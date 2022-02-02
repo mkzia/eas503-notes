@@ -4,7 +4,7 @@
 title: EAS503
 author: Mohammad K. Zia
 copyright: "2022"
-logo: logo.png
+logo: ub.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

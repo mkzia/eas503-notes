@@ -2,8 +2,34 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-chapters:
-- file: introduction
-- file: basics
-- file: notebooks
+root: frontpage
+parts:
+- caption: Course Information 
+  chapters:
+  - file: information
+
+- caption: Python Programming
+  chapters:
+  - file: introduction
+  - file: basics
+  - file: functions
+    sections:
+    - file: function_exercises/exercises
+    - file: function_exercises/exercises_solution
+#  - file: notebooks
+
+- caption: Style Guide
+  chapters:
+  - file: style
+
+
+# - caption: Database
+#   chapters:
+
+
+
+# - caption: Visualization
+#   chapters:
+
+# - caption: Machine Learning
+#   chapters:
