@@ -1,125 +1,139 @@
 # Basics
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
+## Syntax, Expressions, Values, Operators, and Operands 
 
-## What is MyST?
+- The `syntax` of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured (Wiki).
+- An `expression` is a syntactic entity in a programming language that may be evaluated to determine its value (Wiki).
+- `2 + 2` 
+  - `2` is a value
+  - `+` is an operator
+  - `2` is a value
+  - `2 + 2` is an expression because it expresses the intent of the programmer in a syntax that Python understands.
+  - the value and the operator are combined or reduced to 4 -- i.e., the expression 2 + 2 is `evaluated` to 4. In this
+  expression, 2 is also called an operand, i.e., the data that is manipulated (Wiki) using operators. 
+- Expressions do not have to involve an operator. 
+- When an expression is evaluated, it produces a single value. 
 
-MyST stands for "Markedly Structured Text". It
-is a slight variation on a flavor of markdown called "CommonMark" markdown,
-with small syntax extensions to allow you to write **roles** and **directives**
-in the Sphinx ecosystem.
+## Basic Data Types
 
-## What are roles and directives?
+- Every value in Python has a particular type, and the types of values determine how they behave when they are combined. 
+- You will mostly use these data types: `int`, `float`, `str`, `True/False`, and `None`
 
-Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but **roles are written in one line**, whereas
-**directives span many lines**. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.
+## Operators
 
-### Using a directive
+- `+` Addition -- `2+2=4`
+- `-` Subtraction -- `5-2=3`
+- `*` Multiplication -- `2*3=6`
+- `/` Division -- `12/6=2`
+- `**` Exponentiation - raise number to a given power; `2 ^ 3` or `2 * 2 * 2`
+  - `64 ** 0.5` is allowed
+- `%` Modulo -- remainder operator. Good for figuring out if a number is even or odd
+- `//` integer division (i.e. quotient without remainder) `10//3 = 3`
 
-At its simplest, you can insert a directive into your book's content like so:
+## Operator Notes
 
-````
-```{mydirectivename}
-My directive content
-```
-````
+- `3/4` is a float in Python! Other languages would cut off the decimal
+- By default division results in a float
 
-This will only work if a directive with name `mydirectivename` already exists
-(which it doesn't). There are many pre-defined directives associated with
-Jupyter Book. For example, to insert a note box into your content, you can
-use the following directive:
+## Numbers
 
-````
-```{note}
-Here is a note
-```
-````
+- Python has the following number data types:
+  - int - whole number, positive or negative, unlimited
+  - float - number with decimals, positive or negative
+  - complex - `7+3j`
+- `int` vs `float`
+  - Stored differently
+  - `float` take up a set amount of space. `int` take up variable amount of space. 
+  - `int` are stored as `bignum` data type behind the scenes. 
+  
+  ```python
+  import sys
+  sys.getsizeof(2.0)
+  Out[3]: 24
+  sys.getsizeof(2**30)
+  Out[4]: 32
+  sys.getsizeof(2**130)
+  Out[6]: 44
+  ```
 
-This results in:
+  - Both `int` and `float` can store positive and negative numbers
+  - `type()` -- used to figure out which type of data type it is
+- `float` can only represent approximations to real numbers
+  - `2/3` vs `1/3`
+- If you do not need fraction values, use int.
 
-```{note}
-Here is a note
-```
+## Operator Precedence
 
-In your built book.
+- PEMDAS - use parenthesis to manipulate the order in which things are calculated 
+  - what is `8/2(2+2)`?
+- Precedence
+  - Parenthesis
+  - Exponentiation
+  - Negation
+  - Multiplication, division, integer division, and remainder
+  - Addition and subtraction
+- `212 - 32 * 5 / 9` What is wrong with this expression?
 
-For more information on writing directives, see the
-[MyST documentation](https://myst-parser.readthedocs.io/).
+## Working with large numbers
+- `10000000000 + 0.00000000001`
+- The result should have twenty zeros between the first and last significant digit, but
+that is too many for the computer to store, so the result is just 10000000000—it’s as if
+the addition never took place. Adding lots of small numbers to a large one can
+therefore have no effect at all, which is not what a bank wants when it totals up the
+values of its customers’ savings accounts.
+- If you have to add up floating-point numbers, add them from smallest to largest in order to minimize the error.
+- Better yet, use a specialized library (https://mpmath.org/) or (https://github.com/mdickinson/bigfloat)
 
+### Identifiers, Naming Variables in Python, Remembering Values
+- Variables give names to values (number, string, or boolean); Technically they are called identifiers. They are a container of information that a computer program will manipulate using a sequence of instructions. 
+- Variables names MUST follow certain rules and it is BEST to follow Python guidelines for naming 
+- Restrictions for identifiers or naming things in Python
+  1. Start with letter or underscore
+  1. The rest can have letters, underscore, and numbers
+  1. symbols cannot be used in name (@,+)
+  1. Don't use Python keywords or reserved words such as `print`, `str`, `int`, `float`
+    - `int = 3` do `del int` to restore python keyword
+    - `print = Yah` do `del print` to restore Python keyword
+- Conventions for identifiers or naming things in Python
+  1. use snake_case not camelCase for variable and function names
+  1. variables should be lowercase
+  1. upper case are used for constants `PI = 3.14`
+  1. UpperCamelCase for classes
+  1. `__private__`  double underscore is convention that means you are not supposed access this variable directly. They are by convention like private variables in other languages. 
 
-### Using a role
-
-Roles are very similar to directives, but they are less-complex and written
-entirely on one line. You can insert a role into your book's content with
-this pattern:
-
-```
-Some content {rolename}`and here is my role's content!`
-```
-
-Again, roles will only work if `rolename` is a valid role's name. For example,
-the `doc` role can be used to refer to another page in your book. You can
-refer directly to another page by its relative path. For example, the
-role syntax `` {doc}`intro` `` will result in: {doc}`intro`.
-
-For more information on writing roles, see the
-[MyST documentation](https://myst-parser.readthedocs.io/).
-
-
-### Adding a citation
-
-You can also cite references that are stored in a `bibtex` file. For example,
-the following syntax: `` {cite}`holdgraf_evidence_2014` `` will render like
-this: {cite}`holdgraf_evidence_2014`.
-
-Moreover, you can insert a bibliography into your page with this syntax:
-The `{bibliography}` directive must be used for all the `{cite}` roles to
-render properly.
-For example, if the references for your book are stored in `references.bib`,
-then the bibliography is inserted with:
-
-````
-```{bibliography}
-```
-````
-
-Resulting in a rendered bibliography that looks like:
-
-```{bibliography}
-```
+:::{warning}
+Following these conventions in your assignments!
+:::
 
 
-### Basics
+### Working with Variables
+- `x = 503`;  
+- `y = "EAS503"`
+- `print(x)`
+- `print(y)`
+- `y = 34` this is allowed because you can reassign value of a variable with the new value having a different data type in Python;
+This is called Dynamic typing;  C++ statically-typed -- cannot change the variable type. Define variable and variable definition will be enforced
 
-If you'd like to include computational content inside these markdown files,
-you can use MyST Markdown to define cells that will be executed when your
-book is built. Jupyter Book uses *jupytext* to do this.
+- `x = 3.9 * x * (1 - x)`
+- `x = 10`
+- `x = 11`
+  - A variable in Python is like a sticky note on a value. When you change the variable, the sticky note changes to a different value. The variable simply switches to refer to the new value. The old value is not erased immediately. Python has automatic garbage collection.
+- `name = input("What is your name? ")` -- used to prompt user for input; the `name` variable will be a <strong>string!</strong>
+  - avoid using `eval` for type casting, meaning changing type of variable from one type to another.
+- `sum, diff = x+y, x-y` -- simultaneous assignment 
+  - useful when you want to swap values
+    - So instead of doing this:
 
-First, add Jupytext metadata to the file. For example, to add Jupytext metadata
-to this markdown page, run this command:
+    ``` Python
+      temp = x
+      x = y
+      y = temp
+    ```
+   -  do:
+      - `x, y = y, x`
 
-```
-jupyter-book myst init markdown.md
-```
 
-Once a markdown file has Jupytext metadata in it, you can add the following
-directive to run the code at build time:
-
-````
-```{code-cell}
-print("Here is some code to execute")
-```
-````
-
-When your book is built, the contents of any `{code-cell}` blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.
-
-For more information about executing computational content with Jupyter Book,
-see [The MyST-NB documentation](https://myst-nb.readthedocs.io/).
+- `+=` - `x += 3` is the same as `x = x + 3`
+- `-=` - `x -= 3` is the same as `x = x - 3`
+- `*=` - `x *= 3` is the same as `x = x * 3`
+- `/=` - `x /= 3` is the same as `x = x / 3`

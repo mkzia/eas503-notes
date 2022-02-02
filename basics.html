@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content with notebooks" href="notebooks.html" />
+    <link rel="next" title="Functions" href="functions.html" />
     <link rel="prev" title="Introduction" href="introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -78,7 +78,7 @@
         
       
       
-      <img src="_static/logo.png" class="logo" alt="logo">
+      <img src="_static/ub.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">EAS503</h1>
@@ -91,11 +91,28 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="frontpage.html">
    EAS 503
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Course Information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="information.html">
+   Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python Programming
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduction.html">
@@ -107,9 +124,38 @@
    Basics
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="function_exercises/exercises.html">
+     Function Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="function_exercises/exercises_solution.html">
+     Function Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Style Guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Content with notebooks
+  <a class="reference internal" href="style.html">
+   Style Guide
   </a>
  </li>
 </ul>
@@ -200,33 +246,48 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-myst">
-   What is MyST?
+  <a class="reference internal nav-link" href="#syntax-expressions-values-operators-and-operands">
+   Syntax, Expressions, Values, Operators, and Operands
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-are-roles-and-directives">
-   What are roles and directives?
+  <a class="reference internal nav-link" href="#basic-data-types">
+   Basic Data Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operators">
+   Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-notes">
+   Operator Notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numbers">
+   Numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-precedence">
+   Operator Precedence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-large-numbers">
+   Working with large numbers
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-a-directive">
-     Using a directive
+    <a class="reference internal nav-link" href="#identifiers-naming-variables-in-python-remembering-values">
+     Identifiers, Naming Variables in Python, Remembering Values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-a-role">
-     Using a role
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-a-citation">
-     Adding a citation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id8">
-     Basics
+    <a class="reference internal nav-link" href="#working-with-variables">
+     Working with Variables
     </a>
    </li>
   </ul>
@@ -252,33 +313,48 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-myst">
-   What is MyST?
+  <a class="reference internal nav-link" href="#syntax-expressions-values-operators-and-operands">
+   Syntax, Expressions, Values, Operators, and Operands
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-are-roles-and-directives">
-   What are roles and directives?
+  <a class="reference internal nav-link" href="#basic-data-types">
+   Basic Data Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operators">
+   Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-notes">
+   Operator Notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numbers">
+   Numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-precedence">
+   Operator Precedence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-large-numbers">
+   Working with large numbers
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-a-directive">
-     Using a directive
+    <a class="reference internal nav-link" href="#identifiers-naming-variables-in-python-remembering-values">
+     Identifiers, Naming Variables in Python, Remembering Values
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-a-role">
-     Using a role
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-a-citation">
-     Adding a citation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id8">
-     Basics
+    <a class="reference internal nav-link" href="#working-with-variables">
+     Working with Variables
     </a>
    </li>
   </ul>
@@ -294,109 +370,202 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="basics">
 <h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.</p>
-<div class="section" id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this headline">¶</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
+<div class="section" id="syntax-expressions-values-operators-and-operands">
+<h2>Syntax, Expressions, Values, Operators, and Operands<a class="headerlink" href="#syntax-expressions-values-operators-and-operands" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">syntax</span></code> of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured (Wiki).</p></li>
+<li><p>An <code class="docutils literal notranslate"><span class="pre">expression</span></code> is a syntactic entity in a programming language that may be evaluated to determine its value (Wiki).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">2</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> is a value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> is an operator</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> is a value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">2</span></code> is an expression because it expresses the intent of the programmer in a syntax that Python understands.</p></li>
+<li><p>the value and the operator are combined or reduced to 4 – i.e., the expression 2 + 2 is <code class="docutils literal notranslate"><span class="pre">evaluated</span></code> to 4. In this
+expression, 2 is also called an operand, i.e., the data that is manipulated (Wiki) using operators.</p></li>
+</ul>
+</li>
+<li><p>Expressions do not have to involve an operator.</p></li>
+<li><p>When an expression is evaluated, it produces a single value.</p></li>
+</ul>
 </div>
-<div class="section" id="what-are-roles-and-directives">
-<h2>What are roles and directives?<a class="headerlink" href="#what-are-roles-and-directives" title="Permalink to this headline">¶</a></h2>
-<p>Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
-<strong>directives span many lines</strong>. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.</p>
-<div class="section" id="using-a-directive">
-<h3>Using a directive<a class="headerlink" href="#using-a-directive" title="Permalink to this headline">¶</a></h3>
-<p>At its simplest, you can insert a directive into your book’s content like so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mydirectivename}
-My directive content
-```
+<div class="section" id="basic-data-types">
+<h2>Basic Data Types<a class="headerlink" href="#basic-data-types" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Every value in Python has a particular type, and the types of values determine how they behave when they are combined.</p></li>
+<li><p>You will mostly use these data types: <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">True/False</span></code>, and <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="operators">
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> Addition – <code class="docutils literal notranslate"><span class="pre">2+2=4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> Subtraction – <code class="docutils literal notranslate"><span class="pre">5-2=3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> Multiplication – <code class="docutils literal notranslate"><span class="pre">2*3=6</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> Division – <code class="docutils literal notranslate"><span class="pre">12/6=2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> Exponentiation - raise number to a given power; <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">^</span> <span class="pre">3</span></code> or <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">**</span> <span class="pre">0.5</span></code> is allowed</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%</span></code> Modulo – remainder operator. Good for figuring out if a number is even or odd</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">//</span></code> integer division (i.e. quotient without remainder) <code class="docutils literal notranslate"><span class="pre">10//3</span> <span class="pre">=</span> <span class="pre">3</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="operator-notes">
+<h2>Operator Notes<a class="headerlink" href="#operator-notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">3/4</span></code> is a float in Python! Other languages would cut off the decimal</p></li>
+<li><p>By default division results in a float</p></li>
+</ul>
+</div>
+<div class="section" id="numbers">
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Python has the following number data types:</p>
+<ul class="simple">
+<li><p>int - whole number, positive or negative, unlimited</p></li>
+<li><p>float - number with decimals, positive or negative</p></li>
+<li><p>complex - <code class="docutils literal notranslate"><span class="pre">7+3j</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> vs <code class="docutils literal notranslate"><span class="pre">float</span></code></p>
+<ul class="simple">
+<li><p>Stored differently</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> take up a set amount of space. <code class="docutils literal notranslate"><span class="pre">int</span></code> take up variable amount of space.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> are stored as <code class="docutils literal notranslate"><span class="pre">bignum</span></code> data type behind the scenes.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">24</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="mi">32</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">130</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="mi">44</span>
 </pre></div>
 </div>
-<p>This will only work if a directive with name <code class="docutils literal notranslate"><span class="pre">mydirectivename</span></code> already exists
-(which it doesn’t). There are many pre-defined directives associated with
-Jupyter Book. For example, to insert a note box into your content, you can
-use the following directive:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
-Here is a note
-```
+<ul class="simple">
+<li><p>Both <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code> can store positive and negative numbers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type()</span></code> – used to figure out which type of data type it is</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> can only represent approximations to real numbers</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">2/3</span></code> vs <code class="docutils literal notranslate"><span class="pre">1/3</span></code></p></li>
+</ul>
+</li>
+<li><p>If you do not need fraction values, use int.</p></li>
+</ul>
+</div>
+<div class="section" id="operator-precedence">
+<h2>Operator Precedence<a class="headerlink" href="#operator-precedence" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>PEMDAS - use parenthesis to manipulate the order in which things are calculated</p>
+<ul>
+<li><p>what is <code class="docutils literal notranslate"><span class="pre">8/2(2+2)</span></code>?</p></li>
+</ul>
+</li>
+<li><p>Precedence</p>
+<ul>
+<li><p>Parenthesis</p></li>
+<li><p>Exponentiation</p></li>
+<li><p>Negation</p></li>
+<li><p>Multiplication, division, integer division, and remainder</p></li>
+<li><p>Addition and subtraction</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">212</span> <span class="pre">-</span> <span class="pre">32</span> <span class="pre">*</span> <span class="pre">5</span> <span class="pre">/</span> <span class="pre">9</span></code> What is wrong with this expression?</p></li>
+</ul>
+</div>
+<div class="section" id="working-with-large-numbers">
+<h2>Working with large numbers<a class="headerlink" href="#working-with-large-numbers" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">10000000000</span> <span class="pre">+</span> <span class="pre">0.00000000001</span></code></p></li>
+<li><p>The result should have twenty zeros between the first and last significant digit, but
+that is too many for the computer to store, so the result is just 10000000000—it’s as if
+the addition never took place. Adding lots of small numbers to a large one can
+therefore have no effect at all, which is not what a bank wants when it totals up the
+values of its customers’ savings accounts.</p></li>
+<li><p>If you have to add up floating-point numbers, add them from smallest to largest in order to minimize the error.</p></li>
+<li><p>Better yet, use a specialized library (<a class="reference external" href="https://mpmath.org/">https://mpmath.org/</a>) or (<a class="reference external" href="https://github.com/mdickinson/bigfloat">https://github.com/mdickinson/bigfloat</a>)</p></li>
+</ul>
+<div class="section" id="identifiers-naming-variables-in-python-remembering-values">
+<h3>Identifiers, Naming Variables in Python, Remembering Values<a class="headerlink" href="#identifiers-naming-variables-in-python-remembering-values" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Variables give names to values (number, string, or boolean); Technically they are called identifiers. They are a container of information that a computer program will manipulate using a sequence of instructions.</p></li>
+<li><p>Variables names MUST follow certain rules and it is BEST to follow Python guidelines for naming</p></li>
+<li><p>Restrictions for identifiers or naming things in Python</p>
+<ol class="simple">
+<li><p>Start with letter or underscore</p></li>
+<li><p>The rest can have letters, underscore, and numbers</p></li>
+<li><p>symbols cannot be used in name (&#64;,+)</p></li>
+<li><p>Don’t use Python keywords or reserved words such as <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">=</span> <span class="pre">3</span></code> do <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">int</span></code> to restore python keyword</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">=</span> <span class="pre">Yah</span></code> do <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">print</span></code> to restore Python keyword</p></li>
+</ul>
+</li>
+<li><p>Conventions for identifiers or naming things in Python</p>
+<ol class="simple">
+<li><p>use snake_case not camelCase for variable and function names</p></li>
+<li><p>variables should be lowercase</p></li>
+<li><p>upper case are used for constants <code class="docutils literal notranslate"><span class="pre">PI</span> <span class="pre">=</span> <span class="pre">3.14</span></code></p></li>
+<li><p>UpperCamelCase for classes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__private__</span></code>  double underscore is convention that means you are not supposed access this variable directly. They are by convention like private variables in other languages.</p></li>
+</ol>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Following these conventions in your assignments!</p>
+</div>
+</div>
+<div class="section" id="working-with-variables">
+<h3>Working with Variables<a class="headerlink" href="#working-with-variables" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">503</span></code>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">&quot;EAS503&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print(x)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print(y)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">34</span></code> this is allowed because you can reassign value of a variable with the new value having a different data type in Python;
+This is called Dynamic typing;  C++ statically-typed – cannot change the variable type. Define variable and variable definition will be enforced</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">3.9</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">x)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">11</span></code></p>
+<ul class="simple">
+<li><p>A variable in Python is like a sticky note on a value. When you change the variable, the sticky note changes to a different value. The variable simply switches to refer to the new value. The old value is not erased immediately. Python has automatic garbage collection.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">input(&quot;What</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?</span> <span class="pre">&quot;)</span></code> – used to prompt user for input; the <code class="docutils literal notranslate"><span class="pre">name</span></code> variable will be a <strong>string!</strong></p>
+<ul class="simple">
+<li><p>avoid using <code class="docutils literal notranslate"><span class="pre">eval</span></code> for type casting, meaning changing type of variable from one type to another.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sum,</span> <span class="pre">diff</span> <span class="pre">=</span> <span class="pre">x+y,</span> <span class="pre">x-y</span></code> – simultaneous assignment</p>
+<ul>
+<li><p>useful when you want to swap values</p>
+<ul class="simple">
+<li><p>So instead of doing this:</p></li>
+</ul>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>  <span class="n">temp</span> <span class="o">=</span> <span class="n">x</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">temp</span>
 </pre></div>
 </div>
-<p>This results in:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note</p>
-</div>
-<p>In your built book.</p>
-<p>For more information on writing directives, see the
-<a class="reference external" href="https://myst-parser.readthedocs.io/">MyST documentation</a>.</p>
-</div>
-<div class="section" id="using-a-role">
-<h3>Using a role<a class="headerlink" href="#using-a-role" title="Permalink to this headline">¶</a></h3>
-<p>Roles are very similar to directives, but they are less-complex and written
-entirely on one line. You can insert a role into your book’s content with
-this pattern:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Some content {rolename}`and here is my role&#39;s content!`
-</pre></div>
-</div>
-<p>Again, roles will only work if <code class="docutils literal notranslate"><span class="pre">rolename</span></code> is a valid role’s name. For example,
-the <code class="docutils literal notranslate"><span class="pre">doc</span></code> role can be used to refer to another page in your book. You can
-refer directly to another page by its relative path. For example, the
-role syntax <code class="docutils literal notranslate"><span class="pre">{doc}`intro`</span></code> will result in: <a class="reference internal" href="intro.html"><span class="doc">EAS 503</span></a>.</p>
-<p>For more information on writing roles, see the
-<a class="reference external" href="https://myst-parser.readthedocs.io/">MyST documentation</a>.</p>
-</div>
-<div class="section" id="adding-a-citation">
-<h3>Adding a citation<a class="headerlink" href="#adding-a-citation" title="Permalink to this headline">¶</a></h3>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="template.html#id3">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{bibliography}
-```
-</pre></div>
-</div>
-<p>Resulting in a rendered bibliography that looks like:</p>
-<p id="id2"><dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">HdHPK14</a></span></dt>
-<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
-</dd>
-</dl>
-</p>
-</div>
-<div class="section" id="id8">
-<h3>Basics<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<p>If you’d like to include computational content inside these markdown files,
-you can use MyST Markdown to define cells that will be executed when your
-book is built. Jupyter Book uses <em>jupytext</em> to do this.</p>
-<p>First, add Jupytext metadata to the file. For example, to add Jupytext metadata
-to this markdown page, run this command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">markdown</span><span class="o">.</span><span class="n">md</span>
-</pre></div>
-</div>
-<p>Once a markdown file has Jupytext metadata in it, you can add the following
-directive to run the code at build time:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{code-cell}
-print(&quot;Here is some code to execute&quot;)
-```
-</pre></div>
-</div>
-<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.</p>
-<p>For more information about executing computational content with Jupyter Book,
-see <a class="reference external" href="https://myst-nb.readthedocs.io/">The MyST-NB documentation</a>.</p>
+</li>
+<li><p>do:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">y,</span> <span class="pre">x</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+=</span></code> - <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">3</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-=</span></code> - <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-=</span> <span class="pre">3</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*=</span></code> - <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*=</span> <span class="pre">3</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/=</span></code> - <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/=</span> <span class="pre">3</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">/</span> <span class="pre">3</span></code></p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -433,10 +602,10 @@ see <a class="reference external" href="https://myst-nb.readthedocs.io/">The MyS
             <p class="prev-next-title">Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="notebooks.html" title="next page">
+    <a class='right-next' id="next-link" href="functions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Content with notebooks</p>
+        <p class="prev-next-title">Functions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

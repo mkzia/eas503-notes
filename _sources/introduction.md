@@ -1,125 +1,49 @@
 # Introduction
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
+## Programs and Programming
 
-## What is MyST?
+- Programming teaches you how to make computers do what you want them to do. 
+- A program is a set of detailed step-by-step instructions to a computer. It is written in terms of a few basic operations that its reader already understands. Using these few basic operations, you can "teach" a computer new operations by defining them in terms of the basic operations.
+  - Example: Computers understand the addition and division operator, which are the basic mathematical operators. You can teach the 
+  computer to calculate the average by using the addition and division operator by instruction the computer to add all the numbers in a sequence and divide by the size of the sequence. 
+  - You can then use the new average operation and combine with other operations to create more operations. It’s a lot like creating life by putting atoms together to make proteins and then combining proteins to build cells, combining cells to make organs, and combining organs to make a creature.
+  Defining new operations and combining them to do useful things is the heart and soul of programming.
 
-MyST stands for "Markedly Structured Text". It
-is a slight variation on a flavor of markdown called "CommonMark" markdown,
-with small syntax extensions to allow you to write **roles** and **directives**
-in the Sphinx ecosystem.
+## What is a Programming Language?
 
-## What are roles and directives?
+- You can express directions to the nearest bus station in many different languages such as English, Spanish, or Hindi. 
+- Similar to natural languages, there are many programming languages. But they all are instructions that a machine
+can understand. Programming languages can also look different. For example `3 + 4` in Python means add three to four. This same
+instruction in Schema is express as `(+ 3 4)`.  They are both express the same idea-- they just look different. 
+- Every programming language has a way to write mathematical expressions,
+repeat a list of instructions a number of times, choose which of two instructions
+to do based on the current information you have, and much more.
 
-Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but **roles are written in one line**, whereas
-**directives span many lines**. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.
+## What does a programming language do?
 
-### Using a directive
+- It takes a high-level human readable language expression such as `c = a + b` and translates to machine language that the computer can execute.
+- Compilers convert programs written in a high-level language into the machine language of some computer.
+- Interpreters simulate a computer that understands a high-level language.
+- The source program is not translated into machine language all at once.
+- An interpreter analyzes and executes the source code instruction by instruction (line-by-line).
+- Compiling vs. Interpreting
+- Once program is compiled, it can be executed over and over without the source code or compiler. If it is interpreted, the source code and interpreter are needed each time the program runs
+- Compiled programs generally run faster since the translation of the source code happens only once.
+- Interpreted languages are part of a more flexible programming environment since they can be developed and run interactively
+- Interpreted programs are more portable, meaning the executable code produced from a compiler for a Pentium won’t run on a Mac, without recompiling. If a suitable interpreter already exists, the interpreted code can be run with no modifications.
 
-At its simplest, you can insert a directive into your book's content like so:
+## Ambiguity in Language 
 
-````
-```{mydirectivename}
-My directive content
-```
-````
-
-This will only work if a directive with name `mydirectivename` already exists
-(which it doesn't). There are many pre-defined directives associated with
-Jupyter Book. For example, to insert a note box into your content, you can
-use the following directive:
-
-````
-```{note}
-Here is a note
-```
-````
-
-This results in:
-
-```{note}
-Here is a note
-```
-
-In your built book.
-
-For more information on writing directives, see the
-[MyST documentation](https://myst-parser.readthedocs.io/).
+- Natural Language can have ambiguity. 
+- English example: "I saw a man on a hill with a telescope."
+  - There’s a man on a hill, and I’m watching him with my telescope.
+  - There’s a man on a hill, who I’m seeing, and he has a telescope.
+  - There’s a man, and he’s on a hill that also has a telescope on it.
+  - I’m on a hill, and I saw a man using a telescope.
+  - There’s a man on a hill, and I’m sawing him with a telescope.
+  - source: https://www.quora.com/What-are-some-examples-of-ambiguous-sentences
 
 
-### Using a role
-
-Roles are very similar to directives, but they are less-complex and written
-entirely on one line. You can insert a role into your book's content with
-this pattern:
-
-```
-Some content {rolename}`and here is my role's content!`
-```
-
-Again, roles will only work if `rolename` is a valid role's name. For example,
-the `doc` role can be used to refer to another page in your book. You can
-refer directly to another page by its relative path. For example, the
-role syntax `` {doc}`intro` `` will result in: {doc}`intro`.
-
-For more information on writing roles, see the
-[MyST documentation](https://myst-parser.readthedocs.io/).
-
-
-### Adding a citation
-
-You can also cite references that are stored in a `bibtex` file. For example,
-the following syntax: `` {cite}`holdgraf_evidence_2014` `` will render like
-this: {cite}`holdgraf_evidence_2014`.
-
-Moreover, you can insert a bibliography into your page with this syntax:
-The `{bibliography}` directive must be used for all the `{cite}` roles to
-render properly.
-For example, if the references for your book are stored in `references.bib`,
-then the bibliography is inserted with:
-
-````
-```{bibliography}
-```
-````
-
-Resulting in a rendered bibliography that looks like:
-
-```{bibliography}
-```
-
-
-### Executing code in your markdown files
-
-If you'd like to include computational content inside these markdown files,
-you can use MyST Markdown to define cells that will be executed when your
-book is built. Jupyter Book uses *jupytext* to do this.
-
-First, add Jupytext metadata to the file. For example, to add Jupytext metadata
-to this markdown page, run this command:
-
-```
-jupyter-book myst init markdown.md
-```
-
-Once a markdown file has Jupytext metadata in it, you can add the following
-directive to run the code at build time:
-
-````
-```{code-cell}
-print("Here is some code to execute")
-```
-````
-
-When your book is built, the contents of any `{code-cell}` blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.
-
-For more information about executing computational content with Jupyter Book,
-see [The MyST-NB documentation](https://myst-nb.readthedocs.io/).
+:::{warning}
+<strong>Bad code can be ambiguous due to human error. To the machine it is not ambiguous.</strong> When this happens, the program might behave unexpectedly. This unexpected behavior is called a bug!
+:::
