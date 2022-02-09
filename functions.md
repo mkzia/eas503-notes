@@ -85,8 +85,9 @@ max(2, -3, min(4, 7), -5)
 
 ```
 
+
 ## Defining your own functions
-- The build-in functions that Python provides do basic tasks. We can write our own functions that can execute complicated sequence
+- The built-in functions (e.g, type, print, input) that Python provides do basic tasks. We can write our own functions that can execute complicated sequence
 of instructions. Your functions will be made up of Python operators and built-in Python functions.
 
 ### Designing New Functions: A Recipe
@@ -131,6 +132,10 @@ def f(x):
 - One or more input; no output; example -- print the input
 - One or more input: one or more output; example -- take two numbers and return their sum
 - No input; one or more output; example -- a random number
+
+
+
+
 
 ### Function Exercises
 
