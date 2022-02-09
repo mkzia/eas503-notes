@@ -28,13 +28,61 @@
 - `**` Exponentiation - raise number to a given power; `2 ^ 3` or `2 * 2 * 2`
   - `64 ** 0.5` is allowed
 - `%` Modulo -- remainder operator. Good for figuring out if a number is even or odd
-- `//` integer division (i.e. quotient without remainder) `10//3 = 3`
+  - Example: How many 24-hour days in 53 hours?
+ 
+  ```python
+  >>> 53 // 24
+  2
+  ```
+- `//` integer division (i.e. quotient without remainder or integer part of division) `10//3 = 3`
+  - Example: How many hours are left over?
+  
+  ```python
+  >>> 53 % 24
+  5
+  ```
+
+:::warning
+- Be careful about using `//` and `%` with negative operands. 
+- Python takes the floor of the result of an integer division (`//`). 
+  ```python
+  >>> -17 // 10
+  -2
+  ```
+
+- For the modulo operator, the sign of the result matches the sign of the divisors (the second operand)
+  ```python
+  >>> -17 % 10
+  3 
+  >>> 17 % 10
+  -3 
+  ```
+:::
+- The aforementioned seven operators are called `binary` operators because they have two operands. 
+- Negation is a `unary operator` because it applies to only one operand:
+  ```python
+  >>> -5
+  5
+  >>> --5
+  5
+  >>> ---5
+  -5
+  ```
 
 ## Operator Notes
 
 - `3/4` is a float in Python! Other languages would cut off the decimal
-- By default division results in a float
+- By default division (`/`) results in a float. Put another way, when an expression's operands are an `int` and `float`, Python automatically
+converts the `int` to a `float`. 
 
+```python
+>>> 17.0 - 10
+7.0
+>>> 17 - 10.0
+7.0
+```
+
+- Note: You can leave out `0` after the decimal, e.g., `10.`, but this is considered bad style. 
 ## Numbers
 
 - Python has the following number data types:
@@ -102,7 +150,7 @@ values of its customers’ savings accounts.
   1. `__private__`  double underscore is convention that means you are not supposed access this variable directly. They are by convention like private variables in other languages. 
 
 :::{warning}
-Following these conventions in your assignments!
+Follow these conventions in your assignments!
 :::
 
 
@@ -112,7 +160,7 @@ Following these conventions in your assignments!
 - `print(x)`
 - `print(y)`
 - `y = 34` this is allowed because you can reassign value of a variable with the new value having a different data type in Python;
-This is called Dynamic typing;  C++ statically-typed -- cannot change the variable type. Define variable and variable definition will be enforced
+This is called Dynamic typing. This is different from statically-typed where you cannot change the variable type once it has been defined. 
 
 - `x = 3.9 * x * (1 - x)`
 - `x = 10`

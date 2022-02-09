@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Function Exercises &#8212; EAS503</title>
+    <title>String Exercises &#8212; EAS503</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function Exercises Solution" href="exercises_solution.html" />
-    <link rel="prev" title="Functions" href="../functions.html" />
+    <link rel="next" title="String Exercises Solution" href="exercises_solution.html" />
+    <link rel="prev" title="Strings" href="../strings.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -124,45 +124,45 @@
    Basics
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../functions.html">
    Functions
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../function_exercises/exercises.html">
+     Function Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../function_exercises/exercises_solution.html">
+     Function Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../strings.html">
+   Strings
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Function Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises_solution.html">
-     Function Exercises Solution
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../strings.html">
-   Strings
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../string_exercises/exercises.html">
      String Exercises
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../string_exercises/exercises_solution.html">
+    <a class="reference internal" href="exercises_solution.html">
      String Exercises Solution
     </a>
    </li>
@@ -221,7 +221,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/function_exercises/exercises.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/string_exercises/exercises.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -241,7 +241,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffunction_exercises/exercises.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fstring_exercises/exercises.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -283,13 +283,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-4a">
-   Exercise 4a
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-4b">
-   Exercise 4b
+  <a class="reference internal nav-link" href="#exercise-4">
+   Exercise 4
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -317,16 +312,6 @@
    Exercise 9
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-10">
-   Exercise 10
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-11">
-   Exercise 11
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -337,7 +322,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Function Exercises</h1>
+                <h1>String Exercises</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -363,13 +348,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-4a">
-   Exercise 4a
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-4b">
-   Exercise 4b
+  <a class="reference internal nav-link" href="#exercise-4">
+   Exercise 4
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -397,16 +377,6 @@
    Exercise 9
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-10">
-   Exercise 10
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-11">
-   Exercise 11
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -416,103 +386,70 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="function-exercises">
-<h1>Function Exercises<a class="headerlink" href="#function-exercises" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="string-exercises">
+<h1>String Exercises<a class="headerlink" href="#string-exercises" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="exercise-1">
 <h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h2>
 <p>Write a Python function that prints the following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>______________________________
-Happy birthday to you!!!
-Happy birthday to you!!!
-Happy birthday, dear John
-Happy birthday to you!
-Happy birthday to you!
-______________________________
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">They</span><span class="s1">&#39;ll hibernate during the winter.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="exercise-2">
 <h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h2>
 <p>Write a Python function that prints the following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>______________________________
-Happy birthday to you!!!
-Happy birthday to you!!!
-Happy birthday, dear Jane
-Happy birthday to you!
-Happy birthday to you!
-______________________________
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Absolutely not,&quot;</span> <span class="n">he</span> <span class="n">said</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="exercise-3">
 <h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h2>
 <p>Write a Python function that prints the following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Happy birthday to you!!!
-Happy birthday to you!!!
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;He said, &#39;Absolutely not,&#39;&quot;</span> <span class="n">recalled</span> <span class="n">Mel</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="exercise-4a">
-<h2>Exercise 4a<a class="headerlink" href="#exercise-4a" title="Permalink to this headline">¶</a></h2>
-<p>Write a Python function that prints the following using the function from exercise 3.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Happy birthday to you!!!
-Happy birthday to you!!!
-Happy birthday, dear John
-Happy birthday to you!!!
-Happy birthday to you!!!
-</pre></div>
-</div>
-</div>
-<div class="section" id="exercise-4b">
-<h2>Exercise 4b<a class="headerlink" href="#exercise-4b" title="Permalink to this headline">¶</a></h2>
-<p>Repeat 4a for Jane</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Happy birthday to you!!!
-Happy birthday to you!!!
-Happy birthday, dear Jane
-Happy birthday to you!!!
-Happy birthday to you!!!
+<div class="section" id="exercise-4">
+<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h2>
+<p>Write a Python function that prints the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">left</span>\<span class="n">right</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="exercise-5">
 <h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h2>
-<p>Write a function called print_happy_birthday_name that takes the name as an parameter to the function.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Happy</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">dear</span> <span class="o">&lt;</span><span class="n">Name</span><span class="o">&gt;</span>
+<p>Write a Python function that prints the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Given</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">12.5</span><span class="p">,</span> <span class="nb">print</span><span class="p">:</span> <span class="n">The</span> <span class="n">rabbit</span> <span class="ow">is</span> <span class="mf">3.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="exercise-6">
 <h2>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">¶</a></h2>
-<p>Combine the functions print_happy_birthday and print_happy_birthday_name(‘John’)</p>
+<p>Write a Python function that prints the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Given</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">12.5</span><span class="p">,</span> <span class="nb">print</span><span class="p">:</span> <span class="n">The</span> <span class="n">rabbit</span> <span class="ow">is</span> <span class="mi">3</span> <span class="n">years</span> <span class="n">old</span><span class="o">.</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-7">
 <h2>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that calculates the distance between two points and returns the value</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">calculate_distance</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+<p>Write a Python function that prints the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Given</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">12.5</span><span class="p">,</span> <span class="nb">print</span><span class="p">:</span> <span class="mf">12.5</span> <span class="o">*</span> <span class="mf">3.</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="exercise-8">
 <h2>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">¶</a></h2>
-<p>Following the function design recipe, define a function that takes one input parameter, a number, and returns that number tripled.</p>
+<p>Write a Python function that prints the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Given</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">12.5</span><span class="p">,</span> <span class="nb">print</span><span class="p">:</span> <span class="mf">12.5</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mf">37.5</span><span class="o">.</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-9">
 <h2>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this headline">¶</a></h2>
-<p>Following the function design recipe, define a function that takes one input
-parameter, a distance in kilometers, and returns the distance in miles.
-(There are 1.6 kilometers per mile.)</p>
+<p>Write a Python function that prints the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Given</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">12.5</span><span class="p">,</span> <span class="nb">print</span><span class="p">:</span> <span class="mf">12.5</span> <span class="ow">is</span> <span class="n">average</span><span class="o">.</span>
+</pre></div>
 </div>
-<div class="section" id="exercise-10">
-<h2>Exercise 10<a class="headerlink" href="#exercise-10" title="Permalink to this headline">¶</a></h2>
-<p>Following the function design recipe, define a function that has three
-parameters, grades between 0 and 100 inclusive, and returns the average
-of those grades.</p>
-</div>
-<div class="section" id="exercise-11">
-<h2>Exercise 11<a class="headerlink" href="#exercise-11" title="Permalink to this headline">¶</a></h2>
-<p>Following the function design recipe, define a function that has four
-parameters, all of them grades between 0 and 100 inclusive, and returns
-the average of the best 3 of those grades.</p>
 </div>
 </div>
 
@@ -529,7 +466,7 @@ the average of the best 3 of those grades.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./function_exercises"
+            path: "./string_exercises"
         },
         predefinedOutput: true
     }
@@ -541,17 +478,17 @@ the average of the best 3 of those grades.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../functions.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../strings.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Functions</p>
+            <p class="prev-next-title">Strings</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="exercises_solution.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Function Exercises Solution</p>
+        <p class="prev-next-title">String Exercises Solution</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

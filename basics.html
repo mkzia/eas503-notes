@@ -146,6 +146,28 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="strings.html">
+   Strings
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="string_exercises/exercises.html">
+     String Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="string_exercises/exercises_solution.html">
+     String Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -398,25 +420,80 @@ expression, 2 is also called an operand, i.e., the data that is manipulated (Wik
 </div>
 <div class="section" id="operators">
 <h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
+<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> Addition – <code class="docutils literal notranslate"><span class="pre">2+2=4</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> Subtraction – <code class="docutils literal notranslate"><span class="pre">5-2=3</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> Multiplication – <code class="docutils literal notranslate"><span class="pre">2*3=6</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> Division – <code class="docutils literal notranslate"><span class="pre">12/6=2</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> Exponentiation - raise number to a given power; <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">^</span> <span class="pre">3</span></code> or <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span></code></p>
-<ul>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">64</span> <span class="pre">**</span> <span class="pre">0.5</span></code> is allowed</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">%</span></code> Modulo – remainder operator. Good for figuring out if a number is even or odd</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">//</span></code> integer division (i.e. quotient without remainder) <code class="docutils literal notranslate"><span class="pre">10//3</span> <span class="pre">=</span> <span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%</span></code> Modulo – remainder operator. Good for figuring out if a number is even or odd</p>
+<ul class="simple">
+<li><p>Example: How many 24-hour days in 53 hours?</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">53</span> <span class="o">//</span> <span class="mi">24</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">//</span></code> integer division (i.e. quotient without remainder or integer part of division) <code class="docutils literal notranslate"><span class="pre">10//3</span> <span class="pre">=</span> <span class="pre">3</span></code></p>
+<ul class="simple">
+<li><p>Example: How many hours are left over?</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">53</span> <span class="o">%</span> <span class="mi">24</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="highlight-warning notranslate"><div class="highlight"><pre><span></span>- Be careful about using `//` and `%` with negative operands. 
+- Python takes the floor of the result of an integer division (`//`). 
+  ```python
+  &gt;&gt;&gt; -17 // 10
+  -2
+  ```
+
+- For the modulo operator, the sign of the result matches the sign of the divisors (the second operand)
+  ```python
+  &gt;&gt;&gt; -17 % 10
+  3 
+  &gt;&gt;&gt; 17 % 10
+  -3 
+  ```
+</pre></div>
+</div>
+<ul>
+<li><p>The aforementioned seven operators are called <code class="docutils literal notranslate"><span class="pre">binary</span></code> operators because they have two operands.</p></li>
+<li><p>Negation is a <code class="docutils literal notranslate"><span class="pre">unary</span> <span class="pre">operator</span></code> because it applies to only one operand:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">-</span><span class="mi">5</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">--</span><span class="mi">5</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">---</span><span class="mi">5</span>
+<span class="go">-5</span>
+</pre></div>
+</div>
+</li>
 </ul>
 </div>
 <div class="section" id="operator-notes">
 <h2>Operator Notes<a class="headerlink" href="#operator-notes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">3/4</span></code> is a float in Python! Other languages would cut off the decimal</p></li>
-<li><p>By default division results in a float</p></li>
+<li><p>By default division (<code class="docutils literal notranslate"><span class="pre">/</span></code>) results in a float. Put another way, when an expression’s operands are an <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code>, Python automatically
+converts the <code class="docutils literal notranslate"><span class="pre">int</span></code> to a <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">17.0</span> <span class="o">-</span> <span class="mi">10</span>
+<span class="go">7.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">-</span> <span class="mf">10.0</span>
+<span class="go">7.0</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Note: You can leave out <code class="docutils literal notranslate"><span class="pre">0</span></code> after the decimal, e.g., <code class="docutils literal notranslate"><span class="pre">10.</span></code>, but this is considered bad style.</p></li>
 </ul>
 </div>
 <div class="section" id="numbers">
@@ -518,7 +595,7 @@ values of its customers’ savings accounts.</p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Following these conventions in your assignments!</p>
+<p>Follow these conventions in your assignments!</p>
 </div>
 </div>
 <div class="section" id="working-with-variables">
@@ -529,7 +606,7 @@ values of its customers’ savings accounts.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">print(x)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">print(y)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">34</span></code> this is allowed because you can reassign value of a variable with the new value having a different data type in Python;
-This is called Dynamic typing;  C++ statically-typed – cannot change the variable type. Define variable and variable definition will be enforced</p></li>
+This is called Dynamic typing. This is different from statically-typed where you cannot change the variable type once it has been defined.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">3.9</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">(1</span> <span class="pre">-</span> <span class="pre">x)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">11</span></code></p>
