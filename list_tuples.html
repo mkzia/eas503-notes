@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Style Guide" href="style.html" />
+    <link rel="next" title="Loops" href="loops.html" />
     <link rel="prev" title="Conditional Exercises Solution" href="conditional_exercises/exercises_solution.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -194,6 +194,33 @@
   <a class="current reference internal" href="#">
    Lists and Tuples
   </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="loops.html">
+   Loops
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/for_loop_exercises.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/while_loop_exercises.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/modify_loop_exercises.html">
+     Modify Loop Exercises
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -487,22 +514,23 @@ cover <code class="docutils literal notranslate"><span class="pre">list</span></
 data types such as arrays are <code class="docutils literal notranslate"><span class="pre">pass-by-reference</span></code>. This means that changes made to ints and floats inside a function do not change the value outside of the function because they were passed a copy (independent copy). As for arrays, they are passed to a function as a reference, so changes made to the array persist outside the function.</p></li>
 <li><p>NOTE: In Python, however, everything is passed to a function using <code class="docutils literal notranslate"><span class="pre">pass-by-object-reference</span></code>.</p></li>
 </ul>
-<div class="highlight-note notranslate"><div class="highlight"><pre><span></span>Ref: Python for Programmers by Paul Deitel and Harvey Deitel
-
-In many programming languages there are two ways to pass arguments--pass-by-value
-and pass-by-reference (sometimes called call-by-value and call-by-reference, respectively):
-  - With pass-by-value, the called function receives a copy of the argument&#39;s value 
-  and works exclusively with that copy. Changes to the function&#39;s copy do not affect the original
-  variable&#39;s value in the caller.
-  - With pass-by-reference, the called function can access the argument&#39;s value in the caller
-  directly and modify the value if it&#39;s mutable. 
-
-Python arguments are ALWAYS passed by reference. Some people call this pass-by-object-reference, 
-because &quot;everything in Python is an object.&quot; When a function call provides an argument, Python copies
-the argument object&#39;s reference--not the object itself--into the corresponding parameter. This
-is important for performance. Function often manipulate large objects--frequency copying them would
-consume large amount of computer memory and significantly slow down program performance. 
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ref: Python for Programmers by Paul Deitel and Harvey Deitel</p>
+<p>In many programming languages there are two ways to pass arguments–pass-by-value
+and pass-by-reference (sometimes called call-by-value and call-by-reference, respectively):</p>
+<ul class="simple">
+<li><p>With pass-by-value, the called function receives a copy of the argument’s value
+and works exclusively with that copy. Changes to the function’s copy do not affect the original
+variable’s value in the caller.</p></li>
+<li><p>With pass-by-reference, the called function can access the argument’s value in the caller
+directly and modify the value if it’s mutable.</p></li>
+</ul>
+<p>Python arguments are ALWAYS passed by reference. Some people call this pass-by-object-reference,
+because “everything in Python is an object.” When a function call provides an argument, Python copies
+the argument object’s reference–not the object itself–into the corresponding parameter. This
+is important for performance. Function often manipulate large objects–frequency copying them would
+consume large amount of computer memory and significantly slow down program performance.</p>
 </div>
 </li>
 </ul>
@@ -721,10 +749,10 @@ consume large amount of computer memory and significantly slow down program perf
             <p class="prev-next-title">Conditional Exercises Solution</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="style.html" title="next page">
+    <a class='right-next' id="next-link" href="loops.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Style Guide</p>
+        <p class="prev-next-title">Loops</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -8,7 +8,7 @@ cover `list`, and `tuple`
     data types such as arrays are `pass-by-reference`. This means that changes made to ints and floats inside a function do not change the value outside of the function because they were passed a copy (independent copy). As for arrays, they are passed to a function as a reference, so changes made to the array persist outside the function. 
     - NOTE: In Python, however, everything is passed to a function using `pass-by-object-reference`.
   
-    :::note
+    :::{warning}
     Ref: Python for Programmers by Paul Deitel and Harvey Deitel
 
     In many programming languages there are two ways to pass arguments--pass-by-value
