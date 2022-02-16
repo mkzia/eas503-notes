@@ -363,6 +363,11 @@
    Tuples
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-to-a-file">
+   Writing to a file
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -453,6 +458,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tuples">
    Tuples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-to-a-file">
+   Writing to a file
   </a>
  </li>
 </ul>
@@ -650,6 +660,32 @@ consume large amount of computer memory and significantly slow down program perf
 </ul>
 </li>
 </ul>
+</div>
+<div class="section" id="writing-to-a-file">
+<h2>Writing to a file<a class="headerlink" href="#writing-to-a-file" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test_file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;line1</span><span class="se">\n</span><span class="s1">line2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="si">{:^51}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Cereal Yields (kg/ha)&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span>
+<span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">15</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">8</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span>
+<span class="n">row</span> <span class="o">=</span> <span class="s1">&#39;| </span><span class="si">{:&lt;13}</span><span class="s1"> |&#39;</span> <span class="o">+</span> <span class="s1">&#39; </span><span class="si">{:6,d}</span><span class="s1"> |&#39;</span><span class="o">*</span><span class="mi">4</span>
+<span class="n">header</span> <span class="o">=</span> <span class="s1">&#39;| </span><span class="si">{:^13s}</span><span class="s1"> |&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Country&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="s1">&#39; </span><span class="si">{:^6d}</span><span class="s1"> |&#39;</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1980</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span>
+                                                                  <span class="mi">2000</span><span class="p">,</span> <span class="mi">2010</span><span class="p">)</span>
+<span class="n">file_content</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s1">&#39;+&#39;</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span>
+      <span class="n">title</span><span class="p">,</span>
+      <span class="n">line</span><span class="p">,</span>
+      <span class="n">header</span><span class="p">,</span>
+      <span class="n">line</span><span class="p">,</span>
+      <span class="n">row</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;China&#39;</span><span class="p">,</span> <span class="mi">2937</span><span class="p">,</span> <span class="mi">4321</span><span class="p">,</span> <span class="mi">4752</span><span class="p">,</span> <span class="mi">5527</span><span class="p">),</span>
+      <span class="n">row</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span> <span class="mi">4225</span><span class="p">,</span> <span class="mi">5411</span><span class="p">,</span> <span class="mi">6453</span><span class="p">,</span> <span class="mi">6718</span><span class="p">),</span>
+      <span class="n">row</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;United States&#39;</span><span class="p">,</span> <span class="mi">3772</span><span class="p">,</span> <span class="mi">4755</span><span class="p">,</span> <span class="mi">5854</span><span class="p">,</span> <span class="mi">6988</span><span class="p">),</span>
+      <span class="n">line</span><span class="p">))</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test_file.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">file_content</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 
