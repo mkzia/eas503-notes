@@ -1,4 +1,6 @@
-# Making Choices/Flow Control/Conditionals
+# Conditionals
+
+## Making Choices/Flow Control/Conditionals
 
 - So far we have only written small programs that are a sequence of instructions. Sometimes you have to alter the sequential flow of a program to suit the needs of a particular situation.
 - When strings are compared, they are compared lexicographic, meaning strings are put into alphabetical order and uppercase comes before lowercase.
