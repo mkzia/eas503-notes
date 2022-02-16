@@ -87,8 +87,9 @@ for item in info:
 ```
 
 - Do for loop exercises
-- Do modify loop exercises
 - Do while loop exercises
+- Do modify loop exercises
+
 
 ## File Handling
 
