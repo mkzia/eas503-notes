@@ -20,7 +20,12 @@ parts:
     sections:
     - file: string_exercises/exercises
     - file: string_exercises/exercises_solution
-
+  - file: conditionals
+    sections:
+    - file: conditional_exercises/exercises
+    - file: conditional_exercises/exercises_solution
+  - file: list_tuples
+   
 - caption: Style Guide
   chapters:
   - file: style

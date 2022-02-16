@@ -3,7 +3,7 @@
 ## Exercise 1
 Write a Python function that prints the following:
 
-```python
+```
 They'll hibernate during the winter.
 ```
 
@@ -14,53 +14,110 @@ def string_ex1():
 ```
 
 ## Exercise 2
-# Print: "Absolutely not," he said.
+Write a Python function that prints the following:
 
-print('"Absolutely not," he said.')
-print("\"Absolutely not,\" he said.")
+```
+"Absolutely not," he said.
+```
+
+```python
+def string_ex2():
+    print('"Absolutely not," he said.')
+    print("\"Absolutely not,\" he said.")
+```
+
 
 ## Exercise 3
-# Print: "He said, 'Absolutely not,'" recalled Mel.
+Write a Python function that prints the following:
 
+```
+"He said, 'Absolutely not,'" recalled Mel.
+```
+
+```python
+def string_ex3():
 print("\"He said, 'Absolutely not,'\" recalled Mel.")
-
+```
 ## Exercise 4
-# Print: left\right.
+Write a Python function that prints the following: 
 
-print("left\\right")
+```
+left\right.
+```
 
+```python
+def string_ex4():
+    print("left\\right")
+```
 
 ## Exercise 5
-# Given x = 3 and y = 12.5 print: The rabbit is 3.
-x = 3
-y = 12.5
+Write a Python function that prints the following given x = 3:
 
-print("The rabbit is {}.".format(x))
-print("The rabbit is " + str(x) + '.')
+```
+The rabbit is 3.
+```
+
+```python
+def string_ex5():
+    x = 3
+    print(f"The rabbit is {x}.")
+```
 
 ## Exercise 6
 # Given x = 3 and y = 12.5 print: The rabbit is 3 years old.
-x = 3
-y = 12.5
+Write a Python function that prints the following given x = 3:
 
-print("The rabbit is {} years old.".format(x))
+```
+The rabbit is 3 years old.
+```
+
+```python
+def string_ex6():
+    x = 3
+    print(f"The rabbit is {x} years old.")
+```
+
+
 
 ## Exercise 7
-# Given x = 3 and y = 12.5 print: 12.5 * 3.
-x = 3
-y = 12.5
+Write a Python function that prints the following given x = 3 and y = 12.5:
 
-print("{} * {}.".format(y, x))
+```
+12.5 * 3.
+```
+
+```python
+def string_ex7(:)
+    x = 3
+    y = 12.5
+
+    print(f"{x} * {y}.")
+```
 
 ## Exercise 8
-# Given x = 3 and y = 12.5 print: 12.5 * 3 = 37.5
-x = 3
-y = 12.5
+Write a Python function that prints the following given x = 3 and y = 12.5:
 
-print("{} * {} = {}.".format(y, x, y*x))
+```
+12.5 * 3 = 37.5
+```
+
+```python
+def string_ex8():
+    x = 3
+    y = 12.5
+    print(f"{x} * {y} = {x*y}.")
+```
 
 ## Exercise 9
-# Given x = 3 and y = 12.5 print: 12.5 is average.
-x = 3
-y = 12.5
-print("{} is average.".format(y))
+Write a Python function that prints the following given y = 12.5:
+
+
+```
+The average is 12.5.
+```
+
+```python
+def string_ex9():
+    y = 12.5
+    print(f"The average is {y}.")
+```

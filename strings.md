@@ -82,18 +82,36 @@ def convert_celsius():
   print(f'{PI:.2f}')
   ```
 - But you have to know the other ways so you can read older code or use these ways if you have to use an older version of Python
-  - ``` python
-    PI = 3.14159265359 
-    name = 'PI'
-    print('%s is %.2f' % (name, PI))  # oldest way format specifier is <width>.<precision><type>
-    print(('{0} is {1:.2f}'.format('PI', PI)) ) # older way {<index>:<format-specifier>} where the format specifier is <width>.<precision><type>
-    print(f'{name} is {PI:.2f}') # newest way
-    ```
 
-- Go Over: https://pyformat.info/
+### Oldest Method
+ ``` python
+  PI = 3.14159265359 
+  name = 'PI'
+  print('%s is %.2f' % (name, PI))  # oldest way format specifier is <width>.<precision><type>
+```
+
+### Newer Method
+
+``` python
+PI = 3.14159265359 
+name = 'PI'
+#{<index>:<format-specifier>} where the format specifier is <width>.<precision><type>
+print(('{0} is {1:.2f}'.format('PI', PI)) ) # 
+```
+
+### Newest Method
+
+``` python
+PI = 3.14159265359 
+name = 'PI'
+# {<name_of_variable>:<format-specifier>} where the format specifier is <width>.<precision><type>
+print(f'{name} is {PI:.2f}') # newest way
+```
+
+Reference: https://pyformat.info/
 
 ```python
-class_number = 'EAS503'
+course_number = 'EAS503'
 class_size = 113
 class_average = 92.3
 
@@ -112,83 +130,132 @@ lines = line1 + line2
 
 line = 'This is the first line.\n'
 line += 'This is the second line.'
+```
 
-# Example 1
-str_format = '{}'.format(class_number)
-f_string = f'{class_number}'
 
-print(str_format)
-print(f_string)
+### Example 1
 
-# Example 2
-str_format = 'The course number is {}'.format(class_number)
-f_string = f'The course number is {class_number}'
+```python
+str_format = '{}'.format(course_number)
+f_string = f'{course_number}'
 
 print(str_format)
 print(f_string)
+```
 
+### Example 2
 
-# Example 3 use index
-str_format = 'The course number is {}. It has {} students.'.format(class_number, class_size)
-str_format = 'The course number is {0}. It has {1} students.'.format(class_number, class_size)
-f_string = f'The course number is {class_number}. It has {class_size} students.'
-
-print(str_format)
-print(f_string)
-
-
-# Example 4 change index
-str_format = 'The course number is {1}. It has {0} students.'.format(class_number, class_size)
-f_string = f'The course number is {class_size}. It has {class_number} students.'
+```python
+str_format = 'The course number is {}.'.format(course_number)
+f_string = f'The course number is {course_number}.'
 
 print(str_format)
 print(f_string)
+```
 
-# Example 5 adding a float
-str_format = 'The course number is {0}. It has {1} students. The class average is {2}'.format(class_number, class_size, class_average)
-f_string = f'The course number is {class_size}. It has {class_number} students. The class average is {class_average}.'
+
+### Example 3 use index
+
+```python
+str_format = 'The course number is {}. It has {} students.'.format(course_number, class_size)
+str_format = 'The course number is {0}. It has {1} students.'.format(course_number, class_size)
+f_string = f'The course number is {course_number}. It has {class_size} students.'
 
 print(str_format)
 print(f_string)
+```
 
-# Example 6 specify number of spaces to use -- width
-str_format = 'The course number is {0:10}. It has {1:10} students. The class average is {2:10}'.format(class_number, class_size, class_average)
+
+### Example 4 change index
+
+```python
+str_format = 'The course number is {1}. It has {0} students.'.format(course_number, class_size)
+f_string = f'The course number is {class_size}. It has {course_number} students.'
+
+print(str_format)
+print(f_string)
+```
+
+### Example 5 adding a float
+
+```python
+str_format = 'The course number is {0}. It has {1} students. The class average is {2}'.format(course_number, class_size, class_average)
+f_string = f'The course number is {class_size}. It has {course_number} students. The class average is {class_average}.'
+
+print(str_format)
+print(f_string)
+```
+
+### Example 6 specify number of spaces to use -- width
+
+```python
+str_format = 'The course number is {0:10}. It has {1:10} students. The class average is {2:10}'.format(course_number, class_size, class_average)
 f_string = f'The course number is {class_size:10}. It has {class_size:10} students. The class average is {class_average:10}.'
 
 print(str_format)
 print(f_string)
+```
+
+### Example 7 right align
 
 
-# Example 7 right align
-str_format = 'The course number is {0:>10}. It has {1:>10} students. The class average is {2:>10}'.format(class_number, class_size, class_average)
+```python
+str_format = 'The course number is {0:>10}. It has {1:>10} students. The class average is {2:>10}'.format(course_number, class_size, class_average)
 f_string = f'The course number is {class_size:>10}. It has {class_size:>10} students. The class average is {class_average:>10}.'
 
 print(str_format)
 print(f_string)
-
-
-
-# Example 7 left align
-str_format = 'The course number is {0:<10}. It has {1:<10} students. The class average is {2:<10}'.format(class_number, class_size, class_average)
-f_string = f'The course number is {class_number:<10}. It has {class_size:<10} students. The class average is {class_average:<10}.'
-
-print(str_format)
-print(f_string)
-
-
-# Example 8 center align
-str_format = 'The course number is {0:<10}. It has {1:<10} students. The class average is {2:<10}'.format(class_number, class_size, class_average)
-f_string = f'The course number is {class_number:<10}. It has {class_size:<10} students. The class average is {class_average:<10}.'
-
-print(str_format)
-print(f_string)
-
 ```
 
-- String Exercises 1-9
+### Example 8 left align
+
+```python
+str_format = 'The course number is {0:<10}. It has {1:<10} students. The class average is {2:<10}'.format(course_number, class_size, class_average)
+f_string = f'The course number is {course_number:<10}. It has {class_size:<10} students. The class average is {class_average:<10}.'
+
+print(str_format)
+print(f_string)
+```
 
 
-- https://scipython.com/book/chapter-2-the-core-python-language-i/string-representation-of-integers-with-comma-separated-thousands/
+### Example 9 center align
+
+```python
+str_format = 'The course number is {0:<10}. It has {1:<10} students. The class average is {2:<10}'.format(course_number, class_size, class_average)
+f_string = f'The course number is {course_number:<10}. It has {class_size:<10} students. The class average is {class_average:<10}.'
+
+print(str_format)
+print(f_string)
+```
+
+### Example 10 Padding with zeros
+
+```python
+student_id = 223333
+
+str_format = 'The number padded {} padded with zeros {:08}'.format(student_id, student_id)
+f_string = f'The number padded {student_id} padded with zeros {student_id:08}'
+
+print(str_format)
+print(f_string)
+```
+
+### Example 11 Padding with dashes
+
+```python
+student_id = 223333
+
+str_format = 'The number padded {} padded with zeros {:->8}'.format(student_id, student_id)
+f_string = f'The number padded {student_id} padded with zeros {student_id:->8}'
+
+print(str_format)
+print(f_string)
+```
+
+
+String Exercises 1-9
+
+https://scipython.com/book/chapter-2-the-core-python-language-i/string-representation-of-integers-with-comma-separated-thousands/
 ```python
 title = '|' + '{:^51}'.format('Cereal Yields (kg/ha)') + '|'
 line = '+' + '-'*15 + '+' + ('-'*8 + '+')*4
