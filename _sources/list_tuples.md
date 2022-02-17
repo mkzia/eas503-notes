@@ -183,6 +183,6 @@ file_content = '\n'.join(('+' + '-'*(len(title)-2) + '+',
       row.format('United States', 3772, 4755, 5854, 6988),
       line))
 
-with open('test_file.txt') as file:
+with open('test_file.txt', 'w') as file:
     file.write(file_content)
 ```
