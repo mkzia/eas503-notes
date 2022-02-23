@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For Loop Exercises &#8212; EAS503</title>
+    <title>While Loop Exercises &#8212; EAS503</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="For Loop Exercises" href="for_loop_exercises_solution.html" />
-    <link rel="prev" title="Loops" href="../loops.html" />
+    <link rel="next" title="Modify Loop Exercises" href="modify_loop_exercises.html" />
+    <link rel="prev" title="While Loop Exercises" href="while_loop_exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -205,8 +205,8 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="for_loop_exercises.html">
      For Loop Exercises
     </a>
    </li>
@@ -220,8 +220,8 @@
      While Loop Exercises
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="while_loop_exercises_solution.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      While Loop Exercises
     </a>
    </li>
@@ -334,7 +334,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/loop_exercises/for_loop_exercises.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/loop_exercises/while_loop_exercises_solution.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -397,46 +397,6 @@
    Exercise 4
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-5">
-   Exercise 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-6">
-   Exercise 6
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-7">
-   Exercise 7
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-8">
-   Exercise 8
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-9">
-   Exercise 9
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-10">
-   Exercise 10
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-11">
-   Exercise 11
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-12">
-   Exercise 12
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -447,7 +407,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>For Loop Exercises</h1>
+                <h1>While Loop Exercises</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -477,46 +437,6 @@
    Exercise 4
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-5">
-   Exercise 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-6">
-   Exercise 6
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-7">
-   Exercise 7
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-8">
-   Exercise 8
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-9">
-   Exercise 9
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-10">
-   Exercise 10
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-11">
-   Exercise 11
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-12">
-   Exercise 12
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -526,91 +446,111 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="for-loop-exercises">
-<h1>For Loop Exercises<a class="headerlink" href="#for-loop-exercises" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="while-loop-exercises">
+<h1>While Loop Exercises<a class="headerlink" href="#while-loop-exercises" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="exercise-1">
 <h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that takes in a list of values and returns its sum</p>
+<p>Write a program that takes integers from the user and returns the average. Use a while loop and make an empty string the stop criteria.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">summed_values</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># a container to store the sum of interger values collected</span>
+<span class="n">number_count</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># a container to store the number of integer values collected</span>
+
+<span class="n">input_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer. Enter nothing to quit: &#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">input_string</span><span class="p">:</span>
+    <span class="n">summed_values</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
+    <span class="n">number_count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">input_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer. Enter nothing to quit: &#39;</span><span class="p">)</span>
+
+
+<span class="n">average</span> <span class="o">=</span> <span class="n">summed_values</span> <span class="o">/</span> <span class="n">number_count</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average of </span><span class="si">%d</span><span class="s1"> numbers is </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">number_count</span><span class="p">,</span> <span class="n">summed_values</span><span class="p">))</span>
+
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-2">
 <h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that takes in a list of values and returns its average</p>
+<p>Write a program that takes integers from the user and returns the average. Use a while loop and make negative number the stop criteria.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">summed_values</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># a container to store the sum of interger values collected</span>
+<span class="n">number_count</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># a container to store the number of integer values collected</span>
+
+<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer. Enter negative number to quit: &#39;</span><span class="p">))</span>
+
+<span class="k">while</span> <span class="n">number</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">summed_values</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+    <span class="n">number_count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer. Enter nothing to quit: &#39;</span><span class="p">))</span>
+
+
+<span class="n">average</span> <span class="o">=</span> <span class="n">summed_values</span> <span class="o">/</span> <span class="n">number_count</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average of </span><span class="si">%d</span><span class="s1"> numbers is </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">number_count</span><span class="p">,</span> <span class="n">summed_values</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-3">
 <h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that takes in a list of values and returns its average.
-Instead of using a for loop as in ex2, use sum() and len() to calculate the average</p>
+<p>Write a program that takes test grades from the user and returns their average and the letter grade of the average.Use a while loop and make negative number the stop criteria.
+A &gt;=90
+B 80-89
+C 70-79
+D 60-69
+F 59 or less</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">test_grades</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># a container to store the sum of interger values collected</span>
+<span class="n">number_tests</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># a container to store the number of integer values collected</span>
+
+<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter a test grade. Enter negative number to quit: &#39;</span><span class="p">))</span>
+
+<span class="k">while</span> <span class="n">number</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">test_grades</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+    <span class="n">number_tests</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter a test grade. Enter negative number to quit: &#39;</span><span class="p">))</span>
+
+
+<span class="n">average</span> <span class="o">=</span> <span class="n">test_grades</span> <span class="o">/</span> <span class="n">number_tests</span>
+
+
+<span class="k">if</span>   <span class="mi">90</span> <span class="o">&lt;=</span> <span class="n">average</span><span class="p">:</span>
+    <span class="n">letter_grade</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
+<span class="k">elif</span> <span class="mi">80</span> <span class="o">&lt;=</span> <span class="n">average</span> <span class="o">&lt;=</span> <span class="mi">89</span><span class="p">:</span>
+    <span class="n">letter_grade</span> <span class="o">=</span> <span class="s1">&#39;B&#39;</span>
+<span class="k">elif</span> <span class="mi">70</span> <span class="o">&lt;=</span> <span class="n">average</span> <span class="o">&lt;=</span> <span class="mi">79</span><span class="p">:</span>
+    <span class="n">letter_grade</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span>
+<span class="k">elif</span> <span class="mi">60</span> <span class="o">&lt;=</span> <span class="n">average</span> <span class="o">&lt;=</span> <span class="mi">69</span><span class="p">:</span>
+    <span class="n">letter_grade</span> <span class="o">=</span> <span class="s1">&#39;D&#39;</span>
+<span class="k">elif</span> <span class="mi">60</span> <span class="o">&gt;=</span> <span class="n">average</span><span class="p">:</span>
+    <span class="n">letter_grade</span> <span class="o">=</span> <span class="s1">&#39;F&#39;</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">letter_grade</span><span class="p">)</span>
+
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-4">
 <h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that multiplies the elements of the list by two and returns them</p>
+<p>Write a program that takes an integer and counts down to zero – print the value</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter a starting number: &#39;</span><span class="p">))</span>
+
+<span class="k">while</span> <span class="n">number</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">-=</span> <span class="mi">1</span>
+
+
+<span class="c1">###############################################################</span>
+<span class="c1"># while_ex4</span>
+<span class="c1"># Write a program that takes an integer number and outputs all the even numbers starting from 0 to the number</span>
+
+<span class="n">end_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer number: &#39;</span><span class="p">))</span>
+<span class="n">current_number</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">current_number</span> <span class="o">&lt;=</span> <span class="n">end_number</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">current_number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">current_number</span><span class="p">)</span>
+    <span class="n">current_number</span> <span class="o">+=</span> <span class="mi">1</span>
+
+</pre></div>
 </div>
-<div class="section" id="exercise-5">
-<h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h2>
-<p>Write a pow() function that computes the power of each element in a list</p>
-</div>
-<div class="section" id="exercise-6">
-<h2>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">¶</a></h2>
-<p>Write a function to remove duplicate from a list</p>
-</div>
-<div class="section" id="exercise-7">
-<h2>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that reads grades from an input file and calculates their average</p>
-<ul class="simple">
-<li><p>input: filename</p></li>
-<li><p>use: for_ex7_data1.txt</p></li>
-<li><p>use: for_ex7_data2.txt</p></li>
-<li><p>use: for_ex7_data3.txt</p></li>
-<li><p>Use a list to read the values in to and then use sum and len to calculate the average.</p></li>
-<li><p>Be careful about empty rows!</p></li>
-<li><p>Be careful about non-numbers!</p></li>
-</ul>
-</div>
-<div class="section" id="exercise-8">
-<h2>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">¶</a></h2>
-<p>Write a function simulates a coin toss</p>
-<ul class="simple">
-<li><p>Input: number of simulation</p></li>
-<li><p>Output: a string that concatenates the results, ex. ‘HHHTTTHTHTHT’</p></li>
-</ul>
-</div>
-<div class="section" id="exercise-9">
-<h2>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that uses the output from the
-coin_toss function and calculates the probability of H and T
-Input: number of simulation
-Output: probability of H and T</p>
-</div>
-<div class="section" id="exercise-10">
-<h2>Exercise 10<a class="headerlink" href="#exercise-10" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that simulates coin_toss_probability for a given number of times and calculates the average of H and T
-Input: number of simulations
-Input: number of coin tosses
-Output: average probability</p>
-</div>
-<div class="section" id="exercise-11">
-<h2>Exercise 11<a class="headerlink" href="#exercise-11" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that reads a file in which each line has multiple student
-grades and calculates the student average grade
-Print average of each student on screen
-Use list comprehension to convert grades to int
-use: for_ex11_data.txt</p>
-</div>
-<div class="section" id="exercise-12">
-<h2>Exercise 12<a class="headerlink" href="#exercise-12" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that generates a given number of students with a given number of grades and saves them to a file
-inputs: output_filename, number_of_students, number_of_tests, test_score_range(low, high)
-example output:
-student1,93,78,82,83,65
-student2,86,76,85,86,65
-student3,70,98,88,80,93
-student4,89,68,81,80,76
-student5,99,67,100,83,68
-student6,75,77,69,72,76
-student7,67,93,90,92,66
-student8,89,83,90,97,91
-student9,92,84,75,92,92
-student10,65,89,80,68,89</p>
 </div>
 </div>
 
@@ -639,17 +579,17 @@ student10,65,89,80,68,89</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../loops.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="while_loop_exercises.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Loops</p>
+            <p class="prev-next-title">While Loop Exercises</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="for_loop_exercises_solution.html" title="next page">
+    <a class='right-next' id="next-link" href="modify_loop_exercises.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">For Loop Exercises</p>
+        <p class="prev-next-title">Modify Loop Exercises</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
