@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lambda, Filter, Map, and Sorted &#8212; EAS503</title>
+    <title>Lambda, Filter, Map, and Sorted Solutions &#8212; EAS503</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lambda, Filter, Map, and Sorted Solutions" href="exercises_solution.html" />
-    <link rel="prev" title="Lambda, Filter, Map, and Sorted" href="../lambda.html" />
+    <link rel="next" title="Style Guide" href="../style.html" />
+    <link rel="prev" title="Lambda, Filter, Map, and Sorted" href="exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -274,13 +274,13 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises.html">
      Lambda, Filter, Map, and Sorted
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercises_solution.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Lambda, Filter, Map, and Sorted Solutions
     </a>
    </li>
@@ -339,7 +339,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/lambda_exercises/exercises.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/lambda_exercises/exercises_solution.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -384,7 +384,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Lambda, Filter, Map, and Sorted
+   Lambda, Filter, Map, and Sorted Solutions
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -466,7 +466,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lambda, Filter, Map, and Sorted</h1>
+                <h1>Lambda, Filter, Map, and Sorted Solutions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -478,7 +478,7 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Lambda, Filter, Map, and Sorted
+   Lambda, Filter, Map, and Sorted Solutions
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -559,20 +559,39 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lambda-filter-map-and-sorted">
-<h1>Lambda, Filter, Map, and Sorted<a class="headerlink" href="#lambda-filter-map-and-sorted" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lambda-filter-map-and-sorted-solutions">
+<h1>Lambda, Filter, Map, and Sorted Solutions<a class="headerlink" href="#lambda-filter-map-and-sorted-solutions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="exercise-1">
 <h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h2>
 <p>Write a function that squares a number and returns the value.
 Write it again again using Lambda functions</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num</span> <span class="o">*</span> <span class="n">num</span>
+
+<span class="n">square2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">num</span><span class="p">:</span> <span class="n">num</span> <span class="o">*</span> <span class="n">num</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">square2</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-2">
 <h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h2>
 <p>Write a lambda function for adding two numbers</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-3">
 <h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h2>
 <p>Write a lambda function that multiples two numbers. Use the lambda function as an input to another function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="k">def</span> <span class="nf">lambda_test</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">function</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lambda_test</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-4">
 <h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h2>
@@ -582,7 +601,34 @@ Write it again again using Lambda functions</p>
 <li><p>Use lambda with map to double a list</p></li>
 </ol>
 <p>map objects are a generator. How many times can you iterate over them?</p>
-<p>my_list = [2, 3, 4]</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># double this list</span>
+
+<span class="c1"># method 1 - define a square function</span>
+
+<span class="k">def</span> <span class="nf">square_list</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+    <span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+        <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ele</span> <span class="o">*</span> <span class="n">ele</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">new_list</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">square_list</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
+
+<span class="c1"># method 2 - list comprehension</span>
+
+<span class="nb">print</span><span class="p">([</span><span class="n">ele</span><span class="o">*</span><span class="n">ele</span> <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">])</span>
+
+<span class="c1"># method 3 - use lambda with map</span>
+<span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">variables</span> <span class="p">(</span><span class="n">comma</span> <span class="n">separated</span><span class="p">):</span> <span class="n">expression</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">ele</span><span class="p">:</span> <span class="n">ele</span><span class="o">*</span><span class="n">ele</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)))</span>
+
+
+<span class="c1"># map objects are a generator. How many times can you iterate over them?</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-5">
 <h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h2>
@@ -593,6 +639,24 @@ Write it again again using Lambda functions</p>
 <li><p>using lambda and map</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;jane&#39;</span><span class="p">,</span> <span class="s1">&#39;doe&#39;</span><span class="p">]</span>
+<span class="c1"># make upper case</span>
+
+
+<span class="c1"># method 1 create new list and loop</span>
+<span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">:</span>
+    <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">student</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">new_list</span><span class="p">)</span>
+
+<span class="c1"># method 2 -- use list comprehension</span>
+
+<span class="nb">print</span><span class="p">([</span><span class="n">student</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">+</span><span class="n">student</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">])</span>
+
+<span class="c1"># method 3 -- use lambda</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">student</span><span class="p">:</span> <span class="n">student</span><span class="o">.</span><span class="n">title</span><span class="p">(),</span> <span class="n">students</span><span class="p">)))</span>
+
 </pre></div>
 </div>
 </div>
@@ -603,7 +667,13 @@ Write it again again using Lambda functions</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="covert-each-value-to-float">
 <h1>covert each value to float<a class="headerlink" href="#covert-each-value-to-float" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;34.4&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;45.3&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;73.4&#39;</span><span class="p">}]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># covert each value to float</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;34.4&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;45.3&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;73.4&#39;</span><span class="p">}]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">ele</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">ele</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">])},</span> <span class="n">my_dict</span><span class="p">)))</span>
+
+
 </pre></div>
 </div>
 <div class="section" id="exercise-7">
@@ -614,12 +684,61 @@ value is True/False if the year is a leap year</p>
 <li><p>using a loop and dict</p></li>
 <li><p>using filter without a function</p></li>
 </ol>
-<p>years = range(1970, 2000) # for these years</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">years</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span> <span class="c1"># for these years</span>
+
+
+
+<span class="k">def</span> <span class="nf">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
+    <span class="c1"># does not work for century year</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">leap_years</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
+    <span class="n">my_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">year</span><span class="p">:</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">)})</span>
+    <span class="k">if</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
+        <span class="n">leap_years</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">leap_years</span><span class="p">)</span>
+
+<span class="c1"># filter(function, sequence)</span>
+
+<span class="n">leap_year_lambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">year</span><span class="p">:</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> 
+
+<span class="nb">filter</span><span class="p">(</span><span class="n">leap_year_lambda</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">2000</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">year</span><span class="p">:</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">2000</span><span class="p">))))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">year</span><span class="p">:</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">2000</span><span class="p">))))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">year</span><span class="p">:</span> <span class="n">year</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">year</span><span class="p">:</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)))))</span>
+
+<span class="c1"># # combining map with filter</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">year</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> is a leap year!&#39;</span><span class="p">,</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">year</span><span class="p">:</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">2000</span><span class="p">))</span> <span class="p">)))</span>
+
+
+<span class="c1"># # list comprehension</span>
+
+<span class="c1"># print()</span>
+<span class="nb">print</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1"> is a leap year&#39;</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span> <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span>
+
+</pre></div>
+</div>
 </div>
 <div class="section" id="exercise-8">
 <h2>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">¶</a></h2>
 <p>Sort <code class="docutils literal notranslate"><span class="pre">x</span></code> using value</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;efg&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;hij&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="c1"># does work</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">ele</span><span class="p">:</span> <span class="n">ele</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+
 </pre></div>
 </div>
 </div>
@@ -632,6 +751,12 @@ value is True/False if the year is a leap year</p>
     <span class="p">{</span><span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;doe&#39;</span><span class="p">,</span> <span class="s1">&#39;grade&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;grade&#39;</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Kelly&#39;</span><span class="p">}</span>
 <span class="p">]</span>
+
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">student</span><span class="p">:</span> <span class="n">student</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">student</span><span class="p">:</span> <span class="n">student</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
 </pre></div>
 </div>
 </div>
@@ -644,6 +769,11 @@ value is True/False if the year is a leap year</p>
     <span class="p">{</span><span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;doe&#39;</span><span class="p">,</span> <span class="s1">&#39;grade&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;grade&#39;</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Kelly&#39;</span><span class="p">}</span>
 <span class="p">]</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">student</span><span class="p">:</span> <span class="n">student</span><span class="p">[</span><span class="s1">&#39;grade&#39;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">student</span><span class="p">:</span> <span class="n">student</span><span class="p">[</span><span class="s1">&#39;grade&#39;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -651,6 +781,9 @@ value is True/False if the year is a leap year</p>
 <h2>Exercise 11<a class="headerlink" href="#exercise-11" title="Permalink to this headline">¶</a></h2>
 <p>Sort array by len of names</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;Janette&#39;</span><span class="p">,</span> <span class="s1">&#39;doe&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">students</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">student</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">student</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">student</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">student</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -658,6 +791,7 @@ value is True/False if the year is a leap year</p>
 <h2>Exercise 12<a class="headerlink" href="#exercise-12" title="Permalink to this headline">¶</a></h2>
 <p>Sort dictionary by value</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;34.4&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;45.3&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;73.4&#39;</span><span class="p">}]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">ele</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">ele</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">])))</span>
 </pre></div>
 </div>
 </div>
@@ -688,17 +822,17 @@ value is True/False if the year is a leap year</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../lambda.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="exercises.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Lambda, Filter, Map, and Sorted</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="exercises_solution.html" title="next page">
+    <a class='right-next' id="next-link" href="../style.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lambda, Filter, Map, and Sorted Solutions</p>
+        <p class="prev-next-title">Style Guide</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
