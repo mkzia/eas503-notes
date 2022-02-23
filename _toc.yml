@@ -25,19 +25,27 @@ parts:
     - file: conditional_exercises/exercises
     - file: conditional_exercises/exercises_solution
   - file: list_tuples
-   
+  - file: loops
+    sections:
+    - file: loop_exercises/for_loop_exercises
+    - file: loop_exercises/for_loop_exercises_solution
+    - file: loop_exercises/while_loop_exercises
+    - file: loop_exercises/while_loop_exercises_solution
+    - file: loop_exercises/modify_loop_exercises
+    - file: loop_exercises/modify_loop_exercises_solution
+  - file: list_comprehension
+    sections:
+    - file: list_comprehension_exercises/exercises
+    - file: list_comprehension_exercises/exercises_solution
+  - file: sets_dictionaries
+    sections:
+    - file: set_dictionary_exercises/exercises
+    - file: set_dictionary_exercises/exercises_solution
+  - file: lambda
+    sections:
+    - file: lambda_exercises/exercises
+    - file: lambda_exercises/exercises_solution
+     
 - caption: Style Guide
   chapters:
   - file: style
-
-
-# - caption: Database
-#   chapters:
-
-
-
-# - caption: Visualization
-#   chapters:
-
-# - caption: Machine Learning
-#   chapters:
