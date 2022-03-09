@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Functions" href="functions.html" />
+    <link rel="next" title="Functions" href="functions_pt1.html" />
     <link rel="prev" title="Introduction" href="introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -125,7 +125,7 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="functions.html">
+  <a class="reference internal" href="functions_pt1.html">
    Functions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -260,7 +260,7 @@
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="sets_dictionaries.html">
+  <a class="reference internal" href="set_dictionary.html">
    Sets and Dictionaries
   </a>
  </li>
@@ -285,6 +285,16 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="errors.html">
+   Errors and Exception Handling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions_pt2.html">
+   Functions Revisited
+  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -396,32 +406,7 @@
   <a class="reference internal nav-link" href="#operators">
    Operators
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operator-notes">
-   Operator Notes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numbers">
-   Numbers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operator-precedence">
-   Operator Precedence
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-large-numbers">
-   Working with large numbers
-  </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#identifiers-naming-variables-in-python-remembering-values">
-     Identifiers, Naming Variables in Python, Remembering Values
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#working-with-variables">
      Working with Variables
@@ -463,32 +448,7 @@
   <a class="reference internal nav-link" href="#operators">
    Operators
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operator-notes">
-   Operator Notes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numbers">
-   Numbers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#operator-precedence">
-   Operator Precedence
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-large-numbers">
-   Working with large numbers
-  </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#identifiers-naming-variables-in-python-remembering-values">
-     Identifiers, Naming Variables in Python, Remembering Values
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#working-with-variables">
      Working with Variables
@@ -564,154 +524,121 @@ expression, 2 is also called an operand, i.e., the data that is manipulated (Wik
 </div>
 </li>
 </ul>
-<div class="highlight-warning notranslate"><div class="highlight"><pre><span></span>- Be careful about using `//` and `%` with negative operands. 
-- Python takes the floor of the result of an integer division (`//`). 
-  ```python
-  &gt;&gt;&gt; -17 // 10
-  -2
-  ```
-
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li><p>Be careful about using <code class="docutils literal notranslate"><span class="pre">//</span></code> and <code class="docutils literal notranslate"><span class="pre">%</span></code> with negative operands.</p></li>
+<li><p>Python takes the floor of the result of an integer division (<code class="docutils literal notranslate"><span class="pre">//</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">-</span><span class="mi">17</span> <span class="o">//</span> <span class="mi">10</span>
+<span class="go">-2</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 - For the modulo operator, the sign of the result matches the sign of the divisors (the second operand)
   ```python
   &gt;&gt;&gt; -17 % 10
   3 
   &gt;&gt;&gt; 17 % 10
   -3 
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- The aforementioned seven operators are called `binary` operators because they have two operands. 
+- Negation is a `unary operator` because it applies to only one operand:
+  ```python
+  &gt;&gt;&gt; -5
+  5
+  &gt;&gt;&gt; --5
+  5
+  &gt;&gt;&gt; ---5
+  -5
   ```
-</pre></div>
-</div>
-<ul>
-<li><p>The aforementioned seven operators are called <code class="docutils literal notranslate"><span class="pre">binary</span></code> operators because they have two operands.</p></li>
-<li><p>Negation is a <code class="docutils literal notranslate"><span class="pre">unary</span> <span class="pre">operator</span></code> because it applies to only one operand:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">-</span><span class="mi">5</span>
-<span class="go">5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="o">--</span><span class="mi">5</span>
-<span class="go">5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="o">---</span><span class="mi">5</span>
-<span class="go">-5</span>
-</pre></div>
-</div>
-</li>
-</ul>
-</div>
-<div class="section" id="operator-notes">
-<h2>Operator Notes<a class="headerlink" href="#operator-notes" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">3/4</span></code> is a float in Python! Other languages would cut off the decimal</p></li>
-<li><p>By default division (<code class="docutils literal notranslate"><span class="pre">/</span></code>) results in a float. Put another way, when an expression’s operands are an <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code>, Python automatically
-converts the <code class="docutils literal notranslate"><span class="pre">int</span></code> to a <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">17.0</span> <span class="o">-</span> <span class="mi">10</span>
-<span class="go">7.0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">-</span> <span class="mf">10.0</span>
-<span class="go">7.0</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Note: You can leave out <code class="docutils literal notranslate"><span class="pre">0</span></code> after the decimal, e.g., <code class="docutils literal notranslate"><span class="pre">10.</span></code>, but this is considered bad style.</p></li>
-</ul>
-</div>
-<div class="section" id="numbers">
-<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p>Python has the following number data types:</p>
-<ul class="simple">
-<li><p>int - whole number, positive or negative, unlimited</p></li>
-<li><p>float - number with decimals, positive or negative</p></li>
-<li><p>complex - <code class="docutils literal notranslate"><span class="pre">7+3j</span></code></p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> vs <code class="docutils literal notranslate"><span class="pre">float</span></code></p>
-<ul class="simple">
-<li><p>Stored differently</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> take up a set amount of space. <code class="docutils literal notranslate"><span class="pre">int</span></code> take up variable amount of space.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> are stored as <code class="docutils literal notranslate"><span class="pre">bignum</span></code> data type behind the scenes.</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">24</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="mi">32</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">130</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="mi">44</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Both <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code> can store positive and negative numbers</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type()</span></code> – used to figure out which type of data type it is</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> can only represent approximations to real numbers</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">2/3</span></code> vs <code class="docutils literal notranslate"><span class="pre">1/3</span></code></p></li>
-</ul>
-</li>
-<li><p>If you do not need fraction values, use int.</p></li>
-</ul>
-</div>
-<div class="section" id="operator-precedence">
-<h2>Operator Precedence<a class="headerlink" href="#operator-precedence" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>PEMDAS - use parenthesis to manipulate the order in which things are calculated</p>
-<ul>
-<li><p>what is <code class="docutils literal notranslate"><span class="pre">8/2(2+2)</span></code>?</p></li>
-</ul>
-</li>
-<li><p>Precedence</p>
-<ul>
-<li><p>Parenthesis</p></li>
-<li><p>Exponentiation</p></li>
-<li><p>Negation</p></li>
-<li><p>Multiplication, division, integer division, and remainder</p></li>
-<li><p>Addition and subtraction</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">212</span> <span class="pre">-</span> <span class="pre">32</span> <span class="pre">*</span> <span class="pre">5</span> <span class="pre">/</span> <span class="pre">9</span></code> What is wrong with this expression?</p></li>
-</ul>
-</div>
-<div class="section" id="working-with-large-numbers">
-<h2>Working with large numbers<a class="headerlink" href="#working-with-large-numbers" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">10000000000</span> <span class="pre">+</span> <span class="pre">0.00000000001</span></code></p></li>
-<li><p>The result should have twenty zeros between the first and last significant digit, but
+
+## Operator Notes
+
+- `3/4` is a float in Python! Other languages would cut off the decimal
+- By default division (`/`) results in a float. Put another way, when an expression&#39;s operands are an `int` and `float`, Python automatically
+converts the `int` to a `float`. 
+
+```python
+&gt;&gt;&gt; 17.0 - 10
+7.0
+&gt;&gt;&gt; 17 - 10.0
+7.0
+```
+
+- Note: You can leave out `0` after the decimal, e.g., `10.`, but this is considered bad style. 
+## Numbers
+
+- Python has the following number data types:
+  - int - whole number, positive or negative, unlimited
+  - float - number with decimals, positive or negative
+  - complex - `7+3j`
+- `int` vs `float`
+  - Stored differently
+  - `float` take up a set amount of space. `int` take up variable amount of space. 
+  - `int` are stored as `bignum` data type behind the scenes. 
+  
+  ```python
+  import sys
+  sys.getsizeof(2.0)
+  Out[3]: 24
+  sys.getsizeof(2**30)
+  Out[4]: 32
+  sys.getsizeof(2**130)
+  Out[6]: 44
+  ```
+
+  - Both `int` and `float` can store positive and negative numbers
+  - `type()` -- used to figure out which type of data type it is
+- `float` can only represent approximations to real numbers
+  - `2/3` vs `1/3`
+- If you do not need fraction values, use int.
+
+## Operator Precedence
+
+- PEMDAS - use parenthesis to manipulate the order in which things are calculated 
+  - what is `8/2(2+2)`?
+- Precedence
+  - Parenthesis
+  - Exponentiation
+  - Negation
+  - Multiplication, division, integer division, and remainder
+  - Addition and subtraction
+- `212 - 32 * 5 / 9` What is wrong with this expression?
+
+## Working with large numbers
+- `10000000000 + 0.00000000001`
+- The result should have twenty zeros between the first and last significant digit, but
 that is too many for the computer to store, so the result is just 10000000000—it’s as if
 the addition never took place. Adding lots of small numbers to a large one can
 therefore have no effect at all, which is not what a bank wants when it totals up the
-values of its customers’ savings accounts.</p></li>
-<li><p>If you have to add up floating-point numbers, add them from smallest to largest in order to minimize the error.</p></li>
-<li><p>Better yet, use a specialized library (<a class="reference external" href="https://mpmath.org/">https://mpmath.org/</a>) or (<a class="reference external" href="https://github.com/mdickinson/bigfloat">https://github.com/mdickinson/bigfloat</a>)</p></li>
-</ul>
-<div class="section" id="identifiers-naming-variables-in-python-remembering-values">
-<h3>Identifiers, Naming Variables in Python, Remembering Values<a class="headerlink" href="#identifiers-naming-variables-in-python-remembering-values" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p>Variables give names to values (number, string, or boolean); Technically they are called identifiers. They are a container of information that a computer program will manipulate using a sequence of instructions.</p></li>
-<li><p>Variables names MUST follow certain rules and it is BEST to follow Python guidelines for naming</p></li>
-<li><p>Restrictions for identifiers or naming things in Python</p>
-<ol class="simple">
-<li><p>Start with letter or underscore</p></li>
-<li><p>The rest can have letters, underscore, and numbers</p></li>
-<li><p>symbols cannot be used in name (&#64;,+)</p></li>
-<li><p>Don’t use Python keywords or reserved words such as <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
-</ol>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">=</span> <span class="pre">3</span></code> do <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">int</span></code> to restore python keyword</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">=</span> <span class="pre">Yah</span></code> do <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">print</span></code> to restore Python keyword</p></li>
-</ul>
-</li>
-<li><p>Conventions for identifiers or naming things in Python</p>
-<ol class="simple">
-<li><p>use snake_case not camelCase for variable and function names</p></li>
-<li><p>variables should be lowercase</p></li>
-<li><p>upper case are used for constants <code class="docutils literal notranslate"><span class="pre">PI</span> <span class="pre">=</span> <span class="pre">3.14</span></code></p></li>
-<li><p>UpperCamelCase for classes</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">__private__</span></code>  double underscore is convention that means you are not supposed access this variable directly. They are by convention like private variables in other languages.</p></li>
-</ol>
-</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Follow these conventions in your assignments!</p>
-</div>
+values of its customers’ savings accounts.
+- If you have to add up floating-point numbers, add them from smallest to largest in order to minimize the error.
+- Better yet, use a specialized library (https://mpmath.org/) or (https://github.com/mdickinson/bigfloat)
+
+### Identifiers, Naming Variables in Python, Remembering Values
+- Variables give names to values (number, string, or boolean); Technically they are called identifiers. They are a container of information that a computer program will manipulate using a sequence of instructions. 
+- Variables names MUST follow certain rules and it is BEST to follow Python guidelines for naming 
+- Restrictions for identifiers or naming things in Python
+  1. Start with letter or underscore
+  1. The rest can have letters, underscore, and numbers
+  1. symbols cannot be used in name (@,+)
+  1. Don&#39;t use Python keywords or reserved words such as `print`, `str`, `int`, `float`
+    - `int = 3` do `del int` to restore python keyword
+    - `print = Yah` do `del print` to restore Python keyword
+- Conventions for identifiers or naming things in Python
+  1. use snake_case not camelCase for variable and function names
+  1. variables should be lowercase
+  1. upper case are used for constants `PI = 3.14`
+  1. UpperCamelCase for classes
+  1. `__private__`  double underscore is convention that means you are not supposed access this variable directly. They are by convention like private variables in other languages. 
+
+:::{warning}
+Follow these conventions in your assignments!
+</pre></div>
 </div>
 <div class="section" id="working-with-variables">
 <h3>Working with Variables<a class="headerlink" href="#working-with-variables" title="Permalink to this headline">¶</a></h3>
@@ -794,7 +721,7 @@ This is called Dynamic typing. This is different from statically-typed where you
             <p class="prev-next-title">Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="functions.html" title="next page">
+    <a class='right-next' id="next-link" href="functions_pt1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Functions</p>

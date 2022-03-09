@@ -3,8 +3,8 @@
 ## Exercise 1
 Write a Python function that prints the following:
 
-```python
-______________________________
+```
+_____________________________
 Happy birthday to you!!!
 Happy birthday to you!!!
 Happy birthday, dear John
@@ -16,7 +16,7 @@ ______________________________
 ## Exercise 2 
 Write a Python function that prints the following:
 
-```python
+```
 ______________________________
 Happy birthday to you!!!
 Happy birthday to you!!!
@@ -29,7 +29,7 @@ ______________________________
 ## Exercise 3
 Write a Python function that prints the following: 
 
-```python
+```
 Happy birthday to you!!!
 Happy birthday to you!!!
 ```
@@ -38,7 +38,7 @@ Happy birthday to you!!!
 ## Exercise 4a 
 Write a Python function that prints the following using the function from exercise 3. 
 
-```python
+```
 Happy birthday to you!!!
 Happy birthday to you!!!
 Happy birthday, dear John
@@ -49,7 +49,7 @@ Happy birthday to you!!!
 ## Exercise 4b
 Repeat 4a for Jane
 
-```python
+```
 Happy birthday to you!!!
 Happy birthday to you!!!
 Happy birthday, dear Jane
@@ -61,7 +61,7 @@ Happy birthday to you!!!
 ## Exercise 5
 Write a function called print_happy_birthday_name that takes the name as an parameter to the function. 
 
-```python
+```
 Happy birthday, dear <Name>
 ```
 
