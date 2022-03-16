@@ -132,6 +132,32 @@ x_lst
 id(x_lst[1])
 ```
 
+
+## Memory Models
+
+```python
+original = ['H', 'He', 'Li']
+final = original + ['Be']
+```
+
+![list](concat.png)
+
+
+```Python
+life​​ ​​=​​ ​​[[​​'Canada'​​,​​ ​​76.5],​​ ​​[​​'United States'​​,​​ ​​75.5],​​ ​​[​​'Mexico'​​,​​ ​​72.0]]​
+```
+
+![list](nested_lists.png)
+
+
+```python
+life​​ ​​=​​ ​​[[​​'Canada'​​,​​ ​​76.5],​​ ​​[​​'United States'​​,​​ ​​75.5],​​ ​​[​​'Mexico'​​,​​ ​​72.0]]​
+​​canada​​ ​​=​​ ​​life[0]​
+```
+
+![list](sublist_alias.png)
+
+
 ### Scope Example 1
 
 ```python
@@ -191,7 +217,7 @@ def function2(my_list, my_vairable):
 
 def function3():
 	my_list = [1, 2, 3, 4]
-	my_variable = 0def function2(my_list, my_vairable):
+	my_variable = function2(my_list, my_vairable):
 	# https://stackoverflow.com/questions/2612802/how-to-clone-or-copy-a-list
 
 	my_list = my_list[:]
@@ -211,8 +237,6 @@ def function3():
 
 	print('my_list after change2 inside function3', my_list)
 	print('my_variable after change2 inside function3', my_variable)
-
-
 
 function3()
 ```

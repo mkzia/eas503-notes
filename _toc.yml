@@ -47,6 +47,8 @@ parts:
     - file: lambda_exercises/exercises_solution
   - file: errors
   - file: functions_pt2
+  - file: oop
+  - file: misc_topics
      
 - caption: Style Guide
   chapters:
