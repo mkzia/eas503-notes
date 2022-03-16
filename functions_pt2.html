@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Style Guide" href="style.html" />
+    <link rel="next" title="Object-Oriented Programming" href="oop.html" />
     <link rel="prev" title="Errors and Exception Handling" href="errors.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -296,6 +296,16 @@
    Functions Revisited
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="oop.html">
+   Object-Oriented Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="misc_topics.html">
+   Miscellaneous Topics
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -418,6 +428,11 @@
   <a class="reference internal nav-link" href="#function-scope">
    Function Scope
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memory-models">
+   Memory Models
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#scope-example-1">
@@ -476,6 +491,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#function-scope">
    Function Scope
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memory-models">
+   Memory Models
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -627,6 +647,23 @@ is important for performance. Function often manipulate large objects–frequenc
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">x_lst</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="memory-models">
+<h2>Memory Models<a class="headerlink" href="#memory-models" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">original</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;He&#39;</span><span class="p">,</span> <span class="s1">&#39;Li&#39;</span><span class="p">]</span>
+<span class="n">final</span> <span class="o">=</span> <span class="n">original</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Be&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><img alt="list" src="_images/concat.png" /></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>life​​ ​​=​​ ​​[[​​&#39;Canada&#39;​​,​​ ​​76.5],​​ ​​[​​&#39;United States&#39;​​,​​ ​​75.5],​​ ​​[​​&#39;Mexico&#39;​​,​​ ​​72.0]]​
+</pre></div>
+</div>
+<p><img alt="list" src="_images/nested_lists.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>life​​ ​​=​​ ​​[[​​&#39;Canada&#39;​​,​​ ​​76.5],​​ ​​[​​&#39;United States&#39;​​,​​ ​​75.5],​​ ​​[​​&#39;Mexico&#39;​​,​​ ​​72.0]]​
+​​canada​​ ​​=​​ ​​life[0]​
+</pre></div>
+</div>
+<p><img alt="list" src="_images/sublist_alias.png" /></p>
 <div class="section" id="scope-example-1">
 <h3>Scope Example 1<a class="headerlink" href="#scope-example-1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
@@ -686,7 +723,7 @@ is important for performance. Function often manipulate large objects–frequenc
 
 <span class="k">def</span> <span class="nf">function3</span><span class="p">():</span>
 	<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-	<span class="n">my_variable</span> <span class="o">=</span> <span class="mi">0</span><span class="k">def</span> <span class="nf">function2</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">my_vairable</span><span class="p">):</span>
+	<span class="n">my_variable</span> <span class="o">=</span> <span class="n">function2</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">my_vairable</span><span class="p">):</span>
 	<span class="c1"># https://stackoverflow.com/questions/2612802/how-to-clone-or-copy-a-list</span>
 
 	<span class="n">my_list</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[:]</span>
@@ -706,8 +743,6 @@ is important for performance. Function often manipulate large objects–frequenc
 
 	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;my_list after change2 inside function3&#39;</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>
 	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;my_variable after change2 inside function3&#39;</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">)</span>
-
-
 
 <span class="n">function3</span><span class="p">()</span>
 </pre></div>
@@ -748,10 +783,10 @@ is important for performance. Function often manipulate large objects–frequenc
             <p class="prev-next-title">Errors and Exception Handling</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="style.html" title="next page">
+    <a class='right-next' id="next-link" href="oop.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Style Guide</p>
+        <p class="prev-next-title">Object-Oriented Programming</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

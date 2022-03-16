@@ -1,0 +1,1723 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object-Oriented Programming &#8212; EAS503</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Miscellaneous Topics" href="misc_topics.html" />
+    <link rel="prev" title="Functions Revisited" href="functions_pt2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/ub.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EAS503</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   EAS 503
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Course Information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="information.html">
+   Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="basics.html">
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="functions_pt1.html">
+   Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="function_exercises/exercises.html">
+     Function Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="function_exercises/exercises_solution.html">
+     Function Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="strings.html">
+   Strings
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="string_exercises/exercises.html">
+     String Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="string_exercises/exercises_solution.html">
+     String Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="conditionals.html">
+   Conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditional_exercises/exercises.html">
+     Conditional Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditional_exercises/exercises_solution.html">
+     Conditional Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="list_tuples.html">
+   Lists and Tuples
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="loops.html">
+   Loops
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/for_loop_exercises.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/for_loop_exercises_solution.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/while_loop_exercises.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/while_loop_exercises_solution.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/modify_loop_exercises.html">
+     Modify Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/modify_loop_exercises_solution.html">
+     Modify Loop Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="list_comprehension.html">
+   List comprehension
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="list_comprehension_exercises/exercises.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="list_comprehension_exercises/exercises_solution.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="set_dictionary.html">
+   Sets and Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lambda.html">
+   Lambda, Filter, Map, and Sorted
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lambda_exercises/exercises.html">
+     Lambda, Filter, Map, and Sorted
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lambda_exercises/exercises_solution.html">
+     Lambda, Filter, Map, and Sorted Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="errors.html">
+   Errors and Exception Handling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions_pt2.html">
+   Functions Revisited
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Object-Oriented Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="misc_topics.html">
+   Miscellaneous Topics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Style Guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="style.html">
+   Style Guide
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/oop.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/mkzia/eas503-notes"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-between-procedural-and-object-oriented-programming">
+   Comparison between Procedural and Object-oriented Programming
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procedural-programming-example">
+   Procedural Programming Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-oriented-programming-example">
+   Object-Oriented Programming Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#benefits-of-oop">
+   Benefits of OOP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#thoughts-on-oop">
+   Thoughts on OOP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-building-blocks-to-defining-a-class">
+   Basic Building Blocks to defining a class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     Exercise 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4">
+     Exercise 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-5">
+     Exercise 5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#payroll-system-using-polymorphism">
+   Payroll system using polymorphism
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-overloading">
+   Operator overloading
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#self">
+   Self
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Object-Oriented Programming</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-between-procedural-and-object-oriented-programming">
+   Comparison between Procedural and Object-oriented Programming
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procedural-programming-example">
+   Procedural Programming Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#object-oriented-programming-example">
+   Object-Oriented Programming Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#benefits-of-oop">
+   Benefits of OOP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#thoughts-on-oop">
+   Thoughts on OOP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-building-blocks-to-defining-a-class">
+   Basic Building Blocks to defining a class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     Exercise 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     Exercise 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4">
+     Exercise 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-5">
+     Exercise 5
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#payroll-system-using-polymorphism">
+   Payroll system using polymorphism
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-overloading">
+   Operator overloading
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#self">
+   Self
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="object-oriented-programming">
+<h1>Object-Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>We know how to store various data in Python using various data types</p></li>
+<li><p>We also know how to define functions that manipulate
+or operate on that data.</p></li>
+<li><p>Object-oriented programming allows us to define
+the data and functions in one place.</p></li>
+</ul>
+<div class="section" id="comparison-between-procedural-and-object-oriented-programming">
+<h2>Comparison between Procedural and Object-oriented Programming<a class="headerlink" href="#comparison-between-procedural-and-object-oriented-programming" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Procedural programming:</p>
+<ul>
+<li><p>We write a list of nouns (data)</p></li>
+<li><p>We also have a separate list of verbs (functions)</p></li>
+<li><p>We leave it up to the programmer to figure out which
+data goes with with function</p></li>
+</ul>
+</li>
+<li><p>Object-oriented programming:</p>
+<ul>
+<li><p>We define an object which contains both the nouns (data) and verbs (functions) that manipulate that data.</p></li>
+<li><p>Data –&gt; Attribute</p></li>
+<li><p>Function –&gt; Method</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="procedural-programming-example">
+<h2>Procedural Programming Example<a class="headerlink" href="#procedural-programming-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># function </span>
+<span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span> 
+  <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="c1"># data</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">92</span> <span class="mi">85</span><span class="p">]</span>
+
+<span class="c1"># User has to know which data to pass into function</span>
+<span class="c1"># to get desired output</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The average score is </span><span class="si">{</span><span class="n">average</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="object-oriented-programming-example">
+<h2>Object-Oriented Programming Example<a class="headerlink" href="#object-oriented-programming-example" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Define a new class that will contain both the
+data and the function to manipulate it.</p></li>
+<li><p>So put the scores list and the average function
+inside a class</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ScoreList</span><span class="p">():</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scores</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">scores</span> <span class="o">=</span> <span class="n">scores</span>
+
+  <span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scores</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scores</span><span class="p">)</span>
+
+<span class="n">scores</span> <span class="o">=</span> <span class="n">ScoreList</span><span class="p">([</span><span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">92</span> <span class="mi">85</span><span class="p">])</span> 
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The final score is </span><span class="si">{</span><span class="n">scores</span><span class="o">.</span><span class="n">average</span><span class="p">()</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>   
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>No difference it the actual calculation, only that the
+code is organized differently.</p></li>
+</ul>
+</div>
+<div class="section" id="benefits-of-oop">
+<h2>Benefits of OOP<a class="headerlink" href="#benefits-of-oop" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>We can organize our code into distinct objects, so each object handles storing and manipulating the data.</p></li>
+<li><p>We can create hierarchies of classes where each child
+inherits from its parent class attributes and methods, reducing code repetition and improves code maintainability.</p></li>
+</ul>
+</div>
+<div class="section" id="thoughts-on-oop">
+<h2>Thoughts on OOP<a class="headerlink" href="#thoughts-on-oop" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>In Python everything is an object, which means every entity has some attributes and associated functionality called methods. This means that <code class="docutils literal notranslate"><span class="pre">str</span></code> and <code class="docutils literal notranslate"><span class="pre">dict</span></code> are classes that know how to store data and how to operate on them.</p></li>
+<li><p>Do not overdo OOP. It is possible to create a very large object which then basically functions like a procedural system disguised as an object-oriented one.</p></li>
+</ul>
+</div>
+<div class="section" id="basic-building-blocks-to-defining-a-class">
+<h2>Basic Building Blocks to defining a class<a class="headerlink" href="#basic-building-blocks-to-defining-a-class" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span></code> - keyword to indicate that you are creating/defining a class; example <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">ScoreList</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code> - a method that is invoked automatically
+when an instance of a class is created. Class is analogous to a blue print and an object is an instance
+of a class with its own separate data from other objects (attributes/data), but shared functionality (methods/functions).</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">pass</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__repr__</span></code> - a method that returns a string containing
+an object’s printed representation.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;some string &gt;&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">super()</span></code> - used to invoke parent class’s methods</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataclasses.dataclass</span></code> - new in Python 3.7, a convenient way add common things to <code class="docutils literal notranslate"><span class="pre">__init__</span></code> and reduce redundancy.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">InventoryItem</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class for keeping track of an item in inventory.&quot;&quot;&quot;</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">unit_price</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">quantity_on_hand</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">total_cost</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit_price</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantity_on_hand</span>
+
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">unit_price</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">quantity_on_hand</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">unit_price</span> <span class="o">=</span> <span class="n">unit_price</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">quantity_on_hand</span> <span class="o">=</span> <span class="n">quantity_on_hand</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="k">def</span> <span class="nf">get_email</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">email</span>
+
+    <span class="k">def</span> <span class="nf">get_full_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="n">program</span>
+
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="n">PROGRAMS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;graduate&#39;</span><span class="p">,</span> <span class="s1">&#39;undergraduate&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">program</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">PROGRAMS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;program can only be &quot;graduate&quot; or &quot;undergraduate&quot;&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="n">program</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">classes</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+    <span class="k">def</span> <span class="nf">enroll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name_of_course</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name_of_course</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">print_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">classes</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">classes</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;doe&#39;</span><span class="p">,</span> <span class="s1">&#39;jdoe@example.edu&#39;</span><span class="p">,</span> <span class="s1">&#39;gradUate&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="s1">&#39;efg&#39;</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="s1">&#39;hij&#39;</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">print_classes</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="n">PROGRAMS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;graduate&#39;</span><span class="p">,</span> <span class="s1">&#39;undergraduate&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">program</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">PROGRAMS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;program can only be &quot;graduate&quot; or &quot;undergraduate&quot;&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="n">program</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">classes</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+    <span class="k">def</span> <span class="nf">enroll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name_of_course</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">name_of_course</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name_of_course</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Already enrolled in </span><span class="si">{</span><span class="n">name_of_course</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_full_name</span><span class="p">()</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">print_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">classes</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">classes</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">print_self</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;doe&#39;</span><span class="p">,</span> <span class="s1">&#39;jdoe@example.edu&#39;</span><span class="p">,</span> <span class="s1">&#39;graduate&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="s1">&#39;efg&#39;</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="s1">&#39;hij&#39;</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">print_classes</span><span class="p">()</span>
+
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Course</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">course_name</span><span class="p">,</span> <span class="n">credits</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">course_name</span> <span class="o">=</span> <span class="n">course_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">credits</span> <span class="o">=</span> <span class="n">credits</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">course_name</span><span class="si">}</span><span class="s1">&#39;</span>
+
+
+    <span class="k">def</span> <span class="nf">get_course_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">course_name</span>
+
+
+
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="n">PROGRAMS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;graduate&#39;</span><span class="p">,</span> <span class="s1">&#39;undergraduate&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">program</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">PROGRAMS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;program can only be &quot;graduate&quot; or &quot;undergraduate&quot;&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="n">program</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">classes</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+    <span class="k">def</span> <span class="nf">enroll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">course</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">course</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Already enrolled in </span><span class="si">{</span><span class="n">course</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">print_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">classes</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="n">i</span><span class="o">.</span><span class="n">course_name</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">classes</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;Physics&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">c3</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;Chemistry&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">c4</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;doe&#39;</span><span class="p">,</span> <span class="s1">&#39;jdoe@example.edu&#39;</span><span class="p">,</span> <span class="s1">&#39;graduate&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="n">c3</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="n">c3</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">print_classes</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="n">PROGRAMS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;graduate&#39;</span><span class="p">,</span> <span class="s1">&#39;undergraduate&#39;</span><span class="p">]</span>
+    <span class="n">MAX_CREDITS</span> <span class="o">=</span> <span class="mi">9</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">program</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">PROGRAMS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;program can only be &quot;graduate&quot; or &quot;undergraduate&quot;&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="n">program</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">classes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enrolled_credits</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">enroll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">course</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enrolled_credits</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">MAX_CREDITS</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enrolled_credits</span> <span class="o">+=</span> <span class="n">course</span><span class="o">.</span><span class="n">credits</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cannot enroll&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_total_credits</span><span class="p">()</span> <span class="o">+</span> <span class="n">course</span><span class="o">.</span><span class="n">credits</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">MAX_CREDITS</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You will be over the max credits! Cannot add </span><span class="si">{</span><span class="n">course</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="n">course</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Already enrolled in </span><span class="si">{</span><span class="n">course</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">print_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">classes</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="n">i</span><span class="o">.</span><span class="n">course_name</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">classes</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">get_total_credits</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">total_credits</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">classes</span><span class="p">:</span>
+            <span class="n">total_credits</span> <span class="o">+=</span> <span class="n">ele</span><span class="o">.</span><span class="n">credits</span>
+        <span class="k">return</span> <span class="n">total_credits</span>
+
+<span class="k">class</span> <span class="nc">Course</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">course_name</span><span class="p">,</span> <span class="n">credits</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">course_name</span> <span class="o">=</span> <span class="n">course_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">credits</span> <span class="o">=</span> <span class="n">credits</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">course_name</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">course_name</span><span class="si">}</span><span class="s1">&#39;</span>
+
+
+    <span class="k">def</span> <span class="nf">get_course_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">course_name</span>
+
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;Math&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;Physics&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">c3</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;Chemistry&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">c4</span> <span class="o">=</span> <span class="n">Course</span><span class="p">(</span><span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;doe&#39;</span><span class="p">,</span> <span class="s1">&#39;jdoe@example.edu&#39;</span><span class="p">,</span> <span class="s1">&#39;graduate&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="n">c3</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="n">c4</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">enroll</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">print_classes</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>first name –&gt; first_name (variables and Functions)
+first_name –&gt; FirstName (classes)</p>
+</div>
+<div class="section" id="exercise-1">
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<p>Modify enroll to accept multiple classes!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="n">PROGRAMS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;undergraduate&#39;</span><span class="p">,</span> <span class="s1">&#39;graduate&#39;</span><span class="p">]</span>
+    <span class="n">MAX_CREDITS</span> <span class="o">=</span> <span class="mi">12</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">program</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">PROGRAMS</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Programs can only be </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">PROGRAMS</span><span class="si">}</span><span class="s1">. You entered: </span><span class="si">{</span><span class="n">program</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="n">program</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">courses</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">total_credits</span> <span class="o">=</span> <span class="mi">0</span>
+   
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s1">; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+    <span class="k">def</span> <span class="nf">enroll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">courses</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="n">courses</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">total_credits</span> <span class="o">+</span> <span class="n">course</span><span class="o">.</span><span class="n">credits</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">MAX_CREDITS</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This will put you above 16 Credits&#39;</span><span class="p">)</span>
+                <span class="k">return</span>       
+            <span class="k">if</span> <span class="n">course</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">course_name</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">credits</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">total_credits</span> <span class="o">+=</span> <span class="n">course</span><span class="o">.</span><span class="n">credits</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Already enrolled in </span><span class="si">{</span><span class="n">class_name</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">print_classes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">ele</span><span class="o">.</span><span class="n">course_name</span> <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">courses</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-2">
+<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<p>Write a Beverage class whose instances will
+represent beverages. Each beverage should have
+two attributes: a name (describing the beverage)
+and a temperature. Create several beverages and
+check that their names and temperatures are all
+handled correctly.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Beverage</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span>
+        
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">temp</span><span class="si">}</span><span class="s1">&#39;</span>
+        
+<span class="n">b1</span> <span class="o">=</span> <span class="n">Beverage</span><span class="p">(</span><span class="s1">&#39;Coke&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">Beverage</span><span class="p">(</span><span class="s1">&#39;Pepsi&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">b3</span> <span class="o">=</span> <span class="n">Beverage</span><span class="p">(</span><span class="s1">&#39;7up&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+
+<span class="n">beverages</span> <span class="o">=</span> <span class="p">[</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">b3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">beverage</span> <span class="ow">in</span> <span class="n">beverages</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">beverage</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-3">
+<h3>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+<p>Modify the Beverage class, such that you can create
+a new instance specifying the name,
+and not the temperature.
+If you do this, then the temperature should
+have a default value of 75 degrees Celsius.
+Create several beverages and double-check
+that the temperature has this default when
+not specified.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Beverage</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">temp</span><span class="o">=</span><span class="mi">75</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span>
+        
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">temp</span><span class="si">}</span><span class="s1">&#39;</span>
+        
+<span class="n">b1</span> <span class="o">=</span> <span class="n">Beverage</span><span class="p">(</span><span class="s1">&#39;Coke&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">Beverage</span><span class="p">(</span><span class="s1">&#39;Pepsi&#39;</span><span class="p">)</span>
+<span class="n">b3</span> <span class="o">=</span> <span class="n">Beverage</span><span class="p">(</span><span class="s1">&#39;7up&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+
+<span class="n">beverages</span> <span class="o">=</span> <span class="p">[</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">b3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">beverage</span> <span class="ow">in</span> <span class="n">beverages</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">beverage</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-4">
+<h3>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h3>
+<p>Create a new LogFile class that expects to
+be initialized with a filename.
+Inside of <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, open the file for
+writing and assign it to an attribute, file,
+that sits on the instance. Check that it’s
+possible to write to the file via the file attribute.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Logfile</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="kc">None</span>
+        
+    <span class="k">def</span> <span class="nf">open_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">write_row</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">close_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        
+
+        
+<span class="n">l1</span> <span class="o">=</span> <span class="n">Logfile</span><span class="p">(</span><span class="s1">&#39;log1.txt&#39;</span><span class="p">)</span>
+<span class="n">l1</span><span class="o">.</span><span class="n">open_file</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;efg&#39;</span><span class="p">,</span> <span class="s1">&#39;hij&#39;</span><span class="p">]:</span>
+    <span class="n">l1</span><span class="o">.</span><span class="n">write_row</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    
+<span class="n">l1</span><span class="o">.</span><span class="n">close_file</span><span class="p">()</span>
+
+<span class="n">l2</span> <span class="o">=</span> <span class="n">Logfile</span><span class="p">(</span><span class="s1">&#39;log2.txt&#39;</span><span class="p">)</span>
+<span class="n">l2</span><span class="o">.</span><span class="n">open_file</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ABC&#39;</span><span class="p">,</span> <span class="s1">&#39;EFG&#39;</span><span class="p">,</span> <span class="s1">&#39;DHIJ&#39;</span><span class="p">]:</span>
+    <span class="n">l2</span><span class="o">.</span><span class="n">write_row</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    
+<span class="n">l2</span><span class="o">.</span><span class="n">close_file</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercise-5">
+<h3>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s1">; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_gpa</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">credit_hours</span><span class="p">,</span> <span class="n">q_point</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">credit_hours</span> <span class="o">=</span> <span class="n">credit_hours</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">q_point</span> <span class="o">=</span> <span class="n">q_point</span>
+        
+
+    <span class="k">def</span> <span class="nf">get_gpa</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_point</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">credit_hours</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    
+    
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;data.tsv&#39;</span>
+
+<span class="n">students</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="k">continue</span>
+        
+        <span class="n">name</span><span class="p">,</span> <span class="n">credits</span><span class="p">,</span> <span class="n">q_points</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        
+        <span class="n">student</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">credits</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">q_points</span><span class="p">))</span>
+        <span class="n">students</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="payroll-system-using-polymorphism">
+<h2>Payroll system using polymorphism<a class="headerlink" href="#payroll-system-using-polymorphism" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Employee – Abstract</p>
+<ul>
+<li><p>variables (properties)</p>
+<ul>
+<li><p>lastname</p></li>
+<li><p>firstname</p></li>
+<li><p>social_security_number</p></li>
+</ul>
+</li>
+<li><p>functions (methods)</p>
+<ul>
+<li><p><strong>repr</strong> –</p></li>
+<li><p>earnings() –</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SalariedEmployee – inherits from Employee</p></li>
+<li><p>CommissionEmployee – inherits from Employee</p></li>
+<li><p>HourlyEmployee – inherits from Employee</p></li>
+<li><p>BasePlusCommissionEmployee – inherits from CommissionEmployee</p></li>
+<li><p>Demonstrate polymorphism</p></li>
+</ul>
+<div class="section" id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Java How to Program Deitel et. al</span>
+
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+
+<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">ssn</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ssn</span> <span class="o">=</span> <span class="n">ssn</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">earnings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="se">\n</span><span class="s1">social security: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">ssn</span><span class="si">}</span><span class="s1">&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">SalariedEmployee</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">ssn</span><span class="p">,</span> <span class="n">salary</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">ssn</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weekly_salary</span> <span class="o">=</span> <span class="n">salary</span>
+
+    <span class="k">def</span> <span class="nf">earnings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">weekly_salary</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;salaried employee: </span><span class="si">{</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s1">weekly salary: $</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">weekly_salary</span><span class="si">}</span><span class="s1">&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">HourlyEmployee</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">ssn</span><span class="p">,</span> <span class="n">hourly_wage</span><span class="p">,</span> <span class="n">hours_worked</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">ssn</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hourly_wage</span> <span class="o">=</span> <span class="n">hourly_wage</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hours_worked</span> <span class="o">=</span> <span class="n">hours_worked</span>
+
+    <span class="k">def</span> <span class="nf">earnings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hours_worked</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>  <span class="c1"># no overtime</span>
+            <span class="n">earned</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hourly_wage</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hours_worked</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">earned</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hourly_wage</span> <span class="o">+</span> \
+                <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hours_worked</span> <span class="o">-</span> <span class="mi">40</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hourly_wage</span> <span class="o">*</span> <span class="mf">1.5</span>
+
+        <span class="k">return</span> <span class="n">earned</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;hourly employee: </span><span class="si">{</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s1">hourly wage: $</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">hourly_wage</span><span class="si">}</span><span class="s1">; hours worked: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">hours_worked</span><span class="si">}</span><span class="s1">&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">CommissionEmployee</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">ssn</span><span class="p">,</span> <span class="n">sales</span><span class="p">,</span> <span class="n">rate</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">ssn</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sales</span> <span class="o">=</span> <span class="n">sales</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rate</span> <span class="o">=</span> <span class="n">rate</span>
+
+    <span class="k">def</span> <span class="nf">earnings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">earned</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sales</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rate</span>
+        <span class="k">return</span> <span class="n">earned</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;commission employee: </span><span class="si">{</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s1">gross sales: $</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">sales</span><span class="si">}</span><span class="s1">; commission rate: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rate</span><span class="si">}</span><span class="s1">&#39;</span>
+
+
+<span class="k">class</span> <span class="nc">BasePlusCommissionEmployee</span><span class="p">(</span><span class="n">CommissionEmployee</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">ssn</span><span class="p">,</span> <span class="n">sales</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">salary</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">ssn</span><span class="p">,</span> <span class="n">sales</span><span class="p">,</span> <span class="n">rate</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="o">=</span> <span class="n">salary</span>
+
+    <span class="k">def</span> <span class="nf">earnings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">earned</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="o">+</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">earnings</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">earned</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;base-salaried </span><span class="si">{</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="si">}</span><span class="s1">; base-salary: $</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">salary</span><span class="si">}</span><span class="s1">&#39;</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Employees processed individually:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">salaried_employee</span> <span class="o">=</span> <span class="n">SalariedEmployee</span><span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Smith&#39;</span><span class="p">,</span> <span class="s1">&#39;111-11-1111&#39;</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">salaried_employee</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;earned: $</span><span class="si">{</span><span class="n">salaried_employee</span><span class="o">.</span><span class="n">earnings</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="n">hourly_employee</span> <span class="o">=</span> <span class="n">HourlyEmployee</span><span class="p">(</span><span class="s1">&#39;Karen&#39;</span><span class="p">,</span> <span class="s1">&#39;Price&#39;</span><span class="p">,</span> <span class="s1">&#39;222-22-2222&#39;</span><span class="p">,</span> <span class="mf">16.75</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hourly_employee</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;earned: $</span><span class="si">{</span><span class="n">hourly_employee</span><span class="o">.</span><span class="n">earnings</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="n">commission_employee</span> <span class="o">=</span> <span class="n">CommissionEmployee</span><span class="p">(</span><span class="s1">&#39;Sue&#39;</span><span class="p">,</span> <span class="s1">&#39;Jones&#39;</span><span class="p">,</span> <span class="s1">&#39;333-33-3333&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">commission_employee</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;earned: $</span><span class="si">{</span><span class="n">commission_employee</span><span class="o">.</span><span class="n">earnings</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="n">base_plus_commission_employee</span> <span class="o">=</span> <span class="n">BasePlusCommissionEmployee</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Lewis&#39;</span><span class="p">,</span> <span class="s1">&#39;444-44-4444&#39;</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">base_plus_commission_employee</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;earned: $</span><span class="si">{</span><span class="n">base_plus_commission_employee</span><span class="o">.</span><span class="n">earnings</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="n">employees</span> <span class="o">=</span> <span class="p">[</span><span class="n">salaried_employee</span><span class="p">,</span> <span class="n">hourly_employee</span><span class="p">,</span>
+             <span class="n">commission_employee</span><span class="p">,</span> <span class="n">base_plus_commission_employee</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">employee</span> <span class="ow">in</span> <span class="n">employees</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">employee</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">employee</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;BasePlusCommissionEmployee&#39;</span><span class="p">:</span>
+        <span class="n">employee</span><span class="o">.</span><span class="n">salary</span> <span class="o">=</span> <span class="mf">1.10</span> <span class="o">*</span> <span class="n">employee</span><span class="o">.</span><span class="n">salary</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;new base salary with 10% increase is </span><span class="si">{</span><span class="n">employee</span><span class="o">.</span><span class="n">salary</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;earned: $</span><span class="si">{</span><span class="n">employee</span><span class="o">.</span><span class="n">earnings</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="operator-overloading">
+<h2>Operator overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>We know how to create objects. Now we will learn how to define what +, -, or lte means for an object</p></li>
+<li><p>add</p></li>
+<li><p>gt</p></li>
+<li><p>lt</p></li>
+<li><p>eq</p></li>
+<li><p>iterators <a class="reference external" href="https://www.programiz.com/python-programming/iterator">https://www.programiz.com/python-programming/iterator</a></p></li>
+<li><p>generators <a class="reference external" href="https://www.programiz.com/python-programming/generator">https://www.programiz.com/python-programming/generator</a></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import math
+class Circle:
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    def get_area(self):
+        return math.pi * self.radius**2
+
+
+    def __repr__(self):
+        return &quot;Circle with radius &quot; + str(self.radius)
+    def __str__(self):
+        return &quot;Circle with radius &quot; + str(self.radius)
+
+c1 = Circle(10)
+c2 = Circle(5)
+
+# print(c1)
+# print(c2)
+# print(c2.get_area())
+
+
+# lets does c1 + c2 have any meaning? no
+# https://thepythonguru.com/python-operator-overloading/
+
+class Circle:
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    def get_area(self):
+        return math.pi * self.radius**2
+
+    def __str__(self):
+        return &quot;Circle with radius &quot; + str(self.radius)
+
+    def __add__(self, another_circle):
+        return Circle(self.radius + another_circle.radius)
+
+
+c1 = Circle(10)
+c2 = Circle(5)
+c3 = c1 + c2 ### ==&gt; c1.__add__(c2) ==&gt; Circle.__add__(c1, c2)
+print(c3)
+
+
+class Circle:
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    def get_area(self):
+        return math.pi * self.radius**2
+
+    def __str__(self):
+        return &quot;Circle with radius &quot; + str(self.radius)
+
+    def __add__(self, another_circle):
+        return Circle(self.radius + another_circle.radius)
+
+    def __gt__(self, another_circle):
+        return self.radius &gt; another_circle.radius
+
+    def __lt__(self, another_circle):
+        return self.radius &lt; another_circle.radius
+
+
+
+c1 = Circle(10)
+c2 = Circle(5)
+print(c1 &lt; c2)
+
+
+
+class Point:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __add__(self, another_point):
+        return Point(self.x + another_point.x, self.y + another_point.y)
+
+    def __sub__(self, another_point):
+        return Point(self.x - another_point.x, self.y - another_point.y)
+
+    def __str__(self):
+        return f&#39;{self.x}, {self.y}&#39;
+
+p1 = Point(3, 4)
+p2 = Point(8, 6)
+print(p2+p1)
+
+import math
+class Point:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __add__(self, another_point):
+        return Point(self.x + another_point.x, self.y + another_point.y)
+
+    def __sub__(self, another_point):
+        return Point(self.x - another_point.x, self.y - another_point.y)
+
+    def length(self):
+        return math.sqrt(self.x**2 + self.y**2)
+
+    def distance(self, another_point):
+        return (self - another_point).length()
+
+    def __str__(self):
+        return f&#39;{self.x}, {self.y}&#39;
+
+p1 = Point(3, 4)
+p2 = Point(8, 6)
+print(p1.distance(p2))
+
+
+class MyRange:
+
+    def __init__(self, limit):
+        self.limit = limit
+
+    def __iter__(self):
+        self.value = 0
+        return self
+
+    def __next__(self):
+        if self.value &lt; self.limit:
+            output = self.value
+            self.value += 1
+            return output
+        else:
+            raise StopIteration
+
+
+i = iter(MyRange(10))
+next(i)
+for ele in MyRange(10):
+    print(ele)
+
+
+class PowX:
+    def __init__(self, limit, power):
+        self.limit = limit
+        self.power = power
+
+    def __iter__(self):
+        self.value = 0
+        return self
+
+    def __next__(self):
+        if self.value &lt; self.limit:
+            output = self.value**self.power
+            self.value += 1
+            return output
+        else:
+            raise StopIteration
+
+
+for ele in PowX(10, 3):
+    print(ele)
+
+
+## lets use generator
+
+def PowX(limit, power):
+    value = 0
+    while value &lt; limit:
+        yield value**power
+        value += 1
+
+for ele in PowX(10, 3):
+    print(ele)
+
+new_list = []
+for number in numbers:
+
+    if number % 2 == 0
+        new_list.append(number)
+        I am here!!
+</pre></div>
+</div>
+</div>
+<div class="section" id="self">
+<h2>Self<a class="headerlink" href="#self" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> is a reference to an instance of a class. You can use <code class="docutils literal notranslate"><span class="pre">self</span></code> to access attributes and methods bound to an instance.</p></li>
+<li><p>class variable vs instance variable (<a class="reference external" href="https://www.digitalocean.com/community/tutorials/understanding-class-and-instance-variables-in-python-3">https://www.digitalocean.com/community/tutorials/understanding-class-and-instance-variables-in-python-3</a>)</p></li>
+<li><p>staticmethods vs class methods</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestClass</span><span class="p">:</span>
+    <span class="n">class_variable</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Belongs to the class. Shared by all instances</span>
+
+
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">TestClass</span><span class="p">()</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">TestClass</span><span class="p">()</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Print class_variable&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.class_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.class_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Change class_variable in class definition and print class_variable&#39;</span><span class="p">)</span>
+<span class="n">TestClass</span><span class="o">.</span><span class="n">class_variable</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.class_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.class_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Change class_variable in instance t1 and print class_variable&#39;</span><span class="p">)</span>
+<span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.class_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.class_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Change class_variable in instance t2 and print class_variable&#39;</span><span class="p">)</span>
+<span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.class_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.class_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">TestClass</span><span class="p">:</span>
+    <span class="n">class_variable</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Belongs to the class. Shared by all instances</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance_variable</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instance_variable</span> <span class="o">=</span> <span class="n">instance_variable</span>
+
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">TestClass</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">TestClass</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Print class_variable&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.class_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.class_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Print instance_variable&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.instance_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">instance_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.instance_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">instance_variable</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Change class_variable in class definition and print class_variable&#39;</span><span class="p">)</span>
+<span class="n">TestClass</span><span class="o">.</span><span class="n">class_variable</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.class_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.class_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Change instance_variable for t1 and print instance_variable&#39;</span><span class="p">)</span>
+<span class="n">t1</span><span class="o">.</span><span class="n">instance_variable</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.instance_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">instance_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.instance_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">instance_variable</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Change instance_variable for t2 and print instance_variable&#39;</span><span class="p">)</span>
+<span class="n">t2</span><span class="o">.</span><span class="n">instance_variable</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.instance_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">instance_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.instance_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">instance_variable</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Change class_variable in instance t1 and print class_variable&#39;</span><span class="p">)</span>
+<span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.class_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.class_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Change class_variable in instance t2 and print class_variable&#39;</span><span class="p">)</span>
+<span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t1.class_variable: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t2.class_variable: &#39;</span><span class="p">,</span> <span class="n">t2</span><span class="o">.</span><span class="n">class_variable</span><span class="p">)</span>
+
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">TestClass</span><span class="p">:</span>
+    <span class="n">class_variable</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># @staticmethod are bound to class rather than object. Therefore, to use them, you do not have</span>
+    <span class="c1"># to instantiate an object.</span>
+    <span class="c1"># NOTE: staticmethods do no have access to class properties (variables or methods).</span>
+    <span class="c1"># This means they cannot access class_variable.</span>
+    <span class="c1"># Such methods are used when you do not want subclasses to change/overwrite a specific method.</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;@staticmethod add: &#39;</span><span class="p">,</span> <span class="n">TestClass</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+
+<span class="k">class</span> <span class="nc">TestClass2</span><span class="p">:</span>
+    <span class="n">class_variable</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># @staticmethod are bound to class rather than object. Therefore, to use them, you do not have</span>
+    <span class="c1"># to instantiate an object.</span>
+    <span class="c1"># NOTE: staticmethods do no have access to class properties (variables or methods).</span>
+    <span class="c1"># This means they cannot access class_variable.</span>
+    <span class="c1"># Such methods are used when you do not want subclasses to change/overwrite a specific method.</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span><span class="c1"># + class_variable</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;@staticmethod add: &#39;</span><span class="p">,</span> <span class="n">TestClass2</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">TestClass</span><span class="p">:</span>
+    <span class="n">class_variable</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># @classmethod are bound to class rather than object. Therefore, to use them, you do not have</span>
+    <span class="c1"># to instantiate an object.</span>
+    <span class="c1"># NOTE: Unlike staticmethods, classmethods do have access to class properties (variables or methods).</span>
+    <span class="c1"># This means they can access class_variable.</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;@classmethod add: &#39;</span><span class="p">,</span> <span class="n">TestClass</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+
+
+<span class="k">class</span> <span class="nc">TestClass2</span><span class="p">:</span>
+    <span class="n">class_variable</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># @classmethod are bound to class rather than object. Therefore, to use them, you do not have</span>
+    <span class="c1"># to instantiate an object.</span>
+    <span class="c1"># NOTE: Unlike staticmethods, classmethods do have access to class properties (variables or methods).</span>
+    <span class="c1"># This means they can access class_variable.</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span> <span class="o">+</span> <span class="bp">cls</span><span class="o">.</span><span class="n">class_variable</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;@classmethod add -- access to class variable: &#39;</span><span class="p">,</span> <span class="n">TestClass2</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">TestClass</span><span class="p">:</span>
+    <span class="n">class_variable</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">add_static</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">add_class</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span> <span class="o">+</span> <span class="bp">cls</span><span class="o">.</span><span class="n">class_variable</span>
+
+
+    <span class="k">def</span> <span class="nf">add_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">class_variable</span> <span class="o">+</span> <span class="mi">29</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;add_static: &#39;</span><span class="p">,</span> <span class="n">TestClass</span><span class="o">.</span><span class="n">add_static</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;add_class: &#39;</span><span class="p">,</span> <span class="n">TestClass</span><span class="o">.</span><span class="n">add_class</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">))</span>
+
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">TestClass</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Call from class -- add_object: &#39;</span><span class="p">,</span> <span class="n">TestClass</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Call from object -- add_object: &#39;</span><span class="p">,</span> <span class="n">t1</span><span class="o">.</span><span class="n">add_object</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="functions_pt2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Functions Revisited</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="misc_topics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Miscellaneous Topics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mohammad K. Zia<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
