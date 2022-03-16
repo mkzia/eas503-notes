@@ -42,13 +42,14 @@
   5
   ```
 
-:::warning
+```{warning}
 - Be careful about using `//` and `%` with negative operands. 
 - Python takes the floor of the result of an integer division (`//`). 
   ```python
   >>> -17 // 10
   -2
   ```
+```  
 
 - For the modulo operator, the sign of the result matches the sign of the divisors (the second operand)
   ```python

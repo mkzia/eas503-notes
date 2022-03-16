@@ -100,10 +100,8 @@ print(list(map(lambda student: student.title(), students)))
 ## Exercise 6
 Using lambda and map, convert the numbers to float
 
-# covert each value to float
+Covert each value to float
 ```python
-# covert each value to float
-
 my_dict = [{'value': '34.4'}, {'value': '45.3'}, {'value': '73.4'}]
 
 print(list(map(lambda ele: {'Value': float(ele['value'])}, my_dict)))

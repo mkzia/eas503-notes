@@ -12,7 +12,7 @@ parts:
   chapters:
   - file: introduction
   - file: basics
-  - file: functions
+  - file: functions_pt1
     sections:
     - file: function_exercises/exercises
     - file: function_exercises/exercises_solution
@@ -37,7 +37,7 @@ parts:
     sections:
     - file: list_comprehension_exercises/exercises
     - file: list_comprehension_exercises/exercises_solution
-  - file: sets_dictionaries
+  - file: set_dictionary
     sections:
     - file: set_dictionary_exercises/exercises
     - file: set_dictionary_exercises/exercises_solution
@@ -45,6 +45,8 @@ parts:
     sections:
     - file: lambda_exercises/exercises
     - file: lambda_exercises/exercises_solution
+  - file: errors
+  - file: functions_pt2
      
 - caption: Style Guide
   chapters:
