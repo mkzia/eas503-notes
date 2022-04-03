@@ -143,8 +143,8 @@ final = original + ['Be']
 ![list](concat.png)
 
 
-```Python
-life​​ ​​=​​ ​​[[​​'Canada'​​,​​ ​​76.5],​​ ​​[​​'United States'​​,​​ ​​75.5],​​ ​​[​​'Mexico'​​,​​ ​​72.0]]​
+```python
+life =[['Canada',76.5],['United States', 75.5],['Mexico', 72.0]]
 ```
 
 ![list](nested_lists.png)

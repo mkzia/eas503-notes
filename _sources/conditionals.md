@@ -19,27 +19,13 @@
     - Everything else is True 
       
 
-## Boolean Operators
-
-- Assume `a=1` and `b=1`
-
-| Boolean Operators | What it does?                                | Example       |
-|----|---------------------------------------------|---------------|
-| == | True if a has the same value as b           | a == b #True  |
-| != | True if a does not have the same value as b | a != b #False |
-| >  | True if a is greater than b                 | a > b # False |
-| <  | True if a is less than b                    | a < b # False |
-| >= | True if a is greater than or equal to b     | a >= b # True |
-| <= | True if a is less than or equal to b        | a <= b # True |
-
-## Logical Operators
+## Boolean/Logical Operators
 
 | Operator | What it does?                                        | Example                                                                   |
 |----------|------------------------------------------------------|---------------------------------------------------------------------------|
 | `and`    | True if both a AND b are true (logical conjunction)  | if is_teacher and is_active:   print('You can access')                    |
 | `or`     | True if either a OR b are true (logical disjunction) | if is_superuser or (is_teacher and is active):    print('You can access') |
 | `not`    | True if the opposite of a is true (logical negation) | if not is_superuser:   print('You cannot access')    
-
 
 
 ## Examples
@@ -70,14 +56,19 @@ windy = False
 not (cold and windy) # 
 ```
 
-
 ## Relational Operators
-- `==` Equal to 
-- `!=` Not equal to
-- `<` Less than
-- `>` Greater than
-- `<=` Less than or equal to
-- `>=` Greater than or equal to
+
+- Assume `a=1` and `b=1`
+
+| Relational Operators | What it does?                                | Example       |
+|----|---------------------------------------------|---------------|
+| == | True if a has the same value as b           | a == b #True  |
+| != | True if a does not have the same value as b | a != b #False |
+| >  | True if a is greater than b                 | a > b # False |
+| <  | True if a is less than b                    | a < b # False |
+| >= | True if a is greater than or equal to b     | a >= b # True |
+| <= | True if a is less than or equal to b        | a <= b # True |
+
 
 - These operators evaluate to True or False depending on the values you give them.
 - Conditionals are used to instruct computer to make a decision. 
