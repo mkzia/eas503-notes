@@ -1,0 +1,1497 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sets &#8212; EAS503</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Grouping and Aggregates" href="sql_4_grouping.html" />
+    <link rel="prev" title="Filtering" href="sql_2_filtering.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/ub.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EAS503</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   EAS 503
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Course Information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../information.html">
+   Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics.html">
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../functions_pt1.html">
+   Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../function_exercises/exercises.html">
+     Function Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../function_exercises/exercises_solution.html">
+     Function Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../strings.html">
+   Strings
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../string_exercises/exercises.html">
+     String Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../string_exercises/exercises_solution.html">
+     String Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../conditionals.html">
+   Conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conditional_exercises/exercises.html">
+     Conditional Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conditional_exercises/exercises_solution.html">
+     Conditional Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../list_tuples.html">
+   Lists and Tuples
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../loops.html">
+   Loops
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/for_loop_exercises.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/for_loop_exercises_solution.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/while_loop_exercises.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/while_loop_exercises_solution.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/modify_loop_exercises.html">
+     Modify Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/modify_loop_exercises_solution.html">
+     Modify Loop Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../list_comprehension.html">
+   List comprehension
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../list_comprehension_exercises/exercises.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../list_comprehension_exercises/exercises_solution.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../set_dictionary.html">
+   Sets and Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lambda.html">
+   Lambda, Filter, Map, and Sorted
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lambda_exercises/exercises.html">
+     Lambda, Filter, Map, and Sorted
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lambda_exercises/exercises_solution.html">
+     Lambda, Filter, Map, and Sorted Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../errors.html">
+   Errors and Exception Handling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions_pt2.html">
+   Functions Revisited
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../oop.html">
+   Object-Oriented Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc_topics.html">
+   Miscellaneous Topics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Structured Query Language (SQL)
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../sql.html">
+   SQL with SQLite
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_0_tables.html">
+     Creating Tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_1_query_primer.html">
+     SQL Query Primer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_2_filtering.html">
+     Filtering
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Sets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_4_grouping.html">
+     Grouping and Aggregates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_5_subqueries.html">
+     Subqueries
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Style Guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../style.html">
+   Style Guide
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/sql/sql_3_sets.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/sql/sql_3_sets.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/mkzia/eas503-notes"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mkzia/eas503-notes/master?urlpath=tree/docs/sql/sql_3_sets.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basics">
+   Basics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-union-all-and-union-operator">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     UNION
+    </span>
+    <span class="pre">
+     ALL
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     UNION
+    </span>
+   </code>
+   Operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-intersect-operator">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     INTERSECT
+    </span>
+   </code>
+   Operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-except-operator">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     EXCEPT
+    </span>
+   </code>
+   Operator
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sets</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basics">
+   Basics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-union-all-and-union-operator">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     UNION
+    </span>
+    <span class="pre">
+     ALL
+    </span>
+   </code>
+   and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     UNION
+    </span>
+   </code>
+   Operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-intersect-operator">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     INTERSECT
+    </span>
+   </code>
+   Operator
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-except-operator">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     EXCEPT
+    </span>
+   </code>
+   Operator
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="sets">
+<h1>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>SQL supports four types of operations <code class="docutils literal notranslate"><span class="pre">UNION</span></code>, <code class="docutils literal notranslate"><span class="pre">UNION</span> <span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">INTERSECT</span></code>, and <code class="docutils literal notranslate"><span class="pre">EXCEPT</span></code>. The difference between <code class="docutils literal notranslate"><span class="pre">UNION</span></code> and <code class="docutils literal notranslate"><span class="pre">UNION</span> <span class="pre">ALL</span></code> is that the latter includes duplicates.
+Given set A = {L, M, N, O, P} and set B = {P, Q, R, S, T}, the four operations will return</p>
+<ol class="simple">
+<li><p>A UNION B  = {L, M, N, O, P, Q, R, S, T}</p></li>
+<li><p>A UNION ALL = {L, M, N, O, P, P, Q, R, S, T} – Note the two Ps</p></li>
+<li><p>A INTERSECT B = {P}</p></li>
+<li><p>A EXCEPT B = {L, M N, O}</p></li>
+</ol>
+<p>When doing set operations, you should use the same column names so you can order the results.</p>
+</div>
+<div class="section" id="the-union-all-and-union-operator">
+<h2>The <code class="docutils literal notranslate"><span class="pre">UNION</span> <span class="pre">ALL</span></code>  and <code class="docutils literal notranslate"><span class="pre">UNION</span></code> Operator<a class="headerlink" href="#the-union-all-and-union-operator" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> 
+    <span class="s1">&#39;Teacher&#39;</span> <span class="n">typ</span><span class="p">,</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Teachers</span> <span class="n">t</span>
+<span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+<span class="k">UNION</span> <span class="k">ALL</span>
+<span class="k">SELECT</span> 
+    <span class="s1">&#39;Student&#39;</span> <span class="n">typ</span><span class="p">,</span>
+    <span class="n">s</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Students</span> <span class="n">s</span>
+<span class="k">WHERE</span> <span class="n">s</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+</pre></div>
+</div>
+<div class="cell tag_hide-input tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;students_teachers.db&#39;</span><span class="p">)</span>
+
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT </span>
+<span class="s2">    &#39;Teacher&#39; typ,</span>
+<span class="s2">    t.first_name</span>
+<span class="s2">FROM Teachers t</span>
+<span class="s2">WHERE t.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">UNION ALL</span>
+<span class="s2">SELECT </span>
+<span class="s2">    &#39;Student&#39; typ,</span>
+<span class="s2">    s.first_name</span>
+<span class="s2">FROM Students s</span>
+<span class="s2">WHERE s.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_attributes</span><span class="p">(</span><span class="s1">&#39;style=&quot;font-size: 12px&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_af78c_" style="font-size: 12px">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >typ</th>
+      <th class="col_heading level0 col1" >first_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_af78c_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_af78c_row0_col0" class="data row0 col0" >Teacher</td>
+      <td id="T_af78c_row0_col1" class="data row0 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_af78c_row1_col0" class="data row1 col0" >Teacher</td>
+      <td id="T_af78c_row1_col1" class="data row1 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_af78c_row2_col0" class="data row2 col0" >Teacher</td>
+      <td id="T_af78c_row2_col1" class="data row2 col1" >Jorge</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_af78c_row3_col0" class="data row3 col0" >Teacher</td>
+      <td id="T_af78c_row3_col1" class="data row3 col1" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_af78c_row4_col0" class="data row4 col0" >Teacher</td>
+      <td id="T_af78c_row4_col1" class="data row4 col1" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_af78c_row5_col0" class="data row5 col0" >Teacher</td>
+      <td id="T_af78c_row5_col1" class="data row5 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_af78c_row6_col0" class="data row6 col0" >Teacher</td>
+      <td id="T_af78c_row6_col1" class="data row6 col1" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_af78c_row7_col0" class="data row7 col0" >Teacher</td>
+      <td id="T_af78c_row7_col1" class="data row7 col1" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_af78c_row8_col0" class="data row8 col0" >Teacher</td>
+      <td id="T_af78c_row8_col1" class="data row8 col1" >Jorge</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_af78c_row9_col0" class="data row9 col0" >Teacher</td>
+      <td id="T_af78c_row9_col1" class="data row9 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row10" class="row_heading level0 row10" >10</th>
+      <td id="T_af78c_row10_col0" class="data row10 col0" >Teacher</td>
+      <td id="T_af78c_row10_col1" class="data row10 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row11" class="row_heading level0 row11" >11</th>
+      <td id="T_af78c_row11_col0" class="data row11 col0" >Teacher</td>
+      <td id="T_af78c_row11_col1" class="data row11 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row12" class="row_heading level0 row12" >12</th>
+      <td id="T_af78c_row12_col0" class="data row12 col0" >Teacher</td>
+      <td id="T_af78c_row12_col1" class="data row12 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row13" class="row_heading level0 row13" >13</th>
+      <td id="T_af78c_row13_col0" class="data row13 col0" >Teacher</td>
+      <td id="T_af78c_row13_col1" class="data row13 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row14" class="row_heading level0 row14" >14</th>
+      <td id="T_af78c_row14_col0" class="data row14 col0" >Teacher</td>
+      <td id="T_af78c_row14_col1" class="data row14 col1" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row15" class="row_heading level0 row15" >15</th>
+      <td id="T_af78c_row15_col0" class="data row15 col0" >Teacher</td>
+      <td id="T_af78c_row15_col1" class="data row15 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row16" class="row_heading level0 row16" >16</th>
+      <td id="T_af78c_row16_col0" class="data row16 col0" >Teacher</td>
+      <td id="T_af78c_row16_col1" class="data row16 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row17" class="row_heading level0 row17" >17</th>
+      <td id="T_af78c_row17_col0" class="data row17 col0" >Teacher</td>
+      <td id="T_af78c_row17_col1" class="data row17 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row18" class="row_heading level0 row18" >18</th>
+      <td id="T_af78c_row18_col0" class="data row18 col0" >Teacher</td>
+      <td id="T_af78c_row18_col1" class="data row18 col1" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row19" class="row_heading level0 row19" >19</th>
+      <td id="T_af78c_row19_col0" class="data row19 col0" >Teacher</td>
+      <td id="T_af78c_row19_col1" class="data row19 col1" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row20" class="row_heading level0 row20" >20</th>
+      <td id="T_af78c_row20_col0" class="data row20 col0" >Teacher</td>
+      <td id="T_af78c_row20_col1" class="data row20 col1" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row21" class="row_heading level0 row21" >21</th>
+      <td id="T_af78c_row21_col0" class="data row21 col0" >Teacher</td>
+      <td id="T_af78c_row21_col1" class="data row21 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row22" class="row_heading level0 row22" >22</th>
+      <td id="T_af78c_row22_col0" class="data row22 col0" >Teacher</td>
+      <td id="T_af78c_row22_col1" class="data row22 col1" >Johnny</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row23" class="row_heading level0 row23" >23</th>
+      <td id="T_af78c_row23_col0" class="data row23 col0" >Teacher</td>
+      <td id="T_af78c_row23_col1" class="data row23 col1" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row24" class="row_heading level0 row24" >24</th>
+      <td id="T_af78c_row24_col0" class="data row24 col0" >Teacher</td>
+      <td id="T_af78c_row24_col1" class="data row24 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row25" class="row_heading level0 row25" >25</th>
+      <td id="T_af78c_row25_col0" class="data row25 col0" >Teacher</td>
+      <td id="T_af78c_row25_col1" class="data row25 col1" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row26" class="row_heading level0 row26" >26</th>
+      <td id="T_af78c_row26_col0" class="data row26 col0" >Teacher</td>
+      <td id="T_af78c_row26_col1" class="data row26 col1" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row27" class="row_heading level0 row27" >27</th>
+      <td id="T_af78c_row27_col0" class="data row27 col0" >Teacher</td>
+      <td id="T_af78c_row27_col1" class="data row27 col1" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row28" class="row_heading level0 row28" >28</th>
+      <td id="T_af78c_row28_col0" class="data row28 col0" >Teacher</td>
+      <td id="T_af78c_row28_col1" class="data row28 col1" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row29" class="row_heading level0 row29" >29</th>
+      <td id="T_af78c_row29_col0" class="data row29 col0" >Teacher</td>
+      <td id="T_af78c_row29_col1" class="data row29 col1" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row30" class="row_heading level0 row30" >30</th>
+      <td id="T_af78c_row30_col0" class="data row30 col0" >Teacher</td>
+      <td id="T_af78c_row30_col1" class="data row30 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row31" class="row_heading level0 row31" >31</th>
+      <td id="T_af78c_row31_col0" class="data row31 col0" >Teacher</td>
+      <td id="T_af78c_row31_col1" class="data row31 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row32" class="row_heading level0 row32" >32</th>
+      <td id="T_af78c_row32_col0" class="data row32 col0" >Student</td>
+      <td id="T_af78c_row32_col1" class="data row32 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row33" class="row_heading level0 row33" >33</th>
+      <td id="T_af78c_row33_col0" class="data row33 col0" >Student</td>
+      <td id="T_af78c_row33_col1" class="data row33 col1" >Jon</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row34" class="row_heading level0 row34" >34</th>
+      <td id="T_af78c_row34_col0" class="data row34 col0" >Student</td>
+      <td id="T_af78c_row34_col1" class="data row34 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row35" class="row_heading level0 row35" >35</th>
+      <td id="T_af78c_row35_col0" class="data row35 col0" >Student</td>
+      <td id="T_af78c_row35_col1" class="data row35 col1" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row36" class="row_heading level0 row36" >36</th>
+      <td id="T_af78c_row36_col0" class="data row36 col0" >Student</td>
+      <td id="T_af78c_row36_col1" class="data row36 col1" >Jose</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row37" class="row_heading level0 row37" >37</th>
+      <td id="T_af78c_row37_col0" class="data row37 col0" >Student</td>
+      <td id="T_af78c_row37_col1" class="data row37 col1" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row38" class="row_heading level0 row38" >38</th>
+      <td id="T_af78c_row38_col0" class="data row38 col0" >Student</td>
+      <td id="T_af78c_row38_col1" class="data row38 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row39" class="row_heading level0 row39" >39</th>
+      <td id="T_af78c_row39_col0" class="data row39 col0" >Student</td>
+      <td id="T_af78c_row39_col1" class="data row39 col1" >Joan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row40" class="row_heading level0 row40" >40</th>
+      <td id="T_af78c_row40_col0" class="data row40 col0" >Student</td>
+      <td id="T_af78c_row40_col1" class="data row40 col1" >Joan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row41" class="row_heading level0 row41" >41</th>
+      <td id="T_af78c_row41_col0" class="data row41 col0" >Student</td>
+      <td id="T_af78c_row41_col1" class="data row41 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row42" class="row_heading level0 row42" >42</th>
+      <td id="T_af78c_row42_col0" class="data row42 col0" >Student</td>
+      <td id="T_af78c_row42_col1" class="data row42 col1" >Johnny</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row43" class="row_heading level0 row43" >43</th>
+      <td id="T_af78c_row43_col0" class="data row43 col0" >Student</td>
+      <td id="T_af78c_row43_col1" class="data row43 col1" >Joel</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row44" class="row_heading level0 row44" >44</th>
+      <td id="T_af78c_row44_col0" class="data row44 col0" >Student</td>
+      <td id="T_af78c_row44_col1" class="data row44 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row45" class="row_heading level0 row45" >45</th>
+      <td id="T_af78c_row45_col0" class="data row45 col0" >Student</td>
+      <td id="T_af78c_row45_col1" class="data row45 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row46" class="row_heading level0 row46" >46</th>
+      <td id="T_af78c_row46_col0" class="data row46 col0" >Student</td>
+      <td id="T_af78c_row46_col1" class="data row46 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row47" class="row_heading level0 row47" >47</th>
+      <td id="T_af78c_row47_col0" class="data row47 col0" >Student</td>
+      <td id="T_af78c_row47_col1" class="data row47 col1" >Johnny</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row48" class="row_heading level0 row48" >48</th>
+      <td id="T_af78c_row48_col0" class="data row48 col0" >Student</td>
+      <td id="T_af78c_row48_col1" class="data row48 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row49" class="row_heading level0 row49" >49</th>
+      <td id="T_af78c_row49_col0" class="data row49 col0" >Student</td>
+      <td id="T_af78c_row49_col1" class="data row49 col1" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row50" class="row_heading level0 row50" >50</th>
+      <td id="T_af78c_row50_col0" class="data row50 col0" >Student</td>
+      <td id="T_af78c_row50_col1" class="data row50 col1" >John</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row51" class="row_heading level0 row51" >51</th>
+      <td id="T_af78c_row51_col0" class="data row51 col0" >Student</td>
+      <td id="T_af78c_row51_col1" class="data row51 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row52" class="row_heading level0 row52" >52</th>
+      <td id="T_af78c_row52_col0" class="data row52 col0" >Student</td>
+      <td id="T_af78c_row52_col1" class="data row52 col1" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_af78c_level0_row53" class="row_heading level0 row53" >53</th>
+      <td id="T_af78c_row53_col0" class="data row53 col0" >Student</td>
+      <td id="T_af78c_row53_col1" class="data row53 col1" >John</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> 
+    <span class="n">t</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Teachers</span> <span class="n">t</span>
+<span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+<span class="k">UNION</span> <span class="k">ALL</span>
+<span class="k">SELECT</span> 
+    <span class="n">s</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Students</span> <span class="n">s</span>
+<span class="k">WHERE</span> <span class="n">s</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">first_name</span>
+</pre></div>
+</div>
+<div class="cell tag_hide-input tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;students_teachers.db&#39;</span><span class="p">)</span>
+
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT </span>
+<span class="s2">    t.first_name</span>
+<span class="s2">FROM Teachers t</span>
+<span class="s2">WHERE t.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">UNION ALL</span>
+<span class="s2">SELECT </span>
+<span class="s2">    s.first_name</span>
+<span class="s2">FROM Students s</span>
+<span class="s2">WHERE s.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">ORDER BY first_name</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_attributes</span><span class="p">(</span><span class="s1">&#39;style=&quot;font-size: 12px&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_42d4d_" style="font-size: 12px">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >first_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_42d4d_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_42d4d_row0_col0" class="data row0 col0" >Joan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_42d4d_row1_col0" class="data row1 col0" >Joan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_42d4d_row2_col0" class="data row2 col0" >Joel</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_42d4d_row3_col0" class="data row3 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_42d4d_row4_col0" class="data row4 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_42d4d_row5_col0" class="data row5 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_42d4d_row6_col0" class="data row6 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_42d4d_row7_col0" class="data row7 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_42d4d_row8_col0" class="data row8 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_42d4d_row9_col0" class="data row9 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row10" class="row_heading level0 row10" >10</th>
+      <td id="T_42d4d_row10_col0" class="data row10 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row11" class="row_heading level0 row11" >11</th>
+      <td id="T_42d4d_row11_col0" class="data row11 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row12" class="row_heading level0 row12" >12</th>
+      <td id="T_42d4d_row12_col0" class="data row12 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row13" class="row_heading level0 row13" >13</th>
+      <td id="T_42d4d_row13_col0" class="data row13 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row14" class="row_heading level0 row14" >14</th>
+      <td id="T_42d4d_row14_col0" class="data row14 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row15" class="row_heading level0 row15" >15</th>
+      <td id="T_42d4d_row15_col0" class="data row15 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row16" class="row_heading level0 row16" >16</th>
+      <td id="T_42d4d_row16_col0" class="data row16 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row17" class="row_heading level0 row17" >17</th>
+      <td id="T_42d4d_row17_col0" class="data row17 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row18" class="row_heading level0 row18" >18</th>
+      <td id="T_42d4d_row18_col0" class="data row18 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row19" class="row_heading level0 row19" >19</th>
+      <td id="T_42d4d_row19_col0" class="data row19 col0" >Johnny</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row20" class="row_heading level0 row20" >20</th>
+      <td id="T_42d4d_row20_col0" class="data row20 col0" >Johnny</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row21" class="row_heading level0 row21" >21</th>
+      <td id="T_42d4d_row21_col0" class="data row21 col0" >Johnny</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row22" class="row_heading level0 row22" >22</th>
+      <td id="T_42d4d_row22_col0" class="data row22 col0" >Jon</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row23" class="row_heading level0 row23" >23</th>
+      <td id="T_42d4d_row23_col0" class="data row23 col0" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row24" class="row_heading level0 row24" >24</th>
+      <td id="T_42d4d_row24_col0" class="data row24 col0" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row25" class="row_heading level0 row25" >25</th>
+      <td id="T_42d4d_row25_col0" class="data row25 col0" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row26" class="row_heading level0 row26" >26</th>
+      <td id="T_42d4d_row26_col0" class="data row26 col0" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row27" class="row_heading level0 row27" >27</th>
+      <td id="T_42d4d_row27_col0" class="data row27 col0" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row28" class="row_heading level0 row28" >28</th>
+      <td id="T_42d4d_row28_col0" class="data row28 col0" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row29" class="row_heading level0 row29" >29</th>
+      <td id="T_42d4d_row29_col0" class="data row29 col0" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row30" class="row_heading level0 row30" >30</th>
+      <td id="T_42d4d_row30_col0" class="data row30 col0" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row31" class="row_heading level0 row31" >31</th>
+      <td id="T_42d4d_row31_col0" class="data row31 col0" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row32" class="row_heading level0 row32" >32</th>
+      <td id="T_42d4d_row32_col0" class="data row32 col0" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row33" class="row_heading level0 row33" >33</th>
+      <td id="T_42d4d_row33_col0" class="data row33 col0" >Jorge</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row34" class="row_heading level0 row34" >34</th>
+      <td id="T_42d4d_row34_col0" class="data row34 col0" >Jorge</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row35" class="row_heading level0 row35" >35</th>
+      <td id="T_42d4d_row35_col0" class="data row35 col0" >Jose</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row36" class="row_heading level0 row36" >36</th>
+      <td id="T_42d4d_row36_col0" class="data row36 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row37" class="row_heading level0 row37" >37</th>
+      <td id="T_42d4d_row37_col0" class="data row37 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row38" class="row_heading level0 row38" >38</th>
+      <td id="T_42d4d_row38_col0" class="data row38 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row39" class="row_heading level0 row39" >39</th>
+      <td id="T_42d4d_row39_col0" class="data row39 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row40" class="row_heading level0 row40" >40</th>
+      <td id="T_42d4d_row40_col0" class="data row40 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row41" class="row_heading level0 row41" >41</th>
+      <td id="T_42d4d_row41_col0" class="data row41 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row42" class="row_heading level0 row42" >42</th>
+      <td id="T_42d4d_row42_col0" class="data row42 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row43" class="row_heading level0 row43" >43</th>
+      <td id="T_42d4d_row43_col0" class="data row43 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row44" class="row_heading level0 row44" >44</th>
+      <td id="T_42d4d_row44_col0" class="data row44 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row45" class="row_heading level0 row45" >45</th>
+      <td id="T_42d4d_row45_col0" class="data row45 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row46" class="row_heading level0 row46" >46</th>
+      <td id="T_42d4d_row46_col0" class="data row46 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row47" class="row_heading level0 row47" >47</th>
+      <td id="T_42d4d_row47_col0" class="data row47 col0" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row48" class="row_heading level0 row48" >48</th>
+      <td id="T_42d4d_row48_col0" class="data row48 col0" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row49" class="row_heading level0 row49" >49</th>
+      <td id="T_42d4d_row49_col0" class="data row49 col0" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row50" class="row_heading level0 row50" >50</th>
+      <td id="T_42d4d_row50_col0" class="data row50 col0" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row51" class="row_heading level0 row51" >51</th>
+      <td id="T_42d4d_row51_col0" class="data row51 col0" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row52" class="row_heading level0 row52" >52</th>
+      <td id="T_42d4d_row52_col0" class="data row52 col0" >Joshua</td>
+    </tr>
+    <tr>
+      <th id="T_42d4d_level0_row53" class="row_heading level0 row53" >53</th>
+      <td id="T_42d4d_row53_col0" class="data row53 col0" >Joshua</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> 
+    <span class="n">t</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Teachers</span> <span class="n">t</span>
+<span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+<span class="k">UNION</span> 
+<span class="k">SELECT</span> 
+    <span class="n">s</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Students</span> <span class="n">s</span>
+<span class="k">WHERE</span> <span class="n">s</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">first_name</span>
+</pre></div>
+</div>
+<div class="cell tag_hide-input tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;students_teachers.db&#39;</span><span class="p">)</span>
+
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT </span>
+<span class="s2">    t.first_name</span>
+<span class="s2">FROM Teachers t</span>
+<span class="s2">WHERE t.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">UNION</span>
+<span class="s2">SELECT </span>
+<span class="s2">    s.first_name</span>
+<span class="s2">FROM Students s</span>
+<span class="s2">WHERE s.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">ORDER BY first_name</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_attributes</span><span class="p">(</span><span class="s1">&#39;style=&quot;font-size: 12px&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_ef401_" style="font-size: 12px">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >first_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_ef401_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_ef401_row0_col0" class="data row0 col0" >Joan</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_ef401_row1_col0" class="data row1 col0" >Joel</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_ef401_row2_col0" class="data row2 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_ef401_row3_col0" class="data row3 col0" >Johnny</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_ef401_row4_col0" class="data row4 col0" >Jon</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_ef401_row5_col0" class="data row5 col0" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_ef401_row6_col0" class="data row6 col0" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_ef401_row7_col0" class="data row7 col0" >Jorge</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_ef401_row8_col0" class="data row8 col0" >Jose</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_ef401_row9_col0" class="data row9 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_ef401_level0_row10" class="row_heading level0 row10" >10</th>
+      <td id="T_ef401_row10_col0" class="data row10 col0" >Joshua</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="the-intersect-operator">
+<h2>The <code class="docutils literal notranslate"><span class="pre">INTERSECT</span></code> Operator<a class="headerlink" href="#the-intersect-operator" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> 
+    <span class="n">t</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Teachers</span> <span class="n">t</span>
+<span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+<span class="k">INTERSECT</span> 
+<span class="k">SELECT</span> 
+    <span class="n">s</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Students</span> <span class="n">s</span>
+<span class="k">WHERE</span> <span class="n">s</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">first_name</span>
+</pre></div>
+</div>
+<div class="cell tag_hide-input tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;students_teachers.db&#39;</span><span class="p">)</span>
+
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT </span>
+<span class="s2">    t.first_name</span>
+<span class="s2">FROM Teachers t</span>
+<span class="s2">WHERE t.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">INTERSECT </span>
+<span class="s2">SELECT </span>
+<span class="s2">    s.first_name</span>
+<span class="s2">FROM Students s</span>
+<span class="s2">WHERE s.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">ORDER BY first_name</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_attributes</span><span class="p">(</span><span class="s1">&#39;style=&quot;font-size: 12px&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_47c94_" style="font-size: 12px">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >first_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_47c94_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_47c94_row0_col0" class="data row0 col0" >John</td>
+    </tr>
+    <tr>
+      <th id="T_47c94_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_47c94_row1_col0" class="data row1 col0" >Johnny</td>
+    </tr>
+    <tr>
+      <th id="T_47c94_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_47c94_row2_col0" class="data row2 col0" >Jonathan</td>
+    </tr>
+    <tr>
+      <th id="T_47c94_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_47c94_row3_col0" class="data row3 col0" >Joseph</td>
+    </tr>
+    <tr>
+      <th id="T_47c94_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_47c94_row4_col0" class="data row4 col0" >Joshua</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="the-except-operator">
+<h2>The <code class="docutils literal notranslate"><span class="pre">EXCEPT</span></code> Operator<a class="headerlink" href="#the-except-operator" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> 
+    <span class="n">t</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Teachers</span> <span class="n">t</span>
+<span class="k">WHERE</span> <span class="n">t</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+<span class="k">EXCEPT</span> 
+<span class="k">SELECT</span> 
+    <span class="n">s</span><span class="p">.</span><span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">Students</span> <span class="n">s</span>
+<span class="k">WHERE</span> <span class="n">s</span><span class="p">.</span><span class="n">first_name</span> <span class="k">LIKE</span> <span class="s1">&#39;Jo%&#39;</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">first_name</span>
+</pre></div>
+</div>
+<div class="cell tag_hide-input tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;students_teachers.db&#39;</span><span class="p">)</span>
+
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT </span>
+<span class="s2">    t.first_name</span>
+<span class="s2">FROM Teachers t</span>
+<span class="s2">WHERE t.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">EXCEPT</span>
+<span class="s2">SELECT </span>
+<span class="s2">    s.first_name</span>
+<span class="s2">FROM Students s</span>
+<span class="s2">WHERE s.first_name LIKE &#39;Jo%&#39;</span>
+<span class="s2">ORDER BY first_name</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_attributes</span><span class="p">(</span><span class="s1">&#39;style=&quot;font-size: 12px&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_d375c_" style="font-size: 12px">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >first_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_d375c_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_d375c_row0_col0" class="data row0 col0" >Jordan</td>
+    </tr>
+    <tr>
+      <th id="T_d375c_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_d375c_row1_col0" class="data row1 col0" >Jorge</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./sql"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="sql_2_filtering.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Filtering</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="sql_4_grouping.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Grouping and Aggregates</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mohammad K. Zia<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
