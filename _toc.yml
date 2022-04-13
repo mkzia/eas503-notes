@@ -56,6 +56,9 @@ parts:
     - file: sql/sql_0_tables
     - file: sql/sql_1_query_primer
     - file: sql/sql_2_filtering
+    - file: sql/sql_3_sets
+    - file: sql/sql_4_grouping
+    - file: sql/sql_5_subqueries
      
 - caption: Style Guide
   chapters:
