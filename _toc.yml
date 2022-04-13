@@ -49,6 +49,13 @@ parts:
   - file: functions_pt2
   - file: oop
   - file: misc_topics
+- caption: Structured Query Language (SQL)
+  chapters:
+  - file: sql
+    sections:
+    - file: sql/sql_0_tables
+    - file: sql/sql_1_query_primer
+    - file: sql/sql_2_filtering
      
 - caption: Style Guide
   chapters:
