@@ -42,16 +42,15 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Style Guide" href="style.html" />
+    <link rel="next" title="SQL with SQLite" href="sql.html" />
     <link rel="prev" title="Object-Oriented Programming" href="oop.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -309,6 +308,40 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Structured Query Language (SQL)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="sql.html">
+   SQL with SQLite
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_0_tables.html">
+     Creating Tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_1_query_primer.html">
+     SQL Query Primer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_2_filtering.html">
+     Filtering
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Style Guide
  </span>
 </p>
@@ -560,10 +593,10 @@ and returns a dictionary with the element as keys and their counts as values.</p
             <p class="prev-next-title">Object-Oriented Programming</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="style.html" title="next page">
+    <a class='right-next' id="next-link" href="sql.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Style Guide</p>
+        <p class="prev-next-title">SQL with SQLite</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
