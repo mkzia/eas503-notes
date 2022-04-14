@@ -90,6 +90,7 @@ WHERE PatientID IN (
     FROM PatientCorePopulatedTable 
     WHERE PatientLanguage NOT IN ('Icelandic', 'Spanish')
 )
+LIMIT 10;
 ```
 
 ```{code-cell} ipython3

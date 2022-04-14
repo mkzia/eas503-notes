@@ -643,7 +643,7 @@ Change the order of the tables to emulate right join!
 
 ```SQL
 SELECT 
-    Prices.Product, 
+    Quantities.Product, 
     Prices.Price, 
     Quantities.Quantity
 FROM 
@@ -660,7 +660,7 @@ conn = sqlite3.connect('join_example_database.db')
 
 sql_statement = """
 SELECT 
-    Prices.Product, 
+    Quantities.Product, 
     Prices.Price, 
     Quantities.Quantity
 FROM 
