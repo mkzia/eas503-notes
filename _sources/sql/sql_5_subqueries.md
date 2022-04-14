@@ -59,6 +59,7 @@ WHERE PatientID IN (
     FROM PatientCorePopulatedTable 
     WHERE PatientLanguage IN ('Icelandic', 'Spanish')
 )
+LIMIT 100;
 ```
 
 ```{code-cell} ipython3
@@ -76,6 +77,7 @@ WHERE PatientID IN (
     FROM PatientCorePopulatedTable 
     WHERE PatientLanguage IN ('Icelandic', 'Spanish')
 )
+LIMIT 100;
 """
 df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
@@ -90,7 +92,7 @@ WHERE PatientID IN (
     FROM PatientCorePopulatedTable 
     WHERE PatientLanguage NOT IN ('Icelandic', 'Spanish')
 )
-LIMIT 10;
+LIMIT 100;
 ```
 
 ```{code-cell} ipython3
@@ -108,6 +110,7 @@ WHERE PatientID IN (
     FROM PatientCorePopulatedTable 
     WHERE PatientLanguage NOT IN ('Icelandic', 'Spanish')
 )
+LIMIT 100;
 """
 df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
