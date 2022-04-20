@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List Comprehension Exercises &#8212; EAS503</title>
+    <title>Conditionals &#8212; EAS503</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -50,8 +50,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Sets and Dictionaries" href="../set_dictionary.html" />
-    <link rel="prev" title="List Comprehension Exercises" href="exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
   Python Programming
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../introduction.html">
    Introduction
@@ -236,23 +234,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../list_comprehension.html">
    List comprehension
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="exercises.html">
+    <a class="reference internal" href="../list_comprehension_exercises/exercises.html">
      List Comprehension Exercises
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../list_comprehension_exercises/exercises_solution.html">
      List Comprehension Exercises
     </a>
    </li>
@@ -323,48 +321,33 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../sql/sql_0_tables.html">
+    <a class="reference internal" href="sql_0_tables.html">
      Creating Tables
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../sql/sql_1_query_primer.html">
+    <a class="reference internal" href="sql_1_query_primer.html">
      SQL Query Primer
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../sql/sql_2_filtering.html">
+    <a class="reference internal" href="sql_2_filtering.html">
      Filtering
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../sql/sql_3_sets.html">
+    <a class="reference internal" href="sql_3_sets.html">
      Sets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../sql/sql_4_grouping.html">
+    <a class="reference internal" href="sql_4_grouping.html">
      Grouping and Aggregates
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../sql/sql_5_subqueries.html">
+    <a class="reference internal" href="sql_5_subqueries.html">
      Subqueries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../sql/sql_6_conditionals.html">
-     Conditionals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../sql/sql_7_analytic_functions.html">
-     Analytic Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../sql/sql_8_normalization.html">
-     Normalization
     </a>
    </li>
   </ul>
@@ -420,9 +403,12 @@ const thebe_selector_output = ".output, .cell_output"
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
-        
+        <a class="dropdown-buttons"
+            href="../_sources/sql/sql6_conditionals.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/list_comprehension_exercises/exercises_solution.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/sql/sql6_conditionals.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -455,64 +441,28 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mkzia/eas503-notes/master?urlpath=tree/docs/sql/sql6_conditionals.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-1">
-   Exercise 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-2">
-   Exercise 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-3">
-   Exercise 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-4">
-   Exercise 4
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-5">
-   Exercise 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-6">
-   Exercise 6
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-7">
-   Exercise 7
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-8">
-   Exercise 8
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-9">
-   Exercise 9
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -520,154 +470,159 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>List Comprehension Exercises</h1>
+                <h1>Conditionals</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-1">
-   Exercise 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-2">
-   Exercise 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-3">
-   Exercise 3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-4">
-   Exercise 4
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-5">
-   Exercise 5
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-6">
-   Exercise 6
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-7">
-   Exercise 7
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-8">
-   Exercise 8
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-9">
-   Exercise 9
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="list-comprehension-exercises">
-<h1>List Comprehension Exercises<a class="headerlink" href="#list-comprehension-exercises" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="exercise-1">
-<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h2>
-<p>Re-write the following code to use List Comprehension</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
-    <span class="n">tmp</span> <span class="o">=</span> <span class="n">ele</span> <span class="o">*</span> <span class="n">ele</span>
-    <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
-<span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ele</span><span class="o">*</span><span class="n">ele</span> <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">]</span>
+  <div class="tex2jax_ignore mathjax_ignore section" id="conditionals">
+<h1>Conditionals<a class="headerlink" href="#conditionals" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CASE</span>
+    <span class="n">WHEN</span> <span class="n">C1</span> <span class="n">THEN</span> <span class="n">E1</span>
+    <span class="n">WHEN</span> <span class="n">C2</span> <span class="n">THEN</span> <span class="n">E2</span>
+    <span class="o">...</span>
+    <span class="n">WHEN</span> <span class="n">CN</span> <span class="n">THEN</span> <span class="n">EN</span>
+    <span class="p">[</span><span class="n">ELSE</span> <span class="n">ED</span><span class="p">]</span>
+<span class="n">END</span> <span class="p">[</span><span class="n">COLUMN_NAME</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> 
+	<span class="k">CASE</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;01&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;January&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;02&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;February&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;03&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;March&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;04&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;April&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;05&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;May&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;06&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;June&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;07&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;July&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;08&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;August&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;09&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;September&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;10&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;October&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;11&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;November&#39;</span>
+		<span class="k">WHEN</span> <span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m&#39;</span><span class="p">,</span> <span class="n">AdmissionStartDate</span><span class="p">)</span> <span class="o">=</span> <span class="s1">&#39;12&#39;</span> <span class="k">THEN</span> <span class="s1">&#39;Decemeber&#39;</span>
+	<span class="k">END</span> <span class="n">AdmissionMonth</span><span class="p">,</span>
+	<span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">AddmissionCount</span>
+<span class="k">FROM</span> 
+	<span class="n">AdmissionsCorePopulatedTable</span>
+<span class="k">Group</span> <span class="k">BY</span> <span class="n">AdmissionMonth</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="o">-</span><span class="n">AddmissionCount</span>
+</pre></div>
+</div>
+<div class="cell tag_hide-input tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;100_patients.db&#39;</span><span class="p">)</span>
+
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT </span>
+<span class="s2">	CASE</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;01&#39; THEN &#39;January&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;02&#39; THEN &#39;February&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;03&#39; THEN &#39;March&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;04&#39; THEN &#39;April&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;05&#39; THEN &#39;May&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;06&#39; THEN &#39;June&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;07&#39; THEN &#39;July&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;08&#39; THEN &#39;August&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;09&#39; THEN &#39;September&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;10&#39; THEN &#39;October&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;11&#39; THEN &#39;November&#39;</span>
+<span class="s2">		WHEN strftime(&#39;%m&#39;, AdmissionStartDate) = &#39;12&#39; THEN &#39;Decemeber&#39;</span>
+<span class="s2">	END AdmissionMonth,</span>
+<span class="s2">	count(*) AddmissionCount</span>
+<span class="s2">FROM </span>
+<span class="s2">	AdmissionsCorePopulatedTable</span>
+<span class="s2">Group BY AdmissionMonth</span>
+<span class="s2">ORDER BY -AddmissionCount</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_attributes</span><span class="p">(</span><span class="s1">&#39;style=&quot;font-size: 12px&quot;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="exercise-2">
-<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h2>
-<p>Re-write the following code to use List Comprehension
-Multiply each number by 10</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">new_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
-    <span class="n">tmp</span> <span class="o">=</span> <span class="n">ele</span> <span class="o">*</span> <span class="mi">10</span>
-    <span class="n">new_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
-<span class="n">new_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ele</span><span class="o">*</span><span class="mi">10</span> <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="exercise-3">
-<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h2>
-<p>Upper case each letter in animal variable</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">animal</span> <span class="o">=</span> <span class="s1">&#39;buffalo&#39;</span>
-<span class="p">[</span><span class="n">char</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">animal</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="exercise-4">
-<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h2>
-<p>Title each name in the student list</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;jane&#39;</span><span class="p">,</span> <span class="s1">&#39;doe&#39;</span><span class="p">]</span>
-<span class="p">[</span><span class="n">student</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">+</span><span class="n">student</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">for</span> <span class="n">student</span> <span class="ow">in</span> <span class="n">students</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="exercise-5">
-<h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h2>
-<p>Use list comprehension to get the Truthiness of each element in <code class="docutils literal notranslate"><span class="pre">my_list</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">[]]</span>
-<span class="p">[</span><span class="nb">bool</span><span class="p">(</span><span class="n">ele</span><span class="p">)</span> <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="exercise-6">
-<h2>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this headline">¶</a></h2>
-<p>Convert each element of my_list to str using list comprehension</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-<span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="exercise-7">
-<h2>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this headline">¶</a></h2>
-<p>Use list comprehension to reduce a list of numbers to just even or odd</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">even</span> <span class="o">=</span> <span class="p">[</span><span class="n">number</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">]</span>
-<span class="n">odd</span> <span class="o">=</span> <span class="p">[</span><span class="n">number</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="exercise-8">
-<h2>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this headline">¶</a></h2>
-<p>Use list comprehension to modify a list of numbers such that evens are left as is
-and the odds are raised to the three power</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="p">[</span><span class="n">number</span> <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">number</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="exercise-9">
-<h2>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this headline">¶</a></h2>
-<p>Use list comprehension to remove vowels from a sentence</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;I rEAlly want to gO to work&#39;</span>
-<span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">char</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">sentence</span> <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;aeiou&#39;</span> <span class="ow">and</span> <span class="n">char</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;nt&#39;</span><span class="p">])</span>
-</pre></div>
-</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_32cb5_" style="font-size: 12px">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >AdmissionMonth</th>
+      <th class="col_heading level0 col1" >AddmissionCount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_32cb5_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_32cb5_row0_col0" class="data row0 col0" >November</td>
+      <td id="T_32cb5_row0_col1" class="data row0 col1" >38</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_32cb5_row1_col0" class="data row1 col0" >September</td>
+      <td id="T_32cb5_row1_col1" class="data row1 col1" >38</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_32cb5_row2_col0" class="data row2 col0" >Decemeber</td>
+      <td id="T_32cb5_row2_col1" class="data row2 col1" >36</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_32cb5_row3_col0" class="data row3 col0" >July</td>
+      <td id="T_32cb5_row3_col1" class="data row3 col1" >34</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_32cb5_row4_col0" class="data row4 col0" >February</td>
+      <td id="T_32cb5_row4_col1" class="data row4 col1" >31</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_32cb5_row5_col0" class="data row5 col0" >May</td>
+      <td id="T_32cb5_row5_col1" class="data row5 col1" >30</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_32cb5_row6_col0" class="data row6 col0" >January</td>
+      <td id="T_32cb5_row6_col1" class="data row6 col1" >29</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_32cb5_row7_col0" class="data row7 col0" >April</td>
+      <td id="T_32cb5_row7_col1" class="data row7 col1" >28</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_32cb5_row8_col0" class="data row8 col0" >June</td>
+      <td id="T_32cb5_row8_col1" class="data row8 col1" >28</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_32cb5_row9_col0" class="data row9 col0" >March</td>
+      <td id="T_32cb5_row9_col1" class="data row9 col1" >28</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row10" class="row_heading level0 row10" >10</th>
+      <td id="T_32cb5_row10_col0" class="data row10 col0" >October</td>
+      <td id="T_32cb5_row10_col1" class="data row10 col1" >27</td>
+    </tr>
+    <tr>
+      <th id="T_32cb5_level0_row11" class="row_heading level0 row11" >11</th>
+      <td id="T_32cb5_row11_col0" class="data row11 col0" >August</td>
+      <td id="T_32cb5_row11_col1" class="data row11 col1" >25</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
 </div>
 </div>
 
@@ -684,7 +639,7 @@ and the odds are raised to the three power</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./list_comprehension_exercises"
+            path: "./sql"
         },
         predefinedOutput: true
     }
@@ -695,21 +650,7 @@ and the odds are raised to the three power</p>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="exercises.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">List Comprehension Exercises</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../set_dictionary.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Sets and Dictionaries</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
