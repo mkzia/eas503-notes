@@ -169,7 +169,7 @@ LIMIT 10;
 df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
 ```
-(sql:primer:adding_columns_not_from_the_table)=
+(sql:primer:adding_column)=
 ### Adding columns not from the table
 Besides selecting columns in the table, you can also add the following columns to your query:
 1. literals such as numbers or strings

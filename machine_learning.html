@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Machine Learning &#8212; EAS503</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Part 1" href="machine_learning/part1.html" />
+    <link rel="prev" title="Cross-referenced Exercises" href="np_pd/exercises.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/ub.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EAS503</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   EAS 503
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Course Information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="information.html">
+   Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="basics.html">
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="functions_pt1.html">
+   Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="function_exercises/exercises.html">
+     Function Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="function_exercises/exercises_solution.html">
+     Function Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="strings.html">
+   Strings
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="string_exercises/exercises.html">
+     String Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="string_exercises/exercises_solution.html">
+     String Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="conditionals.html">
+   Conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditional_exercises/exercises.html">
+     Conditional Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditional_exercises/exercises_solution.html">
+     Conditional Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="list_tuples.html">
+   Lists and Tuples
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="loops.html">
+   Loops
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/for_loop_exercises.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/for_loop_exercises_solution.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/while_loop_exercises.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/while_loop_exercises_solution.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/modify_loop_exercises.html">
+     Modify Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loop_exercises/modify_loop_exercises_solution.html">
+     Modify Loop Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="list_comprehension.html">
+   List comprehension
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="list_comprehension_exercises/exercises.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="list_comprehension_exercises/exercises_solution.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="set_dictionary.html">
+   Sets and Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lambda.html">
+   Lambda, Filter, Map, and Sorted
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lambda_exercises/exercises.html">
+     Lambda, Filter, Map, and Sorted
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lambda_exercises/exercises_solution.html">
+     Lambda, Filter, Map, and Sorted Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="errors.html">
+   Errors and Exception Handling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions_pt2.html">
+   Functions Revisited
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="oop.html">
+   Object-Oriented Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="misc_topics.html">
+   Miscellaneous Topics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Structured Query Language (SQL)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="sql.html">
+   SQL with SQLite
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_0_tables.html">
+     Creating Tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_1_query_primer.html">
+     SQL Query Primer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_2_filtering.html">
+     Filtering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_3_sets.html">
+     Sets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_4_grouping.html">
+     Grouping and Aggregates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_5_subqueries.html">
+     Subqueries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_6_conditionals.html">
+     Conditionals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_7_analytic_functions.html">
+     Analytic Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql/sql_8_normalization.html">
+     Normalization
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Numpy and Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="np_pd.html">
+   Numpy and pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="np_pd/numpy.html">
+     Numpy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="np_pd/pandas.html">
+     pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="np_pd/exercises.html">
+     Cross-referenced Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Machine Learning
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="machine_learning/part1.html">
+     Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="machine_learning/part2.html">
+     Part 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Style Guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="style.html">
+   Style Guide
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="_sources/machine_learning.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/machine_learning.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/mkzia/eas503-notes"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mkzia/eas503-notes/master?urlpath=tree/docs/machine_learning.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-machine-learning-concept">
+   General Machine Learning Concept
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-outline-of-machine-learning">
+   General Outline of Machine Learning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#various-python-libraries-when-to-use-what">
+   Various Python Libraries: When to use what
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#topics-covered">
+   Topics Covered
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-scikit-learn">
+   Introduction to Scikit-learn
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#high-level-steps">
+     High Level Steps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-steps">
+     General Steps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loading-data">
+     Loading data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing">
+     Preprocessing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mean-and-variance">
+       Mean and Variance
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#encoding">
+       Encoding
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#discretization">
+       Discretization
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#imputation">
+       Imputation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#splitting-data">
+     Splitting Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-regression">
+     Linear Regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naive-bayes">
+     Naive Bayes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#support-vector-machine-svm">
+     Support Vector Machine (SVM)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     Evaluation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Machine Learning</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-machine-learning-concept">
+   General Machine Learning Concept
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-outline-of-machine-learning">
+   General Outline of Machine Learning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#various-python-libraries-when-to-use-what">
+   Various Python Libraries: When to use what
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#topics-covered">
+   Topics Covered
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-scikit-learn">
+   Introduction to Scikit-learn
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#high-level-steps">
+     High Level Steps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-steps">
+     General Steps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loading-data">
+     Loading data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing">
+     Preprocessing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mean-and-variance">
+       Mean and Variance
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#encoding">
+       Encoding
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#discretization">
+       Discretization
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#imputation">
+       Imputation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#splitting-data">
+     Splitting Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-regression">
+     Linear Regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naive-bayes">
+     Naive Bayes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#support-vector-machine-svm">
+     Support Vector Machine (SVM)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     Evaluation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="machine-learning">
+<h1>Machine Learning<a class="headerlink" href="#machine-learning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-machine-learning-concept">
+<h2>General Machine Learning Concept<a class="headerlink" href="#general-machine-learning-concept" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Simplified: in machine learning, a computer is trained to classify new data. Think of it as an input-output device that takes in a number of inputs, and based on the pattern of these inputs, determine the most likely class associated with that data. There two main types of learning strategies. 1) Supervised learning where you train the machine using data for which the correct class is known. 2) Unsupervised learning where the classifier itself tries to find patterns within the input data itself. (Biosignal and Medical Image Processing John Semmlow)</p></li>
+<li><p>Classification (determine <code class="docutils literal notranslate"><span class="pre">label</span></code>) vs Regression (predict a <code class="docutils literal notranslate"><span class="pre">numerical</span> <span class="pre">value</span></code>)</p></li>
+</ul>
+</div>
+<div class="section" id="general-outline-of-machine-learning">
+<h2>General Outline of Machine Learning<a class="headerlink" href="#general-outline-of-machine-learning" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Loading Data</p></li>
+</ol>
+<ul class="simple">
+<li><p>Load toy data included in sklearn</p></li>
+<li><p>Download published/annotated data from online</p></li>
+<li><p>Generate data with specific statistics to learn how algorithms work</p></li>
+</ul>
+<ol class="simple">
+<li><p>Preprocessing Data</p></li>
+</ol>
+<ul class="simple">
+<li><p>Make data zero mean</p></li>
+<li><p>Make data unit variance</p></li>
+<li><p>Fix range of values</p></li>
+<li><p>Deal with missing values</p></li>
+<li><p>Map text labels to integer labels (if applicable) – ML algorithms require the data be numeric</p></li>
+</ul>
+<ol class="simple">
+<li><p>Dimensionality Reduction of data</p></li>
+</ol>
+<ul class="simple">
+<li><p>If you use too many features and do not have enough samples, you could over fit.</p></li>
+<li><p>So you have to choose the most discriminating few features</p></li>
+</ul>
+<ol class="simple">
+<li><p>Applying algorithms</p></li>
+</ol>
+<ul class="simple">
+<li><p>Labeled Data - Supervised</p></li>
+<li><p>Non-labeled Data - Unsupervised</p></li>
+</ul>
+<ol class="simple">
+<li><p>Evaluation</p></li>
+</ol>
+<ul class="simple">
+<li><p>Receiver Operator Curve</p>
+<ul>
+<li><p>Sensitivity</p></li>
+<li><p>Specificity</p></li>
+</ul>
+</li>
+<li><p>Imbalanced Data</p>
+<ul>
+<li><p>Example: 95 % one class, 5% another class</p></li>
+</ul>
+</li>
+<li><p>REF: Scikit-learn Essentials: Mastering the scikit-learn Machine Learning Library for Python by Dhiraj Kumar</p></li>
+</ul>
+</div>
+<div class="section" id="various-python-libraries-when-to-use-what">
+<h2>Various Python Libraries: When to use what<a class="headerlink" href="#various-python-libraries-when-to-use-what" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>ref:<a class="reference external" href="https://www.quora.com/What-is-the-relationship-among-NumPy-SciPy-Pandas-and-Scikit-learn-and-when-should-I-use-each-one-of-them">https://www.quora.com/What-is-the-relationship-among-NumPy-SciPy-Pandas-and-Scikit-learn-and-when-should-I-use-each-one-of-them</a></p></li>
+<li><p>Numpy – provides efficient array computation via vectorization and broadcasting</p>
+<ul>
+<li><p>Vectorization – no need for explicit looping – example, vector multiplication or squaring</p></li>
+<li><p>Broadcasting – manipulate multiple values at once</p></li>
+</ul>
+</li>
+<li><p>Pandas - Uses Numpy arrays as the underlying structure. Good for analyzing tabular data</p></li>
+<li><p>Scipy (scientific python)- provides libraries for scientific computing, including: integration, interpolation, signal processing, linear algebra, statistics. Also uses Numpy infrastructure</p></li>
+<li><p>Scikit-learn - provides a collection of machine-learning algorithms that use Numy and Scipy</p>
+<ul>
+<li><p>Most used Python library for machine-learning</p>
+<ul>
+<li><p>regression</p></li>
+<li><p>classification</p></li>
+<li><p>clustering</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="topics-covered">
+<h2>Topics Covered<a class="headerlink" href="#topics-covered" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Introduction to Scikit-learn</p></li>
+<li><p>Loading Dataset using Scikit-learn</p></li>
+<li><p>Preprocessing data using scikit-learn</p></li>
+<li><p>Train Test split using scikit-learn</p></li>
+<li><p>Linear regression using scikit-learn</p></li>
+<li><p>Naive Bays using Scikit learn</p></li>
+<li><p>SVM using Scikit learn</p></li>
+<li><p>k-Nearest neighbor using Scikit-learn</p></li>
+</ul>
+</div>
+<div class="section" id="introduction-to-scikit-learn">
+<h2>Introduction to Scikit-learn<a class="headerlink" href="#introduction-to-scikit-learn" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Choose the right estimator – the right algorithm for doing ML</p>
+<ul>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html">https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html</a></p></li>
+</ul>
+</li>
+<li><p>Consistent – all object share a common interface</p></li>
+<li><p>Inspection – all parameter values are exposed as public attributes</p></li>
+<li><p>Limited object Hierarchy – algorithms are represented as Python classes, datasets mainly as numpy array and parameters as standard python strings</p></li>
+<li><p>Composition – ML as a sequences of fundamental algorithms</p></li>
+<li><p>Defaults – provides good default values</p></li>
+</ul>
+<div class="section" id="high-level-steps">
+<h3>High Level Steps<a class="headerlink" href="#high-level-steps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Choose the class of model to be coded</p></li>
+<li><p>Choose the hyper parameters of the model</p></li>
+<li><p>Arrange data into target and features</p></li>
+<li><p>Write model fitment code using fit() method.</p></li>
+</ul>
+</div>
+<div class="section" id="general-steps">
+<h3>General Steps<a class="headerlink" href="#general-steps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Load Data</p>
+<ul>
+<li><p>Three ways load data</p>
+<ul>
+<li><p>Dataset loaders (toy datasets that come with skikit-learn)</p>
+<ul>
+<li><p>Good for illustrating how the various algorithms work</p></li>
+</ul>
+</li>
+<li><p>Dataset fetchers (real world datasets)</p>
+<ul>
+<li><p>Built-in functions to load large datasets</p></li>
+<li><p>Pull from <a class="reference external" href="http://openml.org">openml.org</a></p></li>
+</ul>
+</li>
+<li><p>Dataset generation functions</p>
+<ul>
+<li><p>Artificial datasets – can create labeled datasets</p></li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Pre-process Data</p>
+<ul>
+<li><p>Remove mean **</p></li>
+<li><p>Scale Variance **</p></li>
+<li><p>Non-linear transformation</p></li>
+<li><p>Normalization</p></li>
+<li><p>Encoding categorical features</p></li>
+<li><p>Discretization</p></li>
+<li><p>Imputation of missing values</p></li>
+<li><p>Maybe remove outliers if it can be justified. Always document this in research paper</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="loading-data">
+<h3>Loading data<a class="headerlink" href="#loading-data" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="preprocessing">
+<h3>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="mean-and-variance">
+<h4>Mean and Variance<a class="headerlink" href="#mean-and-variance" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>algorithms require that all the features have variance of similar magnitude. If the magnitude differ by orders of magnitude larger than others, it might dominate the objective function.</p>
+<ul>
+<li><p>Whatever mean or std you subtract from the training set, you have to use the same on the testing set.</p></li>
+</ul>
+</li>
+<li><p>Algorithms assume that the input data is Gaussian distribution with zero mean and unit variance.</p></li>
+<li><p>Power transformers aim to map data from any distribution to as close to a Gaussian distribution</p></li>
+</ul>
+</div>
+<div class="section" id="encoding">
+<h4>Encoding<a class="headerlink" href="#encoding" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Map text values to integer codes. For example, instead of using text for city names, use integers, or Male = 0, Female = 1. This allows fitting numerical values into models.</p></li>
+</ul>
+</div>
+<div class="section" id="discretization">
+<h4>Discretization<a class="headerlink" href="#discretization" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Turn continuous values in to discrete values. You bin the continuous into bins. *** Linear models can become non-linear due to discretization</p></li>
+</ul>
+</div>
+<div class="section" id="imputation">
+<h4>Imputation<a class="headerlink" href="#imputation" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Many real world datasets contain missing values;</p>
+<ul>
+<li><p>Discard entire rows</p></li>
+<li><p>Or fill data – usually by guessing from available data</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="splitting-data">
+<h3>Splitting Data<a class="headerlink" href="#splitting-data" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>It is common to split data into training and testing samples.</p></li>
+<li><p>Usually you do 90/10 or 80/20.</p></li>
+<li><p>The splitting has to be random</p></li>
+<li><p>K-Cross-fold validation – split data K times</p></li>
+</ul>
+</div>
+<div class="section" id="linear-regression">
+<h3>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>LR models the relationship between a dependent variable and one or more independent variable. When one increase or decrease, the other increases or decreases.</p></li>
+</ul>
+</div>
+<div class="section" id="naive-bayes">
+<h3>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Simple supervised machine learning classifier</p></li>
+<li><p>Assumes the features are independent</p>
+<ul>
+<li><p>Example – apple is red, round and 4 cm in diameter</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="support-vector-machine-svm">
+<h3>Support Vector Machine (SVM)<a class="headerlink" href="#support-vector-machine-svm" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Another supervised machine learning classifier</p>
+<ul>
+<li><p>use for both classification and regression</p></li>
+</ul>
+</li>
+<li><p>Can do non-linear classification</p></li>
+<li><p>Hyper plane – maximize the margin between two classes</p></li>
+<li><p>Support Vectors – data points that define the hyper plane</p></li>
+<li><p>Margin width – define an optimal hyper plane we need to maximize the width
+of the margin</p></li>
+</ul>
+</div>
+<div class="section" id="evaluation">
+<h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
+<p>Ref: <a class="reference external" href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic">https://en.wikipedia.org/wiki/Receiver_operating_characteristic</a>
+Ref: <a class="reference external" href="https://datascience-enthusiast.com/Python/ROC_Precision-Recall.html">https://datascience-enthusiast.com/Python/ROC_Precision-Recall.html</a></p>
+<p><img alt="roc" src="_images/Roc_curve.svg.png" /></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html">Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#load-sample-dataset">Load sample dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#loading-data-from-the-web">Loading data from the web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#generate-dataset">Generate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#load-data-from-openml-org">Load data from openml.org</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#preprocessing-data">5.3. Preprocessing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#can-save-scaling-and-apply-to-testing-data">Can save scaling and apply to testing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#scaling-features-to-a-range">Scaling features to a range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#pre-processing-data-non-linear-transformation">Pre-processing data - Non-linear transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#normalization">5.3.3. Normalization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#can-save-the-normalization-for-future-use">Can save the normalization for future use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#preprocessing-data-encoding">Preprocessing data - Encoding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#discretization">5.3.5. Discretization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#univariate-feature-imputation">5.4.2. Univariate feature imputation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#splitting-data-into-train-and-test">Splitting data into Train and Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#linear-regression">Linear Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part1.html#naive-bayes">Naive Bayes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning/part2.html">Part 2</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="np_pd/exercises.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Cross-referenced Exercises</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="machine_learning/part1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Part 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mohammad K. Zia<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

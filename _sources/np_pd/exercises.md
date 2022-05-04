@@ -76,7 +76,7 @@ df[['PatientID', 'PatientDateOfBirth']].rename(columns={'PatientDateOfBirth': 'D
 ```
 
 ### Adding columns not from the table
-SQL cross-reference: {ref}`sql:primer:adding_tables_not_from_the_table`
+SQL cross-reference: {ref}`sql:primer:adding_column`
 
 ```{code-cell} ipython3
 from IPython.display import display
