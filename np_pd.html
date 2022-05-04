@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lambda, Filter, Map, and Sorted &#8212; EAS503</title>
+    <title>Numpy and pandas &#8212; EAS503</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -50,8 +50,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lambda, Filter, Map, and Sorted" href="lambda_exercises/exercises.html" />
-    <link rel="prev" title="Set and Dictionary Exercises Solution" href="set_dictionary_exercises/exercises_solution.html" />
+    <link rel="next" title="Numpy" href="np_pd/numpy.html" />
+    <link rel="prev" title="Normalization" href="sql/sql_8_normalization.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
   Python Programming
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduction.html">
    Introduction
@@ -263,11 +263,11 @@ const thebe_selector_output = ".output, .cell_output"
    Sets and Dictionaries
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lambda.html">
    Lambda, Filter, Map, and Sorted
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
@@ -375,12 +375,12 @@ const thebe_selector_output = ".output, .cell_output"
   Numpy and Pandas
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="np_pd.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    Numpy and pandas
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
@@ -456,7 +456,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/lambda.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/np_pd.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -494,34 +494,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lambda">
-   Lambda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filter">
-   Filter
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#map">
-   Map
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sorted">
-   Sorted
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -529,93 +501,28 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lambda, Filter, Map, and Sorted</h1>
+                <h1>Numpy and pandas</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lambda">
-   Lambda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filter">
-   Filter
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#map">
-   Map
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sorted">
-   Sorted
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lambda-filter-map-and-sorted">
-<h1>Lambda, Filter, Map, and Sorted<a class="headerlink" href="#lambda-filter-map-and-sorted" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="lambda">
-<h2>Lambda<a class="headerlink" href="#lambda" title="Permalink to this headline">¶</a></h2>
-<p>lambda a function without a name;</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="numpy-and-pandas">
+<h1>Numpy and pandas<a class="headerlink" href="#numpy-and-pandas" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>anonymous functions</p></li>
-<li><p>one line only</p></li>
-<li><p>single expression only</p></li>
-<li><p>stored in a variable</p></li>
-<li><p>When do you use it?</p>
-<ul>
-<li><p>Pass a function into another function as a parameter</p></li>
+<li><p>Reference book: Effective Pandas: Patterns for Data Manipulation (Treading on Python) by Matt Harrison</p></li>
 </ul>
-</li>
-<li><p>lambda variables (comma separated): expression</p></li>
-<li><p>lambda functions are used with other functions. Usually with map, filter, sort</p></li>
-</ul>
-</div>
-<div class="section" id="filter">
-<h2>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Uses <code class="docutils literal notranslate"><span class="pre">function</span></code> to test the truthiness of each value in the sequence and returns a filtered list.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">function</span></code> must return True or False</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">filter</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">sequence</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="map">
-<h2>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Uses <code class="docutils literal notranslate"><span class="pre">function</span></code> to transform the values in a sequence</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">map</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">sequence</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="sorted">
-<h2>Sorted<a class="headerlink" href="#sorted" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Uses <code class="docutils literal notranslate"><span class="pre">function</span></code> to sort values</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">function</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="np_pd/numpy.html">Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="np_pd/pandas.html">pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="np_pd/exercises.html">Cross-referenced Exercises</a></li>
+</ul>
 </div>
 </div>
 
@@ -644,17 +551,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="set_dictionary_exercises/exercises_solution.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="sql/sql_8_normalization.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Set and Dictionary Exercises Solution</p>
+            <p class="prev-next-title">Normalization</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="lambda_exercises/exercises.html" title="next page">
+    <a class='right-next' id="next-link" href="np_pd/numpy.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lambda, Filter, Map, and Sorted</p>
+        <p class="prev-next-title">Numpy</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

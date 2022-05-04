@@ -290,6 +290,96 @@ df.style.set_table_attributes('style="font-size: 12px"')
 ```
 
 
+```SQL
+WITH SalesTable AS (
+SELECT
+    CASE
+        WHEN 0 + strftime('%m', sale_date) BETWEEN 1
+        AND 3 THEN 'Q1'
+        WHEN 0 + strftime('%m', sale_date) BETWEEN 4
+        AND 6 THEN 'Q2'
+        WHEN 0 + strftime('%m', sale_date) BETWEEN 7
+        AND 9 THEN 'Q3'
+        WHEN 0 + strftime('%m', sale_date) BETWEEN 10
+        AND 12 THEN 'Q4'
+    END Quarter,
+    CASE
+        WHEN strftime('%m', sale_date) = '01' THEN 'January'
+        WHEN strftime('%m', sale_date) = '02' THEN 'February'
+        WHEN strftime('%m', sale_date) = '03' THEN 'March'
+        WHEN strftime('%m', sale_date) = '04' THEN 'April'
+        WHEN strftime('%m', sale_date) = '05' THEN 'May'
+        WHEN strftime('%m', sale_date) = '06' THEN 'June'
+        WHEN strftime('%m', sale_date) = '07' THEN 'July'
+        WHEN strftime('%m', sale_date) = '08' THEN 'August'
+        WHEN strftime('%m', sale_date) = '09' THEN 'September'
+        WHEN strftime('%m', sale_date) = '10' THEN 'October'
+        WHEN strftime('%m', sale_date) = '11' THEN 'November'
+        WHEN strftime('%m', sale_date) = '12' THEN 'December'
+    END Month, 
+	Total
+FROM
+    bakery_sales
+)
+SELECT 
+	Quarter,
+	Month, 
+	Sum(Total) MonthlySales,
+	rank() OVER (PARTITION BY Quarter ORDER BY -sum(total)) SalesRank
+FROM SalesTable
+GROUP BY Quarter, Month
+```
+
+```{code-cell} ipython3
+:tags: ["hide-input", "output_scroll"]
+import sqlite3
+import pandas as pd
+
+conn = sqlite3.connect('bakery_sales.db')
+
+sql_statement = """
+WITH SalesTable AS (
+SELECT
+    CASE
+        WHEN 0 + strftime('%m', sale_date) BETWEEN 1
+        AND 3 THEN 'Q1'
+        WHEN 0 + strftime('%m', sale_date) BETWEEN 4
+        AND 6 THEN 'Q2'
+        WHEN 0 + strftime('%m', sale_date) BETWEEN 7
+        AND 9 THEN 'Q3'
+        WHEN 0 + strftime('%m', sale_date) BETWEEN 10
+        AND 12 THEN 'Q4'
+    END Quarter,
+    CASE
+        WHEN strftime('%m', sale_date) = '01' THEN 'January'
+        WHEN strftime('%m', sale_date) = '02' THEN 'February'
+        WHEN strftime('%m', sale_date) = '03' THEN 'March'
+        WHEN strftime('%m', sale_date) = '04' THEN 'April'
+        WHEN strftime('%m', sale_date) = '05' THEN 'May'
+        WHEN strftime('%m', sale_date) = '06' THEN 'June'
+        WHEN strftime('%m', sale_date) = '07' THEN 'July'
+        WHEN strftime('%m', sale_date) = '08' THEN 'August'
+        WHEN strftime('%m', sale_date) = '09' THEN 'September'
+        WHEN strftime('%m', sale_date) = '10' THEN 'October'
+        WHEN strftime('%m', sale_date) = '11' THEN 'November'
+        WHEN strftime('%m', sale_date) = '12' THEN 'December'
+    END Month, 
+	Total
+FROM
+    bakery_sales
+)
+SELECT 
+	Quarter,
+	Month, 
+	Sum(Total) MonthlySales,
+	rank() OVER (PARTITION BY Quarter ORDER BY -sum(total)) SalesRank
+FROM SalesTable
+GROUP BY Quarter, Month
+"""
+df = pd.read_sql_query(sql_statement, conn)
+df.style.set_table_attributes('style="font-size: 12px"')
+```
+
 ## Window Frames
 
 ref: https://www.sqlitetutorial.net/sqlite-window-functions/sqlite-window-frame/
@@ -512,9 +602,9 @@ df.style.set_table_attributes('style="font-size: 12px"')
 
 ## Ranking
 
-`rank`: returns the same ranking in case of a tie, with gaps in the rankings
-`row_number`: returns a unique number for each row, with rankings arbitrarily assigned in case of a tie
-`dense_rank`: returns the same ranking in the case of a tie, with no gaps in the rankings
+- `rank`: returns the same ranking in case of a tie, with gaps in the rankings
+- `row_number`: returns a unique number for each row, with rankings arbitrarily assigned in case of a tie
+- `dense_rank`: returns the same ranking in the case of a tie, with no gaps in the rankings
 
 Ref: https://blog.jooq.org/the-difference-between-row_number-rank-and-dense_rank/
 
