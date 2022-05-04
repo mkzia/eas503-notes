@@ -540,6 +540,36 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pca">
+   PCA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scree-plot">
+     Scree plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pca-on-iris-data">
+     PCA on Iris Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluating-algorithms">
+   Evaluating Algorithms
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -552,6 +582,36 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pca">
+   PCA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scree-plot">
+     Scree plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pca-on-iris-data">
+     PCA on Iris Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluating-algorithms">
+   Evaluating Algorithms
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -568,6 +628,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<div class="section" id="pca">
+<h2>PCA<a class="headerlink" href="#pca" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -604,10 +666,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f33906bc700&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072f391670&gt;]
 </pre></div>
 </div>
-<img alt="../_images/part2_3_1.png" src="../_images/part2_3_1.png" />
+<img alt="../_images/part2_4_1.png" src="../_images/part2_4_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -617,10 +679,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f338fe32cd0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072eb07be0&gt;]
 </pre></div>
 </div>
-<img alt="../_images/part2_4_1.png" src="../_images/part2_4_1.png" />
+<img alt="../_images/part2_5_1.png" src="../_images/part2_5_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -630,10 +692,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f338fdb5cd0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072ea88f10&gt;]
 </pre></div>
 </div>
-<img alt="../_images/part2_5_1.png" src="../_images/part2_5_1.png" />
+<img alt="../_images/part2_6_1.png" src="../_images/part2_6_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -645,16 +707,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.41687068, -0.34669122, -0.36084703, ..., -0.45305937,
-        -0.4657551 , -0.5131325 ],
-       [-0.19288648, -0.04253791, -0.08792601, ..., -0.18856543,
-        -0.21657426, -0.18862876],
-       [-0.64693222, -0.55279801, -0.54351836, ..., -0.66494436,
-        -0.6756646 , -0.68248273],
-       [ 0.44149514,  0.42125103,  0.52910573, ...,  0.47938288,
-         0.51310019,  0.44230165],
-       [-0.20280104,  0.10278347,  0.06366703, ..., -0.23935691,
-         0.13024015,  0.23997398]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.47862829, -0.38879105, -0.30218849, ..., -0.50902552,
+        -0.50415921, -0.49098793],
+       [-0.16045221, -0.10249944, -0.11655623, ..., -0.29355242,
+        -0.21232194, -0.16834642],
+       [-0.60439822, -0.64006102, -0.49737671, ..., -0.61220229,
+        -0.67643732, -0.74899116],
+       [ 0.39897397,  0.39201591,  0.56711374, ...,  0.36548838,
+         0.45050055,  0.47849504],
+       [ 0.0160127 , -0.08087127, -0.06307017, ...,  0.04286686,
+        -0.15434217, -0.07095115]])
 </pre></div>
 </div>
 </div>
@@ -679,7 +741,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20.92972392, 14.27484738,  5.50544862,  1.45580672,  0.97664879])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20.92941314, 14.19293744,  5.3129186 ,  1.44996795,  0.97824576])
 </pre></div>
 </div>
 </div>
@@ -692,8 +754,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([438.05334341, 203.77126776,  30.30996447,   2.11937321,
-         0.95384287])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([438.04033444, 201.4394733 ,  28.2271041 ,   2.10240704,
+         0.95696476])
 </pre></div>
 </div>
 </div>
@@ -705,8 +767,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([438.05334341, 203.77126776,  30.30996447,   2.11937321,
-         0.95384287])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([438.04033444, 201.4394733 ,  28.2271041 ,   2.10240704,
+         0.95696476])
 </pre></div>
 </div>
 </div>
@@ -734,11 +796,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.6487682 , 0.30179046, 0.04488983, 0.00313885, 0.00141267])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.65304465, 0.30031246, 0.04208188, 0.00313434, 0.00142667])
 </pre></div>
 </div>
 </div>
 </div>
+<div class="section" id="scree-plot">
+<h3>Scree plot<a class="headerlink" href="#scree-plot" title="Permalink to this headline">¶</a></h3>
+<p>Gives the measure of the associated principal component’s importance with regards to how much of the total information it represents.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">eigen</span><span class="p">)</span>
@@ -746,10 +811,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f338fd33550&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072ea076a0&gt;]
 </pre></div>
 </div>
-<img alt="../_images/part2_14_1.png" src="../_images/part2_14_1.png" />
+<img alt="../_images/part2_16_1.png" src="../_images/part2_16_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -760,10 +825,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f338f506400&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072e1d9340&gt;]
 </pre></div>
 </div>
-<img alt="../_images/part2_15_1.png" src="../_images/part2_15_1.png" />
+<img alt="../_images/part2_17_1.png" src="../_images/part2_17_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -774,10 +839,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f338f466ca0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072e194160&gt;]
 </pre></div>
 </div>
-<img alt="../_images/part2_16_1.png" src="../_images/part2_16_1.png" />
+<img alt="../_images/part2_18_1.png" src="../_images/part2_18_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -788,12 +853,15 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f338f448af0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072e11ab20&gt;]
 </pre></div>
 </div>
-<img alt="../_images/part2_17_1.png" src="../_images/part2_17_1.png" />
+<img alt="../_images/part2_19_1.png" src="../_images/part2_19_1.png" />
 </div>
 </div>
+</div>
+<div class="section" id="pca-on-iris-data">
+<h3>PCA on Iris Data<a class="headerlink" href="#pca-on-iris-data" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -846,7 +914,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 576x432 with 0 Axes&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f338d157520&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f0727e29520&gt;
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Sepal length&#39;)
@@ -867,11 +935,11 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([], [])
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_9467/1367415577.py:31: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_12399/1367415577.py:31: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
   ax = Axes3D(fig, elev=-150, azim=110)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;mpl_toolkits.mplot3d.art3d.Path3DCollection at 0x7f338d127e20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;mpl_toolkits.mplot3d.art3d.Path3DCollection at 0x7f0727df9df0&gt;
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.92, &#39;First three PCA directions&#39;)
@@ -920,8 +988,8 @@ const thebe_selector_output = ".output, .cell_output"
  Text(1.0, 0, &#39;&#39;)]
 </pre></div>
 </div>
-<img alt="../_images/part2_18_17.png" src="../_images/part2_18_17.png" />
-<img alt="../_images/part2_18_18.png" src="../_images/part2_18_18.png" />
+<img alt="../_images/part2_21_17.png" src="../_images/part2_21_17.png" />
+<img alt="../_images/part2_21_18.png" src="../_images/part2_21_18.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -961,106 +1029,106 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.1       , 3.5       , 1.4       , 0.2       , 5.12283202,
-        3.54447527, 1.41511551, 0.21465508],
-       [4.9       , 3.        , 1.4       , 0.2       , 4.93726898,
-        3.00549232, 1.42133978, 0.20728007],
-       [4.7       , 3.2       , 1.3       , 0.2       , 4.72572841,
-        3.21985944, 1.33839707, 0.23498145],
-       [4.6       , 3.1       , 1.5       , 0.2       , 4.61724285,
-        3.10937006, 1.51525269, 0.2192566 ],
-       [5.        , 3.6       , 1.4       , 0.2       , 5.01263941,
-        3.64138002, 1.411998  , 0.21514424],
-       [5.4       , 3.9       , 1.7       , 0.4       , 5.44290737,
-        3.91720351, 1.7372706 , 0.40942899],
-       [4.6       , 3.4       , 1.4       , 0.3       , 4.62608864,
-        3.41928452, 1.40858494, 0.32524279],
-       [5.        , 3.4       , 1.5       , 0.2       , 5.01324962,
-        3.4448214 , 1.54944472, 0.2129256 ],
-       [4.4       , 2.9       , 1.4       , 0.2       , 4.42447101,
-        2.90204508, 1.43789133, 0.23071041],
-       [4.9       , 3.1       , 1.5       , 0.1       , 4.90920549,
-        3.13578525, 1.54111167, 0.14835556],
-       [5.4       , 3.7       , 1.5       , 0.2       , 5.43717014,
-        3.72702214, 1.52427196, 0.22506672],
-       [4.8       , 3.4       , 1.6       , 0.2       , 4.81900119,
-        3.40506639, 1.61940779, 0.23601866],
-       [4.8       , 3.        , 1.4       , 0.1       , 4.80855092,
-        3.03889377, 1.40485487, 0.12320693],
-       [4.3       , 3.        , 1.1       , 0.1       , 4.33809751,
-        3.01827834, 1.11321774, 0.10212791],
-       [5.8       , 4.        , 1.2       , 0.2       , 5.80677332,
-        4.00292265, 1.22419928, 0.23301524],
-       [5.7       , 4.4       , 1.5       , 0.4       , 5.73899971,
-        4.4450921 , 1.5053818 , 0.40042875],
-       [5.4       , 3.9       , 1.3       , 0.4       , 5.41690521,
-        3.91975904, 1.32619498, 0.40427879],
-       [5.1       , 3.5       , 1.4       , 0.3       , 5.13372584,
-        3.50073964, 1.41137039, 0.3191731 ],
-       [5.7       , 3.8       , 1.7       , 0.3       , 5.72202918,
-        3.84510077, 1.71177799, 0.30483284],
-       [5.1       , 3.8       , 1.5       , 0.3       , 5.14045824,
-        3.81107992, 1.52569475, 0.30326304],
-       [5.4       , 3.4       , 1.7       , 0.2       , 5.43202624,
-        3.42492285, 1.71206826, 0.20076209],
-       [5.1       , 3.7       , 1.5       , 0.4       , 5.14982559,
-        3.72702442, 1.50449179, 0.43203438],
-       [4.6       , 3.6       , 1.        , 0.2       , 4.60182991,
-        3.6060807 , 1.00177459, 0.22986054],
-       [5.1       , 3.3       , 1.7       , 0.5       , 5.119095  ,
-        3.30323697, 1.74350535, 0.53820444],
-       [4.8       , 3.4       , 1.9       , 0.2       , 4.80690593,
-        3.43682103, 1.90281409, 0.23713052],
-       [5.        , 3.        , 1.6       , 0.2       , 5.0339245 ,
-        3.01476906, 1.62781592, 0.24360135],
-       [5.        , 3.4       , 1.6       , 0.4       , 5.04428051,
-        3.42126379, 1.62244567, 0.44028053],
-       [5.2       , 3.5       , 1.5       , 0.2       , 5.21488029,
-        3.54182836, 1.50348606, 0.2309181 ],
-       [5.2       , 3.4       , 1.4       , 0.2       , 5.20004052,
-        3.41709141, 1.40514106, 0.23603025],
-       [4.7       , 3.2       , 1.6       , 0.2       , 4.72072709,
-        3.22594811, 1.62407943, 0.21171747],
-       [4.8       , 3.1       , 1.6       , 0.2       , 4.84992928,
-        3.11263423, 1.64598126, 0.20037592],
-       [5.4       , 3.4       , 1.5       , 0.4       , 5.41341639,
-        3.43345298, 1.51267512, 0.41258016],
-       [5.2       , 4.1       , 1.5       , 0.1       , 5.20024054,
-        4.12149176, 1.51062721, 0.13057544],
-       [5.5       , 4.2       , 1.4       , 0.2       , 5.52380933,
-        4.21181996, 1.42348841, 0.23464432],
-       [4.9       , 3.1       , 1.5       , 0.2       , 4.9044941 ,
-        3.12657414, 1.52368159, 0.20654035],
-       [5.        , 3.2       , 1.2       , 0.2       , 5.01850964,
-        3.23193829, 1.22223505, 0.20013367],
-       [5.5       , 3.5       , 1.3       , 0.2       , 5.52052097,
-        3.52986729, 1.31147672, 0.21596227],
-       [4.9       , 3.6       , 1.4       , 0.1       , 4.91031091,
-        3.64276994, 1.41802454, 0.13832117],
-       [4.4       , 3.        , 1.3       , 0.2       , 4.40007897,
-        3.03117751, 1.31530582, 0.2174912 ],
-       [5.1       , 3.4       , 1.5       , 0.2       , 5.10435512,
-        3.43345407, 1.54069746, 0.20339705],
-       [5.        , 3.5       , 1.3       , 0.3       , 5.0248747 ,
-        3.50915359, 1.34768302, 0.30785578],
-       [4.5       , 2.3       , 1.3       , 0.3       , 4.52858211,
-        2.30305061, 1.31831105, 0.33576792],
-       [4.4       , 3.2       , 1.3       , 0.2       , 4.43859007,
-        3.23481267, 1.33292308, 0.21316858],
-       [5.        , 3.5       , 1.6       , 0.6       , 5.01744813,
-        3.53679241, 1.61887603, 0.60374835],
-       [5.1       , 3.8       , 1.9       , 0.4       , 5.14899849,
-        3.84472694, 1.9400254 , 0.41261678],
-       [4.8       , 3.        , 1.4       , 0.3       , 4.81600325,
-        3.04533343, 1.44073589, 0.30846682],
-       [5.1       , 3.8       , 1.6       , 0.2       , 5.10055937,
-        3.83001459, 1.64295293, 0.21220689],
-       [4.6       , 3.2       , 1.4       , 0.2       , 4.63980609,
-        3.22873808, 1.44019247, 0.22779614],
-       [5.3       , 3.7       , 1.5       , 0.2       , 5.32104755,
-        3.70725586, 1.52362372, 0.22228001],
-       [5.        , 3.3       , 1.4       , 0.2       , 5.0086903 ,
-        3.33664074, 1.41625021, 0.21965373]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.1       , 3.5       , 1.4       , 0.2       , 5.14431193,
+        3.50764462, 1.44332496, 0.21387327],
+       [4.9       , 3.        , 1.4       , 0.2       , 4.91087993,
+        3.03866705, 1.40983302, 0.2147247 ],
+       [4.7       , 3.2       , 1.3       , 0.2       , 4.74068779,
+        3.20425456, 1.30832604, 0.20743595],
+       [4.6       , 3.1       , 1.5       , 0.2       , 4.61500209,
+        3.14400832, 1.53180218, 0.22365062],
+       [5.        , 3.6       , 1.4       , 0.2       , 5.04254336,
+        3.62243756, 1.40207769, 0.21128666],
+       [5.4       , 3.9       , 1.7       , 0.4       , 5.44456664,
+        3.92603047, 1.73969415, 0.41997868],
+       [4.6       , 3.4       , 1.4       , 0.3       , 4.62756009,
+        3.43180229, 1.44794028, 0.32952289],
+       [5.        , 3.4       , 1.5       , 0.2       , 5.01816748,
+        3.44629783, 1.52940419, 0.21230839],
+       [4.4       , 2.9       , 1.4       , 0.2       , 4.4466031 ,
+        2.92695551, 1.43521754, 0.23356125],
+       [4.9       , 3.1       , 1.5       , 0.1       , 4.93461905,
+        3.13884029, 1.52648616, 0.11586774],
+       [5.4       , 3.7       , 1.5       , 0.2       , 5.44579673,
+        3.72741375, 1.54746558, 0.24514221],
+       [4.8       , 3.4       , 1.6       , 0.2       , 4.84487872,
+        3.41192042, 1.63697193, 0.23168407],
+       [4.8       , 3.        , 1.4       , 0.1       , 4.84514592,
+        3.02725227, 1.42585545, 0.14799218],
+       [4.3       , 3.        , 1.1       , 0.1       , 4.32047793,
+        3.02300803, 1.13346972, 0.11341413],
+       [5.8       , 4.        , 1.2       , 0.2       , 5.84076384,
+        4.01537337, 1.20101386, 0.23800611],
+       [5.7       , 4.4       , 1.5       , 0.4       , 5.74891951,
+        4.43047936, 1.51552475, 0.4144376 ],
+       [5.4       , 3.9       , 1.3       , 0.4       , 5.41466322,
+        3.92812923, 1.3435958 , 0.4420865 ],
+       [5.1       , 3.5       , 1.4       , 0.3       , 5.13409979,
+        3.52395712, 1.41077571, 0.31189431],
+       [5.7       , 3.8       , 1.7       , 0.3       , 5.74822918,
+        3.83249204, 1.70942421, 0.30901002],
+       [5.1       , 3.8       , 1.5       , 0.3       , 5.11537231,
+        3.80288244, 1.51179473, 0.32463632],
+       [5.4       , 3.4       , 1.7       , 0.2       , 5.44368221,
+        3.40083639, 1.70502723, 0.22212559],
+       [5.1       , 3.7       , 1.5       , 0.4       , 5.11180687,
+        3.71728887, 1.51001693, 0.4299192 ],
+       [4.6       , 3.6       , 1.        , 0.2       , 4.63652804,
+        3.63811333, 1.0465597 , 0.24173045],
+       [5.1       , 3.3       , 1.7       , 0.5       , 5.13988175,
+        3.30778551, 1.74438431, 0.51627285],
+       [4.8       , 3.4       , 1.9       , 0.2       , 4.82316961,
+        3.4112845 , 1.92900661, 0.24302114],
+       [5.        , 3.        , 1.6       , 0.2       , 5.00688509,
+        3.03377719, 1.64058502, 0.20139456],
+       [5.        , 3.4       , 1.6       , 0.4       , 5.02323687,
+        3.42999749, 1.6066972 , 0.44669135],
+       [5.2       , 3.5       , 1.5       , 0.2       , 5.20793935,
+        3.50572943, 1.51077713, 0.20750326],
+       [5.2       , 3.4       , 1.4       , 0.2       , 5.23258115,
+        3.44065023, 1.42581109, 0.20812266],
+       [4.7       , 3.2       , 1.6       , 0.2       , 4.72640033,
+        3.20502536, 1.60829046, 0.21317809],
+       [4.8       , 3.1       , 1.6       , 0.2       , 4.83891128,
+        3.11041935, 1.64333907, 0.21661403],
+       [5.4       , 3.4       , 1.5       , 0.4       , 5.44082588,
+        3.40526082, 1.52043594, 0.41071198],
+       [5.2       , 4.1       , 1.5       , 0.1       , 5.24123079,
+        4.10176883, 1.52474432, 0.10847361],
+       [5.5       , 4.2       , 1.4       , 0.2       , 5.52121762,
+        4.23858226, 1.40423983, 0.22194093],
+       [4.9       , 3.1       , 1.5       , 0.2       , 4.94416995,
+        3.13871204, 1.54570182, 0.23053069],
+       [5.        , 3.2       , 1.2       , 0.2       , 5.02277553,
+        3.22043506, 1.2090478 , 0.23914086],
+       [5.5       , 3.5       , 1.3       , 0.2       , 5.53144508,
+        3.51363746, 1.31187013, 0.24886746],
+       [4.9       , 3.6       , 1.4       , 0.1       , 4.92364253,
+        3.62442855, 1.43942086, 0.11235498],
+       [4.4       , 3.        , 1.3       , 0.2       , 4.44413153,
+        3.0349332 , 1.3103121 , 0.2334135 ],
+       [5.1       , 3.4       , 1.5       , 0.2       , 5.12085752,
+        3.40421986, 1.50121448, 0.21590093],
+       [5.        , 3.5       , 1.3       , 0.3       , 5.04632524,
+        3.52098244, 1.32976733, 0.32764328],
+       [4.5       , 2.3       , 1.3       , 0.3       , 4.54628364,
+        2.34218828, 1.33145421, 0.31644044],
+       [4.4       , 3.2       , 1.3       , 0.2       , 4.43323006,
+        3.2088602 , 1.33225768, 0.22905674],
+       [5.        , 3.5       , 1.6       , 0.6       , 5.04154232,
+        3.53819419, 1.62401474, 0.63048618],
+       [5.1       , 3.8       , 1.9       , 0.4       , 5.13108648,
+        3.83354758, 1.9034284 , 0.41849345],
+       [4.8       , 3.        , 1.4       , 0.3       , 4.84488756,
+        3.03425516, 1.40515208, 0.31664769],
+       [5.1       , 3.8       , 1.6       , 0.2       , 5.14649276,
+        3.81382481, 1.60467817, 0.24047775],
+       [4.6       , 3.2       , 1.4       , 0.2       , 4.60334746,
+        3.21172518, 1.44766182, 0.24995917],
+       [5.3       , 3.7       , 1.5       , 0.2       , 5.33784522,
+        3.72140742, 1.52648808, 0.24038454],
+       [5.        , 3.3       , 1.4       , 0.2       , 5.04272104,
+        3.34846579, 1.40048599, 0.20668372]])
 </pre></div>
 </div>
 </div>
@@ -1072,8 +1140,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5.006     , 3.428     , 1.462     , 0.246     , 5.02814292,
-       3.45248715, 1.48472334, 0.2658703 ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5.006     , 3.428     , 1.462     , 0.246     , 5.03876739,
+       3.45132367, 1.48505737, 0.27009389])
 </pre></div>
 </div>
 </div>
@@ -1087,106 +1155,106 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.26938189,  0.19186974, -0.36063582, -0.44092382,  0.27117684,
-         0.24368556, -0.39892632, -0.49985868],
-       [-0.30377107, -1.14055903, -0.36063582, -0.44092382, -0.26025073,
-        -1.1841332 , -0.36325471, -0.57183844],
-       [-0.87692403, -0.60758752, -0.9423065 , -0.44092382, -0.86607441,
-        -0.61625366, -0.83860397, -0.30147403],
-       [-1.16350052, -0.87407328,  0.22103486, -0.44092382, -1.17676246,
-        -0.90895088,  0.17496541, -0.45494803],
-       [-0.01719459,  0.4583555 , -0.36063582, -0.44092382, -0.04439995,
-         0.50039577, -0.41679297, -0.49508446],
-       [ 1.12911134,  1.25781276,  1.38437621,  1.47613628,  1.18782952,
-         1.23107929,  1.44736234,  1.40112749],
-       [-1.16350052, -0.07461601, -0.36063582,  0.51760623, -1.1514293 ,
-        -0.08795702, -0.43635341,  0.57947335],
-       [-0.01719459, -0.07461601,  0.22103486, -0.44092382, -0.04265239,
-        -0.02030731,  0.37092182, -0.51673833],
-       [-1.73665348, -1.40704478, -0.36063582, -0.44092382, -1.72883503,
-        -1.45817511, -0.26839684, -0.34315927],
-       [-0.30377107, -0.87407328,  0.22103486, -1.39945388, -0.34062078,
-        -0.83897443,  0.32316463, -1.1469395 ],
-       [ 1.12911134,  0.72484125,  0.22103486, -0.44092382,  1.17139887,
-         0.72727015,  0.22665534, -0.39824142],
-       [-0.59034755, -0.07461601,  0.80270553, -0.44092382, -0.59895373,
-        -0.12562224,  0.77188405, -0.29135087],
-       [-0.59034755, -1.14055903, -0.36063582, -1.39945388, -0.62888192,
-        -1.09564948, -0.45773066, -1.39238925],
-       [-2.02322996, -1.14055903, -2.10564785, -1.39945388, -1.97619712,
-        -1.15026179, -2.12911919, -1.59811967],
-       [ 2.27541727,  1.52429852, -1.52397717, -0.44092382,  2.22989259,
-         1.45815771, -1.49307783, -0.32066419],
-       [ 1.98884078,  2.59024154,  0.22103486,  1.47613628,  2.0357981 ,
-         2.629508  ,  0.11839478,  1.3132855 ],
-       [ 1.12911134,  1.25781276, -0.9423065 ,  1.47613628,  1.11336284,
-         1.23784913, -0.90853483,  1.35086179],
-       [ 0.26938189,  0.19186974, -0.36063582,  0.51760623,  0.30237526,
-         0.1278256 , -0.42038982,  0.52023339],
-       [ 1.98884078,  0.99132701,  1.38437621,  0.51760623,  1.98719681,
-         1.04007205,  1.30126274,  0.38027295],
-       [ 0.26938189,  0.99132701,  0.22103486,  0.51760623,  0.32165595,
-         0.94994748,  0.23480942,  0.36495177],
-       [ 1.12911134, -0.07461601,  1.38437621, -0.44092382,  1.15666743,
-        -0.07302055,  1.30292633, -0.63545374],
-       [ 0.26938189,  0.72484125,  0.22103486,  1.47613628,  0.34848278,
-         0.7272762 ,  0.11329407,  1.62175531],
-       [-1.16350052,  0.4583555 , -2.68731853, -0.44092382, -1.22090305,
-         0.4068844 , -2.76780601, -0.35145392],
-       [ 0.26938189, -0.34110177,  1.38437621,  2.43466633,  0.26047452,
-        -0.39537837,  1.48309404,  2.6579711 ],
-       [-0.59034755, -0.07461601,  2.54771757, -0.44092382, -0.63359294,
-        -0.04150109,  2.39610121, -0.28049922],
-       [-0.01719459, -1.14055903,  0.80270553, -0.44092382,  0.01655766,
-        -1.1595582 ,  0.82007152, -0.21734408],
-       [-0.01719459, -0.07461601,  0.80270553,  1.47613628,  0.04621589,
-        -0.08271374,  0.7892943 ,  1.70223737],
-       [ 0.55595837,  0.19186974,  0.22103486, -0.44092382,  0.53479067,
-         0.23667365,  0.10753016, -0.34113221],
-       [ 0.55595837, -0.07461601, -0.36063582, -0.44092382,  0.49229157,
-        -0.0937668 , -0.45609049, -0.29123775],
-       [-0.87692403, -0.60758752,  0.80270553, -0.44092382, -0.88039752,
-        -0.60012415,  0.79865749, -0.52852962],
-       [-0.59034755, -0.87407328,  0.80270553, -0.44092382, -0.51037987,
-        -0.90030376,  0.92417803, -0.6392227 ],
-       [ 1.12911134, -0.07461601,  0.22103486,  1.47613628,  1.10337132,
-        -0.05042338,  0.1601932 ,  1.43188278],
-       [ 0.55595837,  1.79078427,  0.22103486, -1.39945388,  0.49286441,
-         1.77225893,  0.14845653, -1.32047286],
-       [ 1.41568782,  2.05727003, -0.36063582, -0.44092382,  1.41952183,
-         2.0115472 , -0.35094079, -0.30476438],
-       [-0.30377107, -0.87407328,  0.22103486, -0.44092382, -0.35411356,
-        -0.86337557,  0.22327188, -0.57905815],
-       [-0.01719459, -0.60758752, -1.52397717, -0.44092382, -0.0275884 ,
-        -0.5842556 , -1.50433495, -0.6415871 ],
-       [ 1.41568782,  0.19186974, -0.9423065 , -0.44092382,  1.41010443,
-         0.2049876 , -0.99288598, -0.48710049],
-       [-0.30377107,  0.4583555 , -0.36063582, -1.39945388, -0.337455  ,
-         0.5040778 , -0.38225454, -1.24487482],
-       [-1.73665348, -1.14055903, -0.9423065 , -0.44092382, -1.79869055,
-        -1.11609062, -0.97094118, -0.47217819],
-       [ 0.26938189, -0.07461601,  0.22103486, -0.44092382,  0.21826148,
-        -0.05042049,  0.32079078, -0.60973664],
-       [-0.01719459,  0.19186974, -0.9423065 ,  0.51760623, -0.00935972,
-         0.15011496, -0.78538569,  0.40977674],
-       [-1.450077  , -3.00595931, -0.9423065 ,  0.51760623, -1.43067489,
-        -3.04497028, -0.95371807,  0.68219815],
-       [-1.73665348, -0.60758752, -0.9423065 , -0.44092382, -1.68839995,
-        -0.57664108, -0.86997571, -0.51436685],
-       [-0.01719459,  0.19186974,  0.80270553,  3.39319638, -0.03062844,
-         0.22333292,  0.7688365 ,  3.29767733],
-       [ 0.26938189,  0.99132701,  2.54771757,  1.47613628,  0.34611408,
-         1.03908172,  2.60936132,  1.43224024],
-       [-0.59034755, -1.14055903, -0.36063582,  0.51760623, -0.60753943,
-        -1.07859019, -0.25209452,  0.4157405 ],
-       [ 0.26938189,  0.99132701,  0.80270553, -0.44092382,  0.20739096,
-         1.00010728,  0.90682256, -0.52375289],
-       [-1.16350052, -0.60758752, -0.36063582, -0.44092382, -1.11214438,
-        -0.59273327, -0.25520889, -0.37160241],
-       [ 0.84253486,  0.72484125,  0.22103486, -0.44092382,  0.83883941,
-         0.67490735,  0.2229402 , -0.42543957],
-       [-0.01719459, -0.34110177, -0.36063582, -0.44092382, -0.05570968,
-        -0.30688851, -0.39242328, -0.45107205]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.26938189,  0.19186974, -0.36063582, -0.44092382,  0.3008163 ,
+         0.15095167, -0.2434004 , -0.53267979],
+       [-0.30377107, -1.14055903, -0.36063582, -0.44092382, -0.36449664,
+        -1.10600415, -0.43873908, -0.5246126 ],
+       [-0.87692403, -0.60758752, -0.9423065 , -0.44092382, -0.84956737,
+        -0.66219575, -1.03076917, -0.59367211],
+       [-1.16350052, -0.87407328,  0.22103486, -0.44092382, -1.20778868,
+        -0.823668  ,  0.2726348 , -0.44004121],
+       [-0.01719459,  0.4583555 , -0.36063582, -0.44092382,  0.01076204,
+         0.45862024, -0.48397131, -0.55718743],
+       [ 1.12911134,  1.25781276,  1.38437621,  1.47613628,  1.15658302,
+         1.27231134,  1.48514552,  1.42012994],
+       [-1.16350052, -0.07461601, -0.36063582,  0.51760623, -1.1719967 ,
+        -0.05232128, -0.21648202,  0.56307846],
+       [-0.01719459, -0.07461601,  0.22103486, -0.44092382, -0.05871255,
+        -0.01347027,  0.25864871, -0.54750664],
+       [-1.73665348, -1.40704478, -0.36063582, -0.44092382, -1.6877487 ,
+        -1.40541392, -0.29068623, -0.34613984],
+       [-0.30377107, -0.87407328,  0.22103486, -1.39945388, -0.29683693,
+        -0.83751936,  0.24162957, -1.46126352],
+       [ 1.12911134,  0.72484125,  0.22103486, -0.44092382,  1.16008895,
+         0.73997791,  0.36399013, -0.23641248],
+       [-0.59034755, -0.07461601,  0.80270553, -0.44092382, -0.55260907,
+        -0.10560877,  0.88602765, -0.36392575],
+       [-0.59034755, -1.14055903, -0.36063582, -1.39945388, -0.55184749,
+        -1.1365981 , -0.34528972, -1.1568906 ],
+       [-2.02322996, -1.14055903, -2.10564785, -1.39945388, -2.04722258,
+        -1.14797352, -2.05060257, -1.48451106],
+       [ 2.27541727,  1.52429852, -1.52397717, -0.44092382,  2.28579889,
+         1.5117686 , -1.65665757, -0.30402567],
+       [ 1.98884078,  2.59024154,  0.22103486,  1.47613628,  2.02403006,
+         2.62433756,  0.17769821,  1.36762921],
+       [ 1.12911134,  1.25781276, -0.9423065 ,  1.47613628,  1.07135421,
+         1.27793645, -0.82506158,  1.62959728],
+       [ 0.26938189,  0.19186974, -0.36063582,  0.51760623,  0.27171029,
+         0.19467251, -0.43324095,  0.39605102],
+       [ 1.98884078,  0.99132701,  1.38437621,  0.51760623,  2.02206253,
+         1.02160921,  1.30859889,  0.36872291],
+       [ 0.26938189,  0.99132701,  0.22103486,  0.51760623,  0.21833445,
+         0.94224944,  0.1559432 ,  0.51677916],
+       [ 1.12911134, -0.07461601,  1.38437621, -0.44092382,  1.15406229,
+        -0.13531622,  1.28295391, -0.45449059],
+       [ 0.26938189,  0.72484125,  0.22103486,  1.47613628,  0.20817245,
+         0.71284115,  0.14557431,  1.5143145 ],
+       [-1.16350052,  0.4583555 , -2.68731853, -0.44092382, -1.1464368 ,
+         0.5006345 , -2.55749719, -0.26873824],
+       [ 0.26938189, -0.34110177,  1.38437621,  2.43466633,  0.28818968,
+        -0.38471163,  1.51250046,  2.33249894],
+       [-0.59034755, -0.07461601,  2.54771757, -0.44092382, -0.61448296,
+        -0.10731314,  2.58929298, -0.25650918],
+       [-0.01719459, -1.14055903,  0.80270553, -0.44092382, -0.09086887,
+        -1.11910996,  0.90710067, -0.65091316],
+       [-0.01719459, -0.07461601,  0.80270553,  1.47613628, -0.0442641 ,
+        -0.05715851,  0.70945309,  1.6732274 ],
+       [ 0.55595837,  0.19186974,  0.22103486, -0.44092382,  0.4821631 ,
+         0.14581858,  0.15000812, -0.59303437],
+       [ 0.55595837, -0.07461601, -0.36063582, -0.44092382,  0.55239555,
+        -0.028607  , -0.34554844, -0.58716564],
+       [-0.87692403, -0.60758752,  0.80270553, -0.44092382, -0.89028856,
+        -0.66012986,  0.71874565, -0.53926646],
+       [-0.59034755, -0.87407328,  0.80270553, -0.44092382, -0.56961707,
+        -0.91369332,  0.92316342, -0.5067116 ],
+       [ 1.12911134, -0.07461601,  0.22103486,  1.47613628,  1.14592136,
+        -0.12345784,  0.20634227,  1.33232967],
+       [ 0.55595837,  1.79078427,  0.22103486, -1.39945388,  0.57704821,
+         1.7433261 ,  0.23147046, -1.53132151],
+       [ 1.41568782,  2.05727003, -0.36063582, -0.44092382,  1.37504875,
+         2.11001409, -0.47136084, -0.45624019],
+       [-0.30377107, -0.87407328,  0.22103486, -0.44092382, -0.26961556,
+        -0.8378631 ,  0.35370316, -0.37485387],
+       [-0.01719459, -0.60758752, -1.52397717, -0.44092382, -0.04557896,
+        -0.61882868, -1.60980035, -0.2932741 ],
+       [ 1.41568782,  0.19186974, -0.9423065 , -0.44092382,  1.40419839,
+         0.16701371, -1.01009859, -0.20111645],
+       [-0.30377107,  0.4583555 , -0.36063582, -1.39945388, -0.32812149,
+         0.46395649, -0.26617076, -1.49454629],
+       [-1.73665348, -1.14055903, -0.9423065 , -0.44092382, -1.69479302,
+        -1.11601164, -1.01918567, -0.34753979],
+       [ 0.26938189, -0.07461601,  0.22103486, -0.44092382,  0.23396803,
+        -0.12624785,  0.09423487, -0.51346802],
+       [-0.01719459,  0.19186974, -0.9423065 ,  0.51760623,  0.02154091,
+         0.18669977, -0.90571482,  0.54526954],
+       [-1.450077  , -3.00595931, -0.9423065 ,  0.51760623, -1.40364563,
+        -2.97270974, -0.89587629,  0.43912475],
+       [-1.73665348, -0.60758752, -0.9423065 , -0.44092382, -1.72586368,
+        -0.64985168, -0.89119009, -0.38881928],
+       [-0.01719459,  0.19186974,  0.80270553,  3.39319638,  0.00790894,
+         0.23283078,  0.81045607,  3.41464851],
+       [ 0.26938189,  0.99132701,  2.54771757,  1.47613628,  0.26312198,
+         1.02443828,  2.44011046,  1.40605763],
+       [-0.59034755, -1.14055903, -0.36063582,  0.51760623, -0.55258387,
+        -1.11782891, -0.46604021,  0.44108837],
+       [ 0.26938189,  0.99132701,  0.80270553, -0.44092382,  0.30703194,
+         0.97157723,  0.6976773 , -0.28060734],
+       [-1.16350052, -0.60758752, -0.36063582, -0.44092382, -1.24100598,
+        -0.64217296, -0.21810607, -0.19077269],
+       [ 0.84253486,  0.72484125,  0.22103486, -0.44092382,  0.85241247,
+         0.7238797 ,  0.2416408 , -0.28149045],
+       [-0.01719459, -0.34110177, -0.36063582, -0.44092382,  0.01126845,
+        -0.27568015, -0.49325478, -0.60079935]])
 </pre></div>
 </div>
 </div>
@@ -1199,7 +1267,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.87003191e-15, -2.20823360e-15, -1.17128529e-15,  9.17044218e-16,
-        2.27401431e-15, -5.25135491e-16,  1.35114142e-15, -4.04121181e-16])
+       -1.73184384e-15,  1.27453603e-15, -3.87356813e-15, -3.04201109e-16])
 </pre></div>
 </div>
 </div>
@@ -1212,8 +1280,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14.32951867, 10.14583688,  8.12731229,  5.00563   ,  0.64671461,
-        0.36999904,  0.19672506,  0.15333685])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14.29116365, 10.11664594,  8.21568289,  5.02875915,  0.62729646,
+        0.4173036 ,  0.18091123,  0.1728595 ])
 </pre></div>
 </div>
 </div>
@@ -1226,8 +1294,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.05335105e+02, 1.02938006e+02, 6.60532050e+01, 2.50563317e+01,
-       4.18239785e-01, 1.36899287e-01, 3.87007495e-02, 2.35121899e-02])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.04237359e+02, 1.02346525e+02, 6.74974454e+01, 2.52884186e+01,
+       3.93500848e-01, 1.74142291e-01, 3.27288742e-02, 2.98804071e-02])
 </pre></div>
 </div>
 </div>
@@ -1272,10 +1340,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f338c04f400&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072651f460&gt;]
 </pre></div>
 </div>
-<img alt="../_images/part2_32_1.png" src="../_images/part2_32_1.png" />
+<img alt="../_images/part2_35_1.png" src="../_images/part2_35_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1301,10 +1369,10 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Three blobs&#39;)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f338c03c250&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f072e1a1f10&gt;
 </pre></div>
 </div>
-<img alt="../_images/part2_34_2.png" src="../_images/part2_34_2.png" />
+<img alt="../_images/part2_37_2.png" src="../_images/part2_37_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1328,16 +1396,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f337f232dc0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f0725f05dc0&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f338d0ea610&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f072e0cf280&gt;
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Data points and cluster centroids&#39;)
 </pre></div>
 </div>
-<img alt="../_images/part2_35_3.png" src="../_images/part2_35_3.png" />
+<img alt="../_images/part2_38_3.png" src="../_images/part2_38_3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1356,6 +1424,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="evaluating-algorithms">
+<h2>Evaluating Algorithms<a class="headerlink" href="#evaluating-algorithms" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
@@ -2081,10 +2153,10 @@ weighted avg       0.96      0.96      0.96       114
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f337f0aaeb0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0725d8e100&gt;]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f337f0bb310&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0725d8e520&gt;]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 1.0)
@@ -2102,19 +2174,13 @@ weighted avg       0.96      0.96      0.96       114
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Receiver operating characteristic example&#39;)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f337f0bb550&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f0725d8e850&gt;
 </pre></div>
 </div>
-<img alt="../_images/part2_67_9.png" src="../_images/part2_67_9.png" />
+<img alt="../_images/part2_71_9.png" src="../_images/part2_71_9.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://datascience-enthusiast.com/Python/ROC_Precision-Recall.html</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>Ref: <a class="reference external" href="https://datascience-enthusiast.com/Python/ROC_Precision-Recall.html">https://datascience-enthusiast.com/Python/ROC_Precision-Recall.html</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span> 
@@ -2143,7 +2209,7 @@ weighted avg       0.96      0.96      0.96       114
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/part2_70_0.png" src="../_images/part2_70_0.png" />
+<img alt="../_images/part2_74_0.png" src="../_images/part2_74_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2164,7 +2230,7 @@ weighted avg       0.96      0.96      0.96       114
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/part2_71_0.png" src="../_images/part2_71_0.png" />
+<img alt="../_images/part2_75_0.png" src="../_images/part2_75_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2212,6 +2278,7 @@ weighted avg       0.96      0.96      0.96       114
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.37258347978910367
 </pre></div>
+</div>
 </div>
 </div>
 </div>
