@@ -24,7 +24,7 @@ sns.regplot(x=x, y=y);
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m/tmp/ipykernel_8879/1637144644.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_9441/1637144644.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;32mimport[0m [0mseaborn[0m [0;32mas[0m [0msns[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      2[0m [0msns[0m[0;34m.[0m[0mset[0m[0;34m([0m[0mcolor_codes[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 3[0;31m [0msns[0m[0;34m.[0m[0mregplot[0m[0;34m([0m[0mx[0m[0;34m=[0m[0mx[0m[0;34m,[0m [0my[0m[0;34m=[0m[0my[0m[0;34m)[0m[0;34m;[0m[0;34m[0m[0;34m[0m[0m
