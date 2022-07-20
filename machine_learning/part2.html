@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Part 2 &#8212; EAS503</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -40,8 +37,9 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -59,7 +57,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -68,9 +80,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,14 +101,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   EAS 503
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    EAS 503
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Course Information
  </span>
@@ -447,104 +461,177 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/machine_learning/part2.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/mkzia/eas503-notes"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/mkzia/eas503-notes/master?urlpath=tree/docs/machine_learning/part2.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mkzia/eas503-notes/master?urlpath=tree/docs/machine_learning/part2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/mkzia/eas503-notes"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/machine_learning/part2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pca">
    PCA
@@ -569,12 +656,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Part 2</h1>
@@ -615,11 +701,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="part-2">
-<h1>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h1>
+<h1>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="kn">import</span> <span class="n">InteractiveShell</span>
@@ -629,7 +716,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="pca">
-<h2>PCA<a class="headerlink" href="#pca" title="Permalink to this headline">¶</a></h2>
+<h2>PCA<a class="headerlink" href="#pca" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -666,7 +753,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072f391670&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdda37a910&gt;]
 </pre></div>
 </div>
 <img alt="../_images/part2_4_1.png" src="../_images/part2_4_1.png" />
@@ -679,7 +766,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072eb07be0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdd9ae9be0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/part2_5_1.png" src="../_images/part2_5_1.png" />
@@ -692,7 +779,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072ea88f10&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdd9a69730&gt;]
 </pre></div>
 </div>
 <img alt="../_images/part2_6_1.png" src="../_images/part2_6_1.png" />
@@ -707,16 +794,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.47862829, -0.38879105, -0.30218849, ..., -0.50902552,
-        -0.50415921, -0.49098793],
-       [-0.16045221, -0.10249944, -0.11655623, ..., -0.29355242,
-        -0.21232194, -0.16834642],
-       [-0.60439822, -0.64006102, -0.49737671, ..., -0.61220229,
-        -0.67643732, -0.74899116],
-       [ 0.39897397,  0.39201591,  0.56711374, ...,  0.36548838,
-         0.45050055,  0.47849504],
-       [ 0.0160127 , -0.08087127, -0.06307017, ...,  0.04286686,
-        -0.15434217, -0.07095115]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.43824946, -0.4140346 , -0.38101056, ..., -0.53556152,
+        -0.48000218, -0.49924334],
+       [-0.18710728, -0.08771533, -0.03923506, ..., -0.27292361,
+        -0.16668009, -0.17000444],
+       [-0.61473941, -0.57372189, -0.49983189, ..., -0.64842628,
+        -0.65645383, -0.72710881],
+       [ 0.56874392,  0.40367472,  0.47884843, ...,  0.37517883,
+         0.48194513,  0.47011726],
+       [ 0.02566075, -0.26796821, -0.11393645, ...,  0.05413708,
+        -0.1904164 ,  0.25518189]])
 </pre></div>
 </div>
 </div>
@@ -741,7 +828,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20.92941314, 14.19293744,  5.3129186 ,  1.44996795,  0.97824576])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([20.82094031, 14.1386569 ,  5.4163208 ,  1.45856434,  0.97258549])
 </pre></div>
 </div>
 </div>
@@ -754,8 +841,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([438.04033444, 201.4394733 ,  28.2271041 ,   2.10240704,
-         0.95696476])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([433.51155556, 199.90161898,  29.33653104,   2.12740993,
+         0.94592254])
 </pre></div>
 </div>
 </div>
@@ -767,8 +854,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([438.04033444, 201.4394733 ,  28.2271041 ,   2.10240704,
-         0.95696476])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([433.51155556, 199.90161898,  29.33653104,   2.12740993,
+         0.94592254])
 </pre></div>
 </div>
 </div>
@@ -796,13 +883,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.65304465, 0.30031246, 0.04208188, 0.00313434, 0.00142667])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.65109125, 0.30023236, 0.04406055, 0.00319516, 0.00142068])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="scree-plot">
-<h3>Scree plot<a class="headerlink" href="#scree-plot" title="Permalink to this headline">¶</a></h3>
+<h3>Scree plot<a class="headerlink" href="#scree-plot" title="Permalink to this headline">#</a></h3>
 <p>Gives the measure of the associated principal component’s importance with regards to how much of the total information it represents.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -811,7 +898,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072ea076a0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdd99dce50&gt;]
 </pre></div>
 </div>
 <img alt="../_images/part2_16_1.png" src="../_images/part2_16_1.png" />
@@ -825,7 +912,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072e1d9340&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdd91a93a0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/part2_17_1.png" src="../_images/part2_17_1.png" />
@@ -839,7 +926,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072e194160&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdd918c850&gt;]
 </pre></div>
 </div>
 <img alt="../_images/part2_18_1.png" src="../_images/part2_18_1.png" />
@@ -853,7 +940,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072e11ab20&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdd90f1370&gt;]
 </pre></div>
 </div>
 <img alt="../_images/part2_19_1.png" src="../_images/part2_19_1.png" />
@@ -861,7 +948,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="pca-on-iris-data">
-<h3>PCA on Iris Data<a class="headerlink" href="#pca-on-iris-data" title="Permalink to this headline">¶</a></h3>
+<h3>PCA on Iris Data<a class="headerlink" href="#pca-on-iris-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -914,7 +1001,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 576x432 with 0 Axes&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f0727e29520&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7efdd6def910&gt;
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Sepal length&#39;)
@@ -935,11 +1022,11 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([], [])
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_12399/1367415577.py:31: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_299/1367415577.py:31: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
   ax = Axes3D(fig, elev=-150, azim=110)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;mpl_toolkits.mplot3d.art3d.Path3DCollection at 0x7f0727df9df0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;mpl_toolkits.mplot3d.art3d.Path3DCollection at 0x7efdd6dd8160&gt;
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.92, &#39;First three PCA directions&#39;)
@@ -960,7 +1047,7 @@ const thebe_selector_output = ".output, .cell_output"
  Text(5.0, 0, &#39;&#39;)]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;2nd eigenvector&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.5, &#39;2nd eigenvector&#39;)
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(-1.5, 0, &#39;&#39;),
@@ -1029,106 +1116,106 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.1       , 3.5       , 1.4       , 0.2       , 5.14431193,
-        3.50764462, 1.44332496, 0.21387327],
-       [4.9       , 3.        , 1.4       , 0.2       , 4.91087993,
-        3.03866705, 1.40983302, 0.2147247 ],
-       [4.7       , 3.2       , 1.3       , 0.2       , 4.74068779,
-        3.20425456, 1.30832604, 0.20743595],
-       [4.6       , 3.1       , 1.5       , 0.2       , 4.61500209,
-        3.14400832, 1.53180218, 0.22365062],
-       [5.        , 3.6       , 1.4       , 0.2       , 5.04254336,
-        3.62243756, 1.40207769, 0.21128666],
-       [5.4       , 3.9       , 1.7       , 0.4       , 5.44456664,
-        3.92603047, 1.73969415, 0.41997868],
-       [4.6       , 3.4       , 1.4       , 0.3       , 4.62756009,
-        3.43180229, 1.44794028, 0.32952289],
-       [5.        , 3.4       , 1.5       , 0.2       , 5.01816748,
-        3.44629783, 1.52940419, 0.21230839],
-       [4.4       , 2.9       , 1.4       , 0.2       , 4.4466031 ,
-        2.92695551, 1.43521754, 0.23356125],
-       [4.9       , 3.1       , 1.5       , 0.1       , 4.93461905,
-        3.13884029, 1.52648616, 0.11586774],
-       [5.4       , 3.7       , 1.5       , 0.2       , 5.44579673,
-        3.72741375, 1.54746558, 0.24514221],
-       [4.8       , 3.4       , 1.6       , 0.2       , 4.84487872,
-        3.41192042, 1.63697193, 0.23168407],
-       [4.8       , 3.        , 1.4       , 0.1       , 4.84514592,
-        3.02725227, 1.42585545, 0.14799218],
-       [4.3       , 3.        , 1.1       , 0.1       , 4.32047793,
-        3.02300803, 1.13346972, 0.11341413],
-       [5.8       , 4.        , 1.2       , 0.2       , 5.84076384,
-        4.01537337, 1.20101386, 0.23800611],
-       [5.7       , 4.4       , 1.5       , 0.4       , 5.74891951,
-        4.43047936, 1.51552475, 0.4144376 ],
-       [5.4       , 3.9       , 1.3       , 0.4       , 5.41466322,
-        3.92812923, 1.3435958 , 0.4420865 ],
-       [5.1       , 3.5       , 1.4       , 0.3       , 5.13409979,
-        3.52395712, 1.41077571, 0.31189431],
-       [5.7       , 3.8       , 1.7       , 0.3       , 5.74822918,
-        3.83249204, 1.70942421, 0.30901002],
-       [5.1       , 3.8       , 1.5       , 0.3       , 5.11537231,
-        3.80288244, 1.51179473, 0.32463632],
-       [5.4       , 3.4       , 1.7       , 0.2       , 5.44368221,
-        3.40083639, 1.70502723, 0.22212559],
-       [5.1       , 3.7       , 1.5       , 0.4       , 5.11180687,
-        3.71728887, 1.51001693, 0.4299192 ],
-       [4.6       , 3.6       , 1.        , 0.2       , 4.63652804,
-        3.63811333, 1.0465597 , 0.24173045],
-       [5.1       , 3.3       , 1.7       , 0.5       , 5.13988175,
-        3.30778551, 1.74438431, 0.51627285],
-       [4.8       , 3.4       , 1.9       , 0.2       , 4.82316961,
-        3.4112845 , 1.92900661, 0.24302114],
-       [5.        , 3.        , 1.6       , 0.2       , 5.00688509,
-        3.03377719, 1.64058502, 0.20139456],
-       [5.        , 3.4       , 1.6       , 0.4       , 5.02323687,
-        3.42999749, 1.6066972 , 0.44669135],
-       [5.2       , 3.5       , 1.5       , 0.2       , 5.20793935,
-        3.50572943, 1.51077713, 0.20750326],
-       [5.2       , 3.4       , 1.4       , 0.2       , 5.23258115,
-        3.44065023, 1.42581109, 0.20812266],
-       [4.7       , 3.2       , 1.6       , 0.2       , 4.72640033,
-        3.20502536, 1.60829046, 0.21317809],
-       [4.8       , 3.1       , 1.6       , 0.2       , 4.83891128,
-        3.11041935, 1.64333907, 0.21661403],
-       [5.4       , 3.4       , 1.5       , 0.4       , 5.44082588,
-        3.40526082, 1.52043594, 0.41071198],
-       [5.2       , 4.1       , 1.5       , 0.1       , 5.24123079,
-        4.10176883, 1.52474432, 0.10847361],
-       [5.5       , 4.2       , 1.4       , 0.2       , 5.52121762,
-        4.23858226, 1.40423983, 0.22194093],
-       [4.9       , 3.1       , 1.5       , 0.2       , 4.94416995,
-        3.13871204, 1.54570182, 0.23053069],
-       [5.        , 3.2       , 1.2       , 0.2       , 5.02277553,
-        3.22043506, 1.2090478 , 0.23914086],
-       [5.5       , 3.5       , 1.3       , 0.2       , 5.53144508,
-        3.51363746, 1.31187013, 0.24886746],
-       [4.9       , 3.6       , 1.4       , 0.1       , 4.92364253,
-        3.62442855, 1.43942086, 0.11235498],
-       [4.4       , 3.        , 1.3       , 0.2       , 4.44413153,
-        3.0349332 , 1.3103121 , 0.2334135 ],
-       [5.1       , 3.4       , 1.5       , 0.2       , 5.12085752,
-        3.40421986, 1.50121448, 0.21590093],
-       [5.        , 3.5       , 1.3       , 0.3       , 5.04632524,
-        3.52098244, 1.32976733, 0.32764328],
-       [4.5       , 2.3       , 1.3       , 0.3       , 4.54628364,
-        2.34218828, 1.33145421, 0.31644044],
-       [4.4       , 3.2       , 1.3       , 0.2       , 4.43323006,
-        3.2088602 , 1.33225768, 0.22905674],
-       [5.        , 3.5       , 1.6       , 0.6       , 5.04154232,
-        3.53819419, 1.62401474, 0.63048618],
-       [5.1       , 3.8       , 1.9       , 0.4       , 5.13108648,
-        3.83354758, 1.9034284 , 0.41849345],
-       [4.8       , 3.        , 1.4       , 0.3       , 4.84488756,
-        3.03425516, 1.40515208, 0.31664769],
-       [5.1       , 3.8       , 1.6       , 0.2       , 5.14649276,
-        3.81382481, 1.60467817, 0.24047775],
-       [4.6       , 3.2       , 1.4       , 0.2       , 4.60334746,
-        3.21172518, 1.44766182, 0.24995917],
-       [5.3       , 3.7       , 1.5       , 0.2       , 5.33784522,
-        3.72140742, 1.52648808, 0.24038454],
-       [5.        , 3.3       , 1.4       , 0.2       , 5.04272104,
-        3.34846579, 1.40048599, 0.20668372]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.1       , 3.5       , 1.4       , 0.2       , 5.11167876,
+        3.52517383, 1.40676105, 0.24656951],
+       [4.9       , 3.        , 1.4       , 0.2       , 4.94418518,
+        3.04211368, 1.42161233, 0.24815605],
+       [4.7       , 3.2       , 1.3       , 0.2       , 4.70478297,
+        3.20663332, 1.31583968, 0.23915458],
+       [4.6       , 3.1       , 1.5       , 0.2       , 4.60137266,
+        3.10587516, 1.52412868, 0.21975911],
+       [5.        , 3.6       , 1.4       , 0.2       , 5.01772095,
+        3.64548291, 1.40779885, 0.22880983],
+       [5.4       , 3.9       , 1.7       , 0.4       , 5.4082978 ,
+        3.94400556, 1.73115601, 0.4291879 ],
+       [4.6       , 3.4       , 1.4       , 0.3       , 4.63329619,
+        3.42187497, 1.44541242, 0.32268939],
+       [5.        , 3.4       , 1.5       , 0.2       , 5.0119501 ,
+        3.44735122, 1.5322488 , 0.20027495],
+       [4.4       , 2.9       , 1.4       , 0.2       , 4.41889742,
+        2.94317582, 1.41042037, 0.20517047],
+       [4.9       , 3.1       , 1.5       , 0.1       , 4.92589713,
+        3.12558943, 1.50074163, 0.11252117],
+       [5.4       , 3.7       , 1.5       , 0.2       , 5.44086339,
+        3.70097692, 1.50825459, 0.21440165],
+       [4.8       , 3.4       , 1.6       , 0.2       , 4.8061419 ,
+        3.4175313 , 1.64122281, 0.2255724 ],
+       [4.8       , 3.        , 1.4       , 0.1       , 4.81838551,
+        3.01495864, 1.42549263, 0.12384828],
+       [4.3       , 3.        , 1.1       , 0.1       , 4.33416647,
+        3.00328034, 1.14894184, 0.11012788],
+       [5.8       , 4.        , 1.2       , 0.2       , 5.80608658,
+        4.00974625, 1.24642743, 0.21728258],
+       [5.7       , 4.4       , 1.5       , 0.4       , 5.71736586,
+        4.40357464, 1.53274868, 0.44898098],
+       [5.4       , 3.9       , 1.3       , 0.4       , 5.41871562,
+        3.92705123, 1.34269113, 0.43593984],
+       [5.1       , 3.5       , 1.4       , 0.3       , 5.12847001,
+        3.54145328, 1.41912971, 0.31792547],
+       [5.7       , 3.8       , 1.7       , 0.3       , 5.72091706,
+        3.83537551, 1.7430879 , 0.32107507],
+       [5.1       , 3.8       , 1.5       , 0.3       , 5.12336041,
+        3.81550851, 1.52619155, 0.34785643],
+       [5.4       , 3.4       , 1.7       , 0.2       , 5.41724806,
+        3.44830901, 1.74599904, 0.22851336],
+       [5.1       , 3.7       , 1.5       , 0.4       , 5.10431083,
+        3.73057969, 1.52864083, 0.42372338],
+       [4.6       , 3.6       , 1.        , 0.2       , 4.60320629,
+        3.61284723, 1.00768577, 0.23311496],
+       [5.1       , 3.3       , 1.7       , 0.5       , 5.13342553,
+        3.30708495, 1.73868449, 0.51066406],
+       [4.8       , 3.4       , 1.9       , 0.2       , 4.80607711,
+        3.42966398, 1.93322369, 0.21735322],
+       [5.        , 3.        , 1.6       , 0.2       , 5.00611943,
+        3.04393838, 1.63709955, 0.20643262],
+       [5.        , 3.4       , 1.6       , 0.4       , 5.00407705,
+        3.40148994, 1.645425  , 0.43012959],
+       [5.2       , 3.5       , 1.5       , 0.2       , 5.2147587 ,
+        3.50859168, 1.53972562, 0.23077504],
+       [5.2       , 3.4       , 1.4       , 0.2       , 5.2253871 ,
+        3.41755266, 1.44807925, 0.20373044],
+       [4.7       , 3.2       , 1.6       , 0.2       , 4.74173614,
+        3.20190486, 1.62627858, 0.20364676],
+       [4.8       , 3.1       , 1.6       , 0.2       , 4.80468739,
+        3.13915582, 1.62699523, 0.21750953],
+       [5.4       , 3.4       , 1.5       , 0.4       , 5.44452092,
+        3.41776265, 1.54921484, 0.43312019],
+       [5.2       , 4.1       , 1.5       , 0.1       , 5.21797907,
+        4.13279588, 1.53711128, 0.11989538],
+       [5.5       , 4.2       , 1.4       , 0.2       , 5.5230655 ,
+        4.21201937, 1.44241897, 0.21684339],
+       [4.9       , 3.1       , 1.5       , 0.2       , 4.90610502,
+        3.12082614, 1.5355291 , 0.24635048],
+       [5.        , 3.2       , 1.2       , 0.2       , 5.01045764,
+        3.23205829, 1.24528318, 0.24631792],
+       [5.5       , 3.5       , 1.3       , 0.2       , 5.50722804,
+        3.51813188, 1.3416925 , 0.21047721],
+       [4.9       , 3.6       , 1.4       , 0.1       , 4.94498087,
+        3.62380909, 1.44137511, 0.12560148],
+       [4.4       , 3.        , 1.3       , 0.2       , 4.43283271,
+        3.03412023, 1.32321967, 0.22974105],
+       [5.1       , 3.4       , 1.5       , 0.2       , 5.11250943,
+        3.40610015, 1.51680985, 0.24808608],
+       [5.        , 3.5       , 1.3       , 0.3       , 5.04845555,
+        3.50804526, 1.30744257, 0.31089632],
+       [4.5       , 2.3       , 1.3       , 0.3       , 4.51426309,
+        2.33498665, 1.33783121, 0.31685068],
+       [4.4       , 3.2       , 1.3       , 0.2       , 4.43916013,
+        3.20276792, 1.34719793, 0.20989972],
+       [5.        , 3.5       , 1.6       , 0.6       , 5.01436267,
+        3.51993446, 1.61461003, 0.60046108],
+       [5.1       , 3.8       , 1.9       , 0.4       , 5.11198224,
+        3.84404362, 1.93731219, 0.42327585],
+       [4.8       , 3.        , 1.4       , 0.3       , 4.80397677,
+        3.0282503 , 1.4387234 , 0.30657137],
+       [5.1       , 3.8       , 1.6       , 0.2       , 5.13668377,
+        3.81875831, 1.61751524, 0.20660655],
+       [4.6       , 3.2       , 1.4       , 0.2       , 4.60717364,
+        3.22324288, 1.44602936, 0.21257685],
+       [5.3       , 3.7       , 1.5       , 0.2       , 5.33294105,
+        3.72787716, 1.50551099, 0.20620184],
+       [5.        , 3.3       , 1.4       , 0.2       , 5.02415267,
+        3.31104104, 1.40231435, 0.21193203]])
 </pre></div>
 </div>
 </div>
@@ -1140,8 +1227,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5.006     , 3.428     , 1.462     , 0.246     , 5.03876739,
-       3.45132367, 1.48505737, 0.27009389])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5.006     , 3.428     , 1.462     , 0.246     , 5.02572833,
+       3.45068844, 1.49190574, 0.26805204])
 </pre></div>
 </div>
 </div>
@@ -1155,106 +1242,106 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.26938189,  0.19186974, -0.36063582, -0.44092382,  0.3008163 ,
-         0.15095167, -0.2434004 , -0.53267979],
-       [-0.30377107, -1.14055903, -0.36063582, -0.44092382, -0.36449664,
-        -1.10600415, -0.43873908, -0.5246126 ],
-       [-0.87692403, -0.60758752, -0.9423065 , -0.44092382, -0.84956737,
-        -0.66219575, -1.03076917, -0.59367211],
-       [-1.16350052, -0.87407328,  0.22103486, -0.44092382, -1.20778868,
-        -0.823668  ,  0.2726348 , -0.44004121],
-       [-0.01719459,  0.4583555 , -0.36063582, -0.44092382,  0.01076204,
-         0.45862024, -0.48397131, -0.55718743],
-       [ 1.12911134,  1.25781276,  1.38437621,  1.47613628,  1.15658302,
-         1.27231134,  1.48514552,  1.42012994],
-       [-1.16350052, -0.07461601, -0.36063582,  0.51760623, -1.1719967 ,
-        -0.05232128, -0.21648202,  0.56307846],
-       [-0.01719459, -0.07461601,  0.22103486, -0.44092382, -0.05871255,
-        -0.01347027,  0.25864871, -0.54750664],
-       [-1.73665348, -1.40704478, -0.36063582, -0.44092382, -1.6877487 ,
-        -1.40541392, -0.29068623, -0.34613984],
-       [-0.30377107, -0.87407328,  0.22103486, -1.39945388, -0.29683693,
-        -0.83751936,  0.24162957, -1.46126352],
-       [ 1.12911134,  0.72484125,  0.22103486, -0.44092382,  1.16008895,
-         0.73997791,  0.36399013, -0.23641248],
-       [-0.59034755, -0.07461601,  0.80270553, -0.44092382, -0.55260907,
-        -0.10560877,  0.88602765, -0.36392575],
-       [-0.59034755, -1.14055903, -0.36063582, -1.39945388, -0.55184749,
-        -1.1365981 , -0.34528972, -1.1568906 ],
-       [-2.02322996, -1.14055903, -2.10564785, -1.39945388, -2.04722258,
-        -1.14797352, -2.05060257, -1.48451106],
-       [ 2.27541727,  1.52429852, -1.52397717, -0.44092382,  2.28579889,
-         1.5117686 , -1.65665757, -0.30402567],
-       [ 1.98884078,  2.59024154,  0.22103486,  1.47613628,  2.02403006,
-         2.62433756,  0.17769821,  1.36762921],
-       [ 1.12911134,  1.25781276, -0.9423065 ,  1.47613628,  1.07135421,
-         1.27793645, -0.82506158,  1.62959728],
-       [ 0.26938189,  0.19186974, -0.36063582,  0.51760623,  0.27171029,
-         0.19467251, -0.43324095,  0.39605102],
-       [ 1.98884078,  0.99132701,  1.38437621,  0.51760623,  2.02206253,
-         1.02160921,  1.30859889,  0.36872291],
-       [ 0.26938189,  0.99132701,  0.22103486,  0.51760623,  0.21833445,
-         0.94224944,  0.1559432 ,  0.51677916],
-       [ 1.12911134, -0.07461601,  1.38437621, -0.44092382,  1.15406229,
-        -0.13531622,  1.28295391, -0.45449059],
-       [ 0.26938189,  0.72484125,  0.22103486,  1.47613628,  0.20817245,
-         0.71284115,  0.14557431,  1.5143145 ],
-       [-1.16350052,  0.4583555 , -2.68731853, -0.44092382, -1.1464368 ,
-         0.5006345 , -2.55749719, -0.26873824],
-       [ 0.26938189, -0.34110177,  1.38437621,  2.43466633,  0.28818968,
-        -0.38471163,  1.51250046,  2.33249894],
-       [-0.59034755, -0.07461601,  2.54771757, -0.44092382, -0.61448296,
-        -0.10731314,  2.58929298, -0.25650918],
-       [-0.01719459, -1.14055903,  0.80270553, -0.44092382, -0.09086887,
-        -1.11910996,  0.90710067, -0.65091316],
-       [-0.01719459, -0.07461601,  0.80270553,  1.47613628, -0.0442641 ,
-        -0.05715851,  0.70945309,  1.6732274 ],
-       [ 0.55595837,  0.19186974,  0.22103486, -0.44092382,  0.4821631 ,
-         0.14581858,  0.15000812, -0.59303437],
-       [ 0.55595837, -0.07461601, -0.36063582, -0.44092382,  0.55239555,
-        -0.028607  , -0.34554844, -0.58716564],
-       [-0.87692403, -0.60758752,  0.80270553, -0.44092382, -0.89028856,
-        -0.66012986,  0.71874565, -0.53926646],
-       [-0.59034755, -0.87407328,  0.80270553, -0.44092382, -0.56961707,
-        -0.91369332,  0.92316342, -0.5067116 ],
-       [ 1.12911134, -0.07461601,  0.22103486,  1.47613628,  1.14592136,
-        -0.12345784,  0.20634227,  1.33232967],
-       [ 0.55595837,  1.79078427,  0.22103486, -1.39945388,  0.57704821,
-         1.7433261 ,  0.23147046, -1.53132151],
-       [ 1.41568782,  2.05727003, -0.36063582, -0.44092382,  1.37504875,
-         2.11001409, -0.47136084, -0.45624019],
-       [-0.30377107, -0.87407328,  0.22103486, -0.44092382, -0.26961556,
-        -0.8378631 ,  0.35370316, -0.37485387],
-       [-0.01719459, -0.60758752, -1.52397717, -0.44092382, -0.04557896,
-        -0.61882868, -1.60980035, -0.2932741 ],
-       [ 1.41568782,  0.19186974, -0.9423065 , -0.44092382,  1.40419839,
-         0.16701371, -1.01009859, -0.20111645],
-       [-0.30377107,  0.4583555 , -0.36063582, -1.39945388, -0.32812149,
-         0.46395649, -0.26617076, -1.49454629],
-       [-1.73665348, -1.14055903, -0.9423065 , -0.44092382, -1.69479302,
-        -1.11601164, -1.01918567, -0.34753979],
-       [ 0.26938189, -0.07461601,  0.22103486, -0.44092382,  0.23396803,
-        -0.12624785,  0.09423487, -0.51346802],
-       [-0.01719459,  0.19186974, -0.9423065 ,  0.51760623,  0.02154091,
-         0.18669977, -0.90571482,  0.54526954],
-       [-1.450077  , -3.00595931, -0.9423065 ,  0.51760623, -1.40364563,
-        -2.97270974, -0.89587629,  0.43912475],
-       [-1.73665348, -0.60758752, -0.9423065 , -0.44092382, -1.72586368,
-        -0.64985168, -0.89119009, -0.38881928],
-       [-0.01719459,  0.19186974,  0.80270553,  3.39319638,  0.00790894,
-         0.23283078,  0.81045607,  3.41464851],
-       [ 0.26938189,  0.99132701,  2.54771757,  1.47613628,  0.26312198,
-         1.02443828,  2.44011046,  1.40605763],
-       [-0.59034755, -1.14055903, -0.36063582,  0.51760623, -0.55258387,
-        -1.11782891, -0.46604021,  0.44108837],
-       [ 0.26938189,  0.99132701,  0.80270553, -0.44092382,  0.30703194,
-         0.97157723,  0.6976773 , -0.28060734],
-       [-1.16350052, -0.60758752, -0.36063582, -0.44092382, -1.24100598,
-        -0.64217296, -0.21810607, -0.19077269],
-       [ 0.84253486,  0.72484125,  0.22103486, -0.44092382,  0.85241247,
-         0.7238797 ,  0.2416408 , -0.28149045],
-       [-0.01719459, -0.34110177, -0.36063582, -0.44092382,  0.01126845,
-        -0.27568015, -0.49325478, -0.60079935]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.26938189,  0.19186974, -0.36063582, -0.44092382,  0.24641631,
+         0.19924776, -0.49086744, -0.20311458],
+       [-0.30377107, -1.14055903, -0.36063582, -0.44092382, -0.23378081,
+        -1.09293389, -0.40524834, -0.18811402],
+       [-0.87692403, -0.60758752, -0.9423065 , -0.44092382, -0.92013693,
+        -0.65284531, -1.01503799, -0.27322172],
+       [-1.16350052, -0.87407328,  0.22103486, -0.44092382, -1.21660999,
+        -0.9223725 ,  0.18576841, -0.45660342],
+       [-0.01719459,  0.4583555 , -0.36063582, -0.44092382, -0.02295682,
+         0.5210735 , -0.48488443, -0.37103005],
+       [ 1.12911134,  1.25781276,  1.38437621,  1.47613628,  1.0968107 ,
+         1.31961897,  1.37930111,  1.52351876],
+       [-1.16350052, -0.07461601, -0.36063582,  0.51760623, -1.12508656,
+        -0.07707579, -0.26803853,  0.5165891 ],
+       [-0.01719459, -0.07461601,  0.22103486, -0.44092382, -0.03950161,
+        -0.00892703,  0.23258166, -0.64082367],
+       [-1.73665348, -1.40704478, -0.36063582, -0.44092382, -1.73975887,
+        -1.35759178, -0.46977107, -0.59453709],
+       [-0.30377107, -0.87407328,  0.22103486, -1.39945388, -0.28621188,
+        -0.86963699,  0.05093975, -1.47052433],
+       [ 1.12911134,  0.72484125,  0.22103486, -0.44092382,  1.19017489,
+         0.66951949,  0.09425269, -0.50725754],
+       [-0.59034755, -0.07461601,  0.80270553, -0.44092382, -0.62954512,
+        -0.08869507,  0.86082748, -0.40163953],
+       [-0.59034755, -1.14055903, -0.36063582, -1.39945388, -0.59444321,
+        -1.16557337, -0.38287805, -1.36342792],
+       [-2.02322996, -1.14055903, -2.10564785, -1.39945388, -1.98267898,
+        -1.19681272, -1.97722028, -1.49315251],
+       [ 2.27541727,  1.52429852, -1.52397717, -0.44092382,  2.23725453,
+         1.49547473, -1.41520636, -0.48001871],
+       [ 1.98884078,  2.59024154,  0.22103486,  1.47613628,  1.98289594,
+         2.54896221,  0.23546353,  1.71065979],
+       [ 1.12911134,  1.25781276, -0.9423065 ,  1.47613628,  1.12667818,
+         1.27426628, -0.86023674,  1.58735755],
+       [ 0.26938189,  0.19186974, -0.36063582,  0.51760623,  0.29455611,
+         0.24279516, -0.41956089,  0.47154682],
+       [ 1.98884078,  0.99132701,  1.38437621,  0.51760623,  1.99307709,
+         1.02903453,  1.44808964,  0.50132593],
+       [ 0.26938189,  0.99132701,  0.22103486,  0.51760623,  0.27990711,
+         0.97589047,  0.19766107,  0.75454021],
+       [ 1.12911134, -0.07461601,  1.38437621, -0.44092382,  1.12247072,
+        -0.00636495,  1.46487265, -0.37383313],
+       [ 0.26938189,  0.72484125,  0.22103486,  1.47613628,  0.22529275,
+         0.74870663,  0.2117814 ,  1.47185245],
+       [-1.16350052,  0.4583555 , -2.68731853, -0.44092382, -1.21135305,
+         0.43377332, -2.79157527, -0.33032554],
+       [ 0.26938189, -0.34110177,  1.38437621,  2.43466633,  0.30876337,
+        -0.38413807,  1.42270355,  2.29386539],
+       [-0.59034755, -0.07461601,  2.54771757, -0.44092382, -0.62973088,
+        -0.05624025,  2.54424094, -0.47935078],
+       [-0.01719459, -1.14055903,  0.80270553, -0.44092382, -0.05621789,
+        -1.08805283,  0.83705648, -0.58260365],
+       [-0.01719459, -0.07461601,  0.80270553,  1.47613628, -0.0620733 ,
+        -0.13160554,  0.88505347,  1.53242233],
+       [ 0.55595837,  0.19186974,  0.22103486, -0.44092382,  0.5419422 ,
+         0.15489066,  0.27568629, -0.35244919],
+       [ 0.55595837, -0.07461601, -0.36063582, -0.44092382,  0.57241338,
+        -0.08863792, -0.25266395, -0.60815243],
+       [-0.87692403, -0.60758752,  0.80270553, -0.44092382, -0.81419373,
+        -0.66549389,  0.77467249, -0.60894365],
+       [-0.59034755, -0.87407328,  0.80270553, -0.44092382, -0.63371515,
+        -0.83334701,  0.77880409, -0.47787294],
+       [ 1.12911134, -0.07461601,  0.22103486,  1.47613628,  1.20066088,
+        -0.0880762 ,  0.33039256,  1.5606981 ],
+       [ 0.55595837,  1.79078427,  0.22103486, -1.39945388,  0.55117484,
+         1.8246314 ,  0.26061436, -1.4008021 ],
+       [ 1.41568782,  2.05727003, -0.36063582, -0.44092382,  1.4258449 ,
+         2.03655353, -0.28529604, -0.48417117],
+       [-0.30377107, -0.87407328,  0.22103486, -0.44092382, -0.34295502,
+        -0.88237876,  0.25149294, -0.20518544],
+       [-0.01719459, -0.60758752, -1.52397717, -0.44092382, -0.04378042,
+        -0.58483372, -1.42180308, -0.20549332],
+       [ 1.41568782,  0.19186974, -0.9423065 , -0.44092382,  1.38043957,
+         0.1804106 , -0.86599393, -0.5443626 ],
+       [-0.30377107,  0.4583555 , -0.36063582, -1.39945388, -0.23149959,
+         0.46309621, -0.29131402, -1.34685169],
+       [-1.73665348, -1.14055903, -0.9423065 , -0.44092382, -1.699807  ,
+        -1.11431631, -0.9724916 , -0.36222546],
+       [ 0.26938189, -0.07461601,  0.22103486, -0.44092382,  0.2487978 ,
+        -0.11927329,  0.14357464, -0.18877561],
+       [-0.01719459,  0.19186974, -0.9423065 ,  0.51760623,  0.06515801,
+         0.15342898, -1.06344811,  0.40508716],
+       [-1.450077  , -3.00595931, -0.9423065 ,  0.51760623, -1.46634948,
+        -2.98449248, -0.88825464,  0.46138486],
+       [-1.73665348, -0.60758752, -0.9423065 , -0.44092382, -1.68166653,
+        -0.66318521, -0.8342546 , -0.54982269],
+       [-0.01719459,  0.19186974,  0.80270553,  3.39319638, -0.03258485,
+         0.18523251,  0.70740219,  3.14288459],
+       [ 0.26938189,  0.99132701,  2.54771757,  1.47613628,  0.24728636,
+         1.05222166,  2.56781159,  1.46762115],
+       [-0.59034755, -1.14055903, -0.36063582,  0.51760623, -0.63575246,
+        -1.13001831, -0.30660135,  0.36419527],
+       [ 0.26938189,  0.99132701,  0.80270553, -0.44092382,  0.31810461,
+         0.98458366,  0.72415098, -0.58095913],
+       [-1.16350052, -0.60758752, -0.36063582, -0.44092382, -1.1999788 ,
+        -0.60841488, -0.2644818 , -0.52451075],
+       [ 0.84253486,  0.72484125,  0.22103486, -0.44092382,  0.88076605,
+         0.74147738,  0.07843561, -0.58478563],
+       [-0.01719459, -0.34110177, -0.36063582, -0.44092382, -0.00451735,
+        -0.37355556, -0.51650308, -0.53060748]])
 </pre></div>
 </div>
 </div>
@@ -1267,7 +1354,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.87003191e-15, -2.20823360e-15, -1.17128529e-15,  9.17044218e-16,
-       -1.73184384e-15,  1.27453603e-15, -3.87356813e-15, -3.04201109e-16])
+       -1.74783799e-15,  6.00630656e-16, -8.12683254e-16, -1.70974346e-16])
 </pre></div>
 </div>
 </div>
@@ -1280,8 +1367,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14.29116365, 10.11664594,  8.21568289,  5.02875915,  0.62729646,
-        0.4173036 ,  0.18091123,  0.1728595 ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14.38569749, 10.02425047,  8.18433934,  4.99348571,  0.64119419,
+        0.41210252,  0.19806594,  0.16616769])
 </pre></div>
 </div>
 </div>
@@ -1294,8 +1381,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.04237359e+02, 1.02346525e+02, 6.74974454e+01, 2.52884186e+01,
-       3.93500848e-01, 1.74142291e-01, 3.27288742e-02, 2.98804071e-02])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.06948292e+02, 1.00485598e+02, 6.69834104e+01, 2.49348995e+01,
+       4.11129985e-01, 1.69828488e-01, 3.92301166e-02, 2.76117010e-02])
 </pre></div>
 </div>
 </div>
@@ -1316,7 +1403,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.51 0.26 0.17 0.06 0.   0.   0.   0.  ]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.52 0.25 0.17 0.06 0.   0.   0.   0.  ]
 </pre></div>
 </div>
 </div>
@@ -1340,7 +1427,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f072651f460&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdd54e8be0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/part2_35_1.png" src="../_images/part2_35_1.png" />
@@ -1369,7 +1456,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Three blobs&#39;)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f072e1a1f10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7efdd9a295e0&gt;
 </pre></div>
 </div>
 <img alt="../_images/part2_37_2.png" src="../_images/part2_37_2.png" />
@@ -1396,10 +1483,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f0725f05dc0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7efdd46ddc10&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f072e0cf280&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7efdd46ddfd0&gt;
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Data points and cluster centroids&#39;)
@@ -1427,7 +1514,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="evaluating-algorithms">
-<h2>Evaluating Algorithms<a class="headerlink" href="#evaluating-algorithms" title="Permalink to this headline">¶</a></h2>
+<h2>Evaluating Algorithms<a class="headerlink" href="#evaluating-algorithms" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
@@ -2153,10 +2240,10 @@ weighted avg       0.96      0.96      0.96       114
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0725d8e100&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdd441fca0&gt;]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0725d8e520&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7efdd4431040&gt;]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 1.0)
@@ -2174,7 +2261,7 @@ weighted avg       0.96      0.96      0.96       114
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Receiver operating characteristic example&#39;)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f0725d8e850&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7efdd441faf0&gt;
 </pre></div>
 </div>
 <img alt="../_images/part2_71_9.png" src="../_images/part2_71_9.png" />
@@ -2306,9 +2393,11 @@ weighted avg       0.96      0.96      0.96       114
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="part1.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2324,24 +2413,28 @@ weighted avg       0.96      0.96      0.96       114
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mohammad K. Zia<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Mohammad K. Zia<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strings &#8212; EAS503</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -40,8 +37,9 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -59,7 +57,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -68,9 +80,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,14 +101,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   EAS 503
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    EAS 503
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Course Information
  </span>
@@ -447,87 +461,148 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/strings.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/mkzia/eas503-notes"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/mkzia/eas503-notes"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/strings.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#operations-on-strings">
    Operations on Strings
@@ -637,12 +712,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Strings</h1>
@@ -768,17 +842,18 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="strings">
-<h1>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h1>
+<h1>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>In Python, text is represented as a string, which is a sequence of characters (letters, digits, and symbols).</p></li>
 <li><p>In Python, we indicate that a value is a string by putting either single or double quotes around it.</p></li>
 </ul>
 <div class="section" id="operations-on-strings">
-<h2>Operations on Strings<a class="headerlink" href="#operations-on-strings" title="Permalink to this headline">¶</a></h2>
+<h2>Operations on Strings<a class="headerlink" href="#operations-on-strings" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">len()</span></code> – to get length of a string</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> – can add strings, but not str and type float or int</p></li>
@@ -789,7 +864,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="simple-examples">
-<h2>Simple examples<a class="headerlink" href="#simple-examples" title="Permalink to this headline">¶</a></h2>
+<h2>Simple examples<a class="headerlink" href="#simple-examples" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Aristotle&#39;</span>
 <span class="s2">&quot;Issac Newton&quot;</span>
 
@@ -816,7 +891,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="using-special-characters-in-strings">
-<h2>Using Special Characters in Strings<a class="headerlink" href="#using-special-characters-in-strings" title="Permalink to this headline">¶</a></h2>
+<h2>Using Special Characters in Strings<a class="headerlink" href="#using-special-characters-in-strings" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>How would you put a single quote inside a string that is declared using a single quote?</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'\\'</span></code> – how would you print <code class="docutils literal notranslate"><span class="pre">/\/\</span></code></p></li>
@@ -827,13 +902,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="printing-in-python">
-<h2>Printing in Python<a class="headerlink" href="#printing-in-python" title="Permalink to this headline">¶</a></h2>
+<h2>Printing in Python<a class="headerlink" href="#printing-in-python" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;abbcd&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="getting-information-from-the-keyboard">
-<h2>Getting information from the Keyboard<a class="headerlink" href="#getting-information-from-the-keyboard" title="Permalink to this headline">¶</a></h2>
+<h2>Getting information from the Keyboard<a class="headerlink" href="#getting-information-from-the-keyboard" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please enter a number: &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -853,7 +928,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="string-formatting">
-<h2>String Formatting<a class="headerlink" href="#string-formatting" title="Permalink to this headline">¶</a></h2>
+<h2>String Formatting<a class="headerlink" href="#string-formatting" title="Permalink to this headline">#</a></h2>
 <ul>
 <li><p>The fastest and latest way to do string formatting is using the F-strings (<a class="reference external" href="https://realpython.com/python-f-strings/">https://realpython.com/python-f-strings/</a>)</p></li>
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159265359</span> 
@@ -864,7 +939,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>But you have to know the other ways so you can read older code or use these ways if you have to use an older version of Python</p></li>
 </ul>
 <div class="section" id="oldest-method">
-<h3>Oldest Method<a class="headerlink" href="#oldest-method" title="Permalink to this headline">¶</a></h3>
+<h3>Oldest Method<a class="headerlink" href="#oldest-method" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159265359</span> 
  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;PI&#39;</span>
  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> is </span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">PI</span><span class="p">))</span>  <span class="c1"># oldest way format specifier is &lt;width&gt;.&lt;precision&gt;&lt;type&gt;</span>
@@ -872,7 +947,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="newer-method">
-<h3>Newer Method<a class="headerlink" href="#newer-method" title="Permalink to this headline">¶</a></h3>
+<h3>Newer Method<a class="headerlink" href="#newer-method" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159265359</span> 
 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;PI&#39;</span>
 <span class="c1">#{&lt;index&gt;:&lt;format-specifier&gt;} where the format specifier is &lt;width&gt;.&lt;precision&gt;&lt;type&gt;</span>
@@ -881,7 +956,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="newest-method">
-<h3>Newest Method<a class="headerlink" href="#newest-method" title="Permalink to this headline">¶</a></h3>
+<h3>Newest Method<a class="headerlink" href="#newest-method" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159265359</span> 
 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;PI&#39;</span>
 <span class="c1"># {&lt;name_of_variable&gt;:&lt;format-specifier&gt;} where the format specifier is &lt;width&gt;.&lt;precision&gt;&lt;type&gt;</span>
@@ -912,7 +987,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-1">
-<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">)</span>
 <span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">course_number</span><span class="si">}</span><span class="s1">&#39;</span>
 
@@ -922,7 +997,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-2">
-<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The course number is </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">)</span>
 <span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">course_number</span><span class="si">}</span><span class="s1">.&#39;</span>
 
@@ -932,7 +1007,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-3-use-index">
-<h3>Example 3 use index<a class="headerlink" href="#example-3-use-index" title="Permalink to this headline">¶</a></h3>
+<h3>Example 3 use index<a class="headerlink" href="#example-3-use-index" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The course number is </span><span class="si">{}</span><span class="s1">. It has </span><span class="si">{}</span><span class="s1"> students.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">,</span> <span class="n">class_size</span><span class="p">)</span>
 <span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The course number is </span><span class="si">{0}</span><span class="s1">. It has </span><span class="si">{1}</span><span class="s1"> students.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">,</span> <span class="n">class_size</span><span class="p">)</span>
 <span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">course_number</span><span class="si">}</span><span class="s1">. It has </span><span class="si">{</span><span class="n">class_size</span><span class="si">}</span><span class="s1"> students.&#39;</span>
@@ -943,7 +1018,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-4-change-index">
-<h3>Example 4 change index<a class="headerlink" href="#example-4-change-index" title="Permalink to this headline">¶</a></h3>
+<h3>Example 4 change index<a class="headerlink" href="#example-4-change-index" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The course number is </span><span class="si">{1}</span><span class="s1">. It has </span><span class="si">{0}</span><span class="s1"> students.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">,</span> <span class="n">class_size</span><span class="p">)</span>
 <span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">class_size</span><span class="si">}</span><span class="s1">. It has </span><span class="si">{</span><span class="n">course_number</span><span class="si">}</span><span class="s1"> students.&#39;</span>
 
@@ -953,7 +1028,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-5-adding-a-float">
-<h3>Example 5 adding a float<a class="headerlink" href="#example-5-adding-a-float" title="Permalink to this headline">¶</a></h3>
+<h3>Example 5 adding a float<a class="headerlink" href="#example-5-adding-a-float" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The course number is </span><span class="si">{0}</span><span class="s1">. It has </span><span class="si">{1}</span><span class="s1"> students. The class average is </span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">,</span> <span class="n">class_size</span><span class="p">,</span> <span class="n">class_average</span><span class="p">)</span>
 <span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">class_size</span><span class="si">}</span><span class="s1">. It has </span><span class="si">{</span><span class="n">course_number</span><span class="si">}</span><span class="s1"> students. The class average is </span><span class="si">{</span><span class="n">class_average</span><span class="si">}</span><span class="s1">.&#39;</span>
 
@@ -963,7 +1038,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-6-specify-number-of-spaces-to-use-width">
-<h3>Example 6 specify number of spaces to use – width<a class="headerlink" href="#example-6-specify-number-of-spaces-to-use-width" title="Permalink to this headline">¶</a></h3>
+<h3>Example 6 specify number of spaces to use – width<a class="headerlink" href="#example-6-specify-number-of-spaces-to-use-width" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The course number is </span><span class="si">{0:10}</span><span class="s1">. It has </span><span class="si">{1:10}</span><span class="s1"> students. The class average is </span><span class="si">{2:10}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">,</span> <span class="n">class_size</span><span class="p">,</span> <span class="n">class_average</span><span class="p">)</span>
 <span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">class_size</span><span class="si">:</span><span class="s1">10</span><span class="si">}</span><span class="s1">. It has </span><span class="si">{</span><span class="n">class_size</span><span class="si">:</span><span class="s1">10</span><span class="si">}</span><span class="s1"> students. The class average is </span><span class="si">{</span><span class="n">class_average</span><span class="si">:</span><span class="s1">10</span><span class="si">}</span><span class="s1">.&#39;</span>
 
@@ -973,7 +1048,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-7-right-align">
-<h3>Example 7 right align<a class="headerlink" href="#example-7-right-align" title="Permalink to this headline">¶</a></h3>
+<h3>Example 7 right align<a class="headerlink" href="#example-7-right-align" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The course number is </span><span class="si">{0:&gt;10}</span><span class="s1">. It has </span><span class="si">{1:&gt;10}</span><span class="s1"> students. The class average is </span><span class="si">{2:&gt;10}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">,</span> <span class="n">class_size</span><span class="p">,</span> <span class="n">class_average</span><span class="p">)</span>
 <span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">class_size</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">. It has </span><span class="si">{</span><span class="n">class_size</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1"> students. The class average is </span><span class="si">{</span><span class="n">class_average</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">.&#39;</span>
 
@@ -983,7 +1058,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-8-left-align">
-<h3>Example 8 left align<a class="headerlink" href="#example-8-left-align" title="Permalink to this headline">¶</a></h3>
+<h3>Example 8 left align<a class="headerlink" href="#example-8-left-align" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The course number is </span><span class="si">{0:&lt;10}</span><span class="s1">. It has </span><span class="si">{1:&lt;10}</span><span class="s1"> students. The class average is </span><span class="si">{2:&lt;10}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">,</span> <span class="n">class_size</span><span class="p">,</span> <span class="n">class_average</span><span class="p">)</span>
 <span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">course_number</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1">. It has </span><span class="si">{</span><span class="n">class_size</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1"> students. The class average is </span><span class="si">{</span><span class="n">class_average</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1">.&#39;</span>
 
@@ -993,7 +1068,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-9-center-align">
-<h3>Example 9 center align<a class="headerlink" href="#example-9-center-align" title="Permalink to this headline">¶</a></h3>
+<h3>Example 9 center align<a class="headerlink" href="#example-9-center-align" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The course number is </span><span class="si">{0:&lt;10}</span><span class="s1">. It has </span><span class="si">{1:&lt;10}</span><span class="s1"> students. The class average is </span><span class="si">{2:&lt;10}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">course_number</span><span class="p">,</span> <span class="n">class_size</span><span class="p">,</span> <span class="n">class_average</span><span class="p">)</span>
 <span class="n">f_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The course number is </span><span class="si">{</span><span class="n">course_number</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1">. It has </span><span class="si">{</span><span class="n">class_size</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1"> students. The class average is </span><span class="si">{</span><span class="n">class_average</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1">.&#39;</span>
 
@@ -1003,7 +1078,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-10-padding-with-zeros">
-<h3>Example 10 Padding with zeros<a class="headerlink" href="#example-10-padding-with-zeros" title="Permalink to this headline">¶</a></h3>
+<h3>Example 10 Padding with zeros<a class="headerlink" href="#example-10-padding-with-zeros" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student_id</span> <span class="o">=</span> <span class="mi">223333</span>
 
 <span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The number padded </span><span class="si">{}</span><span class="s1"> padded with zeros </span><span class="si">{:08}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">student_id</span><span class="p">,</span> <span class="n">student_id</span><span class="p">)</span>
@@ -1015,7 +1090,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="example-11-padding-with-dashes">
-<h3>Example 11 Padding with dashes<a class="headerlink" href="#example-11-padding-with-dashes" title="Permalink to this headline">¶</a></h3>
+<h3>Example 11 Padding with dashes<a class="headerlink" href="#example-11-padding-with-dashes" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">student_id</span> <span class="o">=</span> <span class="mi">223333</span>
 
 <span class="n">str_format</span> <span class="o">=</span> <span class="s1">&#39;The number padded </span><span class="si">{}</span><span class="s1"> padded with zeros </span><span class="si">{:-&gt;8}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">student_id</span><span class="p">,</span> <span class="n">student_id</span><span class="p">)</span>
@@ -1047,7 +1122,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="string-methods">
-<h2>String methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h2>
+<h2>String methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">#</a></h2>
 <p><img alt="String Methods" src="_images/string_methods1.png" />
 <img alt="String Methods" src="_images/string_methods2.png" /></p>
 </div>
@@ -1077,9 +1152,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="function_exercises/exercises_solution.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1095,24 +1172,28 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mohammad K. Zia<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Mohammad K. Zia<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

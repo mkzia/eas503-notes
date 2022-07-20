@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Object-Oriented Programming &#8212; EAS503</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -40,8 +37,9 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -59,7 +57,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -68,9 +80,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,14 +101,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   EAS 503
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    EAS 503
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Course Information
  </span>
@@ -447,87 +461,148 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/oop.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/mkzia/eas503-notes"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/mkzia/eas503-notes"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/oop.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparison-between-procedural-and-object-oriented-programming">
    Comparison between Procedural and Object-oriented Programming
@@ -614,12 +689,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Object-Oriented Programming</h1>
@@ -722,11 +796,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="object-oriented-programming">
-<h1>Object-Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this headline">¶</a></h1>
+<h1>Object-Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>We know how to store various data in Python using various data types</p></li>
 <li><p>We also know how to define functions that manipulate
@@ -735,7 +810,7 @@ or operate on that data.</p></li>
 the data and functions in one place.</p></li>
 </ul>
 <div class="section" id="comparison-between-procedural-and-object-oriented-programming">
-<h2>Comparison between Procedural and Object-oriented Programming<a class="headerlink" href="#comparison-between-procedural-and-object-oriented-programming" title="Permalink to this headline">¶</a></h2>
+<h2>Comparison between Procedural and Object-oriented Programming<a class="headerlink" href="#comparison-between-procedural-and-object-oriented-programming" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Procedural programming:</p>
 <ul>
@@ -755,7 +830,7 @@ data goes with with function</p></li>
 </ul>
 </div>
 <div class="section" id="procedural-programming-example">
-<h2>Procedural Programming Example<a class="headerlink" href="#procedural-programming-example" title="Permalink to this headline">¶</a></h2>
+<h2>Procedural Programming Example<a class="headerlink" href="#procedural-programming-example" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># function </span>
 <span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span> 
   <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
@@ -771,7 +846,7 @@ data goes with with function</p></li>
 </div>
 </div>
 <div class="section" id="object-oriented-programming-example">
-<h2>Object-Oriented Programming Example<a class="headerlink" href="#object-oriented-programming-example" title="Permalink to this headline">¶</a></h2>
+<h2>Object-Oriented Programming Example<a class="headerlink" href="#object-oriented-programming-example" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Define a new class that will contain both the
 data and the function to manipulate it.</p></li>
@@ -795,7 +870,7 @@ code is organized differently.</p></li>
 </ul>
 </div>
 <div class="section" id="benefits-of-oop">
-<h2>Benefits of OOP<a class="headerlink" href="#benefits-of-oop" title="Permalink to this headline">¶</a></h2>
+<h2>Benefits of OOP<a class="headerlink" href="#benefits-of-oop" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>We can organize our code into distinct objects, so each object handles storing and manipulating the data.</p></li>
 <li><p>We can create hierarchies of classes where each child
@@ -803,14 +878,14 @@ inherits from its parent class attributes and methods, reducing code repetition 
 </ul>
 </div>
 <div class="section" id="thoughts-on-oop">
-<h2>Thoughts on OOP<a class="headerlink" href="#thoughts-on-oop" title="Permalink to this headline">¶</a></h2>
+<h2>Thoughts on OOP<a class="headerlink" href="#thoughts-on-oop" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>In Python everything is an object, which means every entity has some attributes and associated functionality called methods. This means that <code class="docutils literal notranslate"><span class="pre">str</span></code> and <code class="docutils literal notranslate"><span class="pre">dict</span></code> are classes that know how to store data and how to operate on them.</p></li>
 <li><p>Do not overdo OOP. It is possible to create a very large object which then basically functions like a procedural system disguised as an object-oriented one.</p></li>
 </ul>
 </div>
 <div class="section" id="basic-building-blocks-to-defining-a-class">
-<h2>Basic Building Blocks to defining a class<a class="headerlink" href="#basic-building-blocks-to-defining-a-class" title="Permalink to this headline">¶</a></h2>
+<h2>Basic Building Blocks to defining a class<a class="headerlink" href="#basic-building-blocks-to-defining-a-class" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">class</span></code> - keyword to indicate that you are creating/defining a class; example <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">ScoreList</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__init__</span></code> - a method that is invoked automatically
@@ -860,7 +935,7 @@ an object’s printed representation.</p></li>
 </div>
 </div>
 <div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
@@ -1085,7 +1160,7 @@ an object’s printed representation.</p></li>
 first_name –&gt; FirstName (classes)</p>
 </div>
 <div class="section" id="exercise-1">
-<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h3>
 <p>Modify enroll to accept multiple classes!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
     <span class="n">PROGRAMS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;undergraduate&#39;</span><span class="p">,</span> <span class="s1">&#39;graduate&#39;</span><span class="p">]</span>
@@ -1123,7 +1198,7 @@ first_name –&gt; FirstName (classes)</p>
 </div>
 </div>
 <div class="section" id="exercise-2">
-<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h3>
 <p>Write a Beverage class whose instances will
 represent beverages. Each beverage should have
 two attributes: a name (describing the beverage)
@@ -1149,7 +1224,7 @@ handled correctly.</p>
 </div>
 </div>
 <div class="section" id="exercise-3">
-<h3>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+<h3>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h3>
 <p>Modify the Beverage class, such that you can create
 a new instance specifying the name,
 and not the temperature.
@@ -1177,7 +1252,7 @@ not specified.</p>
 </div>
 </div>
 <div class="section" id="exercise-4">
-<h3>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">¶</a></h3>
+<h3>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h3>
 <p>Create a new LogFile class that expects to
 be initialized with a filename.
 Inside of <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, open the file for
@@ -1219,7 +1294,7 @@ possible to write to the file via the file attribute.</p>
 </div>
 </div>
 <div class="section" id="exercise-5">
-<h3>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">¶</a></h3>
+<h3>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
@@ -1259,7 +1334,7 @@ possible to write to the file via the file attribute.</p>
 </div>
 </div>
 <div class="section" id="payroll-system-using-polymorphism">
-<h2>Payroll system using polymorphism<a class="headerlink" href="#payroll-system-using-polymorphism" title="Permalink to this headline">¶</a></h2>
+<h2>Payroll system using polymorphism<a class="headerlink" href="#payroll-system-using-polymorphism" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Employee – Abstract</p>
 <ul>
@@ -1285,7 +1360,7 @@ possible to write to the file via the file attribute.</p>
 <li><p>Demonstrate polymorphism</p></li>
 </ul>
 <div class="section" id="exercise">
-<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Java How to Program Deitel et. al</span>
 
 <span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
@@ -1402,7 +1477,7 @@ possible to write to the file via the file attribute.</p>
 </div>
 </div>
 <div class="section" id="operator-overloading">
-<h2>Operator overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h2>
+<h2>Operator overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>We know how to create objects. Now we will learn how to define what +, -, or lte means for an object</p></li>
 <li><p>add</p></li>
@@ -1598,7 +1673,7 @@ for number in numbers:
 </div>
 </div>
 <div class="section" id="self">
-<h2>Self<a class="headerlink" href="#self" title="Permalink to this headline">¶</a></h2>
+<h2>Self<a class="headerlink" href="#self" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> is a reference to an instance of a class. You can use <code class="docutils literal notranslate"><span class="pre">self</span></code> to access attributes and methods bound to an instance.</p></li>
 <li><p>class variable vs instance variable (<a class="reference external" href="https://www.digitalocean.com/community/tutorials/understanding-class-and-instance-variables-in-python-3">https://www.digitalocean.com/community/tutorials/understanding-class-and-instance-variables-in-python-3</a>)</p></li>
@@ -1808,9 +1883,11 @@ for number in numbers:
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="functions_pt2.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1826,24 +1903,28 @@ for number in numbers:
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mohammad K. Zia<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Mohammad K. Zia<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

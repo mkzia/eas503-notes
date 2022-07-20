@@ -58,7 +58,7 @@
   >>> 17 % 10
   -3 
   ```
-:::
+
 - The aforementioned seven operators are called `binary` operators because they have two operands. 
 - Negation is a `unary operator` because it applies to only one operand:
   ```python
@@ -72,7 +72,7 @@
 
 ## Operator Notes
 
-- `3/4` is a float in Python! Other languages would cut off the decimal
+- `3/4` is a float in Python! Other languages would cut off (truncate) the decimal
 - By default division (`/`) results in a float. Put another way, when an expression's operands are an `int` and `float`, Python automatically
 converts the `int` to a `float`. 
 
@@ -92,7 +92,7 @@ converts the `int` to a `float`.
   - complex - `7+3j`
 - `int` vs `float`
   - Stored differently
-  - `float` take up a set amount of space. `int` take up variable amount of space. 
+  - `float` take up a fixed amount of space. `int` take up variable amount of space. 
   - `int` are stored as `bignum` data type behind the scenes. 
   
   ```python
@@ -150,9 +150,9 @@ values of its customers’ savings accounts.
   1. UpperCamelCase for classes
   1. `__private__`  double underscore is convention that means you are not supposed access this variable directly. They are by convention like private variables in other languages. 
 
-:::{warning}
+```{warning}
 Follow these conventions in your assignments!
-:::
+```
 
 
 ### Working with Variables

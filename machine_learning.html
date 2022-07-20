@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Machine Learning &#8212; EAS503</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -40,8 +37,9 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -59,7 +57,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -68,9 +80,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,14 +101,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   EAS 503
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    EAS 503
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Course Information
  </span>
@@ -447,107 +461,194 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="_sources/machine_learning.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/machine_learning.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/mkzia/eas503-notes"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/mkzia/eas503-notes/master?urlpath=tree/docs/machine_learning.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mkzia/eas503-notes/master?urlpath=tree/docs/machine_learning.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/mkzia/eas503-notes"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/machine_learning.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="_sources/machine_learning.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-machine-learning-concept">
    General Machine Learning Concept
@@ -644,12 +745,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Machine Learning</h1>
@@ -762,20 +862,21 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="machine-learning">
-<h1>Machine Learning<a class="headerlink" href="#machine-learning" title="Permalink to this headline">¶</a></h1>
+<h1>Machine Learning<a class="headerlink" href="#machine-learning" title="Permalink to this headline">#</a></h1>
 <div class="section" id="general-machine-learning-concept">
-<h2>General Machine Learning Concept<a class="headerlink" href="#general-machine-learning-concept" title="Permalink to this headline">¶</a></h2>
+<h2>General Machine Learning Concept<a class="headerlink" href="#general-machine-learning-concept" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Simplified: in machine learning, a computer is trained to classify new data. Think of it as an input-output device that takes in a number of inputs, and based on the pattern of these inputs, determine the most likely class associated with that data. There two main types of learning strategies. 1) Supervised learning where you train the machine using data for which the correct class is known. 2) Unsupervised learning where the classifier itself tries to find patterns within the input data itself. (Biosignal and Medical Image Processing John Semmlow)</p></li>
 <li><p>Classification (determine <code class="docutils literal notranslate"><span class="pre">label</span></code>) vs Regression (predict a <code class="docutils literal notranslate"><span class="pre">numerical</span> <span class="pre">value</span></code>)</p></li>
 </ul>
 </div>
 <div class="section" id="general-outline-of-machine-learning">
-<h2>General Outline of Machine Learning<a class="headerlink" href="#general-outline-of-machine-learning" title="Permalink to this headline">¶</a></h2>
+<h2>General Outline of Machine Learning<a class="headerlink" href="#general-outline-of-machine-learning" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Loading Data</p>
 <ul class="simple">
@@ -823,7 +924,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="various-python-libraries-when-to-use-what">
-<h2>Various Python Libraries: When to use what<a class="headerlink" href="#various-python-libraries-when-to-use-what" title="Permalink to this headline">¶</a></h2>
+<h2>Various Python Libraries: When to use what<a class="headerlink" href="#various-python-libraries-when-to-use-what" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>ref:<a class="reference external" href="https://www.quora.com/What-is-the-relationship-among-NumPy-SciPy-Pandas-and-Scikit-learn-and-when-should-I-use-each-one-of-them">https://www.quora.com/What-is-the-relationship-among-NumPy-SciPy-Pandas-and-Scikit-learn-and-when-should-I-use-each-one-of-them</a></p></li>
 <li><p>Numpy – provides efficient array computation via vectorization and broadcasting</p>
@@ -848,7 +949,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="topics-covered">
-<h2>Topics Covered<a class="headerlink" href="#topics-covered" title="Permalink to this headline">¶</a></h2>
+<h2>Topics Covered<a class="headerlink" href="#topics-covered" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Introduction to Scikit-learn</p></li>
 <li><p>Loading Dataset using Scikit-learn</p></li>
@@ -861,7 +962,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="introduction-to-scikit-learn">
-<h2>Introduction to Scikit-learn<a class="headerlink" href="#introduction-to-scikit-learn" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction to Scikit-learn<a class="headerlink" href="#introduction-to-scikit-learn" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Choose the right estimator – the right algorithm for doing ML</p>
 <ul>
@@ -875,7 +976,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Defaults – provides good default values</p></li>
 </ul>
 <div class="section" id="high-level-steps">
-<h3>High Level Steps<a class="headerlink" href="#high-level-steps" title="Permalink to this headline">¶</a></h3>
+<h3>High Level Steps<a class="headerlink" href="#high-level-steps" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Choose the class of model to be coded</p></li>
 <li><p>Choose the hyper parameters of the model</p></li>
@@ -884,7 +985,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="general-steps">
-<h3>General Steps<a class="headerlink" href="#general-steps" title="Permalink to this headline">¶</a></h3>
+<h3>General Steps<a class="headerlink" href="#general-steps" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Load Data</p>
 <ul>
@@ -926,12 +1027,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="loading-data">
-<h3>Loading data<a class="headerlink" href="#loading-data" title="Permalink to this headline">¶</a></h3>
+<h3>Loading data<a class="headerlink" href="#loading-data" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="preprocessing">
-<h3>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h3>
+<h3>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">#</a></h3>
 <div class="section" id="mean-and-variance">
-<h4>Mean and Variance<a class="headerlink" href="#mean-and-variance" title="Permalink to this headline">¶</a></h4>
+<h4>Mean and Variance<a class="headerlink" href="#mean-and-variance" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>algorithms require that all the features have variance of similar magnitude. If the magnitude differ by orders of magnitude larger than others, it might dominate the objective function.</p>
 <ul>
@@ -943,19 +1044,19 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="encoding">
-<h4>Encoding<a class="headerlink" href="#encoding" title="Permalink to this headline">¶</a></h4>
+<h4>Encoding<a class="headerlink" href="#encoding" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Map text values to integer codes. For example, instead of using text for city names, use integers, or Male = 0, Female = 1. This allows fitting numerical values into models.</p></li>
 </ul>
 </div>
 <div class="section" id="discretization">
-<h4>Discretization<a class="headerlink" href="#discretization" title="Permalink to this headline">¶</a></h4>
+<h4>Discretization<a class="headerlink" href="#discretization" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Turn continuous values in to discrete values. You bin the continuous into bins. *** Linear models can become non-linear due to discretization</p></li>
 </ul>
 </div>
 <div class="section" id="imputation">
-<h4>Imputation<a class="headerlink" href="#imputation" title="Permalink to this headline">¶</a></h4>
+<h4>Imputation<a class="headerlink" href="#imputation" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Many real world datasets contain missing values;</p>
 <ul>
@@ -967,7 +1068,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="splitting-data">
-<h3>Splitting Data<a class="headerlink" href="#splitting-data" title="Permalink to this headline">¶</a></h3>
+<h3>Splitting Data<a class="headerlink" href="#splitting-data" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>It is common to split data into training and testing samples.</p></li>
 <li><p>Usually you do 90/10 or 80/20.</p></li>
@@ -976,13 +1077,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="linear-regression">
-<h3>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h3>
+<h3>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>LR models the relationship between a dependent variable and one or more independent variable. When one increase or decrease, the other increases or decreases.</p></li>
 </ul>
 </div>
 <div class="section" id="naive-bayes">
-<h3>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Permalink to this headline">¶</a></h3>
+<h3>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Simple supervised machine learning classifier</p></li>
 <li><p>Assumes the features are independent</p>
@@ -993,7 +1094,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="support-vector-machine-svm">
-<h3>Support Vector Machine (SVM)<a class="headerlink" href="#support-vector-machine-svm" title="Permalink to this headline">¶</a></h3>
+<h3>Support Vector Machine (SVM)<a class="headerlink" href="#support-vector-machine-svm" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Another supervised machine learning classifier</p>
 <ul>
@@ -1008,7 +1109,7 @@ of the margin</p></li>
 </ul>
 </div>
 <div class="section" id="evaluation">
-<h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
+<h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">#</a></h3>
 <p>Ref: <a class="reference external" href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic">https://en.wikipedia.org/wiki/Receiver_operating_characteristic</a>
 Ref: <a class="reference external" href="https://datascience-enthusiast.com/Python/ROC_Precision-Recall.html">https://datascience-enthusiast.com/Python/ROC_Precision-Recall.html</a></p>
 <p><img alt="roc" src="_images/Roc_curve.svg.png" /></p>
@@ -1044,9 +1145,11 @@ Ref: <a class="reference external" href="https://datascience-enthusiast.com/Pyth
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="np_pd/exercises.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1062,24 +1165,28 @@ Ref: <a class="reference external" href="https://datascience-enthusiast.com/Pyth
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mohammad K. Zia<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Mohammad K. Zia<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

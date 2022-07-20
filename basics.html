@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basics &#8212; EAS503</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -40,8 +37,9 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -59,7 +57,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -68,9 +80,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,14 +101,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   EAS 503
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    EAS 503
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Course Information
  </span>
@@ -447,87 +461,148 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/basics.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/mkzia/eas503-notes"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/mkzia/eas503-notes"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/basics.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#syntax-expressions-values-operators-and-operands">
    Syntax, Expressions, Values, Operators, and Operands
@@ -542,7 +617,32 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#operators">
    Operators
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-notes">
+   Operator Notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numbers">
+   Numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-precedence">
+   Operator Precedence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-large-numbers">
+   Working with large numbers
+  </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identifiers-naming-variables-in-python-remembering-values">
+     Identifiers, Naming Variables in Python, Remembering Values
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#working-with-variables">
      Working with Variables
@@ -552,12 +652,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Basics</h1>
@@ -584,7 +683,32 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#operators">
    Operators
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-notes">
+   Operator Notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numbers">
+   Numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operator-precedence">
+   Operator Precedence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-large-numbers">
+   Working with large numbers
+  </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identifiers-naming-variables-in-python-remembering-values">
+     Identifiers, Naming Variables in Python, Remembering Values
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#working-with-variables">
      Working with Variables
@@ -598,13 +722,14 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="basics">
-<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
+<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h1>
 <div class="section" id="syntax-expressions-values-operators-and-operands">
-<h2>Syntax, Expressions, Values, Operators, and Operands<a class="headerlink" href="#syntax-expressions-values-operators-and-operands" title="Permalink to this headline">¶</a></h2>
+<h2>Syntax, Expressions, Values, Operators, and Operands<a class="headerlink" href="#syntax-expressions-values-operators-and-operands" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">syntax</span></code> of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured (Wiki).</p></li>
 <li><p>An <code class="docutils literal notranslate"><span class="pre">expression</span></code> is a syntactic entity in a programming language that may be evaluated to determine its value (Wiki).</p></li>
@@ -623,14 +748,14 @@ expression, 2 is also called an operand, i.e., the data that is manipulated (Wik
 </ul>
 </div>
 <div class="section" id="basic-data-types">
-<h2>Basic Data Types<a class="headerlink" href="#basic-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>Basic Data Types<a class="headerlink" href="#basic-data-types" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Every value in Python has a particular type, and the types of values determine how they behave when they are combined.</p></li>
 <li><p>You will mostly use these data types: <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">True/False</span></code>, and <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="operators">
-<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">#</a></h2>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> Addition – <code class="docutils literal notranslate"><span class="pre">2+2=4</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> Subtraction – <code class="docutils literal notranslate"><span class="pre">5-2=3</span></code></p></li>
@@ -681,103 +806,141 @@ expression, 2 is also called an operand, i.e., the data that is manipulated (Wik
   -3 
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- The aforementioned seven operators are called `binary` operators because they have two operands. 
-- Negation is a `unary operator` because it applies to only one operand:
-  ```python
-  &gt;&gt;&gt; -5
-  5
-  &gt;&gt;&gt; --5
-  5
-  &gt;&gt;&gt; ---5
-  -5
-  ```
-
-## Operator Notes
-
-- `3/4` is a float in Python! Other languages would cut off the decimal
-- By default division (`/`) results in a float. Put another way, when an expression&#39;s operands are an `int` and `float`, Python automatically
-converts the `int` to a `float`. 
-
-```python
-&gt;&gt;&gt; 17.0 - 10
-7.0
-&gt;&gt;&gt; 17 - 10.0
-7.0
-```
-
-- Note: You can leave out `0` after the decimal, e.g., `10.`, but this is considered bad style. 
-## Numbers
-
-- Python has the following number data types:
-  - int - whole number, positive or negative, unlimited
-  - float - number with decimals, positive or negative
-  - complex - `7+3j`
-- `int` vs `float`
-  - Stored differently
-  - `float` take up a set amount of space. `int` take up variable amount of space. 
-  - `int` are stored as `bignum` data type behind the scenes. 
-  
-  ```python
-  import sys
-  sys.getsizeof(2.0)
-  Out[3]: 24
-  sys.getsizeof(2**30)
-  Out[4]: 32
-  sys.getsizeof(2**130)
-  Out[6]: 44
-  ```
-
-  - Both `int` and `float` can store positive and negative numbers
-  - `type()` -- used to figure out which type of data type it is
-- `float` can only represent approximations to real numbers
-  - `2/3` vs `1/3`
-- If you do not need fraction values, use int.
-
-## Operator Precedence
-
-- PEMDAS - use parenthesis to manipulate the order in which things are calculated 
-  - what is `8/2(2+2)`?
-- Precedence
-  - Parenthesis
-  - Exponentiation
-  - Negation
-  - Multiplication, division, integer division, and remainder
-  - Addition and subtraction
-- `212 - 32 * 5 / 9` What is wrong with this expression?
-
-## Working with large numbers
-- `10000000000 + 0.00000000001`
-- The result should have twenty zeros between the first and last significant digit, but
+<ul>
+<li><p>The aforementioned seven operators are called <code class="docutils literal notranslate"><span class="pre">binary</span></code> operators because they have two operands.</p></li>
+<li><p>Negation is a <code class="docutils literal notranslate"><span class="pre">unary</span> <span class="pre">operator</span></code> because it applies to only one operand:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">-</span><span class="mi">5</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">--</span><span class="mi">5</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">---</span><span class="mi">5</span>
+<span class="go">-5</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="operator-notes">
+<h2>Operator Notes<a class="headerlink" href="#operator-notes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">3/4</span></code> is a float in Python! Other languages would cut off (truncate) the decimal</p></li>
+<li><p>By default division (<code class="docutils literal notranslate"><span class="pre">/</span></code>) results in a float. Put another way, when an expression’s operands are an <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code>, Python automatically
+converts the <code class="docutils literal notranslate"><span class="pre">int</span></code> to a <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mf">17.0</span> <span class="o">-</span> <span class="mi">10</span>
+<span class="go">7.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">-</span> <span class="mf">10.0</span>
+<span class="go">7.0</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Note: You can leave out <code class="docutils literal notranslate"><span class="pre">0</span></code> after the decimal, e.g., <code class="docutils literal notranslate"><span class="pre">10.</span></code>, but this is considered bad style.</p></li>
+</ul>
+</div>
+<div class="section" id="numbers">
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><p>Python has the following number data types:</p>
+<ul class="simple">
+<li><p>int - whole number, positive or negative, unlimited</p></li>
+<li><p>float - number with decimals, positive or negative</p></li>
+<li><p>complex - <code class="docutils literal notranslate"><span class="pre">7+3j</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> vs <code class="docutils literal notranslate"><span class="pre">float</span></code></p>
+<ul class="simple">
+<li><p>Stored differently</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> take up a fixed amount of space. <code class="docutils literal notranslate"><span class="pre">int</span></code> take up variable amount of space.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> are stored as <code class="docutils literal notranslate"><span class="pre">bignum</span></code> data type behind the scenes.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">24</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="mi">32</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">130</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="mi">44</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Both <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code> can store positive and negative numbers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type()</span></code> – used to figure out which type of data type it is</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code> can only represent approximations to real numbers</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">2/3</span></code> vs <code class="docutils literal notranslate"><span class="pre">1/3</span></code></p></li>
+</ul>
+</li>
+<li><p>If you do not need fraction values, use int.</p></li>
+</ul>
+</div>
+<div class="section" id="operator-precedence">
+<h2>Operator Precedence<a class="headerlink" href="#operator-precedence" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>PEMDAS - use parenthesis to manipulate the order in which things are calculated</p>
+<ul>
+<li><p>what is <code class="docutils literal notranslate"><span class="pre">8/2(2+2)</span></code>?</p></li>
+</ul>
+</li>
+<li><p>Precedence</p>
+<ul>
+<li><p>Parenthesis</p></li>
+<li><p>Exponentiation</p></li>
+<li><p>Negation</p></li>
+<li><p>Multiplication, division, integer division, and remainder</p></li>
+<li><p>Addition and subtraction</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">212</span> <span class="pre">-</span> <span class="pre">32</span> <span class="pre">*</span> <span class="pre">5</span> <span class="pre">/</span> <span class="pre">9</span></code> What is wrong with this expression?</p></li>
+</ul>
+</div>
+<div class="section" id="working-with-large-numbers">
+<h2>Working with large numbers<a class="headerlink" href="#working-with-large-numbers" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">10000000000</span> <span class="pre">+</span> <span class="pre">0.00000000001</span></code></p></li>
+<li><p>The result should have twenty zeros between the first and last significant digit, but
 that is too many for the computer to store, so the result is just 10000000000—it’s as if
 the addition never took place. Adding lots of small numbers to a large one can
 therefore have no effect at all, which is not what a bank wants when it totals up the
-values of its customers’ savings accounts.
-- If you have to add up floating-point numbers, add them from smallest to largest in order to minimize the error.
-- Better yet, use a specialized library (https://mpmath.org/) or (https://github.com/mdickinson/bigfloat)
-
-### Identifiers, Naming Variables in Python, Remembering Values
-- Variables give names to values (number, string, or boolean); Technically they are called identifiers. They are a container of information that a computer program will manipulate using a sequence of instructions. 
-- Variables names MUST follow certain rules and it is BEST to follow Python guidelines for naming 
-- Restrictions for identifiers or naming things in Python
-  1. Start with letter or underscore
-  1. The rest can have letters, underscore, and numbers
-  1. symbols cannot be used in name (@,+)
-  1. Don&#39;t use Python keywords or reserved words such as `print`, `str`, `int`, `float`
-    - `int = 3` do `del int` to restore python keyword
-    - `print = Yah` do `del print` to restore Python keyword
-- Conventions for identifiers or naming things in Python
-  1. use snake_case not camelCase for variable and function names
-  1. variables should be lowercase
-  1. upper case are used for constants `PI = 3.14`
-  1. UpperCamelCase for classes
-  1. `__private__`  double underscore is convention that means you are not supposed access this variable directly. They are by convention like private variables in other languages. 
-
-:::{warning}
-Follow these conventions in your assignments!
-</pre></div>
+values of its customers’ savings accounts.</p></li>
+<li><p>If you have to add up floating-point numbers, add them from smallest to largest in order to minimize the error.</p></li>
+<li><p>Better yet, use a specialized library (<a class="reference external" href="https://mpmath.org/">https://mpmath.org/</a>) or (<a class="reference external" href="https://github.com/mdickinson/bigfloat">https://github.com/mdickinson/bigfloat</a>)</p></li>
+</ul>
+<div class="section" id="identifiers-naming-variables-in-python-remembering-values">
+<h3>Identifiers, Naming Variables in Python, Remembering Values<a class="headerlink" href="#identifiers-naming-variables-in-python-remembering-values" title="Permalink to this headline">#</a></h3>
+<ul>
+<li><p>Variables give names to values (number, string, or boolean); Technically they are called identifiers. They are a container of information that a computer program will manipulate using a sequence of instructions.</p></li>
+<li><p>Variables names MUST follow certain rules and it is BEST to follow Python guidelines for naming</p></li>
+<li><p>Restrictions for identifiers or naming things in Python</p>
+<ol class="simple">
+<li><p>Start with letter or underscore</p></li>
+<li><p>The rest can have letters, underscore, and numbers</p></li>
+<li><p>symbols cannot be used in name (&#64;,+)</p></li>
+<li><p>Don’t use Python keywords or reserved words such as <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">=</span> <span class="pre">3</span></code> do <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">int</span></code> to restore python keyword</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">=</span> <span class="pre">Yah</span></code> do <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">print</span></code> to restore Python keyword</p></li>
+</ul>
+</li>
+<li><p>Conventions for identifiers or naming things in Python</p>
+<ol class="simple">
+<li><p>use snake_case not camelCase for variable and function names</p></li>
+<li><p>variables should be lowercase</p></li>
+<li><p>upper case are used for constants <code class="docutils literal notranslate"><span class="pre">PI</span> <span class="pre">=</span> <span class="pre">3.14</span></code></p></li>
+<li><p>UpperCamelCase for classes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__private__</span></code>  double underscore is convention that means you are not supposed access this variable directly. They are by convention like private variables in other languages.</p></li>
+</ol>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Follow these conventions in your assignments!</p>
+</div>
 </div>
 <div class="section" id="working-with-variables">
-<h3>Working with Variables<a class="headerlink" href="#working-with-variables" title="Permalink to this headline">¶</a></h3>
+<h3>Working with Variables<a class="headerlink" href="#working-with-variables" title="Permalink to this headline">#</a></h3>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">503</span></code>;</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">&quot;EAS503&quot;</span></code></p></li>
@@ -847,9 +1010,11 @@ This is called Dynamic typing. This is different from statically-typed where you
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -865,24 +1030,28 @@ This is called Dynamic typing. This is different from statically-typed where you
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mohammad K. Zia<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Mohammad K. Zia<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
