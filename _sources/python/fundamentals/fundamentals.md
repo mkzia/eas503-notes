@@ -12,19 +12,6 @@ kernelspec:
 
 # Fundamentals 
 
-## Objectives 
-
-In this section you will learn:
-- Write simple Python statements and scripts
-- Create variables to store data for later use
-- Become familiar with built-in data types
-- Use arithmetic operators and understand their precedence
-- Use built-in `print` to display text
-- Use built-in function `input` to prompt the user to enter data
-at the keyboard and get the data for use in the program
-- Convert text to integer values with built-in function `int`
-  
-
 ## Expression and Values: Arithmetic in Python
 
 The **syntax** of a computer language is a set of rules that tells you how you can combine **operators** and **operands**/**value** to write legal/correct Python **expressions**. 
