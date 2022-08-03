@@ -28,6 +28,7 @@ SQL offers six clauses ({ref}`query-clauses`) to query your data. All SQL querie
 | ORDER BY        	| Sorts the rows of the final result set by one or more columns                         	|
 ```
 
+(sql:primer:basic)=
 ### Basic query
 The most basic SQL query will have a `SELECT` and `FROM` clause. Select lets you choose the columns
 you want. In case you want all the columns, you can use `*`, which indicates to SQL you want all the columns. 
@@ -64,7 +65,7 @@ df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
 ```
 
-
+(sql:primer:limit_rows)=
 ### Limit rows
 You can limit the number of rows to 10 by adding `LIMIT 10` after the `FROM` clause. 
 
@@ -96,6 +97,7 @@ df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
 ```
 
+(sql:primer:select_some_columns)=
 ### Select some columns
 You can select columns from a table by specifying them after the `SELECT` clause. Multiple
 columns are separated by a comma (`,`). 
@@ -130,6 +132,7 @@ df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
 ```
 
+(sql:primer:using_column_alias)=
 ### Using column alias
 Notice that all the column names are prefixed by `Patient`. You can give columns a different name, meaning an alias. 
 There are two ways to do alias. You can put the alias name right after the actual column name, e.g., `PatientID PTID`
@@ -166,7 +169,7 @@ LIMIT 10;
 df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
 ```
-
+(sql:primer:adding_column)=
 ### Adding columns not from the table
 Besides selecting columns in the table, you can also add the following columns to your query:
 1. literals such as numbers or strings
@@ -206,6 +209,7 @@ df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
 ```
 
+(sql:primer:removing_duplicates)=
 ### Removing duplicates
 In some cases you might get duplicate rows. You remove these duplicate rows by putting the `DISTINCT` keyword
 after the `SELECT` keyword. One use of this is to get distinct values of a given column. 
@@ -263,6 +267,8 @@ df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
 ```
 
+(sql:primer:removing_duplicates_2)=
+### Removing duplicates with multiple columns
 The `DISTINCT` keyword can also be used to find distinct combination of columns. **It is also used sometimes with joins
 to remove duplicate rows.**
 
@@ -274,7 +280,8 @@ SELECT DISTINCT
     PatientRace,
     PatientMaritalStatus
 FROM
-    PatientCorePopulatedTable;
+    PatientCorePopulatedTable
+ORDER BY PatientRace, PatientMaritalStatus
 ```
 
 ```{code-cell} ipython3
@@ -289,7 +296,8 @@ SELECT DISTINCT
     PatientRace,
     PatientMaritalStatus
 FROM
-    PatientCorePopulatedTable;
+    PatientCorePopulatedTable
+ORDER BY PatientRace, PatientMaritalStatus
 """
 df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
@@ -308,7 +316,8 @@ You should now that there are four types of tables in SQL:
 We have been using permanent tables so far. Temporary and virtual tables will be covered later. The following
 is an example a derived table. 
 
-#### From a derived table
+(sql:primer:derived_table)=
+#### Derived table
 A derived query is a query held in memory. You surround it a pair of parenthesis and give it a name. 
 
 **Query**: Create a subquery called `dx_codes` which selects the `PrimaryDiagnosisCode` and `PrimaryDiagnosisDescription`
@@ -350,6 +359,7 @@ df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
 ```
 
+(sql:primer:where_clause)=
 ### The `WHERE` Clause
 The `WHERE` clause allows you to filter out unwanted rows. For string fields, you can use the equality operator (`=`) or 
 the `LIKE` operator. For numerical and date fields, you can use all the usually operators such as greater than, less than, etc. 
@@ -398,6 +408,7 @@ df = pd.read_sql_query(sql_statement, conn)
 df.style.set_table_attributes('style="font-size: 12px"')
 ```
 
+(sql:primer:order_by_clause)=
 ### The `ORDER BY` Clauses 
 You can order the the rows by column(s) using the `ORDER BY` clause. This clause is put after the `WHERE` clause. You can specify
 multiple columns separated by comma. You can also specify ascending order using the `ASC` keyword after the column name 

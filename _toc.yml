@@ -11,11 +11,12 @@ parts:
 - caption: Python Programming
   chapters:
   - file: introduction
-  - file: basics
-  - file: functions_pt1
+  - file: python/fundamentals/fundamentals
     sections:
-    - file: function_exercises/exercises
-    - file: function_exercises/exercises_solution
+    - file: python/fundamentals/exercises
+  - file: python/functions/functions_1
+    sections:
+    - file: python/functions/exercises
   - file: strings
     sections:
     - file: string_exercises/exercises
@@ -59,7 +60,25 @@ parts:
     - file: sql/sql_3_sets
     - file: sql/sql_4_grouping
     - file: sql/sql_5_subqueries
+    - file: sql/sql_6_conditionals
+    - file: sql/sql_7_analytic_functions
+    - file: sql/sql_8_normalization
+
+- caption: Numpy and Pandas
+  chapters:
+  - file: np_pd
+    sections:
+    - file: np_pd/numpy
+    - file: np_pd/pandas
+    - file: np_pd/exercises
      
+- caption: Machine Learning
+  chapters:
+  - file: machine_learning
+    sections:
+    - file: machine_learning/part1
+    - file: machine_learning/part2
+
 - caption: Style Guide
   chapters:
   - file: style
