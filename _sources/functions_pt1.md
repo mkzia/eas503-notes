@@ -82,13 +82,11 @@ Some other useful functions
 min(2, 3, 4)
 max(2, -3, 4, 7, -5)
 max(2, -3, min(4, 7), -5)
-
 ```
 
 
 ## Defining your own functions
-- The built-in functions (e.g, type, print, input) that Python provides do basic tasks. We can write our own functions that can execute complicated sequence
-of instructions. Your functions will be made up of Python operators and built-in Python functions.
+- The built-in functions (e.g, type, print, input) that Python provides do basic tasks. We can write our own functions that can execute complicated sequence of instructions. Your functions will be made up of Python operators and built-in Python functions.
 
 ### Designing New Functions: A Recipe
 - What do you name the function?
