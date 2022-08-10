@@ -12,19 +12,49 @@ kernelspec:
 
 # Functions
 
-What is a function?
-- Functions are subprograms -- they are a sequence of of statements that have a name
+## Previous Lecture
+- In the previous lecture we covered the fundamentals of Python:
+  - We covered the basic terminologies such as:
+    - Operators: arithmetic operators (additions, subtraction multiplication, division, modulo)
+    - Operands: the values to the left and right of an operator 
+    - Expressions: represent individual values, such as numbers or characters, or a combination of operators and operands
+    - Syntax: set of rules that tells you how you can combine operators and operands/value to write legal/correct Python expressions
+  - Next we covered the basic data types that Python provides. These include: int (integer), float (floating-point), and str (string)
+  - Then we covered examples of using arithmetic operators in detail and operator precedence.
+  - We also covered variables, which are containers for holding values, and how they are named. 
+- These are the fundamentals of Python because they are the basic building block for writing sophisticated code. 
+
+## Lecture Objectives
+- In this lecture we will cover functions. You will learn
+  - What are functions?
+  - What are some advantages of using functions?
+  - What are some built-in Python functions?
+  - How do you write a function?
+  - What is a function call? 
+  - What are arguments? What is their purpose?
+  - What is the purpose of the return statement?
+  - 
+
+## Functions: An Overview
+- A Functions is a small, self-contained sequence of statements/instructions that has a name. Example: convert Celsius to Fahrenheit
+- What the advantages of using functions?
+  - Many programs require a particular sequence of statements/instructions to be executed repeatedly. The repeated statements/instructions can be placed with a single function, which can be accessed whenever needed. Therefore, they reduce repeated statements/instructions. 
+  - Functions help decompose larger programs into logical subprograms. Such programs are easier to write and debug. 
 - Functions can be executed at any point by using their name 
-- Functions remove duplicated code
 - Functions can call other functions
 - Functions can OPTIONALLY take argument(s) that they can use inside the function
 - Functions can OPTIONALLY return value(s)
 
 The general form of a function call is as follows:
 ```
-<<function_name>>(<<arguments>>)
+def <<function_name>>(<<arguments>>):
+    body
 ```
 
+```python
+def convert_celsius_to_fahrenheit(degrees_in_celsius):
+    return 9 / 5 * degrees_celsius + 32
+```
 
 ## Built-in functions
 `abs(-9)` -- `-9` is the argument. Arguments appear between the parenthesis after the function name. Arguments are evaluated left to right.
@@ -130,14 +160,14 @@ min(2, 3, 4)
 
 
 ```{code-cell} ipython3
-max(2, -3, 4, 7, -5)```
+max(2, -3, 4, 7, -5)
+```
 
 ```{code-cell} ipython3
 max(2, -3, min(4, 7), -5)
 ```
 
 Function objects have memory addresses just like variables:
-
 
 ```{code-cell} ipython3
 id(-9)

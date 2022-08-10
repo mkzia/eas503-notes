@@ -167,7 +167,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../strings.html">
+  <a class="reference internal" href="../strings/strings.html">
    Strings
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -177,13 +177,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../string_exercises/exercises.html">
-     String Exercises
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../string_exercises/exercises_solution.html">
-     String Exercises Solution
+    <a class="reference internal" href="../strings/exercises.html">
+     Exercises
     </a>
    </li>
   </ul>
@@ -657,6 +652,21 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#previous-lecture">
+   Previous Lecture
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lecture-objectives">
+   Lecture Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-an-overview">
+   Functions: An Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#built-in-functions">
    Built-in functions
   </a>
@@ -718,6 +728,21 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#previous-lecture">
+   Previous Lecture
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lecture-objectives">
+   Lecture Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-an-overview">
+   Functions: An Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#built-in-functions">
    Built-in functions
   </a>
@@ -771,18 +796,68 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="functions">
 <h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h1>
-<p>What is a function?</p>
+<div class="section" id="previous-lecture">
+<h2>Previous Lecture<a class="headerlink" href="#previous-lecture" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Functions are subprograms – they are a sequence of of statements that have a name</p></li>
+<li><p>In the previous lecture we covered the fundamentals of Python:</p>
+<ul>
+<li><p>We covered the basic terminologies such as:</p>
+<ul>
+<li><p>Operators: arithmetic operators (additions, subtraction multiplication, division, modulo)</p></li>
+<li><p>Operands: the values to the left and right of an operator</p></li>
+<li><p>Expressions: represent individual values, such as numbers or characters, or a combination of operators and operands</p></li>
+<li><p>Syntax: set of rules that tells you how you can combine operators and operands/value to write legal/correct Python expressions</p></li>
+</ul>
+</li>
+<li><p>Next we covered the basic data types that Python provides. These include: int (integer), float (floating-point), and str (string)</p></li>
+<li><p>Then we covered examples of using arithmetic operators in detail and operator precedence.</p></li>
+<li><p>We also covered variables, which are containers for holding values, and how they are named.</p></li>
+</ul>
+</li>
+<li><p>These are the fundamentals of Python because they are the basic building block for writing sophisticated code.</p></li>
+</ul>
+</div>
+<div class="section" id="lecture-objectives">
+<h2>Lecture Objectives<a class="headerlink" href="#lecture-objectives" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>In this lecture we will cover functions. You will learn</p>
+<ul>
+<li><p>What are functions?</p></li>
+<li><p>What are some advantages of using functions?</p></li>
+<li><p>What are some built-in Python functions?</p></li>
+<li><p>How do you write a function?</p></li>
+<li><p>What is a function call?</p></li>
+<li><p>What are arguments? What is their purpose?</p></li>
+<li><p>What is the purpose of the return statement?</p></li>
+<li></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="functions-an-overview">
+<h2>Functions: An Overview<a class="headerlink" href="#functions-an-overview" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>A Functions is a small, self-contained sequence of statements/instructions that has a name. Example: convert Celsius to Fahrenheit</p></li>
+<li><p>What the advantages of using functions?</p>
+<ul>
+<li><p>Many programs require a particular sequence of statements/instructions to be executed repeatedly. The repeated statements/instructions can be placed with a single function, which can be accessed whenever needed. Therefore, they reduce repeated statements/instructions.</p></li>
+<li><p>Functions help decompose larger programs into logical subprograms. Such programs are easier to write and debug.</p></li>
+</ul>
+</li>
 <li><p>Functions can be executed at any point by using their name</p></li>
-<li><p>Functions remove duplicated code</p></li>
 <li><p>Functions can call other functions</p></li>
 <li><p>Functions can OPTIONALLY take argument(s) that they can use inside the function</p></li>
 <li><p>Functions can OPTIONALLY return value(s)</p></li>
 </ul>
 <p>The general form of a function call is as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;&lt;</span><span class="n">function_name</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="o">&lt;&lt;</span><span class="n">arguments</span><span class="o">&gt;&gt;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="o">&lt;&lt;</span><span class="n">function_name</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="o">&lt;&lt;</span><span class="n">arguments</span><span class="o">&gt;&gt;</span><span class="p">):</span>
+    <span class="n">body</span>
 </pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_celsius_to_fahrenheit</span><span class="p">(</span><span class="n">degrees_in_celsius</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">degrees_celsius</span> <span class="o">+</span> <span class="mi">32</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="built-in-functions">
 <h2>Built-in functions<a class="headerlink" href="#built-in-functions" title="Permalink to this headline">#</a></h2>
@@ -1040,18 +1115,24 @@ pow(base, exp, mod=None)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>max(2, -3, 4, 7, -5)```
-
-```{code-cell} ipython3
-max(2, -3, min(4, 7), -5)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  Input In [20]
-    max(2, -3, 4, 7, -5)```
-                        ^
-SyntaxError: invalid syntax
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
@@ -1063,10 +1144,20 @@ SyntaxError: invalid syntax
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140339004071184
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="mf">23.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140339004071600
 </pre></div>
 </div>
 </div>
@@ -1078,6 +1169,11 @@ SyntaxError: invalid syntax
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140339004071760
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1085,10 +1181,20 @@ SyntaxError: invalid syntax
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140339197471056
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="nb">round</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140339197478048
 </pre></div>
 </div>
 </div>
@@ -1155,6 +1261,11 @@ SyntaxError: invalid syntax
     <span class="k">return</span> <span class="n">first</span> <span class="o">+</span> <span class="n">second</span> <span class="o">+</span> <span class="n">third</span>
 <span class="n">quadratic</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="n">quadratic</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.0
 </pre></div>
 </div>
 </div>
@@ -1260,6 +1371,11 @@ current_day and birthday_day are both in the range 1-365.</p></li>
     <span class="k">return</span> <span class="kc">None</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
 </pre></div>
 </div>
 </div>
