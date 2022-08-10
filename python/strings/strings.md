@@ -1,8 +1,42 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
+
 # Strings
+
+## Previous Lecture
+- In the previous lecture we covered functions.
+  - Functions are small, self-contained set of instructions that can be called at anytime.
+- We covered how to use built-in functions.
+- We covered how to write your own functions
+
+
+## Lecture Objectives
+- In this lecture we will take a deep-dive into the str or string data type. You will learn
+  - What is the meaning of arithmetic operators on strings.
+  - How to convert strings to numbers and numbers to strings.
+  - How to use special characters inside strings.
+  - How to print results to the screen.
+  - How to get information from the user. 
+  - How to format strings.
+  - What methods are available to manipulate strings.
+
+
+## Strings Basics
+
 - In Python, text is represented as a string, which is a sequence of characters (letters, digits, and symbols).
 - In Python, we indicate that a value is a string by putting either single or double quotes around it.
 
-## Operations on Strings
+### Operations on Strings
 - `len()` -- to get length of a string
 - `+` -- can add strings, but not str and type float or int
 - `*` -- to repeat a string 
@@ -10,31 +44,61 @@
 - `int(3)`
 - `float(3.4)`
 
-## Simple examples
+### Simple examples
 
+#### Single Quotes vs Double Quotes
+-
 ```python
 'Aristotle'
 "Issac Newton"
+```
 
+#### Triple Quotes for String Literal
+```python
+'''Should you want a string
+​ 	that crosses multiple lines,
+​ 	Use matched triple quotes.'''
+```
+
+```python
+"""
+This is a string literal. 
+        Spaces are printed as is. 
+  Hello there!"""
+```
+
+#### Determining the length of a string
+```python
 scientist = 'Issac Newton'
 print(len(scientist))
+```
 
 
+#### Concatenating Strings
+```python
 'Alan Turning' + ' ' + 'Grace Hopper'
+```
 
+```python
 'NH' + 3 # This will not work. You cannot add a str and int type. 
+```
 
+```python
 'Four score and ' + str(7) + ' years ago'
+```
 
+#### Converting Strings to Numbers
+```python
 int('0')
 int('11')
 int('-324')
 float('-324.40')
+```
 
+#### Repeating Strings
+```python
 'AT' * 5
-
 '-' * 5
-
 ```
 
 ## Using Special Characters in Strings
@@ -50,6 +114,7 @@ float('-324.40')
 ## Printing in Python
 ```python
 print('abbcd', 2, 3)
+print('abbcd', 2, 3, sep='\n') # default separator is space
 ```
 
 
@@ -58,6 +123,7 @@ print('abbcd', 2, 3)
 number = input('Please enter a number: ')
 ```
 
+### Converting Numeric Values
 ```python
 number = int(input('Please enter a number: '))
 ```
@@ -91,7 +157,7 @@ def convert_celsius():
 ```
 
 ### Newer Method
-
+- Still used for creating string templates
 ``` python
 PI = 3.14159265359 
 name = 'PI'
@@ -100,7 +166,7 @@ print(('{0} is {1:.2f}'.format('PI', PI)) ) #
 ```
 
 ### Newest Method
-
+- Newest and fastest method for string formatting
 ``` python
 PI = 3.14159265359 
 name = 'PI'
@@ -190,7 +256,7 @@ print(f_string)
 
 ```python
 str_format = 'The course number is {0:10}. It has {1:10} students. The class average is {2:10}'.format(course_number, class_size, class_average)
-f_string = f'The course number is {class_size:10}. It has {class_size:10} students. The class average is {class_average:10}.'
+f_string = f'The course number is {course_number:10}. It has {class_size:10} students. The class average is {class_average:10}.'
 
 print(str_format)
 print(f_string)
@@ -253,8 +319,6 @@ print(f_string)
 ```
 
 
-String Exercises 1-9
-
 https://scipython.com/book/chapter-2-the-core-python-language-i/string-representation-of-integers-with-comma-separated-thousands/
 ```python
 title = '|' + '{:^51}'.format('Cereal Yields (kg/ha)') + '|'
@@ -277,5 +341,23 @@ print('+' + '-'*(len(title)-2) + '+',
 
 
 ## String methods
+- We have already encountered functions: built-in functions and functions we have defined. A method is another kind of function that is attached to a particular type. This section covers
+the methods that are attached to string types.  
+- Method calls in this form—`'browning'.capitalize()`—are shorthand for this: `str.capitalize('browning')`. 
+
+
 ![String Methods](string_methods1.png)
 ![String Methods](string_methods2.png)
+
+
+## Summary
+- Python uses type str to represent text as sequences of characters.
+- Strings are created by placing pairs of single quotes `’` or double quotes `"` around the text.
+```python
+'''Should you want a string
+    ​ 	that crosses multiple lines,
+    ​ 	Use matched triple quotes.'''
+```
+- Special characters like newline (\n) and tab (\t) are represented using escape sequences that begin with a backslash. For example, `"this string\nspans\nthree lines"`.
+- Values can be printed using built-in function print, and input can be provided by the user using built-in function input. 
+- Methods are like functions, except that the first argument must be an object of the class in which the method is defined.

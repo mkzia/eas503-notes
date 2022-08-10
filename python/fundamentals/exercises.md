@@ -26,11 +26,9 @@
 
 
 4. For each of the following expressions, in which order are the subexpressions evaluated?
-
-- 6 * 3 + 7 * 4
-- 5 + 3 / 4
-- 5 - 2 * 3 ** 4 
-
+6 * 3 + 7 * 4
+5 + 3 / 4
+5 - 2 * 3 ** 4 
 
 5. Exercise
 Create a new variable x, and assign it the value 10.5.
