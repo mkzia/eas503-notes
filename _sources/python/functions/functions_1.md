@@ -33,7 +33,6 @@ kernelspec:
   - What is a function call? 
   - What are arguments? What is their purpose?
   - What is the purpose of the return statement?
-  - 
 
 ## Functions: An Overview
 - A Functions is a small, self-contained sequence of statements/instructions that has a name. Example: convert Celsius to Fahrenheit
