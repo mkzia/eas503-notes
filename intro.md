@@ -20,7 +20,14 @@ Welcome to EAS503! EAS503 is a course taught in the Department of Engineering & 
 
 ## Course Content
 
+### Matott Section
 - Quizzes (14) - 20 %
+- Programming Assignments (10) - 40 %
+- Mini-Projects (2) - 30 %
+- Group Project (1) - 10%
+
+### Zia Section
+- Quizzes (**24*) - 20 %
 - Programming Assignments (10) - 40 %
 - Mini-Projects (2) - 30 %
 - Group Project (1) - 10%
@@ -29,8 +36,9 @@ Welcome to EAS503! EAS503 is a course taught in the Department of Engineering & 
 
 - This website will host the course notes
 - Github (https://github.com/mkzia/eas503) for hosting lecture Jupyter notebooks
-- UB Learns will be used for distributing quizzes, providing programming assignment descriptions, forming groups for projects, submitting the final project report, and manage course grades
-- GradeScope will be used to assign programming assignments and mini-projects
+- UB Learns will be used for distributing programming assignments' description, forming groups for projects, submitting the final project report, and managing course grades
+- Kritik will be used for quizzes 
+- GradeScope will be used to submit programming assignments and mini-projects
 - Piazza will be used for:
     - course announcements and updates 
     - asking the instructor and TA questions 
@@ -44,6 +52,7 @@ Welcome to EAS503! EAS503 is a course taught in the Department of Engineering & 
 
 - Ensure you can access EAS503 course page on UB Learns
 - Ensure you can log into Gradescope
+- Ensure you can log into Kritik and pay the fee ($24)
 - Ensure you can log into Piazza
 - Install Anaconda (https://www.anaconda.com/products/individual) 
 - Install Microsoft Visual Studio Code
