@@ -1,59 +1,52 @@
 Traceback (most recent call last):
   File "/home/mkzia/anaconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
-  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 1112, in execute
+  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 74, in wrapped
+  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 53, in just_run
+  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
   File "/home/mkzia/anaconda3/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
     return future.result()
-  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 553, in async_execute
+  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 857, in async_execute_cell
-    self._check_raise_for_error(cell, exec_reply)
-  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/mkzia/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from IPython.display import display
-import pandas as pd
-import numpy as np
-filename = 'PatientCorePopulatedTable.txt'
-
-df = pd.read_csv(filename, delimiter='\t')
-pd.DataFrame(df[['PrimaryDiagnosisCode', 'PrimaryDiagnosisDescription']].apply(lambda row: f'({row[0]}) {row[1]}', axis=1), columns=['CodeWDescription'])
+celsius = float(input("What is the Celsius temperature? "))
+fahrenheit = 9/5 * celsius + 32
+print("The temperature is", fahrenheit, "degrees Fahrenheit.")
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mKeyError[0m                                  Traceback (most recent call last)
-[0;32m/tmp/ipykernel_4103/288911843.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      5[0m [0;34m[0m[0m
-[1;32m      6[0m [0mdf[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0mfilename[0m[0;34m,[0m [0mdelimiter[0m[0;34m=[0m[0;34m'\t'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 7[0;31m [0mpd[0m[0;34m.[0m[0mDataFrame[0m[0;34m([0m[0mdf[0m[0;34m[[0m[0;34m[[0m[0;34m'PrimaryDiagnosisCode'[0m[0;34m,[0m [0;34m'PrimaryDiagnosisDescription'[0m[0;34m][0m[0;34m][0m[0;34m.[0m[0mapply[0m[0;34m([0m[0;32mlambda[0m [0mrow[0m[0;34m:[0m [0;34mf'({row[0]}) {row[1]}'[0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0;36m1[0m[0;34m)[0m[0;34m,[0m [0mcolumns[0m[0;34m=[0m[0;34m[[0m[0;34m'CodeWDescription'[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m~/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
-[1;32m   3462[0m             [0;32mif[0m [0mis_iterator[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3463[0m                 [0mkey[0m [0;34m=[0m [0mlist[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3464[0;31m             [0mindexer[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mloc[0m[0;34m.[0m[0m_get_listlike_indexer[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0;36m1[0m[0;34m)[0m[0;34m[[0m[0;36m1[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3465[0m [0;34m[0m[0m
-[1;32m   3466[0m         [0;31m# take() does not accept boolean indexers[0m[0;34m[0m[0;34m[0m[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+Input [0;32mIn [1][0m, in [0;36m<cell line: 1>[0;34m()[0m
+[0;32m----> 1[0m celsius [38;5;241m=[39m [38;5;28mfloat[39m([38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mWhat is the Celsius temperature? [39;49m[38;5;124;43m"[39;49m[43m)[49m)
+[1;32m      2[0m fahrenheit [38;5;241m=[39m [38;5;241m9[39m[38;5;241m/[39m[38;5;241m5[39m [38;5;241m*[39m celsius [38;5;241m+[39m [38;5;241m32[39m
+[1;32m      3[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mThe temperature is[39m[38;5;124m"[39m, fahrenheit, [38;5;124m"[39m[38;5;124mdegrees Fahrenheit.[39m[38;5;124m"[39m)
 
-[0;32m~/anaconda3/lib/python3.9/site-packages/pandas/core/indexing.py[0m in [0;36m_get_listlike_indexer[0;34m(self, key, axis)[0m
-[1;32m   1312[0m             [0mkeyarr[0m[0;34m,[0m [0mindexer[0m[0;34m,[0m [0mnew_indexer[0m [0;34m=[0m [0max[0m[0;34m.[0m[0m_reindex_non_unique[0m[0;34m([0m[0mkeyarr[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1313[0m [0;34m[0m[0m
-[0;32m-> 1314[0;31m         [0mself[0m[0;34m.[0m[0m_validate_read_indexer[0m[0;34m([0m[0mkeyarr[0m[0;34m,[0m [0mindexer[0m[0;34m,[0m [0maxis[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1315[0m [0;34m[0m[0m
-[1;32m   1316[0m         if needs_i8_conversion(ax.dtype) or isinstance(
+File [0;32m~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1072[0m, in [0;36mKernel.raw_input[0;34m(self, prompt)[0m
+[1;32m   1065[0m [38;5;124;03m"""Forward raw_input to frontends[39;00m
+[1;32m   1066[0m 
+[1;32m   1067[0m [38;5;124;03mRaises[39;00m
+[1;32m   1068[0m [38;5;124;03m------[39;00m
+[1;32m   1069[0m [38;5;124;03mStdinNotImplementedError if active frontend doesn't support stdin.[39;00m
+[1;32m   1070[0m [38;5;124;03m"""[39;00m
+[1;32m   1071[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_allow_stdin:
+[0;32m-> 1072[0m     [38;5;28;01mraise[39;00m StdinNotImplementedError(
+[1;32m   1073[0m         [38;5;124m"[39m[38;5;124mraw_input was called, but this frontend does not support input requests.[39m[38;5;124m"[39m
+[1;32m   1074[0m     )
+[1;32m   1075[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_input_request(
+[1;32m   1076[0m     [38;5;28mstr[39m(prompt),
+[1;32m   1077[0m     [38;5;28mself[39m[38;5;241m.[39m_parent_ident[[38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m],
+[1;32m   1078[0m     [38;5;28mself[39m[38;5;241m.[39mget_parent([38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m),
+[1;32m   1079[0m     password[38;5;241m=[39m[38;5;28;01mFalse[39;00m,
+[1;32m   1080[0m )
 
-[0;32m~/anaconda3/lib/python3.9/site-packages/pandas/core/indexing.py[0m in [0;36m_validate_read_indexer[0;34m(self, key, indexer, axis)[0m
-[1;32m   1372[0m                 [0;32mif[0m [0muse_interval_msg[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1373[0m                     [0mkey[0m [0;34m=[0m [0mlist[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1374[0;31m                 [0;32mraise[0m [0mKeyError[0m[0;34m([0m[0;34mf"None of [{key}] are in the [{axis_name}]"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1375[0m [0;34m[0m[0m
-[1;32m   1376[0m             [0mnot_found[0m [0;34m=[0m [0mlist[0m[0;34m([0m[0mensure_index[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[[0m[0mmissing_mask[0m[0;34m.[0m[0mnonzero[0m[0;34m([0m[0;34m)[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m][0m[0;34m.[0m[0munique[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;31mKeyError[0m: "None of [Index(['PrimaryDiagnosisCode', 'PrimaryDiagnosisDescription'], dtype='object')] are in the [columns]"
-KeyError: "None of [Index(['PrimaryDiagnosisCode', 'PrimaryDiagnosisDescription'], dtype='object')] are in the [columns]"
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
 
