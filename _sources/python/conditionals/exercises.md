@@ -19,9 +19,10 @@ Write a program to prompt the user for temperature in Celsius, convert the tempe
 
 ```{code-cell} ipython3
 :tags: ["hide-input", "output_scroll"]
-celsius = float(input("What is the Celsius temperature? "))
-fahrenheit = 9/5 * celsius + 32
-print("The temperature is", fahrenheit, "degrees Fahrenheit.")
+def ex1():
+    celsius = float(input("What is the Celsius temperature? "))
+    fahrenheit = 9/5 * celsius + 32
+    print("The temperature is", fahrenheit, "degrees Fahrenheit.")
 ```
 
 ## Exercise 2

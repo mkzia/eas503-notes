@@ -20,11 +20,17 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 celsius = float(input("What is the Celsius temperature? "))
 fahrenheit = 9/5 * celsius + 32
 print("The temperature is", fahrenheit, "degrees Fahrenheit.")
+
+if fahrenheit > 95: # <expr> <relop> <expr>, where <relop> is relation operator
+    print("It's really hot out there. Be careful!")
+
+if fahrenheit < 32: # <expr> <relop> <expr>, where <relop> is relation is operator
+    print("Be sure to dress warmly!")
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-Input [0;32mIn [1][0m, in [0;36m<cell line: 1>[0;34m()[0m
+Input [0;32mIn [2][0m, in [0;36m<cell line: 1>[0;34m()[0m
 [0;32m----> 1[0m celsius [38;5;241m=[39m [38;5;28mfloat[39m([38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mWhat is the Celsius temperature? [39;49m[38;5;124;43m"[39;49m[43m)[49m)
 [1;32m      2[0m fahrenheit [38;5;241m=[39m [38;5;241m9[39m[38;5;241m/[39m[38;5;241m5[39m [38;5;241m*[39m celsius [38;5;241m+[39m [38;5;241m32[39m
 [1;32m      3[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mThe temperature is[39m[38;5;124m"[39m, fahrenheit, [38;5;124m"[39m[38;5;124mdegrees Fahrenheit.[39m[38;5;124m"[39m)

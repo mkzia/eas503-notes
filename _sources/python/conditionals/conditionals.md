@@ -208,7 +208,7 @@ else:
 'abc' < 'abcd' # shorter is less
 ```
 - Convert a single character to its unicode number: `ord()`
-- Convert a unicode number to its unicode character: `ord()`
+- Convert a unicode number to its unicode character: `chr()`
 
 
 - Python provides a way to check if one string appears inside another one:

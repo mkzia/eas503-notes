@@ -802,16 +802,36 @@ title="Print to PDF"
 <p>Write a program to prompt the user for temperature in Celsius, convert the temperature to Fahrenheit, and print temperature in Fahrenheit.</p>
 <div class="cell tag_hide-input tag_output_scroll docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ex1</span><span class="p">():</span>
+    <span class="n">celsius</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the Celsius temperature? &quot;</span><span class="p">))</span>
+    <span class="n">fahrenheit</span> <span class="o">=</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="o">*</span> <span class="n">celsius</span> <span class="o">+</span> <span class="mi">32</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The temperature is&quot;</span><span class="p">,</span> <span class="n">fahrenheit</span><span class="p">,</span> <span class="s2">&quot;degrees Fahrenheit.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h2>
+<p>Modify exercise 1 to print a message when F &gt; 90 and F &lt; 32</p>
+<div class="cell tag_hide-input tag_output_scroll docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">celsius</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the Celsius temperature? &quot;</span><span class="p">))</span>
 <span class="n">fahrenheit</span> <span class="o">=</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="o">*</span> <span class="n">celsius</span> <span class="o">+</span> <span class="mi">32</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The temperature is&quot;</span><span class="p">,</span> <span class="n">fahrenheit</span><span class="p">,</span> <span class="s2">&quot;degrees Fahrenheit.&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">fahrenheit</span> <span class="o">&gt;</span> <span class="mi">95</span><span class="p">:</span> <span class="c1"># &lt;expr&gt; &lt;relop&gt; &lt;expr&gt;, where &lt;relop&gt; is relation operator</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s really hot out there. Be careful!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">fahrenheit</span> <span class="o">&lt;</span> <span class="mi">32</span><span class="p">:</span> <span class="c1"># &lt;expr&gt; &lt;relop&gt; &lt;expr&gt;, where &lt;relop&gt; is relation is operator</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Be sure to dress warmly!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">celsius</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the Celsius temperature? &quot;</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">fahrenheit</span> <span class="o">=</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="o">*</span> <span class="n">celsius</span> <span class="o">+</span> <span class="mi">32</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The temperature is&quot;</span><span class="p">,</span> <span class="n">fahrenheit</span><span class="p">,</span> <span class="s2">&quot;degrees Fahrenheit.&quot;</span><span class="p">)</span>
@@ -835,25 +855,6 @@ title="Print to PDF"
 <span class="g g-Whitespace">   </span><span class="mi">1080</span> <span class="p">)</span>
 
 <span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="exercise-2">
-<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h2>
-<p>Modify exercise 1 to print a message when F &gt; 90 and F &lt; 32</p>
-<div class="cell tag_hide-input tag_output_scroll docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">celsius</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the Celsius temperature? &quot;</span><span class="p">))</span>
-<span class="n">fahrenheit</span> <span class="o">=</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span> <span class="o">*</span> <span class="n">celsius</span> <span class="o">+</span> <span class="mi">32</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The temperature is&quot;</span><span class="p">,</span> <span class="n">fahrenheit</span><span class="p">,</span> <span class="s2">&quot;degrees Fahrenheit.&quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">fahrenheit</span> <span class="o">&gt;</span> <span class="mi">95</span><span class="p">:</span> <span class="c1"># &lt;expr&gt; &lt;relop&gt; &lt;expr&gt;, where &lt;relop&gt; is relation operator</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s really hot out there. Be careful!&quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">fahrenheit</span> <span class="o">&lt;</span> <span class="mi">32</span><span class="p">:</span> <span class="c1"># &lt;expr&gt; &lt;relop&gt; &lt;expr&gt;, where &lt;relop&gt; is relation is operator</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Be sure to dress warmly!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -287,8 +287,8 @@ print(f_string)
 ### Example 9 center align
 
 ```python
-str_format = 'The course number is {0:<10}. It has {1:<10} students. The class average is {2:<10}'.format(course_number, class_size, class_average)
-f_string = f'The course number is {course_number:<10}. It has {class_size:<10} students. The class average is {class_average:<10}.'
+str_format = 'The course number is {0:^10}. It has {1:^10} students. The class average is {2:^10}'.format(course_number, class_size, class_average)
+f_string = f'The course number is {course_number:^10}. It has {class_size:^10} students. The class average is {class_average:^10}.'
 
 print(str_format)
 print(f_string)
