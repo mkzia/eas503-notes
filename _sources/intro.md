@@ -89,6 +89,6 @@ You are allowed to:
 :::
 
 :::{warning}
-- Violation of DS honor code and departmental policy will result in an automatic F for the concerned submission
+- Violation of DS honor code and departmental policy will result in either a 0 on the assignment or a drop in letter grade. 
 - Two violations ⇒ fail grade in the course
 :::
