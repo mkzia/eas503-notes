@@ -64,18 +64,8 @@ This website will be updated frequently throughout the semester.
 :::
 
 
-
-## Academic Integrity
-
-Academic integrity is a fundamental university value. Through the honest completion of academic work, students sustain the integrity of the university and of themselves while facilitating the university's imperative for the transmission of knowledge and culture based upon the generation of new and innovative ideas. For more information, please refer to the Graduate Academic Integrity policy (https://grad.buffalo.edu/succeed/current-students/policy-library.html#academic-integrity)
-
-This course will operate with a zero-tolerance policy regarding cheating and other forms of academic dishonesty. Any act of academic dishonesty will subject the student to penalty, including the high probability of failure of the course (i.e., assignment of a grade of “F”). It is expected that you will behave in an honorable and respectful way as you learn and share ideas. Therefore, recycled papers, work submitted to other courses, and major assistance in preparation of assignments without identifying and acknowledging such assistance are not acceptable. All work for this course must be original for this course. Additionally, you are not allowed to post course homeworks, exams, solutions, etc., on a public forum. Please be familiar with the University and the School policies regarding plagiarism.
-
-
 :::{warning}
-
-**Academic Integrity**
-
+## Academic Integrity
 Academic integrity is a fundamental university value. Through the
 honest completion of academic work, students sustain the integrity of the university while facilitating the university’s imperative for the transmission of knowledge and culture based upon the
 generation of new and innovative ideas. The UB graduate academic integrity policy is available
