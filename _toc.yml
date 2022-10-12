@@ -20,10 +20,9 @@ parts:
   - file: python/strings/strings
     sections:
     - file: python/strings/exercises
-  - file: conditionals
+  - file: python/conditionals/conditionals
     sections:
-    - file: conditional_exercises/exercises
-    - file: conditional_exercises/exercises_solution
+    - file: python/conditionals/exercises
   - file: list_tuples
   - file: loops
     sections:
