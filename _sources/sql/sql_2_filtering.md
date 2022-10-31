@@ -16,15 +16,13 @@ kernelspec:
 
 | Operator | What it does?                                        |
 |----------|------------------------------------------------------|
-| `AND`    | True if both a AND b are true (logical conjunction)  | 
-| `OR`     | True if either a OR b are true (logical disjunction) |
-| `NOT`    | True if the opposite of a is true (logical negation) |
-| `IN` | True if the opposite of a is true (logical negation) |
-| `NOT IN`    | True if the opposite of a is true (logical negation) |
-| `EXISTS`    | True if the opposite of a is true (logical negation) |
-| `EXISTS`    | True if the opposite of a is true (logical negation) |
-| `LIKE`    | True if the opposite of a is true (logical negation) |
-| `GLOB`    | True if the opposite of a is true (logical negation) |
+| `AND`    | True if both conditions are true  | 
+| `OR`     | True if one of two conditions is true |
+| `NOT`    | Negate a specified condition |
+| `IN` | Allows for multiple OR conditions |
+| `NOT IN`    | Negate multiple AND conditions  |
+| `EXISTS`    | True if a record exists |
+| `LIKE`    | True if there is a string match using % |
 
 
 ## Relational Operators

@@ -1,0 +1,2023 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>India Export Database &#8212; EAS503</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Soccer Database" href="sql_11_soccer.html" />
+    <link rel="prev" title="Python and SQLite3" href="sql_9_python.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/ub.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EAS503</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    EAS 503
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Course Information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../information.html">
+   Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/fundamentals/fundamentals.html">
+   Fundamentals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fundamentals/exercises.html">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/functions/functions_1.html">
+   Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/functions/exercises.html">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/strings/strings.html">
+   Strings
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/strings/exercises.html">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/conditionals/conditionals.html">
+   Conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/conditionals/exercises.html">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../list_tuples.html">
+   Lists and Tuples
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../loops.html">
+   Loops
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/for_loop_exercises.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/for_loop_exercises_solution.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/while_loop_exercises.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/while_loop_exercises_solution.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/modify_loop_exercises.html">
+     Modify Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/modify_loop_exercises_solution.html">
+     Modify Loop Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../list_comprehension.html">
+   List comprehension
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../list_comprehension_exercises/exercises.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../list_comprehension_exercises/exercises_solution.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../set_dictionary.html">
+   Sets and Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lambda.html">
+   Lambda, Filter, Map, and Sorted
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lambda_exercises/exercises.html">
+     Lambda, Filter, Map, and Sorted
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lambda_exercises/exercises_solution.html">
+     Lambda, Filter, Map, and Sorted Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../errors.html">
+   Errors and Exception Handling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions_pt2.html">
+   Functions Revisited
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../oop.html">
+   Object-Oriented Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc_topics.html">
+   Miscellaneous Topics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Structured Query Language (SQL)
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../sql.html">
+   SQL with SQLite
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_0_tables.html">
+     Creating Tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_1_query_primer.html">
+     SQL Query Primer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_2_filtering.html">
+     Filtering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_3_sets.html">
+     Sets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_4_grouping.html">
+     Grouping and Aggregates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_5_subqueries.html">
+     Subqueries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_6_conditionals.html">
+     Conditionals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_7_analytic_functions.html">
+     Analytic Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_8_normalization.html">
+     Normalization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_9_python.html">
+     Python and SQLite3
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     India Export Database
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql_11_soccer.html">
+     Soccer Database
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Numpy and Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../np_pd.html">
+   Numpy and pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../np_pd/numpy.html">
+     Numpy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../np_pd/pandas.html">
+     pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../np_pd/exercises.html">
+     Cross-referenced Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../machine_learning.html">
+   Machine Learning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../machine_learning/part1.html">
+     Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../machine_learning/part2.html">
+     Part 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Style Guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../style.html">
+   Style Guide
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/mkzia/eas503-notes/master?urlpath=tree/docs/sql/sql_10_india_export_data.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/mkzia/eas503-notes"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/sql/sql_10_india_export_data.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   India Export Database
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-to-normalizing-india-export-database">
+   Steps to normalizing India export database
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>India Export Database</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   India Export Database
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-to-normalizing-india-export-database">
+   Steps to normalizing India export database
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="india-export-database">
+<h1>India Export Database<a class="headerlink" href="#india-export-database" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;india_export.csv&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HSCode</th>
+      <th>Commodity</th>
+      <th>value</th>
+      <th>country</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>MEAT AND EDIBLE MEAT OFFAL.</td>
+      <td>0.18</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUAT...</td>
+      <td>0.00</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>DAIRY PRODUCE; BIRDS' EGGS; NATURAL HONEY; EDI...</td>
+      <td>12.48</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>LIVE TREES AND OTHER PLANTS; BULBS; ROOTS AND ...</td>
+      <td>0.00</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7</td>
+      <td>EDIBLE VEGETABLES AND CERTAIN ROOTS AND TUBERS.</td>
+      <td>1.89</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>137018</th>
+      <td>95</td>
+      <td>TOYS, GAMES AND SPORTS REQUISITES; PARTS AND A...</td>
+      <td>0.03</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>137019</th>
+      <td>96</td>
+      <td>MISCELLANEOUS MANUFACTURED ARTICLES.</td>
+      <td>0.45</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>137020</th>
+      <td>97</td>
+      <td>WORKS OF ART COLLECTORS' PIECES AND ANTIQUES.</td>
+      <td>0.00</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>137021</th>
+      <td>98</td>
+      <td>PROJECT GOODS; SOME SPECIAL USES.</td>
+      <td>0.00</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>137022</th>
+      <td>99</td>
+      <td>MISCELLANEOUS GOODS.</td>
+      <td>0.07</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+  </tbody>
+</table>
+<p>137023 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;india_export.db&#39;</span><span class="p">)</span>
+<span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;DROP TABLE IF EXISTS export&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;export&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># - writes the pd.df to SQLIte DB</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s1">&#39;select * from export&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HSCode</th>
+      <th>Commodity</th>
+      <th>value</th>
+      <th>country</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>MEAT AND EDIBLE MEAT OFFAL.</td>
+      <td>0.18</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUAT...</td>
+      <td>0.00</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>DAIRY PRODUCE; BIRDS' EGGS; NATURAL HONEY; EDI...</td>
+      <td>12.48</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>LIVE TREES AND OTHER PLANTS; BULBS; ROOTS AND ...</td>
+      <td>0.00</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7</td>
+      <td>EDIBLE VEGETABLES AND CERTAIN ROOTS AND TUBERS.</td>
+      <td>1.89</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>137018</th>
+      <td>95</td>
+      <td>TOYS, GAMES AND SPORTS REQUISITES; PARTS AND A...</td>
+      <td>0.03</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>137019</th>
+      <td>96</td>
+      <td>MISCELLANEOUS MANUFACTURED ARTICLES.</td>
+      <td>0.45</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>137020</th>
+      <td>97</td>
+      <td>WORKS OF ART COLLECTORS' PIECES AND ANTIQUES.</td>
+      <td>0.00</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>137021</th>
+      <td>98</td>
+      <td>PROJECT GOODS; SOME SPECIAL USES.</td>
+      <td>0.00</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>137022</th>
+      <td>99</td>
+      <td>MISCELLANEOUS GOODS.</td>
+      <td>0.07</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+    </tr>
+  </tbody>
+</table>
+<p>137023 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="steps-to-normalizing-india-export-database">
+<h1>Steps to normalizing India export database<a class="headerlink" href="#steps-to-normalizing-india-export-database" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Inspect table and determine how many tables into convert the database into</p>
+<ul>
+<li><p>Four tables:</p>
+<ul>
+<li><p>year</p></li>
+<li><p>country</p></li>
+<li><p>commodity</p></li>
+<li><p>a table that joins country, year, commmodity, and value</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Steps to create year table</p>
+<ul>
+<li><p>list of unique years</p></li>
+<li><p>create statement</p></li>
+<li><p>insert function</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">Error</span>
+
+<span class="k">def</span> <span class="nf">create_connection</span><span class="p">(</span><span class="n">db_file</span><span class="p">,</span> <span class="n">delete_db</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="k">if</span> <span class="n">delete_db</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">db_file</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">db_file</span><span class="p">)</span>
+
+    <span class="n">conn</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_file</span><span class="p">)</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;PRAGMA foreign_keys = 1&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">conn</span>
+
+
+<span class="k">def</span> <span class="nf">create_table</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">create_table_sql</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">create_table_sql</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        
+<span class="k">def</span> <span class="nf">execute_sql_statement</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">):</span>
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">)</span>
+
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">rows</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="s1">&#39;india_export.db&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get list of unique years</span>
+
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT DISTINCT year from export ORDER BY year&quot;</span>
+
+<span class="n">years</span> <span class="o">=</span> <span class="n">execute_sql_statement</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">years</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">years</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_table_sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;CREATE TABLE [Year] (</span>
+<span class="s2">    [YEAR] INTEGER NOT NULL PRIMARY KEY</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="c1"># conn_norm.close()</span>
+
+<span class="n">conn_norm</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="s1">&#39;india_export_norm.db&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">create_table</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="n">create_table_sql</span><span class="p">)</span>
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Year&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn_norm</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">conn_norm</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn_norm</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="s1">&#39;india_export_norm.db&#39;</span><span class="p">)</span>
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Year&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn_norm</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">2022</span><span class="p">,)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2022,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">insert_year</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39; INSERT INTO YEAR(YEAR)</span>
+<span class="s1">              VALUES(?) &#39;&#39;&#39;</span>
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cur</span><span class="o">.</span><span class="n">lastrowid</span>
+
+<span class="k">with</span> <span class="n">conn_norm</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
+        <span class="n">insert_year</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Year&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn_norm</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2011</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2012</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2013</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2014</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2016</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2017</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2018</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn_norm</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn_norm</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="s1">&#39;india_export_norm.db&#39;</span><span class="p">)</span>
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Year&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn_norm</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2011</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2012</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2013</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2014</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2016</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2017</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2018</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get list of unique countries</span>
+
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT DISTINCT country from export ORDER BY country&quot;</span>
+
+<span class="n">countries</span> <span class="o">=</span> <span class="n">execute_sql_statement</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">countries</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">countries</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;AFGHANISTAN TIS&#39;, &#39;ALBANIA&#39;, &#39;ALGERIA&#39;, &#39;AMERI SAMOA&#39;, &#39;ANDORRA&#39;, &#39;ANGOLA&#39;, &#39;ANGUILLA&#39;, &#39;ANTARTICA&#39;, &#39;ANTIGUA&#39;, &#39;ARGENTINA&#39;, &#39;ARMENIA&#39;, &#39;ARUBA&#39;, &#39;AUSTRALIA&#39;, &#39;AUSTRIA&#39;, &#39;AZERBAIJAN&#39;, &#39;BAHAMAS&#39;, &#39;BAHARAIN IS&#39;, &#39;BANGLADESH PR&#39;, &#39;BARBADOS&#39;, &#39;BELARUS&#39;, &#39;BELGIUM&#39;, &#39;BELIZE&#39;, &#39;BENIN&#39;, &#39;BERMUDA&#39;, &#39;BHUTAN&#39;, &#39;BOLIVIA&#39;, &#39;BOSNIA-HRZGOVIN&#39;, &#39;BOTSWANA&#39;, &#39;BR VIRGN IS&#39;, &#39;BRAZIL&#39;, &#39;BRUNEI&#39;, &#39;BULGARIA&#39;, &#39;BURKINA FASO&#39;, &#39;BURUNDI&#39;, &#39;C AFRI REP&#39;, &#39;CAMBODIA&#39;, &#39;CAMEROON&#39;, &#39;CANADA&#39;, &#39;CANARY IS&#39;, &#39;CAPE VERDE IS&#39;, &#39;CAYMAN IS&#39;, &#39;CHAD&#39;, &#39;CHANNEL IS&#39;, &#39;CHILE&#39;, &#39;CHINA P RP&#39;, &#39;CHRISTMAS IS.&#39;, &#39;COCOS IS&#39;, &#39;COLOMBIA&#39;, &#39;COMOROS&#39;, &#39;CONGO D. REP.&#39;, &#39;CONGO P REP&#39;, &#39;COOK IS&#39;, &#39;COSTA RICA&#39;, &quot;COTE D&#39; IVOIRE&quot;, &#39;CROATIA&#39;, &#39;CUBA&#39;, &#39;CURACAO&#39;, &#39;CYPRUS&#39;, &#39;CZECH REPUBLIC&#39;, &#39;DENMARK&#39;, &#39;DJIBOUTI&#39;, &#39;DOMINIC REP&#39;, &#39;DOMINICA&#39;, &#39;ECUADOR&#39;, &#39;EGYPT A RP&#39;, &#39;EL SALVADOR&#39;, &#39;EQUTL GUINEA&#39;, &#39;ERITREA&#39;, &#39;ESTONIA&#39;, &#39;ETHIOPIA&#39;, &#39;FALKLAND IS&#39;, &#39;FAROE IS.&#39;, &#39;FIJI IS&#39;, &#39;FINLAND&#39;, &#39;FR GUIANA&#39;, &#39;FR POLYNESIA&#39;, &#39;FR S ANT TR&#39;, &#39;FRANCE&#39;, &#39;GABON&#39;, &#39;GAMBIA&#39;, &#39;GEORGIA&#39;, &#39;GERMANY&#39;, &#39;GHANA&#39;, &#39;GIBRALTAR&#39;, &#39;GREECE&#39;, &#39;GREENLAND&#39;, &#39;GRENADA&#39;, &#39;GUADELOUPE&#39;, &#39;GUAM&#39;, &#39;GUATEMALA&#39;, &#39;GUERNSEY&#39;, &#39;GUINEA&#39;, &#39;GUINEA BISSAU&#39;, &#39;GUYANA&#39;, &#39;HAITI&#39;, &#39;HEARD MACDONALD&#39;, &#39;HONDURAS&#39;, &#39;HONG KONG&#39;, &#39;HUNGARY&#39;, &#39;ICELAND&#39;, &#39;INDONESIA&#39;, &#39;INSTALLATIONS IN INTERNATIONAL WATERS   &#39;, &#39;IRAN&#39;, &#39;IRAQ&#39;, &#39;IRELAND&#39;, &#39;ISRAEL&#39;, &#39;ITALY&#39;, &#39;JAMAICA&#39;, &#39;JAPAN&#39;, &#39;JERSEY         &#39;, &#39;JORDAN&#39;, &#39;KAZAKHSTAN&#39;, &#39;KENYA&#39;, &#39;KIRIBATI REP&#39;, &#39;KOREA DP RP&#39;, &#39;KOREA RP&#39;, &#39;KUWAIT&#39;, &#39;KYRGHYZSTAN&#39;, &#39;LAO PD RP&#39;, &#39;LATVIA&#39;, &#39;LEBANON&#39;, &#39;LESOTHO&#39;, &#39;LIBERIA&#39;, &#39;LIBYA&#39;, &#39;LIECHTENSTEIN&#39;, &#39;LITHUANIA&#39;, &#39;LUXEMBOURG&#39;, &#39;MACAO&#39;, &#39;MACEDONIA&#39;, &#39;MADAGASCAR&#39;, &#39;MALAWI&#39;, &#39;MALAYSIA&#39;, &#39;MALDIVES&#39;, &#39;MALI&#39;, &#39;MALTA&#39;, &#39;MARSHALL ISLAND&#39;, &#39;MARTINIQUE&#39;, &#39;MAURITANIA&#39;, &#39;MAURITIUS&#39;, &#39;MAYOTTE&#39;, &#39;MEXICO&#39;, &#39;MICRONESIA&#39;, &#39;MOLDOVA&#39;, &#39;MONACO&#39;, &#39;MONGOLIA&#39;, &#39;MONTENEGRO&#39;, &#39;MONTSERRAT&#39;, &#39;MOROCCO&#39;, &#39;MOZAMBIQUE&#39;, &#39;MYANMAR&#39;, &#39;N. MARIANA IS.&#39;, &#39;NAMIBIA&#39;, &#39;NAURU RP&#39;, &#39;NEPAL&#39;, &#39;NETHERLAND&#39;, &#39;NETHERLANDANTIL&#39;, &#39;NEUTRAL ZONE&#39;, &#39;NEW CALEDONIA&#39;, &#39;NEW ZEALAND&#39;, &#39;NICARAGUA&#39;, &#39;NIGER&#39;, &#39;NIGERIA&#39;, &#39;NIUE IS&#39;, &#39;NORFOLK IS&#39;, &#39;NORWAY&#39;, &#39;OMAN&#39;, &#39;PACIFIC IS&#39;, &#39;PAKISTAN IR&#39;, &#39;PALAU&#39;, &#39;PANAMA C Z&#39;, &#39;PANAMA REPUBLIC&#39;, &#39;PAPUA N GNA&#39;, &#39;PARAGUAY&#39;, &#39;PERU&#39;, &#39;PHILIPPINES&#39;, &#39;PITCAIRN IS.&#39;, &#39;POLAND&#39;, &#39;PORTUGAL&#39;, &#39;PUERTO RICO&#39;, &#39;QATAR&#39;, &#39;REUNION&#39;, &#39;ROMANIA&#39;, &#39;RUSSIA&#39;, &#39;RWANDA&#39;, &#39;SAHARWI A.DM RP&#39;, &#39;SAMOA&#39;, &#39;SAN MARINO&#39;, &#39;SAO TOME&#39;, &#39;SAUDI ARAB&#39;, &#39;SENEGAL&#39;, &#39;SERBIA&#39;, &#39;SEYCHELLES&#39;, &#39;SIERRA LEONE&#39;, &#39;SINGAPORE&#39;, &#39;SINT MAARTEN (DUTCH PART)&#39;, &#39;SLOVAK REP&#39;, &#39;SLOVENIA&#39;, &#39;SOLOMON IS&#39;, &#39;SOMALIA&#39;, &#39;SOUTH AFRICA&#39;, &#39;SOUTH SUDAN &#39;, &#39;SPAIN&#39;, &#39;SRI LANKA DSR&#39;, &#39;ST HELENA&#39;, &#39;ST KITT N A&#39;, &#39;ST LUCIA&#39;, &#39;ST PIERRE&#39;, &#39;ST VINCENT&#39;, &#39;STATE OF PALEST&#39;, &#39;SUDAN&#39;, &#39;SURINAME&#39;, &#39;SWAZILAND&#39;, &#39;SWEDEN&#39;, &#39;SWITZERLAND&#39;, &#39;SYRIA&#39;, &#39;TAIWAN&#39;, &#39;TAJIKISTAN&#39;, &#39;TANZANIA REP&#39;, &#39;THAILAND&#39;, &#39;TIMOR LESTE&#39;, &#39;TOGO&#39;, &#39;TOKELAU IS&#39;, &#39;TONGA&#39;, &#39;TRINIDAD&#39;, &#39;TUNISIA&#39;, &#39;TURKEY&#39;, &#39;TURKMENISTAN&#39;, &#39;TURKS C IS&#39;, &#39;TUVALU&#39;, &#39;U ARAB EMTS&#39;, &#39;U K&#39;, &#39;U S A&#39;, &#39;UGANDA&#39;, &#39;UKRAINE&#39;, &#39;UNION OF SERBIA &amp; MONTENEGRO&#39;, &#39;UNSPECIFIED&#39;, &#39;URUGUAY&#39;, &#39;US MINOR OUTLYING ISLANDS               &#39;, &#39;UZBEKISTAN&#39;, &#39;VANUATU REP&#39;, &#39;VATICAN CITY&#39;, &#39;VENEZUELA&#39;, &#39;VIETNAM SOC REP&#39;, &#39;VIRGIN IS US&#39;, &#39;WALLIS F IS&#39;, &#39;YEMEN REPUBLC&#39;, &#39;ZAMBIA&#39;, &#39;ZIMBABWE&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">insert_country</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39; INSERT INTO COUNTRY(COUNTRY)</span>
+<span class="s1">              VALUES(?) &#39;&#39;&#39;</span>
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cur</span><span class="o">.</span><span class="n">lastrowid</span>
+
+<span class="n">create_table_sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;CREATE TABLE IF NOT EXISTS [Country] (</span>
+<span class="s2">    [Country] TEXT NOT NULL PRIMARY KEY</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">conn_norm</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="s1">&#39;india_export_norm.db&#39;</span><span class="p">)</span>
+
+<span class="n">create_table</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="n">create_table_sql</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">conn_norm</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+        <span class="n">insert_country</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="p">))</span>
+        
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM country&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn_norm</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN TIS</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AMERI SAMOA</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANDORRA</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>243</th>
+      <td>VIRGIN IS US</td>
+    </tr>
+    <tr>
+      <th>244</th>
+      <td>WALLIS F IS</td>
+    </tr>
+    <tr>
+      <th>245</th>
+      <td>YEMEN REPUBLC</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>ZAMBIA</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>ZIMBABWE</td>
+    </tr>
+  </tbody>
+</table>
+<p>248 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT DISTINCT COMMODITY FROM export order by COMMODITY&quot;</span>
+<span class="n">commodities</span> <span class="o">=</span> <span class="n">execute_sql_statement</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">commodities</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">commodities</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;AIRCRAFT, SPACECRAFT, AND PARTS THEREOF.&#39;,), (&#39;ALBUMINOIDAL SUBSTANCES; MODIFIED STARCHES; GLUES; ENZYMES.&#39;,), (&#39;ALUMINIUM AND ARTICLES THEREOF.&#39;,), (&#39;ANIMAL OR VEGETABLE FATS AND OILS AND THEIR CLEAVAGE PRODUCTS; PRE. EDIBLE FATS; ANIMAL OR VEGETABLE WAXEX.&#39;,), (&#39;ARMS AND AMMUNITION; PARTS AND ACCESSORIES THEREOF.&#39;,), (&#39;ARTICLES OF APPAREL AND CLOTHING ACCESSORIES, KNITTED OR CORCHETED.&#39;,), (&#39;ARTICLES OF APPAREL AND CLOTHING ACCESSORIES, NOT KNITTED OR CROCHETED.&#39;,), (&#39;ARTICLES OF IRON OR STEEL&#39;,), (&#39;ARTICLES OF LEATHER,SADDLERY AND HARNESS;TRAVEL GOODS, HANDBAGS AND SIMILAR CONT.ARTICLES OF ANIMAL GUT(OTHR THN SILK-WRM)GUT.&#39;,), (&#39;ARTICLES OF STONE, PLASTER, CEMENT, ASBESTOS, MICA OR SIMILAR MATERIALS.&#39;,), (&#39;BEVERAGES, SPIRITS AND VINEGAR.&#39;,), (&#39;CARPETS AND OTHER TEXTILE FLOOR COVERINGS.&#39;,), (&#39;CERAMIC PRODUCTS.&#39;,), (&#39;CEREALS.&#39;,), (&#39;CLOCKS AND WATCHES AND PARTS THEREOF.&#39;,), (&#39;COCOA AND COCOA PREPARATIONS.&#39;,), (&#39;COFFEE, TEA, MATE AND SPICES.&#39;,), (&#39;COPPER AND ARTICLES THEREOF.&#39;,), (&#39;CORK AND ARTICLES OF CORK.&#39;,), (&#39;COTTON.&#39;,), (&quot;DAIRY PRODUCE; BIRDS&#39; EGGS; NATURAL HONEY; EDIBLE PROD. OF ANIMAL ORIGIN, NOT ELSEWHERE SPEC. OR INCLUDED.&quot;,), (&#39;EDIBLE FRUIT AND NUTS; PEEL OR CITRUS FRUIT OR MELONS.&#39;,), (&#39;EDIBLE VEGETABLES AND CERTAIN ROOTS AND TUBERS.&#39;,), (&#39;ELECTRICAL MACHINERY AND EQUIPMENT AND PARTS THEREOF; SOUND RECORDERS AND REPRODUCERS, TELEVISION IMAGE AND SOUND RECORDERS AND REPRODUCERS,AND PARTS.&#39;,), (&#39;ESSENTIAL OILS AND RESINOIDS; PERFUMERY, COSMETIC OR TOILET PREPARATIONS.&#39;,), (&#39;EXPLOSIVES; PYROTECHNIC PRODUCTS; MATCHES; PYROPHORIC ALLOYS; CERTAIN COMBUSTIBLE PREPARATIONS.&#39;,), (&#39;FERTILISERS.&#39;,), (&#39;FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUATIC INVERTABRATES.&#39;,), (&#39;FOOTWEAR, GAITERS AND THE LIKE; PARTS OF SUCH ARTICLES.&#39;,), (&#39;FURNITURE; BEDDING, MATTRESSES, MATTRESS SUPPORTS, CUSHIONS AND SIMILAR STUFFED FURNISHING; LAMPS AND LIGHTING FITTINGS NOT ELSEWHERE SPECIFIED OR INC&#39;,), (&#39;FURSKINS AND ARTIFICIAL FUR, MANUFACTURES THEREOF.&#39;,), (&#39;GLASS AND GLASSWARE.&#39;,), (&#39;HEADGEAR AND PARTS THEREOF.&#39;,), (&#39;IMPREGNATED, COATED, COVERED OR LAMINATED TEXTILE FABRICS; TEXTILE ARTICLES OF A KIND SUITABLE FOR INDUSTRIAL USE.&#39;,), (&#39;INORGANIC CHEMICALS; ORGANIC OR INORGANIC COMPOUNDS OF PRECIOUS METALS, OF RARE-EARTH METALS, OR RADI. ELEM. OR OF ISOTOPES.&#39;,), (&#39;IRON AND STEEL&#39;,), (&#39;KNITTED OR CROCHETED FABRICS.&#39;,), (&#39;LAC; GUMS, RESINS AND OTHER VEGETABLE SAPS AND EXTRACTS.&#39;,), (&#39;LEAD AND ARTICLES THEREOF.&#39;,), (&#39;LIVE ANIMALS.&#39;,), (&#39;LIVE TREES AND OTHER PLANTS; BULBS; ROOTS AND THE LIKE; CUT FLOWERS AND ORNAMENTAL FOLIAGE.&#39;,), (&#39;MAN-MADE FILAMENTS.&#39;,), (&#39;MAN-MADE STAPLE FIBRES.&#39;,), (&#39;MANUFACTURES OF STRAW, OF ESPARTO OR OF OTHER PLAITING MATERIALS; BASKETWARE AND WICKERWORK.&#39;,), (&#39;MEAT AND EDIBLE MEAT OFFAL.&#39;,), (&#39;MINERAL FUELS, MINERAL OILS AND PRODUCTS OF THEIR DISTILLATION; BITUMINOUS SUBSTANCES; MINERAL WAXES.&#39;,), (&#39;MISCELLANEOUS ARTICLES OF BASE METAL.&#39;,), (&#39;MISCELLANEOUS CHEMICAL PRODUCTS.&#39;,), (&#39;MISCELLANEOUS EDIBLE PREPARATIONS.&#39;,), (&#39;MISCELLANEOUS GOODS.&#39;,), (&#39;MISCELLANEOUS MANUFACTURED ARTICLES.&#39;,), (&#39;MUSICAL INSTRUMENTS; PARTS AND ACCESSORIES OF SUCH ARTICLES.&#39;,), (&#39;NATURAL OR CULTURED PEARLS,PRECIOUS OR SEMIPRECIOUS STONES,PRE.METALS,CLAD WITH PRE.METAL AND ARTCLS THEREOF;IMIT.JEWLRY;COIN.&#39;,), (&#39;NICKEL AND ARTICLES THEREOF.&#39;,), (&#39;NUCLEAR REACTORS, BOILERS, MACHINERY AND MECHANICAL APPLIANCES; PARTS THEREOF.&#39;,), (&#39;OIL SEEDS AND OLEA. FRUITS; MISC. GRAINS, SEEDS AND FRUIT; INDUSTRIAL OR MEDICINAL PLANTS; STRAW AND FODDER.&#39;,), (&#39;OPTICAL, PHOTOGRAPHIC CINEMATOGRAPHIC MEASURING, CHECKING PRECISION, MEDICAL OR SURGICAL INST. AND APPARATUS PARTS AND ACCESSORIES THEREOF;&#39;,), (&#39;ORES, SLAG AND ASH.&#39;,), (&#39;ORGANIC CHEMICALS&#39;,), (&#39;OTHER BASE METALS; CERMETS; ARTICLES THEREOF.&#39;,), (&#39;OTHER MADE UP TEXTILE ARTICLES; SETS; WORN CLOTHING AND WORN TEXTILE ARTICLES; RAGS&#39;,), (&#39;OTHER VEGETABLE TEXTILE FIBRES; PAPER YARN AND WOVEN FABRICS OF PAPER YARN.&#39;,), (&#39;PAPER AND PAPERBOARD; ARTICLES OF PAPER PULP, OF PAPER OR OF PAPERBOARD.&#39;,), (&#39;PHARMACEUTICAL PRODUCTS&#39;,), (&#39;PHOTOGRAPHIC OR CINEMATOGRAPHIC GOODS.&#39;,), (&#39;PLASTIC AND ARTICLES THEREOF.&#39;,), (&#39;PREPARATIONS OF CEREALS, FLOUR, STARCH OR MILK; PASTRYCOOKS PRODUCTS.&#39;,), (&#39;PREPARATIONS OF MEAT, OF FISH OR OF CRUSTACEANS, MOLLUSCS OR OTHER AQUATIC INVERTEBRATES&#39;,), (&#39;PREPARATIONS OF VEGETABLES, FRUIT, NUTS OR OTHER PARTS OF PLANTS.&#39;,), (&#39;PREPARED FEATHERS AND DOWN AND ARTICLES MADE OF FEATHERS OR OF DOWN; ARTIFICIAL FLOWERS; ARTICLES OF HUMAN HAIR.&#39;,), (&#39;PRINTED BOOKDS, NEWSPAPERS, PICTURES AND OTHER PRODUCTS OF THE PRINTING INDUSTRY; MANUSCRIPTS, TYPESCRIPTS AND PLANS.&#39;,), (&#39;PRODUCTS OF ANIMAL ORIGIN, NOT ELSEWHERE SPECIFIED OR INCLUDED.&#39;,), (&#39;PRODUCTS OF THE MILLING INDUSTRY; MALT; STARCHES; INULIN; WHEAT GLUTEN.&#39;,), (&#39;PROJECT GOODS; SOME SPECIAL USES.&#39;,), (&#39;PULP OF WOOD OR OF OTHER FIBROUS CELLULOSIC MATERIAL; WASTE AND SCRAP OF PAPER OR PAPERBOARD.&#39;,), (&#39;RAILWAY OR TRAMWAY LOCOMOTIVES, ROLLING-STOCK AND PARTS THEREOF; RAILWAY OR TRAMWAY TRACK FIXTURES AND FITTINGS AND PARTS THEREOF; MECHANICAL&#39;,), (&#39;RAW HIDES AND SKINS (OTHER THAN FURSKINS) AND LEATHER&#39;,), (&#39;RESIDUES AND WASTE FROM THE FOOD INDUSTRIES; PREPARED ANIMAL FODER.&#39;,), (&#39;RUBBER AND ARTICLES THEREOF.&#39;,), (&#39;SALT; SULPHUR; EARTHS AND STONE; PLASTERING MATERIALS, LIME AND CEMENT.&#39;,), (&#39;SHIPS, BOATS AND FLOATING STRUCTURES.&#39;,), (&#39;SILK&#39;,), (&#39;SOAP, ORGANIC SURFACE-ACTIVE AGENTS, WASHING PREPARATIONS, LUBRICATING PREPARATIONS, ARTIFICIAL WAXES, PREPARED WAXES, POLISHING OR SCOURING PREP.&#39;,), (&#39;SPECIAL WOVEN FABRICS; TUFTED TEXTILE FABRICS; LACE; TAPESTRIES; TRIMMINGS; EMBROIDERY.&#39;,), (&#39;SUGARS AND SUGAR CONFECTIONERY.&#39;,), (&#39;TANNING OR DYEING EXTRACTS; TANNINS AND THEIR DERI. DYES, PIGMENTS AND OTHER COLOURING MATTER; PAINTS AND VER; PUTTY AND OTHER MASTICS; INKS.&#39;,), (&#39;TIN AND ARTICLES THEREOF.&#39;,), (&#39;TOBACCO AND MANUFACTURED TOBACCO SUBSTITUTES.&#39;,), (&#39;TOOLS IMPLEMENTS, CUTLERY, SPOONS AND FORKS, OF BASE METAL; PARTS THEREOF OF BASE METAL.&#39;,), (&#39;TOYS, GAMES AND SPORTS REQUISITES; PARTS AND ACCESSORIES THEREOF.&#39;,), (&#39;UMBRELLAS, SUN UMBRELLAS, WALKING-STICKS, SEAT-STICKS, WHIPS,RIDING-CROPS AND PARTS THEREOF.&#39;,), (&#39;VEGETABLE PLAITING MATERIALS; VEGETABLE PRODUCTS NOT ELSEWHERE SPECIFIED OR INCLUDED.&#39;,), (&#39;VEHICLES OTHER THAN RAILWAY OR TRAMWAY ROLLING STOCK, AND PARTS AND ACCESSORIES THEREOF.&#39;,), (&#39;WADDING, FELT AND NONWOVENS; SPACIAL YARNS; TWINE, CORDAGE, ROPES AND CABLES AND ARTICLES THEREOF.&#39;,), (&#39;WOOD AND ARTICLES OF WOOD; WOOD CHARCOAL.&#39;,), (&#39;WOOL, FINE OR COARSE ANIMAL HAIR, HORSEHAIR YARN AND WOVEN FABRIC.&#39;,), (&quot;WORKS OF ART COLLECTORS&#39; PIECES AND ANTIQUES.&quot;,), (&#39;ZINC AND ARTICLES THEREOF.&#39;,)]
+98
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">insert_commodity</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39; INSERT INTO COMMODITY (COMMODITY)</span>
+<span class="s1">              VALUES(?) &#39;&#39;&#39;</span>
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cur</span><span class="o">.</span><span class="n">lastrowid</span>
+
+<span class="n">create_table_sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;CREATE TABLE IF NOT EXISTS [COMMODITY] (</span>
+<span class="s2">    [HSCODE] INTEGER NOT NULL PRIMARY KEY, </span>
+<span class="s2">    [COMMODITY] TEXT NOT NULL</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">create_table</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="n">create_table_sql</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">conn_norm</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">commodity</span> <span class="ow">in</span> <span class="n">commodities</span><span class="p">:</span>
+        <span class="n">insert_commodity</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="n">commodity</span><span class="p">)</span>
+        
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM Commodity&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn_norm</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HSCODE</th>
+      <th>COMMODITY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>AIRCRAFT, SPACECRAFT, AND PARTS THEREOF.</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>ALBUMINOIDAL SUBSTANCES; MODIFIED STARCHES; GL...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>ALUMINIUM AND ARTICLES THEREOF.</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>ANIMAL OR VEGETABLE FATS AND OILS AND THEIR CL...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>ARMS AND AMMUNITION; PARTS AND ACCESSORIES THE...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>94</td>
+      <td>WADDING, FELT AND NONWOVENS; SPACIAL YARNS; TW...</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>95</td>
+      <td>WOOD AND ARTICLES OF WOOD; WOOD CHARCOAL.</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>96</td>
+      <td>WOOL, FINE OR COARSE ANIMAL HAIR, HORSEHAIR YA...</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>97</td>
+      <td>WORKS OF ART COLLECTORS' PIECES AND ANTIQUES.</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>98</td>
+      <td>ZINC AND ARTICLES THEREOF.</td>
+    </tr>
+  </tbody>
+</table>
+<p>98 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Table 4 which is going link all the tables with values</span>
+
+<span class="k">def</span> <span class="nf">insert_value</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+    <span class="n">sql</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39; INSERT INTO Export (HSCODE, COUNTRY, YEAR, VALUE)</span>
+<span class="s1">              VALUES(?, ?, ?, ?) &#39;&#39;&#39;</span>
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cur</span><span class="o">.</span><span class="n">lastrowid</span>
+
+<span class="n">create_table_sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;CREATE TABLE IF NOT EXISTS [Export] (</span>
+<span class="s2">    [VALUEID] INTEGER NOT NULL PRIMARY KEY,</span>
+<span class="s2">    [HSCODE] INTEGER NOT NULL, </span>
+<span class="s2">    [COUNTRY] TEXT NOT NULL,</span>
+<span class="s2">    [YEAR] INTEGER NOT NULL,</span>
+<span class="s2">    [VALUE] REAL,</span>
+<span class="s2">    FOREIGN KEY(COUNTRY) REFERENCES Country(COUNTRY),</span>
+<span class="s2">    FOREIGN KEY(YEAR) REFERENCES YEAR(YEAR),</span>
+<span class="s2">    FOREIGN KEY(HSCODE) REFERENCES Commodity(HSCODE)</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">create_table</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="n">create_table_sql</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sql_statement</span> <span class="o">=</span> <span class="s1">&#39;SELECT Commodity, country, year, value from export&#39;</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">execute_sql_statement</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;MEAT AND EDIBLE MEAT OFFAL.&#39;, &#39;AFGHANISTAN TIS&#39;, 2018, 0.18), (&#39;FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUATIC INVERTABRATES.&#39;, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (&quot;DAIRY PRODUCE; BIRDS&#39; EGGS; NATURAL HONEY; EDIBLE PROD. OF ANIMAL ORIGIN, NOT ELSEWHERE SPEC. OR INCLUDED.&quot;, &#39;AFGHANISTAN TIS&#39;, 2018, 12.48), (&#39;LIVE TREES AND OTHER PLANTS; BULBS; ROOTS AND THE LIKE; CUT FLOWERS AND ORNAMENTAL FOLIAGE.&#39;, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (&#39;EDIBLE VEGETABLES AND CERTAIN ROOTS AND TUBERS.&#39;, &#39;AFGHANISTAN TIS&#39;, 2018, 1.89), (&#39;EDIBLE FRUIT AND NUTS; PEEL OR CITRUS FRUIT OR MELONS.&#39;, &#39;AFGHANISTAN TIS&#39;, 2018, 25.01), (&#39;COFFEE, TEA, MATE AND SPICES.&#39;, &#39;AFGHANISTAN TIS&#39;, 2018, 13.75), (&#39;CEREALS.&#39;, &#39;AFGHANISTAN TIS&#39;, 2018, 0.75), (&#39;PRODUCTS OF THE MILLING INDUSTRY; MALT; STARCHES; INULIN; WHEAT GLUTEN.&#39;, &#39;AFGHANISTAN TIS&#39;, 2018, 0.01), (&#39;OIL SEEDS AND OLEA. FRUITS; MISC. GRAINS, SEEDS AND FRUIT; INDUSTRIAL OR MEDICINAL PLANTS; STRAW AND FODDER.&#39;, &#39;AFGHANISTAN TIS&#39;, 2018, 10.02)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sql_statement</span> <span class="o">=</span> <span class="s1">&#39;SELECT HSCODE, COMMODITY from COMMODITY&#39;</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">execute_sql_statement</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn_norm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1, &#39;AIRCRAFT, SPACECRAFT, AND PARTS THEREOF.&#39;), (2, &#39;ALBUMINOIDAL SUBSTANCES; MODIFIED STARCHES; GLUES; ENZYMES.&#39;), (3, &#39;ALUMINIUM AND ARTICLES THEREOF.&#39;), (4, &#39;ANIMAL OR VEGETABLE FATS AND OILS AND THEIR CLEAVAGE PRODUCTS; PRE. EDIBLE FATS; ANIMAL OR VEGETABLE WAXEX.&#39;), (5, &#39;ARMS AND AMMUNITION; PARTS AND ACCESSORIES THEREOF.&#39;), (6, &#39;ARTICLES OF APPAREL AND CLOTHING ACCESSORIES, KNITTED OR CORCHETED.&#39;), (7, &#39;ARTICLES OF APPAREL AND CLOTHING ACCESSORIES, NOT KNITTED OR CROCHETED.&#39;), (8, &#39;ARTICLES OF IRON OR STEEL&#39;), (9, &#39;ARTICLES OF LEATHER,SADDLERY AND HARNESS;TRAVEL GOODS, HANDBAGS AND SIMILAR CONT.ARTICLES OF ANIMAL GUT(OTHR THN SILK-WRM)GUT.&#39;), (10, &#39;ARTICLES OF STONE, PLASTER, CEMENT, ASBESTOS, MICA OR SIMILAR MATERIALS.&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">commodity_lookup</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">hscode</span><span class="p">,</span> <span class="n">commodity</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="n">commodity_lookup</span><span class="p">[</span><span class="n">commodity</span><span class="p">]</span> <span class="o">=</span> <span class="n">hscode</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">commodity_lookup</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;AIRCRAFT, SPACECRAFT, AND PARTS THEREOF.&#39;: 1, &#39;ALBUMINOIDAL SUBSTANCES; MODIFIED STARCHES; GLUES; ENZYMES.&#39;: 2, &#39;ALUMINIUM AND ARTICLES THEREOF.&#39;: 3, &#39;ANIMAL OR VEGETABLE FATS AND OILS AND THEIR CLEAVAGE PRODUCTS; PRE. EDIBLE FATS; ANIMAL OR VEGETABLE WAXEX.&#39;: 4, &#39;ARMS AND AMMUNITION; PARTS AND ACCESSORIES THEREOF.&#39;: 5, &#39;ARTICLES OF APPAREL AND CLOTHING ACCESSORIES, KNITTED OR CORCHETED.&#39;: 6, &#39;ARTICLES OF APPAREL AND CLOTHING ACCESSORIES, NOT KNITTED OR CROCHETED.&#39;: 7, &#39;ARTICLES OF IRON OR STEEL&#39;: 8, &#39;ARTICLES OF LEATHER,SADDLERY AND HARNESS;TRAVEL GOODS, HANDBAGS AND SIMILAR CONT.ARTICLES OF ANIMAL GUT(OTHR THN SILK-WRM)GUT.&#39;: 9, &#39;ARTICLES OF STONE, PLASTER, CEMENT, ASBESTOS, MICA OR SIMILAR MATERIALS.&#39;: 10, &#39;BEVERAGES, SPIRITS AND VINEGAR.&#39;: 11, &#39;CARPETS AND OTHER TEXTILE FLOOR COVERINGS.&#39;: 12, &#39;CERAMIC PRODUCTS.&#39;: 13, &#39;CEREALS.&#39;: 14, &#39;CLOCKS AND WATCHES AND PARTS THEREOF.&#39;: 15, &#39;COCOA AND COCOA PREPARATIONS.&#39;: 16, &#39;COFFEE, TEA, MATE AND SPICES.&#39;: 17, &#39;COPPER AND ARTICLES THEREOF.&#39;: 18, &#39;CORK AND ARTICLES OF CORK.&#39;: 19, &#39;COTTON.&#39;: 20, &quot;DAIRY PRODUCE; BIRDS&#39; EGGS; NATURAL HONEY; EDIBLE PROD. OF ANIMAL ORIGIN, NOT ELSEWHERE SPEC. OR INCLUDED.&quot;: 21, &#39;EDIBLE FRUIT AND NUTS; PEEL OR CITRUS FRUIT OR MELONS.&#39;: 22, &#39;EDIBLE VEGETABLES AND CERTAIN ROOTS AND TUBERS.&#39;: 23, &#39;ELECTRICAL MACHINERY AND EQUIPMENT AND PARTS THEREOF; SOUND RECORDERS AND REPRODUCERS, TELEVISION IMAGE AND SOUND RECORDERS AND REPRODUCERS,AND PARTS.&#39;: 24, &#39;ESSENTIAL OILS AND RESINOIDS; PERFUMERY, COSMETIC OR TOILET PREPARATIONS.&#39;: 25, &#39;EXPLOSIVES; PYROTECHNIC PRODUCTS; MATCHES; PYROPHORIC ALLOYS; CERTAIN COMBUSTIBLE PREPARATIONS.&#39;: 26, &#39;FERTILISERS.&#39;: 27, &#39;FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUATIC INVERTABRATES.&#39;: 28, &#39;FOOTWEAR, GAITERS AND THE LIKE; PARTS OF SUCH ARTICLES.&#39;: 29, &#39;FURNITURE; BEDDING, MATTRESSES, MATTRESS SUPPORTS, CUSHIONS AND SIMILAR STUFFED FURNISHING; LAMPS AND LIGHTING FITTINGS NOT ELSEWHERE SPECIFIED OR INC&#39;: 30, &#39;FURSKINS AND ARTIFICIAL FUR, MANUFACTURES THEREOF.&#39;: 31, &#39;GLASS AND GLASSWARE.&#39;: 32, &#39;HEADGEAR AND PARTS THEREOF.&#39;: 33, &#39;IMPREGNATED, COATED, COVERED OR LAMINATED TEXTILE FABRICS; TEXTILE ARTICLES OF A KIND SUITABLE FOR INDUSTRIAL USE.&#39;: 34, &#39;INORGANIC CHEMICALS; ORGANIC OR INORGANIC COMPOUNDS OF PRECIOUS METALS, OF RARE-EARTH METALS, OR RADI. ELEM. OR OF ISOTOPES.&#39;: 35, &#39;IRON AND STEEL&#39;: 36, &#39;KNITTED OR CROCHETED FABRICS.&#39;: 37, &#39;LAC; GUMS, RESINS AND OTHER VEGETABLE SAPS AND EXTRACTS.&#39;: 38, &#39;LEAD AND ARTICLES THEREOF.&#39;: 39, &#39;LIVE ANIMALS.&#39;: 40, &#39;LIVE TREES AND OTHER PLANTS; BULBS; ROOTS AND THE LIKE; CUT FLOWERS AND ORNAMENTAL FOLIAGE.&#39;: 41, &#39;MAN-MADE FILAMENTS.&#39;: 42, &#39;MAN-MADE STAPLE FIBRES.&#39;: 43, &#39;MANUFACTURES OF STRAW, OF ESPARTO OR OF OTHER PLAITING MATERIALS; BASKETWARE AND WICKERWORK.&#39;: 44, &#39;MEAT AND EDIBLE MEAT OFFAL.&#39;: 45, &#39;MINERAL FUELS, MINERAL OILS AND PRODUCTS OF THEIR DISTILLATION; BITUMINOUS SUBSTANCES; MINERAL WAXES.&#39;: 46, &#39;MISCELLANEOUS ARTICLES OF BASE METAL.&#39;: 47, &#39;MISCELLANEOUS CHEMICAL PRODUCTS.&#39;: 48, &#39;MISCELLANEOUS EDIBLE PREPARATIONS.&#39;: 49, &#39;MISCELLANEOUS GOODS.&#39;: 50, &#39;MISCELLANEOUS MANUFACTURED ARTICLES.&#39;: 51, &#39;MUSICAL INSTRUMENTS; PARTS AND ACCESSORIES OF SUCH ARTICLES.&#39;: 52, &#39;NATURAL OR CULTURED PEARLS,PRECIOUS OR SEMIPRECIOUS STONES,PRE.METALS,CLAD WITH PRE.METAL AND ARTCLS THEREOF;IMIT.JEWLRY;COIN.&#39;: 53, &#39;NICKEL AND ARTICLES THEREOF.&#39;: 54, &#39;NUCLEAR REACTORS, BOILERS, MACHINERY AND MECHANICAL APPLIANCES; PARTS THEREOF.&#39;: 55, &#39;OIL SEEDS AND OLEA. FRUITS; MISC. GRAINS, SEEDS AND FRUIT; INDUSTRIAL OR MEDICINAL PLANTS; STRAW AND FODDER.&#39;: 56, &#39;OPTICAL, PHOTOGRAPHIC CINEMATOGRAPHIC MEASURING, CHECKING PRECISION, MEDICAL OR SURGICAL INST. AND APPARATUS PARTS AND ACCESSORIES THEREOF;&#39;: 57, &#39;ORES, SLAG AND ASH.&#39;: 58, &#39;ORGANIC CHEMICALS&#39;: 59, &#39;OTHER BASE METALS; CERMETS; ARTICLES THEREOF.&#39;: 60, &#39;OTHER MADE UP TEXTILE ARTICLES; SETS; WORN CLOTHING AND WORN TEXTILE ARTICLES; RAGS&#39;: 61, &#39;OTHER VEGETABLE TEXTILE FIBRES; PAPER YARN AND WOVEN FABRICS OF PAPER YARN.&#39;: 62, &#39;PAPER AND PAPERBOARD; ARTICLES OF PAPER PULP, OF PAPER OR OF PAPERBOARD.&#39;: 63, &#39;PHARMACEUTICAL PRODUCTS&#39;: 64, &#39;PHOTOGRAPHIC OR CINEMATOGRAPHIC GOODS.&#39;: 65, &#39;PLASTIC AND ARTICLES THEREOF.&#39;: 66, &#39;PREPARATIONS OF CEREALS, FLOUR, STARCH OR MILK; PASTRYCOOKS PRODUCTS.&#39;: 67, &#39;PREPARATIONS OF MEAT, OF FISH OR OF CRUSTACEANS, MOLLUSCS OR OTHER AQUATIC INVERTEBRATES&#39;: 68, &#39;PREPARATIONS OF VEGETABLES, FRUIT, NUTS OR OTHER PARTS OF PLANTS.&#39;: 69, &#39;PREPARED FEATHERS AND DOWN AND ARTICLES MADE OF FEATHERS OR OF DOWN; ARTIFICIAL FLOWERS; ARTICLES OF HUMAN HAIR.&#39;: 70, &#39;PRINTED BOOKDS, NEWSPAPERS, PICTURES AND OTHER PRODUCTS OF THE PRINTING INDUSTRY; MANUSCRIPTS, TYPESCRIPTS AND PLANS.&#39;: 71, &#39;PRODUCTS OF ANIMAL ORIGIN, NOT ELSEWHERE SPECIFIED OR INCLUDED.&#39;: 72, &#39;PRODUCTS OF THE MILLING INDUSTRY; MALT; STARCHES; INULIN; WHEAT GLUTEN.&#39;: 73, &#39;PROJECT GOODS; SOME SPECIAL USES.&#39;: 74, &#39;PULP OF WOOD OR OF OTHER FIBROUS CELLULOSIC MATERIAL; WASTE AND SCRAP OF PAPER OR PAPERBOARD.&#39;: 75, &#39;RAILWAY OR TRAMWAY LOCOMOTIVES, ROLLING-STOCK AND PARTS THEREOF; RAILWAY OR TRAMWAY TRACK FIXTURES AND FITTINGS AND PARTS THEREOF; MECHANICAL&#39;: 76, &#39;RAW HIDES AND SKINS (OTHER THAN FURSKINS) AND LEATHER&#39;: 77, &#39;RESIDUES AND WASTE FROM THE FOOD INDUSTRIES; PREPARED ANIMAL FODER.&#39;: 78, &#39;RUBBER AND ARTICLES THEREOF.&#39;: 79, &#39;SALT; SULPHUR; EARTHS AND STONE; PLASTERING MATERIALS, LIME AND CEMENT.&#39;: 80, &#39;SHIPS, BOATS AND FLOATING STRUCTURES.&#39;: 81, &#39;SILK&#39;: 82, &#39;SOAP, ORGANIC SURFACE-ACTIVE AGENTS, WASHING PREPARATIONS, LUBRICATING PREPARATIONS, ARTIFICIAL WAXES, PREPARED WAXES, POLISHING OR SCOURING PREP.&#39;: 83, &#39;SPECIAL WOVEN FABRICS; TUFTED TEXTILE FABRICS; LACE; TAPESTRIES; TRIMMINGS; EMBROIDERY.&#39;: 84, &#39;SUGARS AND SUGAR CONFECTIONERY.&#39;: 85, &#39;TANNING OR DYEING EXTRACTS; TANNINS AND THEIR DERI. DYES, PIGMENTS AND OTHER COLOURING MATTER; PAINTS AND VER; PUTTY AND OTHER MASTICS; INKS.&#39;: 86, &#39;TIN AND ARTICLES THEREOF.&#39;: 87, &#39;TOBACCO AND MANUFACTURED TOBACCO SUBSTITUTES.&#39;: 88, &#39;TOOLS IMPLEMENTS, CUTLERY, SPOONS AND FORKS, OF BASE METAL; PARTS THEREOF OF BASE METAL.&#39;: 89, &#39;TOYS, GAMES AND SPORTS REQUISITES; PARTS AND ACCESSORIES THEREOF.&#39;: 90, &#39;UMBRELLAS, SUN UMBRELLAS, WALKING-STICKS, SEAT-STICKS, WHIPS,RIDING-CROPS AND PARTS THEREOF.&#39;: 91, &#39;VEGETABLE PLAITING MATERIALS; VEGETABLE PRODUCTS NOT ELSEWHERE SPECIFIED OR INCLUDED.&#39;: 92, &#39;VEHICLES OTHER THAN RAILWAY OR TRAMWAY ROLLING STOCK, AND PARTS AND ACCESSORIES THEREOF.&#39;: 93, &#39;WADDING, FELT AND NONWOVENS; SPACIAL YARNS; TWINE, CORDAGE, ROPES AND CABLES AND ARTICLES THEREOF.&#39;: 94, &#39;WOOD AND ARTICLES OF WOOD; WOOD CHARCOAL.&#39;: 95, &#39;WOOL, FINE OR COARSE ANIMAL HAIR, HORSEHAIR YARN AND WOVEN FABRIC.&#39;: 96, &quot;WORKS OF ART COLLECTORS&#39; PIECES AND ANTIQUES.&quot;: 97, &#39;ZINC AND ARTICLES THEREOF.&#39;: 98}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">commodity_lookup</span><span class="p">[</span><span class="s1">&#39;MEAT AND EDIBLE MEAT OFFAL.&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>45
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create_table_sql = &quot;&quot;&quot;CREATE TABLE IF NOT EXISTS [Export] (</span>
+<span class="c1">#     [VALUEID] INTEGER NOT NULL PRIMARY KEY,</span>
+<span class="c1">#     [HSCODE] INTEGER NOT NULL, </span>
+<span class="c1">#     [COUNTRY] TEXT NOT NULL,</span>
+<span class="c1">#     [YEAR] INTEGER NOT NULL,</span>
+<span class="c1">#     [VALUE] REAL,</span>
+<span class="c1">#     FOREIGN KEY(COUNTRY) REFERENCES Country(COUNTRY),</span>
+<span class="c1">#     FOREIGN KEY(YEAR) REFERENCES YEAR(YEAR),</span>
+<span class="c1">#     FOREIGN KEY(HSCODE) REFERENCES Commodity(HSCODE)</span>
+<span class="c1"># );</span>
+<span class="c1"># &quot;&quot;&quot;</span>
+
+<span class="n">sql_statement</span> <span class="o">=</span> <span class="s1">&#39;SELECT Commodity, country, year, value from export&#39;</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">execute_sql_statement</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+<span class="c1"># with conn_norm:</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">with</span> <span class="n">conn_norm</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">hscode</span> <span class="o">=</span> <span class="n">commodity_lookup</span><span class="p">[</span><span class="n">text</span><span class="p">]</span>
+        <span class="n">insert_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="n">hscode</span><span class="p">,</span> <span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">value</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">value</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">insert_value</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="n">insert_tuple</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sql_statement</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT </span>
+<span class="s2">export.hscode,</span>
+<span class="s2">Commodity.COMMODITY,</span>
+<span class="s2">export.country,</span>
+<span class="s2">export.year,</span>
+<span class="s2">export.value</span>
+<span class="s2">FROM Export</span>
+<span class="s2">JOIN Commodity ON Commodity.hscode = export.hscode</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_statement</span><span class="p">,</span> <span class="n">conn_norm</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HSCODE</th>
+      <th>COMMODITY</th>
+      <th>COUNTRY</th>
+      <th>YEAR</th>
+      <th>VALUE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>45</td>
+      <td>MEAT AND EDIBLE MEAT OFFAL.</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+      <td>0.18</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>28</td>
+      <td>FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUAT...</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>21</td>
+      <td>DAIRY PRODUCE; BIRDS' EGGS; NATURAL HONEY; EDI...</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+      <td>12.48</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>41</td>
+      <td>LIVE TREES AND OTHER PLANTS; BULBS; ROOTS AND ...</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>23</td>
+      <td>EDIBLE VEGETABLES AND CERTAIN ROOTS AND TUBERS.</td>
+      <td>AFGHANISTAN TIS</td>
+      <td>2018</td>
+      <td>1.89</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>137018</th>
+      <td>90</td>
+      <td>TOYS, GAMES AND SPORTS REQUISITES; PARTS AND A...</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <th>137019</th>
+      <td>51</td>
+      <td>MISCELLANEOUS MANUFACTURED ARTICLES.</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+      <td>0.45</td>
+    </tr>
+    <tr>
+      <th>137020</th>
+      <td>97</td>
+      <td>WORKS OF ART COLLECTORS' PIECES AND ANTIQUES.</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>137021</th>
+      <td>74</td>
+      <td>PROJECT GOODS; SOME SPECIAL USES.</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>137022</th>
+      <td>50</td>
+      <td>MISCELLANEOUS GOODS.</td>
+      <td>ZIMBABWE</td>
+      <td>2010</td>
+      <td>0.07</td>
+    </tr>
+  </tbody>
+</table>
+<p>137023 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn_norm</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>297812.832273181
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn_norm</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="s1">&#39;india_export_norm.db&#39;</span><span class="p">)</span>
+<span class="n">cur</span> <span class="o">=</span> <span class="n">conn_norm</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;DROP TABLE EXPORT&#39;</span><span class="p">)</span>
+<span class="n">create_table_sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;CREATE TABLE IF NOT EXISTS [Export] (</span>
+<span class="s2">    [VALUEID] INTEGER NOT NULL PRIMARY KEY,</span>
+<span class="s2">    [HSCODE] INTEGER NOT NULL, </span>
+<span class="s2">    [COUNTRY] TEXT NOT NULL,</span>
+<span class="s2">    [YEAR] INTEGER NOT NULL,</span>
+<span class="s2">    [VALUE] REAL,</span>
+<span class="s2">    FOREIGN KEY(COUNTRY) REFERENCES Country(COUNTRY),</span>
+<span class="s2">    FOREIGN KEY(YEAR) REFERENCES YEAR(YEAR),</span>
+<span class="s2">    FOREIGN KEY(HSCODE) REFERENCES Commodity(HSCODE)</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">create_table</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="n">create_table_sql</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">conn_norm</span><span class="p">:</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span> 
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">hscode</span> <span class="o">=</span> <span class="n">commodity_lookup</span><span class="p">[</span><span class="n">text</span><span class="p">]</span>
+        <span class="n">insert_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="n">hscode</span><span class="p">,</span> <span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">value</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">value</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">insert_value</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="n">insert_tuple</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span>     
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">end_time</span><span class="o">-</span><span class="n">start_time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4970100619830191
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">insert_tuples</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">hscode</span> <span class="o">=</span> <span class="n">commodity_lookup</span><span class="p">[</span><span class="n">text</span><span class="p">]</span>
+    <span class="n">insert_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="n">hscode</span><span class="p">,</span> <span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">value</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">value</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">insert_tuples</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">insert_tuple</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">insert_tuples</span><span class="p">[:</span><span class="mi">100</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(45, &#39;AFGHANISTAN TIS&#39;, 2018, 0.18), (28, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (21, &#39;AFGHANISTAN TIS&#39;, 2018, 12.48), (41, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (23, &#39;AFGHANISTAN TIS&#39;, 2018, 1.89), (22, &#39;AFGHANISTAN TIS&#39;, 2018, 25.01), (17, &#39;AFGHANISTAN TIS&#39;, 2018, 13.75), (14, &#39;AFGHANISTAN TIS&#39;, 2018, 0.75), (73, &#39;AFGHANISTAN TIS&#39;, 2018, 0.01), (56, &#39;AFGHANISTAN TIS&#39;, 2018, 10.02), (38, &#39;AFGHANISTAN TIS&#39;, 2018, 0.04), (92, &#39;AFGHANISTAN TIS&#39;, 2018, None), (4, &#39;AFGHANISTAN TIS&#39;, 2018, 0.37), (85, &#39;AFGHANISTAN TIS&#39;, 2018, 15.92), (16, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (67, &#39;AFGHANISTAN TIS&#39;, 2018, 0.63), (69, &#39;AFGHANISTAN TIS&#39;, 2018, 5.04), (49, &#39;AFGHANISTAN TIS&#39;, 2018, 3.08), (11, &#39;AFGHANISTAN TIS&#39;, 2018, 0.01), (78, &#39;AFGHANISTAN TIS&#39;, 2018, 0.22), (88, &#39;AFGHANISTAN TIS&#39;, 2018, 91.22), (80, &#39;AFGHANISTAN TIS&#39;, 2018, 0.02), (46, &#39;AFGHANISTAN TIS&#39;, 2018, 0.59), (35, &#39;AFGHANISTAN TIS&#39;, 2018, 1.08), (59, &#39;AFGHANISTAN TIS&#39;, 2018, 7.15), (64, &#39;AFGHANISTAN TIS&#39;, 2018, 80.27), (27, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (86, &#39;AFGHANISTAN TIS&#39;, 2018, 0.21), (25, &#39;AFGHANISTAN TIS&#39;, 2018, 5.63), (83, &#39;AFGHANISTAN TIS&#39;, 2018, 0.32), (2, &#39;AFGHANISTAN TIS&#39;, 2018, 0.04), (26, &#39;AFGHANISTAN TIS&#39;, 2018, 0.01), (65, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (48, &#39;AFGHANISTAN TIS&#39;, 2018, 1.31), (66, &#39;AFGHANISTAN TIS&#39;, 2018, 2.35), (79, &#39;AFGHANISTAN TIS&#39;, 2018, 8.32), (77, &#39;AFGHANISTAN TIS&#39;, 2018, None), (9, &#39;AFGHANISTAN TIS&#39;, 2018, 0.19), (95, &#39;AFGHANISTAN TIS&#39;, 2018, 0.01), (75, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (63, &#39;AFGHANISTAN TIS&#39;, 2018, 2.48), (71, &#39;AFGHANISTAN TIS&#39;, 2018, 0.71), (82, &#39;AFGHANISTAN TIS&#39;, 2018, 0.23), (20, &#39;AFGHANISTAN TIS&#39;, 2018, 2.38), (62, &#39;AFGHANISTAN TIS&#39;, 2018, None), (42, &#39;AFGHANISTAN TIS&#39;, 2018, 46.97), (43, &#39;AFGHANISTAN TIS&#39;, 2018, 39.19), (94, &#39;AFGHANISTAN TIS&#39;, 2018, 0.07), (12, &#39;AFGHANISTAN TIS&#39;, 2018, 0.03), (84, &#39;AFGHANISTAN TIS&#39;, 2018, 1.74), (34, &#39;AFGHANISTAN TIS&#39;, 2018, 0.07), (37, &#39;AFGHANISTAN TIS&#39;, 2018, 3.21), (6, &#39;AFGHANISTAN TIS&#39;, 2018, 43.18), (7, &#39;AFGHANISTAN TIS&#39;, 2018, 89.25), (61, &#39;AFGHANISTAN TIS&#39;, 2018, 21.08), (29, &#39;AFGHANISTAN TIS&#39;, 2018, 18.35), (33, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (91, &#39;AFGHANISTAN TIS&#39;, 2018, None), (70, &#39;AFGHANISTAN TIS&#39;, 2018, 0.01), (10, &#39;AFGHANISTAN TIS&#39;, 2018, 0.46), (13, &#39;AFGHANISTAN TIS&#39;, 2018, 0.45), (32, &#39;AFGHANISTAN TIS&#39;, 2018, 0.23), (53, &#39;AFGHANISTAN TIS&#39;, 2018, 2.77), (36, &#39;AFGHANISTAN TIS&#39;, 2018, 0.84), (8, &#39;AFGHANISTAN TIS&#39;, 2018, 61.16), (18, &#39;AFGHANISTAN TIS&#39;, 2018, 0.73), (3, &#39;AFGHANISTAN TIS&#39;, 2018, 38.36), (39, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (98, &#39;AFGHANISTAN TIS&#39;, 2018, None), (60, &#39;AFGHANISTAN TIS&#39;, 2018, None), (89, &#39;AFGHANISTAN TIS&#39;, 2018, 2.81), (47, &#39;AFGHANISTAN TIS&#39;, 2018, 1.15), (55, &#39;AFGHANISTAN TIS&#39;, 2018, 10.11), (24, &#39;AFGHANISTAN TIS&#39;, 2018, 13.08), (76, &#39;AFGHANISTAN TIS&#39;, 2018, None), (93, &#39;AFGHANISTAN TIS&#39;, 2018, 16.09), (1, &#39;AFGHANISTAN TIS&#39;, 2018, 0.56), (57, &#39;AFGHANISTAN TIS&#39;, 2018, 7.25), (15, &#39;AFGHANISTAN TIS&#39;, 2018, 0.32), (52, &#39;AFGHANISTAN TIS&#39;, 2018, 0.02), (30, &#39;AFGHANISTAN TIS&#39;, 2018, 0.17), (90, &#39;AFGHANISTAN TIS&#39;, 2018, 0.09), (51, &#39;AFGHANISTAN TIS&#39;, 2018, 1.59), (97, &#39;AFGHANISTAN TIS&#39;, 2018, 0.01), (74, &#39;AFGHANISTAN TIS&#39;, 2018, 0.03), (50, &#39;AFGHANISTAN TIS&#39;, 2018, 0.0), (28, &#39;ALBANIA&#39;, 2018, 0.32), (72, &#39;ALBANIA&#39;, 2018, 0.32), (23, &#39;ALBANIA&#39;, 2018, 0.17), (22, &#39;ALBANIA&#39;, 2018, 0.06), (17, &#39;ALBANIA&#39;, 2018, 4.01), (14, &#39;ALBANIA&#39;, 2018, 0.16), (56, &#39;ALBANIA&#39;, 2018, 0.95), (92, &#39;ALBANIA&#39;, 2018, 0.01), (4, &#39;ALBANIA&#39;, 2018, 0.0), (85, &#39;ALBANIA&#39;, 2018, 0.08), (67, &#39;ALBANIA&#39;, 2018, 0.01), (69, &#39;ALBANIA&#39;, 2018, 0.09), (49, &#39;ALBANIA&#39;, 2018, 0.17), (88, &#39;ALBANIA&#39;, 2018, 0.74)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn_norm</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="s1">&#39;india_export_norm.db&#39;</span><span class="p">)</span>
+<span class="n">cur</span> <span class="o">=</span> <span class="n">conn_norm</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;DROP TABLE EXPORT&#39;</span><span class="p">)</span>
+<span class="n">create_table_sql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;CREATE TABLE IF NOT EXISTS [Export] (</span>
+<span class="s2">    [VALUEID] INTEGER NOT NULL PRIMARY KEY,</span>
+<span class="s2">    [HSCODE] INTEGER NOT NULL, </span>
+<span class="s2">    [COUNTRY] TEXT NOT NULL,</span>
+<span class="s2">    [YEAR] INTEGER NOT NULL,</span>
+<span class="s2">    [VALUE] REAL,</span>
+<span class="s2">    FOREIGN KEY(COUNTRY) REFERENCES Country(COUNTRY),</span>
+<span class="s2">    FOREIGN KEY(YEAR) REFERENCES YEAR(YEAR),</span>
+<span class="s2">    FOREIGN KEY(HSCODE) REFERENCES Commodity(HSCODE)</span>
+<span class="s2">);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">create_table</span><span class="p">(</span><span class="n">conn_norm</span><span class="p">,</span> <span class="n">create_table_sql</span><span class="p">)</span>
+<span class="n">sql</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39; INSERT INTO Export (HSCODE, COUNTRY, YEAR, VALUE)</span>
+<span class="s1">              VALUES(?, ?, ?, ?) &#39;&#39;&#39;</span>
+<span class="n">cur</span> <span class="o">=</span> <span class="n">conn_norm</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span> 
+<span class="n">cur</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">insert_tuples</span><span class="p">)</span>
+<span class="n">conn_norm</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span>     
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">end_time</span><span class="o">-</span><span class="n">start_time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2796216430142522
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;abcd&#39;</span>
+<span class="n">x</span><span class="o">.</span><span class="n">upper</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function str.upper()&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conn_norm</span><span class="o">.</span><span class="n">commit</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function Connection.commit&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./sql"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="sql_9_python.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Python and SQLite3</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="sql_11_soccer.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Soccer Database</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mohammad K. Zia<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
