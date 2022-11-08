@@ -398,7 +398,7 @@ SELECT
 	sale_year,
 	sale_week,
 	sum(total) week_total,
-	sum(sum(total)) OVER (ORDER BY sale_week ROWS UNBOUNDED PRECEDING) rolling_sum
+	sum(sum(total)) OVER (ORDER BY sale_year, sale_week ROWS UNBOUNDED PRECEDING) rolling_sum
 FROM SalesTable
 GROUP BY sale_year, sale_week
 ```
@@ -424,7 +424,7 @@ SELECT
 	sale_year,
 	sale_week,
 	sum(total) week_total,
-	sum(sum(total)) OVER (ORDER BY sale_week ROWS UNBOUNDED PRECEDING) rolling_sum
+	sum(sum(total)) OVER (ORDER BY sale_year, sale_week ROWS UNBOUNDED PRECEDING) rolling_sum
 FROM SalesTable
 GROUP BY sale_year, sale_week
 """

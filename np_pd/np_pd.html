@@ -1,0 +1,1988 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numpy and Pandas &#8212; EAS503</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/ub.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EAS503</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    EAS 503
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Course Information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../information.html">
+   Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/fundamentals/fundamentals.html">
+   Fundamentals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/fundamentals/exercises.html">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/functions/functions_1.html">
+   Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/functions/exercises.html">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/strings/strings.html">
+   Strings
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/strings/exercises.html">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/conditionals/conditionals.html">
+   Conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/conditionals/exercises.html">
+     Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../list_tuples.html">
+   Lists and Tuples
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../loops.html">
+   Loops
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/for_loop_exercises.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/for_loop_exercises_solution.html">
+     For Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/while_loop_exercises.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/while_loop_exercises_solution.html">
+     While Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/modify_loop_exercises.html">
+     Modify Loop Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../loop_exercises/modify_loop_exercises_solution.html">
+     Modify Loop Exercises Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../list_comprehension.html">
+   List comprehension
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../list_comprehension_exercises/exercises.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../list_comprehension_exercises/exercises_solution.html">
+     List Comprehension Exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../set_dictionary.html">
+   Sets and Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lambda.html">
+   Lambda, Filter, Map, and Sorted
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lambda_exercises/exercises.html">
+     Lambda, Filter, Map, and Sorted
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lambda_exercises/exercises_solution.html">
+     Lambda, Filter, Map, and Sorted Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../errors.html">
+   Errors and Exception Handling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions_pt2.html">
+   Functions Revisited
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../oop.html">
+   Object-Oriented Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc_topics.html">
+   Miscellaneous Topics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Structured Query Language (SQL)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../sql.html">
+   SQL with SQLite
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_0_tables.html">
+     Creating Tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_1_query_primer.html">
+     SQL Query Primer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_2_filtering.html">
+     Filtering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_3_sets.html">
+     Sets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_4_grouping.html">
+     Grouping and Aggregates
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_5_subqueries.html">
+     Subqueries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_6_conditionals.html">
+     Conditionals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_7_analytic_functions.html">
+     Analytic Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_8_normalization.html">
+     Normalization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_9_python.html">
+     Python and SQLite3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_10_india_export_data.html">
+     India Export Database
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sql/sql_11_soccer.html">
+     Soccer Database
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Numpy and Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../np_pd.html">
+   Numpy and pandas
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../machine_learning.html">
+   Machine Learning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../machine_learning/part1.html">
+     Part 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../machine_learning/part2.html">
+     Part 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Style Guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../style.html">
+   Style Guide
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/mkzia/eas503-notes"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/np_pd/np_pd.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#topics">
+   Topics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy">
+   NumPy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description">
+     Description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-it-different-from-python-arrays">
+     How is it different from Python arrays?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-use-numpy">
+     Why use NumPy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-example">
+     Simple example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-basics">
+     Numpy Basics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numpy-casting-covert-python-list-to-a-numpy-array">
+       NumPy casting – covert Python list to a NumPy array
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numpy-creating-arrays">
+       NumPy creating arrays
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-an-identify-matrix">
+   Create an identify matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-an-empty-array">
+   Creating an empty array
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-random-numbers">
+   Creating Random Numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reshaping-arrays">
+   Reshaping arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-array-operations">
+   Basic array operations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-a-1-d-array-vector">
+   Indexing a 1-D array – vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-multiple-values-at-once-broadcasting">
+   Setting multiple values at once – Broadcasting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#be-careful">
+   BE CAREFUL
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-a-2-d-array-matrix">
+   Indexing a 2-D array – Matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditional-selection">
+   Conditional selection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array-operations-basic">
+   Array operations – Basic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array-operations-advanced">
+   Array operations – Advanced
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pandas">
+   Pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-examples">
+     Basic examples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframes">
+   Dataframes –
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#select-dataframe-rows">
+   Select Dataframe rows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#select-subset-of-data">
+   Select subset of data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-conditions-to-select">
+   Use conditions to select
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-student-index">
+   Adding student index
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-index-data">
+   Multi-index data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dealing-with-missing-data">
+   Dealing with missing data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groupby">
+   Groupby
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging-sql-join">
+   Merging  – SQL JOIN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concatenation">
+   Concatenation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-pandas-operations">
+   More Pandas Operations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lambda-with-pandas">
+   Lambda with Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dropping-columns">
+   Dropping columns
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sorting">
+   Sorting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-csv-tsv">
+   Importing CSV, TSV
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-methods">
+   Other methods
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-data-manipulation">
+   More data manipulation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misc">
+   Misc
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-previous-example-in-pandas">
+   A Previous Example in Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Numpy and Pandas</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#topics">
+   Topics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy">
+   NumPy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description">
+     Description
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-it-different-from-python-arrays">
+     How is it different from Python arrays?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-use-numpy">
+     Why use NumPy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-example">
+     Simple example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-basics">
+     Numpy Basics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numpy-casting-covert-python-list-to-a-numpy-array">
+       NumPy casting – covert Python list to a NumPy array
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#numpy-creating-arrays">
+       NumPy creating arrays
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-an-identify-matrix">
+   Create an identify matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-an-empty-array">
+   Creating an empty array
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-random-numbers">
+   Creating Random Numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reshaping-arrays">
+   Reshaping arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-array-operations">
+   Basic array operations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-a-1-d-array-vector">
+   Indexing a 1-D array – vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-multiple-values-at-once-broadcasting">
+   Setting multiple values at once – Broadcasting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#be-careful">
+   BE CAREFUL
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-a-2-d-array-matrix">
+   Indexing a 2-D array – Matrix
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditional-selection">
+   Conditional selection
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array-operations-basic">
+   Array operations – Basic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array-operations-advanced">
+   Array operations – Advanced
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pandas">
+   Pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-examples">
+     Basic examples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframes">
+   Dataframes –
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#select-dataframe-rows">
+   Select Dataframe rows
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#select-subset-of-data">
+   Select subset of data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-conditions-to-select">
+   Use conditions to select
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-student-index">
+   Adding student index
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-index-data">
+   Multi-index data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dealing-with-missing-data">
+   Dealing with missing data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groupby">
+   Groupby
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging-sql-join">
+   Merging  – SQL JOIN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concatenation">
+   Concatenation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-pandas-operations">
+   More Pandas Operations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lambda-with-pandas">
+   Lambda with Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dropping-columns">
+   Dropping columns
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sorting">
+   Sorting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-csv-tsv">
+   Importing CSV, TSV
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-methods">
+   Other methods
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-data-manipulation">
+   More data manipulation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misc">
+   Misc
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-previous-example-in-pandas">
+   A Previous Example in Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="numpy-and-pandas">
+<h1>Numpy and Pandas<a class="headerlink" href="#numpy-and-pandas" title="Permalink to this headline">#</a></h1>
+<div class="section" id="topics">
+<h2>Topics<a class="headerlink" href="#topics" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Numpy/Pandas</p></li>
+<li><p>Data visualization with Matplotlib</p></li>
+</ul>
+</div>
+<div class="section" id="numpy">
+<h2>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">#</a></h2>
+<div class="section" id="description">
+<h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Ref: <a class="reference external" href="https://docs.scipy.org/doc/numpy/user/whatisnumpy.html">https://docs.scipy.org/doc/numpy/user/whatisnumpy.html</a></p></li>
+<li><p>Ref: <a class="reference external" href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf">https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf</a></p></li>
+<li><p>NumPy provides a multidimensional array object.</p></li>
+<li><p>Each object comes with an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.</p></li>
+<li><p>Basically, you can use NumPy to create ndarray (N-dimensional array) and easily manipulate the array. It is super fast because it is written in C.</p></li>
+</ul>
+</div>
+<div class="section" id="how-is-it-different-from-python-arrays">
+<h3>How is it different from Python arrays?<a class="headerlink" href="#how-is-it-different-from-python-arrays" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Python lists can be modified – you can add and remove elements. NumPy arrays have a fixed size at creation.</p></li>
+<li><p>Python lists can contain different data types. NumPy arrays can only have one data type. If you put in mixed types, they become a string.</p></li>
+<li><p>NumPy arrays come prepackaged with advanced mathematical operations. The operations are super fast even on large numbers of data and they use less memory.</p></li>
+</ul>
+</div>
+<div class="section" id="why-use-numpy">
+<h3>Why use NumPy<a class="headerlink" href="#why-use-numpy" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Most data analysis programs use NumPy to manipulate data. They might take in data as standard Python lists, but they convert it to a NumPy array and manipulate the data using NumPy routines and output the transformed data as a NumPy array.</p></li>
+<li><p>NumPy data array is the main data type used in most scientific and mathematical Python-based packages.</p></li>
+</ul>
+</div>
+<div class="section" id="simple-example">
+<h3>Simple example<a class="headerlink" href="#simple-example" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Square a list using Python</span>
+<span class="n">squared_values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">squared_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">number</span><span class="o">*</span><span class="n">number</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">squared_values</span><span class="p">)</span>
+
+<span class="c1"># Square a list using NumPy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">scalar</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vector</span> <span class="o">*</span> <span class="n">scalar</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vector</span> <span class="o">*</span> <span class="n">vector</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="numpy-basics">
+<h3>Numpy Basics<a class="headerlink" href="#numpy-basics" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>NumPy arrays can be a 1-D array, called a vector, or a 2-D array, called a matrix</p></li>
+</ul>
+<div class="section" id="numpy-casting-covert-python-list-to-a-numpy-array">
+<h4>NumPy casting – covert Python list to a NumPy array<a class="headerlink" href="#numpy-casting-covert-python-list-to-a-numpy-array" title="Permalink to this headline">#</a></h4>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">my_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_vector</span><span class="p">)</span>
+
+<span class="n">my_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">my_list</span><span class="p">,</span> <span class="n">my_list</span><span class="p">])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">my_list</span><span class="p">,</span> <span class="n">my_list</span><span class="p">])</span>
+
+<span class="n">my_nested_list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+<span class="n">my_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">my_nested_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span>
+
+<span class="n">my_list1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
+<span class="n">my_list2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]]</span>  
+<span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">my_list1</span><span class="p">,</span> <span class="n">my_list2</span><span class="p">])</span>   
+<span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">my_list1</span><span class="p">,</span> <span class="n">my_list2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="numpy-creating-arrays">
+<h4>NumPy creating arrays<a class="headerlink" href="#numpy-creating-arrays" title="Permalink to this headline">#</a></h4>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1">## Create array using arange</span>
+<span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">## Create array of zeros</span>
+<span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="c1">## Create array of ones</span>
+<span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span>
+
+<span class="c1">## Create evenly spaced vector</span>
+<span class="c1">### Example use case: when you have Y values for a plot but need to generate X values</span>
+<span class="c1">### *** Includes both start an end </span>
+<span class="c1"># np.arange(start, end(not included), step size)</span>
+<span class="c1"># np.linspace(start, end(included), number_of_points)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1900</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-an-identify-matrix">
+<h2>Create an identify matrix<a class="headerlink" href="#create-an-identify-matrix" title="Permalink to this headline">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-an-empty-array">
+<h2>Creating an empty array<a class="headerlink" href="#creating-an-empty-array" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-random-numbers">
+<h2>Creating Random Numbers<a class="headerlink" href="#creating-random-numbers" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Ref: <a class="reference external" href="https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html">https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.random.html</a></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uniform distribution </span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Normal distribution</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Random integers</span>
+<span class="c1"># np.random.randint(start, end(not_included), size)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+<div class="section" id="reshaping-arrays">
+<h2>Reshaping arrays<a class="headerlink" href="#reshaping-arrays" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vector</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vector</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="basic-array-operations">
+<h2>Basic array operations<a class="headerlink" href="#basic-array-operations" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+<span class="c1"># Min</span>
+<span class="n">vector</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="c1"># Max</span>
+<span class="n">vector</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="c1"># get location of min value</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+<span class="c1"># get location of max value</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span>
+<span class="c1"># get shape</span>
+<span class="n">vector</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="n">my_matrix</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">my_matrix</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="indexing-a-1-d-array-vector">
+<h2>Indexing a 1-D array – vector<a class="headerlink" href="#indexing-a-1-d-array-vector" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="c1"># vector[index]</span>
+<span class="c1"># vector [start:end]</span>
+<span class="c1"># vector [:end]</span>
+<span class="c1"># vector [start:]</span>
+<span class="c1"># vector [start, end, step]</span>
+
+<span class="n">vector</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">vector</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">vector</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">vector</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+<span class="n">vector</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">vector</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-multiple-values-at-once-broadcasting">
+<h2>Setting multiple values at once – Broadcasting<a class="headerlink" href="#setting-multiple-values-at-once-broadcasting" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>There are two main features of NumPy arrays</p>
+<ul>
+<li><p>Broadcasting – set multiple values at once</p></li>
+<li><p>Vectorization – no need for explicit looping – example, vector multiplication or squaring</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="be-careful">
+<h2>BE CAREFUL<a class="headerlink" href="#be-careful" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>If you store a slice of an array in a new variable, changes in the new variable will be reflected in the original array.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">my_slice</span> <span class="o">=</span> <span class="n">vector</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">my_slice</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Copy the array if you need a copy</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">my_slice_copy</span> <span class="o">=</span> <span class="n">vector</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="indexing-a-2-d-array-matrix">
+<h2>Indexing a 2-D array – Matrix<a class="headerlink" href="#indexing-a-2-d-array-matrix" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Remember – Python is zero-indexed</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> 
+<span class="n">matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>  
+<span class="n">matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> 
+
+
+<span class="n">matrix</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># Grab the third column</span>
+<span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span> <span class="c1"># Grab the second row</span>
+<span class="n">matrix</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># grab the first two rows, all columns</span>
+<span class="n">matrix</span><span class="p">[:</span><span class="mi">2</span><span class="p">,:]</span> <span class="c1"># grab the first two rows, all columns</span>
+<span class="n">matrix</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span> <span class="c1"># grab all the rows, but columns starting from 1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conditional-selection">
+<h2>Conditional selection<a class="headerlink" href="#conditional-selection" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">gt2</span> <span class="o">=</span> <span class="n">vector</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="c1"># create condition</span>
+<span class="n">lt8</span> <span class="o">=</span> <span class="n">vector</span> <span class="o">&lt;</span> <span class="mi">8</span> <span class="c1"># create condition</span>
+
+<span class="n">selected_gt2</span> <span class="o">=</span> <span class="n">vector</span><span class="p">[</span><span class="n">gt2</span><span class="p">]</span> <span class="c1"># apply condition to select</span>
+<span class="n">selected_lt8</span> <span class="o">=</span> <span class="n">vector</span><span class="p">[</span><span class="n">lt8</span><span class="p">]</span> <span class="c1"># apply condition to select</span>
+
+<span class="n">vector</span><span class="p">[</span><span class="n">vector</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">vector</span><span class="p">[</span><span class="n">vector</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">vector</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">vector</span><span class="p">[</span><span class="n">cond</span><span class="p">]</span>
+
+<span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">vector</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">vector</span><span class="o">&lt;=</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">vector</span><span class="p">[</span><span class="n">cond</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="array-operations-basic">
+<h2>Array operations – Basic<a class="headerlink" href="#array-operations-basic" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">vector</span> <span class="o">+</span> <span class="n">vector</span>
+<span class="n">vector</span> <span class="o">-</span> <span class="n">vector</span>
+<span class="n">vector</span> <span class="o">*</span> <span class="n">vector</span>
+<span class="n">vector</span> <span class="o">/</span> <span class="n">vector</span> <span class="c1"># problem!!! return `nan` </span>
+<span class="n">vector</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="n">vector</span> <span class="o">-</span> <span class="mi">10</span>
+<span class="n">vector</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">vector</span> <span class="o">/</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="array-operations-advanced">
+<h2>Array operations – Advanced<a class="headerlink" href="#array-operations-advanced" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Ref: <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/ufuncs.html#math-operations">https://docs.scipy.org/doc/numpy/reference/ufuncs.html#math-operations</a></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/25773245/ambiguity-in-pandas-dataframe-numpy-array-axis-definition/43413031">https://stackoverflow.com/questions/25773245/ambiguity-in-pandas-dataframe-numpy-array-axis-definition/43413031</a></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+
+<span class="nb">sum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> 
+<span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+<span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">+</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span>
+
+<span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">matrix</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span>
+<span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">matrix</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span>
+<span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">matrix</span><span class="o">*</span><span class="mi">1000</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span>
+
+<span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+<span class="n">matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> 
+<span class="n">matrix</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span> 
+<span class="n">matrix</span><span class="o">.</span><span class="n">cumprod</span><span class="p">()</span> 
+
+<span class="n">matrix</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+<span class="n">matrix</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> 
+
+<span class="n">matrix</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+<span class="n">matrix</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> 
+
+<span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pandas">
+<h2>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Built-on top of NumPy – meaning the underlying data structure used is ndarray</p></li>
+<li><p>Pandas provides series which are like NumPy arrays but with associated index labels – meaning are like column  labels or row labels. Element data type can be different</p></li>
+<li><p>Pandas also provides dataframes which are like Excel sheets or database tables</p></li>
+</ul>
+<div class="section" id="basic-examples">
+<h3>Basic examples<a class="headerlink" href="#basic-examples" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chrom&#39;</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12345</span><span class="p">,</span> <span class="mf">38.4</span><span class="p">]</span>
+
+<span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">data_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;chrom&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">:</span> <span class="mi">12345</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">:</span> <span class="mf">38.4</span><span class="p">}</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span> <span class="c1"># Notice the data type is float</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="c1"># can also do </span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">header</span><span class="p">)</span>
+
+<span class="c1"># can hold different data types</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;2s&#39;</span><span class="p">,</span> <span class="mi">34</span><span class="p">]</span> 
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># can use a dictionary to initialize a panda series</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data_dict</span><span class="p">)</span>
+
+<span class="c1">## Using index labels to fetch element</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chrom&#39;</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12345</span><span class="p">,</span> <span class="mf">38.4</span><span class="p">]</span>
+<span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+<span class="n">series</span><span class="p">[</span><span class="s1">&#39;chrom&#39;</span><span class="p">]</span>
+<span class="n">series</span><span class="p">[</span><span class="s1">&#39;filter&#39;</span><span class="p">]</span>
+
+<span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="c1">## Basic operations</span>
+<span class="n">header1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chrom&#39;</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">]</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12345</span><span class="p">,</span> <span class="mf">38.4</span><span class="p">]</span>
+<span class="n">header2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chrom&#39;</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">,</span> <span class="s1">&#39;qual&#39;</span><span class="p">]</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4899</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mf">89.9</span><span class="p">]</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">header1</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data2</span><span class="p">,</span> <span class="n">header2</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">+</span><span class="n">s2</span> 
+
+<span class="n">header1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chrom&#39;</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">]</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12345</span><span class="p">,</span> <span class="mf">38.4</span><span class="p">]</span>
+<span class="n">header2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chrom&#39;</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">,</span> <span class="s1">&#39;qual&#39;</span><span class="p">]</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="mi">4899</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mf">89.9</span><span class="p">]</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">header1</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data2</span><span class="p">,</span> <span class="n">header2</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">+</span><span class="n">s2</span> 
+
+<span class="n">data1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12345</span><span class="p">,</span> <span class="mf">38.4</span><span class="p">]</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4899</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mf">89.9</span><span class="p">]</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data2</span><span class="p">)</span>
+
+
+<span class="c1">## IMPORTANT - with index labels -- operations are based on label</span>
+<span class="n">header1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">,</span> <span class="s1">&#39;chrom&#39;</span><span class="p">]</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12345</span><span class="p">,</span> <span class="mf">38.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">header2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chrom&#39;</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;filter&#39;</span><span class="p">,</span> <span class="s1">&#39;qual&#39;</span><span class="p">]</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4899</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mf">89.9</span><span class="p">]</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">header1</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data2</span><span class="p">,</span> <span class="n">header2</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">+</span><span class="n">s2</span> 
+
+
+<span class="n">data1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12345</span><span class="p">,</span> <span class="mf">38.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4899</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mf">89.9</span><span class="p">]</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="dataframes">
+<h2>Dataframes –<a class="headerlink" href="#dataframes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Dataframe is composed of series</p></li>
+<li><p>Ref: <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.io.formats.style.Styler.html#pandas.io.formats.style.Styler">https://pandas.pydata.org/docs/reference/api/pandas.io.formats.style.Styler.html#pandas.io.formats.style.Styler</a></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">,</span> <span class="s1">&#39;student2&#39;</span><span class="p">,</span> <span class="s1">&#39;student3&#39;</span><span class="p">,</span> <span class="s1">&#39;student4&#39;</span><span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">students</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">exam1</span> <span class="c1"># not a good way to do this</span>
+
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;average&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam2&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam3&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">3</span> 
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;average&#39;</span><span class="p">)</span> <span class="c1"># does not work because default for drop is to work on row labels</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;average&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># works on column labels </span>
+
+<span class="c1">## STILL NOT DROPPED from df</span>
+<span class="n">df</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;average&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">## drop a student</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;student3&#39;</span><span class="p">)</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">,</span> <span class="s1">&#39;student2&#39;</span><span class="p">,</span> <span class="s1">&#39;student3&#39;</span><span class="p">,</span> <span class="s1">&#39;student3&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">students</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;student3&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;student3&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1">## Row is referred to as axis=0</span>
+<span class="c1">## Column is referred to as axis=1</span>
+<span class="c1">## (R,C) == (axis=0, axis=1) df.shape</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="select-dataframe-rows">
+<h2>Select Dataframe rows<a class="headerlink" href="#select-dataframe-rows" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">,</span> <span class="s1">&#39;student2&#39;</span><span class="p">,</span> <span class="s1">&#39;student3&#39;</span><span class="p">,</span> <span class="s1">&#39;student4&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">students</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">## remember that column names do not count as rows</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="select-subset-of-data">
+<h2>Select subset of data<a class="headerlink" href="#select-subset-of-data" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">,</span> <span class="s1">&#39;student2&#39;</span><span class="p">,</span> <span class="s1">&#39;student3&#39;</span><span class="p">,</span> <span class="s1">&#39;student4&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">students</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam1&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;student1&#39;</span><span class="p">,</span> <span class="s1">&#39;student3&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="use-conditions-to-select">
+<h2>Use conditions to select<a class="headerlink" href="#use-conditions-to-select" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">,</span> <span class="s1">&#39;student2&#39;</span><span class="p">,</span> <span class="s1">&#39;student3&#39;</span><span class="p">,</span> <span class="s1">&#39;student4&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">students</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">&gt;=</span><span class="mi">90</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">&gt;=</span><span class="mi">90</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span> <span class="c1">#   </span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">]</span> <span class="c1"># gives all columns where exam1 is greater than 85</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">][</span><span class="s1">&#39;exam3&#39;</span><span class="p">]</span> 
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">][[</span><span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]]</span> 
+
+
+<span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam2&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">)]</span>
+<span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam2&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">)][</span><span class="s1">&#39;exam3&#39;</span><span class="p">]</span>
+
+<span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam2&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">)]</span>
+<span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;exam2&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">85</span><span class="p">)][</span><span class="s1">&#39;exam3&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-student-index">
+<h2>Adding student index<a class="headerlink" href="#adding-student-index" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">,</span> <span class="s1">&#39;student2&#39;</span><span class="p">,</span> <span class="s1">&#39;student3&#39;</span><span class="p">,</span> <span class="s1">&#39;student4&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">students</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multi-index-data">
+<h2>Multi-index data<a class="headerlink" href="#multi-index-data" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="s1">&#39;student1 student1 student1 student2 student2 student2 student3 student3 student3&#39;</span>
+<span class="n">exams</span> <span class="o">=</span> <span class="s1">&#39;exam1 exam2 exam3&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span><span class="o">*</span><span class="mi">3</span>
+<span class="n">classes</span> <span class="o">=</span> <span class="s1">&#39;class1 class2&#39;</span>
+<span class="n">index</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">students</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span> <span class="n">exams</span><span class="p">))</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">classes</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">][</span><span class="s1">&#39;class1&#39;</span><span class="p">]</span> 
+<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Students&#39;</span><span class="p">,</span> <span class="s1">&#39;Exams&#39;</span><span class="p">]</span>
+
+<span class="c1">## cross-section</span>
+<span class="n">df</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s1">&#39;student1&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;Exams&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dealing-with-missing-data">
+<h2>Dealing with missing data<a class="headerlink" href="#dealing-with-missing-data" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;student1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span> <span class="s1">&#39;student2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">77</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span> <span class="s1">&#39;student3&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">93</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">thresh</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">55</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span> 
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="groupby">
+<h2>Groupby<a class="headerlink" href="#groupby" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Exams&#39;</span><span class="p">:</span> <span class="s1">&#39;exam1 exam1 exam1&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;exam2 exam2 exam2&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;exam3 exam3 exam3&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span>
+    <span class="s1">&#39;Students&#39;</span><span class="p">:</span> <span class="s1">&#39;student1 student2 student3&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span>   
+    <span class="s1">&#39;Scores&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Students&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Students&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;student1&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Exams&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()[</span><span class="s1">&#39;Scores&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Exams&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span> 
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Students&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="merging-sql-join">
+<h2>Merging  – SQL JOIN<a class="headerlink" href="#merging-sql-join" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">departments</span> <span class="o">=</span> <span class="p">{</span> 
+    <span class="s1">&#39;DepartmentId&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="s1">&#39;DepartmentName&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;IT&#39;</span><span class="p">,</span> <span class="s1">&#39;Physics&#39;</span><span class="p">,</span> <span class="s1">&#39;Arts&#39;</span><span class="p">,</span> <span class="s1">&#39;Math&#39;</span><span class="p">]</span> 
+<span class="p">}</span>
+
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">departments</span><span class="p">)</span>
+
+<span class="n">students</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;StudentId&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+    <span class="s1">&#39;StudentName&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Michael&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Jack&#39;</span><span class="p">,</span> <span class="s1">&#39;Sara&#39;</span><span class="p">,</span> <span class="s1">&#39;Sally&#39;</span><span class="p">,</span> <span class="s1">&#39;Jena&#39;</span><span class="p">,</span> <span class="s1">&#39;Nancy&#39;</span><span class="p">,</span> <span class="s1">&#39;Adam&#39;</span><span class="p">,</span> <span class="s1">&#39;Stevens&#39;</span><span class="p">,</span> <span class="s1">&#39;George&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;DepartmentId&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">students</span><span class="p">)</span>
+
+<span class="n">marks</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;MarkId&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+    <span class="s1">&#39;StudentId&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> 
+    <span class="s1">&#39;Mark&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">marks</span><span class="p">)</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">df1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;DepartmentId&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;DepartmentId&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;DepartmentId&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">df1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;DepartmentId&#39;</span><span class="p">)</span> 
+
+<span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df3</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">df1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;DepartmentId&#39;</span><span class="p">),</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;StudentId&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df3</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">df1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;DepartmentId&#39;</span><span class="p">),</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;StudentId&#39;</span><span class="p">)</span>
+
+<span class="n">data</span><span class="p">[[</span><span class="s1">&#39;StudentName&#39;</span><span class="p">,</span> <span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="s1">&#39;DepartmentName&#39;</span><span class="p">]]</span> 
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>ref: <a class="reference external" href="https://stackoverflow.com/a/48411543">https://stackoverflow.com/a/48411543</a></p></li>
+</ul>
+</div>
+<div class="section" id="concatenation">
+<h2>Concatenation<a class="headerlink" href="#concatenation" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d1</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;C0&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;COR0&#39;</span><span class="p">,</span> <span class="s1">&#39;COR1&#39;</span><span class="p">,</span> <span class="s1">&#39;COR2&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C1R0&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R1&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R2&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C2R0&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R1&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R2&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
+
+<span class="n">d2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;C0&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C0R3&#39;</span><span class="p">,</span> <span class="s1">&#39;C0R4&#39;</span><span class="p">,</span> <span class="s1">&#39;C0R5&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C1R3&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R4&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R5&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C2R3&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R4&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R5&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
+
+<span class="n">d3</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;C0&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C0R6&#39;</span><span class="p">,</span> <span class="s1">&#39;C0R7&#39;</span><span class="p">,</span> <span class="s1">&#39;C0R8&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C1R6&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R7&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R8&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C2R6&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R7&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R8&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d3</span><span class="p">)</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">df3</span><span class="p">])</span>
+
+<span class="c1">## Concatenation -- Fix index</span>
+
+<span class="n">d1</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;C0&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;COR0&#39;</span><span class="p">,</span> <span class="s1">&#39;COR1&#39;</span><span class="p">,</span> <span class="s1">&#39;COR2&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C1R0&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R1&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R2&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C2R0&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R1&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R2&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">d2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;C0&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C0R3&#39;</span><span class="p">,</span> <span class="s1">&#39;C0R4&#39;</span><span class="p">,</span> <span class="s1">&#39;C0R5&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C1R3&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R4&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R5&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C2R3&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R4&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R5&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d2</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="n">d3</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;C0&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C0R6&#39;</span><span class="p">,</span> <span class="s1">&#39;C0R7&#39;</span><span class="p">,</span> <span class="s1">&#39;C0R8&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C1R6&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R7&#39;</span><span class="p">,</span> <span class="s1">&#39;C1R8&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;C2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C2R6&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R7&#39;</span><span class="p">,</span> <span class="s1">&#39;C2R8&#39;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d3</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">df3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="more-pandas-operations">
+<h2>More Pandas Operations<a class="headerlink" href="#more-pandas-operations" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;DepartmentName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> 
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;DepartmentName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> 
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;DepartmentName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Mark&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">17</span><span class="p">]</span>  
+</pre></div>
+</div>
+</div>
+<div class="section" id="lambda-with-pandas">
+<h2>Lambda with Pandas<a class="headerlink" href="#lambda-with-pandas" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Scale marks by 5</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">def</span> <span class="nf">times5</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">val</span> <span class="o">*</span> <span class="mi">5</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Mark&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">times5</span><span class="p">)</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Mark&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">val</span><span class="p">:</span> <span class="n">val</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Upper all department names</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">upper</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">string</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;DepartmentName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">upper</span><span class="p">)</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;DepartmentName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">string</span><span class="p">:</span> <span class="n">string</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="mi">18</span><span class="p">:</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">19</span><span class="p">:</span> <span class="s1">&#39;A-&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span> <span class="s1">&#39;A+&#39;</span><span class="p">}</span>
+<span class="n">df3</span><span class="p">[</span><span class="s1">&#39;Mark&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span>     
+
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="dropping-columns">
+<h2>Dropping columns<a class="headerlink" href="#dropping-columns" title="Permalink to this headline">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;StudentId&#39;</span><span class="p">,</span> <span class="s1">&#39;MarkId&#39;</span> <span class="p">,</span> <span class="s1">&#39;DepartmentId&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sorting">
+<h2>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="importing-csv-tsv">
+<h2>Importing CSV, TSV<a class="headerlink" href="#importing-csv-tsv" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;students.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lastname&#39;</span><span class="p">,</span> <span class="s1">&#39;firstname&#39;</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">])</span> 
+
+<span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+
+<span class="n">data</span><span class="p">[[</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> 
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;average&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;exam1&#39;</span><span class="p">,</span> <span class="s1">&#39;exam2&#39;</span><span class="p">,</span> <span class="s1">&#39;exam3&#39;</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+<span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;average&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+
+<span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;output.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-methods">
+<h2>Other methods<a class="headerlink" href="#other-methods" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">tail</span>
+<span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> 
+<span class="n">data</span><span class="o">.</span><span class="n">columns</span> 
+<span class="n">data</span><span class="o">.</span><span class="n">dtypes</span> 
+<span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>  
+<span class="n">data</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>  
+</pre></div>
+</div>
+</div>
+<div class="section" id="more-data-manipulation">
+<h2>More data manipulation<a class="headerlink" href="#more-data-manipulation" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">75</span><span class="p">,</span> <span class="mi">85</span><span class="p">)]</span> 
+<span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">75</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">95</span><span class="p">])]</span>  
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> 
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;exam1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="misc">
+<h2>Misc<a class="headerlink" href="#misc" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Iterate over the data frame</p>
+<ul>
+<li><p>items: <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.items.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.items.html</a></p></li>
+<li><p>iteritems: <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iteritems.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iteritems.html</a></p></li>
+</ul>
+</li>
+<li><p>Where: <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.where.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.where.html</a></p></li>
+<li><p>Plotting: <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html</a></p></li>
+<li><p>to_csv</p></li>
+<li><p>to_sql: <a class="reference external" href="https://datacarpentry.org/python-ecology-lesson/09-working-with-sql/index.html">https://datacarpentry.org/python-ecology-lesson/09-working-with-sql/index.html</a></p></li>
+</ul>
+</div>
+<div class="section" id="a-previous-example-in-pandas">
+<h2>A Previous Example in Pandas<a class="headerlink" href="#a-previous-example-in-pandas" title="Permalink to this headline">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<span class="n">employees</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;EmployeeID&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;EN1-26&#39;</span><span class="p">,</span> <span class="s1">&#39;EN1-33&#39;</span><span class="p">,</span> <span class="s1">&#39;EN1-35&#39;</span><span class="p">,</span> <span class="s1">&#39;EN1-36&#39;</span><span class="p">,</span> <span class="s1">&#39;EN1-38&#39;</span><span class="p">,</span> <span class="s1">&#39;EN1-40&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Last_Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;O&#39;Brien&quot;</span><span class="p">,</span> <span class="s2">&quot;Guya&quot;</span><span class="p">,</span> <span class="s2">&quot;Baranco&quot;</span><span class="p">,</span> <span class="s2">&quot;Roslyn&quot;</span><span class="p">,</span> <span class="s2">&quot;Schaaf&quot;</span><span class="p">,</span> <span class="s2">&quot;Wing&quot;</span><span class="p">],</span>
+    <span class="s1">&#39;First_Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Sean&quot;</span><span class="p">,</span> <span class="s2">&quot;Amy&quot;</span><span class="p">,</span> <span class="s2">&quot;Steven&quot;</span><span class="p">,</span> <span class="s2">&quot;Elizabeth&quot;</span><span class="p">,</span> <span class="s2">&quot;Carol&quot;</span><span class="p">,</span> <span class="s2">&quot;Alexandra&quot;</span> <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df_employees</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">employees</span><span class="p">)</span>
+
+<span class="n">projects</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;ProjectNum&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;30-452-T3&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;30-457-T3&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;30-482-TC&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;31-124-T3&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;31-238-TC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;31-238-TC2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;35-152-TC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;36-272-TC&quot;</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;ProjectTitle&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;STAR manual&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ISO procedures&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Web site&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Employee handbook&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;STAR prototype&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;New catalog&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;STAR pricing&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Order system&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+
+<span class="n">df_projects</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">projects</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df_projects</span><span class="p">)</span>
+
+<span class="n">employees_projects</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;EmployeeID&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;EN1-26&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-26&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-26&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-33&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-33&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-33&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-35&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-35&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-36&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-38&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-40&quot;</span><span class="p">,</span> 
+        <span class="s2">&quot;EN1-40&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;ProjectNum&#39;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;30-452-T3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;30-457-T3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;31-124-T3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;30-328-TC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;30-452-T3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;32-244-T3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;30-452-T3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;31-238-TC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;35-152-TC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;36-272-TC&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;31-238-TC2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;31-241-TC&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+
+<span class="p">}</span>
+
+<span class="n">df_employees_projects</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">employees_projects</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_employees_projects</span><span class="p">,</span> <span class="n">df_employees</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;EmployeeID&#39;</span><span class="p">),</span> <span class="n">df_projects</span><span class="p">,</span>  <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;ProjectNum&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<p>Ref: <a class="reference external" href="https://www.kaggle.com/shovitbhari/pandas-75-exercises-with-solutions">https://www.kaggle.com/shovitbhari/pandas-75-exercises-with-solutions</a>
+Ref: <a class="reference external" href="https://pythonspeed.com/memory/">https://pythonspeed.com/memory/</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./np_pd"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Mohammad K. Zia<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
