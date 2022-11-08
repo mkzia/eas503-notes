@@ -61,14 +61,13 @@ parts:
     - file: sql/sql_6_conditionals
     - file: sql/sql_7_analytic_functions
     - file: sql/sql_8_normalization
+    - file: sql/sql_9_python
+    - file: sql/sql_10_india_export_data
+    - file: sql/sql_11_soccer
 
 - caption: Numpy and Pandas
   chapters:
   - file: np_pd
-    sections:
-    - file: np_pd/numpy
-    - file: np_pd/pandas
-    - file: np_pd/exercises
      
 - caption: Machine Learning
   chapters:

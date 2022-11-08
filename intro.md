@@ -63,19 +63,8 @@ An invitation to gain access to Gradescope and Piazza will be sent couple of day
 This website will be updated frequently throughout the semester. 
 :::
 
-
-
 ## Academic Integrity
-
-Academic integrity is a fundamental university value. Through the honest completion of academic work, students sustain the integrity of the university and of themselves while facilitating the university's imperative for the transmission of knowledge and culture based upon the generation of new and innovative ideas. For more information, please refer to the Graduate Academic Integrity policy (https://grad.buffalo.edu/succeed/current-students/policy-library.html#academic-integrity)
-
-This course will operate with a zero-tolerance policy regarding cheating and other forms of academic dishonesty. Any act of academic dishonesty will subject the student to penalty, including the high probability of failure of the course (i.e., assignment of a grade of “F”). It is expected that you will behave in an honorable and respectful way as you learn and share ideas. Therefore, recycled papers, work submitted to other courses, and major assistance in preparation of assignments without identifying and acknowledging such assistance are not acceptable. All work for this course must be original for this course. Additionally, you are not allowed to post course homeworks, exams, solutions, etc., on a public forum. Please be familiar with the University and the School policies regarding plagiarism.
-
-
 :::{warning}
-
-**Academic Integrity**
-
 Academic integrity is a fundamental university value. Through the
 honest completion of academic work, students sustain the integrity of the university while facilitating the university’s imperative for the transmission of knowledge and culture based upon the
 generation of new and innovative ideas. The UB graduate academic integrity policy is available
@@ -100,30 +89,26 @@ to your computer or accounts! If another student gains or is provided access to
 your computer or on-line account and they violate the Academic Integrity Policy,
 you will be held responsible!
 
-### Example 1
-Student A has been positively identified as posting a homework question to Chegg, Stack Overflow, Course Hero.
+**Example 1**: Student A has been positively identified as posting a homework question to Chegg, Stack Overflow, Course Hero.
 That student will earn an “F” in the course and be reported to the University.
 
-### Example 2
-Students B and C are working on code for a homework together. Student B finished
+**Example 2**: Students B and C are working on code for a homework together. Student B finished
 the code but Student C is stuck and does not know how to proceed. Student B let’s Student C
 look (either in person or electronically) at their code, which Student C then uses to complete
 the problem. Both Student B and Student C will earn a zero on the entire homework and be
 reported to the University.
 
-### Example 3
-Students D and E are working on code for a homework together. Student D finished
+**Example 3**: Students D and E are working on code for a homework together. Student D finished
 the code but Student E is stuck and does not know how to proceed. Students D and E verbally
 discuss the code but do not view each other’s code and Student D does not tell the code that
 Student E needs. During this Student E learns what was done wrong and how to fix it. This is
 not a violation of academic integrity and thus no sanction will apply.
 
-### Example 4
-Student F’s computer is non-functional and student G allows student F access to
+**Example 4**: Student F’s computer is non-functional and student G allows student F access to
 their laptop to finish a homework. While doing so student F copies code that student G has
 already completed. Both students will earn a zero on the entire homework or exam and will be
 reported to the University.
 
-By submitting work for a grade, students are accepting the academic integrity
-policy.
+**By submitting work for a grade, students are accepting the academic integrity
+policy.**
 :::
