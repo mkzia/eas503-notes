@@ -147,10 +147,7 @@ grades.sort()
 grades.reverse()
 ```
 
-### List unpacking 
-```python
-a, b = [3,4]
-```
+
 
 ## Tuples
 - Tuple are just like lists except that they are immutable. Once you have created a tuple, you cannot modify it. 

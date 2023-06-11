@@ -21,16 +21,9 @@ Please read this information carefully!
 
 ## Course Content
 
-### Matott Section
-- Quizzes (14) - 20 %
-- Programming Assignments (10) - 40 %
-- Mini-Projects (2) - 30 %
-- Group Project (1) - 10%
-
-### Zia Section
-- Quizzes (**24*) - 20 %
-- Programming Assignments (10) - 40 %
-- Mini-Projects (2) - 30 %
+- Kritik Lecture Quizzes (8-9) - 20 %
+- Programming Assignments (7-8) - 40 %
+- Individual Mini-Projects (2) - 30 % 
 - Group Project (1) - 10%
 
 

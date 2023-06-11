@@ -683,14 +683,15 @@ class Circle:
 c1 = Circle(10)
 c2 = Circle(5)
 
-# print(c1)
-# print(c2)
-# print(c2.get_area())
+print(c1)
+print(c2)
+print(c2.get_area())
+```
 
 
-# lets does c1 + c2 have any meaning? no
-# https://thepythonguru.com/python-operator-overloading/
 
+## Allowing c1 + c2
+```python
 class Circle:
 
     def __init__(self, radius):
@@ -737,9 +738,11 @@ class Circle:
 c1 = Circle(10)
 c2 = Circle(5)
 print(c1 < c2)
+```
 
+## Point Class
 
-
+```python
 class Point:
     def __init__(self, x=0, y=0):
         self.x = x
@@ -757,7 +760,10 @@ class Point:
 p1 = Point(3, 4)
 p2 = Point(8, 6)
 print(p2+p1)
+```
 
+## Extended Point Class
+```python
 import math
 class Point:
     def __init__(self, x=0, y=0):
@@ -782,8 +788,11 @@ class Point:
 p1 = Point(3, 4)
 p2 = Point(8, 6)
 print(p1.distance(p2))
+```
 
+## Iterator Class
 
+```python
 class MyRange:
 
     def __init__(self, limit):
@@ -806,8 +815,11 @@ i = iter(MyRange(10))
 next(i)
 for ele in MyRange(10):
     print(ele)
+```
 
 
+### PowX with iteration
+```python
 class PowX:
     def __init__(self, limit, power):
         self.limit = limit
@@ -828,10 +840,13 @@ class PowX:
 
 for ele in PowX(10, 3):
     print(ele)
+```
 
 
-## lets use generator
 
+### PowX with generator
+
+```python
 def PowX(limit, power):
     value = 0
     while value < limit:

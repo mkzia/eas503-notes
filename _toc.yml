@@ -67,7 +67,7 @@ parts:
 
 - caption: Numpy and Pandas
   chapters:
-  - file: np_pd
+  - file: np_pd/np_pd
      
 - caption: Machine Learning
   chapters:
